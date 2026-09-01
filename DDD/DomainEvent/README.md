@@ -305,7 +305,7 @@ Rozhodnutí, které je potřeba udělat vědomě, protože výchozí chování b
 - **Symfony Messenger** — middleware `DispatchAfterCurrentBus` řeší přesně to „až po commitu“. Pro asynchronní doručení stačí přepnout transport.
 - **Doctrine** — události z agregátů se sbírají v posluchači na `postFlush`. Sahat na `preFlush` nebo `onFlush` je zdroj problémů: transakce ještě neskončila.
 - **Outbox** — tabulka `outbox` zapsaná ve stejné transakci plus samostatný odesílač. Jediná varianta, u které událost nezmizí při pádu procesu.
-- **U nás** — DX zprávy jsou **integrační** události: verzovaný dokumentový kontrakt pro cizí služby. Vnitřní doménové události služby ven nikdy neposílají, právě proto, aby šel vnitřní model měnit.
+- **U nás** — [DX zprávy](../../Glossary.md#dx-zpráva) jsou **integrační** události: verzovaný dokumentový kontrakt pro cizí služby. Vnitřní doménové události služby ven nikdy neposílají, právě proto, aby šel vnitřní model měnit.
 
 ---
 
@@ -353,7 +353,9 @@ Ukáže, že agregát událost jen zaznamená, publikaci po úspěšném commitu
 | **Autoři**    | Martin Fowler, Eric Evans, Vaughn Vernon                  |
 | **Roky**      | **2005** (Fowler) · **2013** (Vernon) · **2015** (Evans)  |
 | **Kategorie** | Taktické stavební bloky                                   |
-| **Obtížnost** | ●●●○○                                                     |
+| **Obtížnost** | ●●●●○                                                     |
+
+Na obtížnosti stojí za to se zastavit. Napsat událost je triviální — je to `readonly` třída o čtyřech vlastnostech. **Náročné je všechno kolem ní:** správně se zavěsit na konec transakce (v Doctrine na `postFlush`, ne dřív), rozhodnout mezi synchronním doručením, frontou a outboxem, zařídit idempotenci u opakovaného doručení a udržet oddělené doménové a integrační události. Tenhle pattern si s sebou táhne infrastrukturu, kterou ostatní taktické bloky nepotřebují — proto čtyři body, ne tři.
 
 Stojí za zmínku, že **doménové události v původní knize z roku 2003 nejsou**. Evans je mezi stavební bloky doplnil až v *Domain-Driven Design Reference* (2015) a sám k tomu poznamenal, že jde o vzor, který se vynořil až z praxe po vydání knihy — a že kdyby ji psal znovu, patřily by tam od začátku.
 
@@ -382,7 +384,7 @@ category: Taktické stavební bloky
 source: DDD – doplněno po vydání knihy
 authors: Martin Fowler, Eric Evans, Vaughn Vernon
 year: 2005
-difficulty: 3
+difficulty: 4
 tags: [události, rozvázání vazeb, eventuální konzistence, integrace, reakce]
 principles: [OCP, SRP, TellDontAsk]
 related: [Aggregate, Entity, ValueObject, CQRS, EventSourcing, ContextMap, AnticorruptionLayer, ChainOfResponsibility]

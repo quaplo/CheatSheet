@@ -347,7 +347,7 @@ Antikorupční vrstva je jediné místo, které cizí systém opravdu zná — t
 - **Symfony DI** — port v doméně, vrstva v infrastruktuře, spojení jedním řádkem v `services.yaml`.
 - **deptrac** — jediný způsob, jak uhlídat, že se cizí jméno neobjeví v doméně.
 - **Golden files** v testech — uložené skutečné odpovědi cizího systému jako fixture.
-- **U nás** — SDK cizí služby je hotový klient, ale **není to antikorupční vrstva**: mluví pojmy té druhé služby. Pokud se její model liší od tvého, patří překlad na tvou stranu.
+- **U nás** — [SDK](../../Glossary.md#sdk-balíček) cizí služby je hotový klient, ale **není to antikorupční vrstva**: mluví pojmy té druhé služby. Pokud se její model liší od tvého, patří překlad na tvou stranu.
 
 ---
 

@@ -19,6 +19,7 @@ Praktický katalog návrhových vzorů s ukázkami v PHP.
 | ...že začínám a nevím, kde píchnout | [Kudy začít](#kudy-začít) |
 | ...jak se pattern jmenuje | [Sbírky](#sbírky) — u každé je tabulka jejích patternů |
 | ...že chci vědět, proč patterny vůbec existují | [Principy](#principy) |
+| ...co znamená pojem ze sekce „U nás“ | [Slovníček](Glossary.md) |
 
 ---
 
@@ -89,7 +90,7 @@ Aggregate, Entity, Value Object, Domain Event, Bounded Context. Ne úplně „de
 | [Entity](DDD/Entity/) | Taktický | Objekt s identitou, která přežije změnu všech atributů | ●●○○○ |
 | [Value Object](DDD/ValueObject/) | Taktický | Hodnota bez identity — vlastní typ místo `string` a `int` | ●●○○○ |
 | [Aggregate](DDD/Aggregate/) | Taktický | Hranice konzistence — jediný vstup a pravidla platná pro celek | ●●●●○ |
-| [Domain Event](DDD/DomainEvent/) | Taktický | Fakt, který se stal — reakce se přihlašují samy, use-case o nich neví | ●●●○○ |
+| [Domain Event](DDD/DomainEvent/) | Taktický | Fakt, který se stal — reakce se přihlašují samy, use-case o nich neví | ●●●●○ |
 | [Specification](DDD/Specification/) | Taktický | Doménové pravidlo jako objekt — pojmenovatelné, testovatelné, skládatelné | ●●●○○ |
 | [Bounded Context](DDD/BoundedContext/) | Strategický | Model platí jen uvnitř hranice; totéž slovo smí za ní znamenat jinou věc | ●●●●○ |
 | [Context Map](DDD/ContextMap/) | Strategický | Vztahy mezi kontexty — kdo se komu musí přizpůsobit | ●●●○○ |
@@ -204,3 +205,4 @@ Ve zkratce: zkopíruj `_template/PATTERN.md` jako `README.md` do složky pattern
 - **PHP 8.3+**, `declare(strict_types=1)`, bez frameworků — ukázky mají jít zkopírovat a spustit.
 - Složitější implementace mají složku `demo/` se spustitelným příkladem: `php <cesta>/demo/run.php`.
 - Kde to jde, používáme **jeden doménový příklad napříč patterny** (e-shop / objednávky), aby se nemusel při každém patternu chytat nový kontext.
+- Sekce **„U nás“** spojuje obecný pattern s konkrétními věcmi na naší platformě. Pojmy, které v ní zaznívají (DX zpráva, SDK balíček, read-model služba), vysvětluje **[slovníček](Glossary.md)**.

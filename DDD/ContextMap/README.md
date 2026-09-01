@@ -225,7 +225,7 @@ Existuje na to i hotový nástroj — **[Context Mapper](https://contextmapper.o
 - **Mermaid v README** — nejlevnější varianta, která vydrží: obrázek se vykreslí přímo na GitHubu a mění se v pull requestu.
 - **ADR (Architecture Decision Records)** — k mapě patří zdůvodnění, proč je zrovna tenhle vztah zrovna takový.
 - **OpenAPI a verzované kontrakty** — technická podoba Open Host Service.
-- **U nás** — SDK balíčky jsou v podstatě Open Host Service (publikovaný kontrakt pro víc konzumentů), DX zprávy publikovaný jazyk. Většina vztahů na platformě je Customer/Supplier — a stojí za to si pojmenovat ty, které jím **nejsou**.
+- **U nás** — [SDK balíčky](../../Glossary.md#sdk-balíček) jsou v podstatě Open Host Service (publikovaný kontrakt pro víc konzumentů), [DX zprávy](../../Glossary.md#dx-zpráva) publikovaný jazyk. Většina vztahů na platformě je Customer/Supplier — a stojí za to si pojmenovat ty, které jím **nejsou**.
 
 ---
 
