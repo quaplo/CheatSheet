@@ -344,7 +344,7 @@ Use-case načítá, ukládá a publikuje. **Rozhoduje doménová služba.**
 | [Domain Event](../DomainEvent/) | Když se dva agregáty nemají měnit v jedné transakci, konzistenci dožene událost. |
 | [Bounded Context](../BoundedContext/) | **Hranice, kterou doménová služba nikdy nepřekročí.** Koordinace napříč kontexty patří o vrstvu výš. |
 | [Service Composition](../../Architecture/ServiceComposition/) | **Kam patří to, co doménová služba nesmí** — koordinace napříč kontexty. Volá jen jejich veřejné use-case. |
-| **Saga / Process Manager** *(plánováno)* | Když ta koordinace navíc mění stav a potřebuje kompenzace. |
+| [Saga](../../Architecture/Saga/) | Když ta koordinace navíc **mění stav** ve víc kontextech a potřebuje kompenzace. |
 | [Strategy](../../GoF/Behavioral/Strategy/) | Doménová služba s víc variantami výpočtu je Strategy — jen pojmenovaná doménově. |
 
 ---

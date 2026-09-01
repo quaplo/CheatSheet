@@ -340,6 +340,7 @@ $repository->save($order->cancel());
 | [Ports & Adapters](../PortsAndAdapters/) | Vrstva, do které se CQRS vkládá: zápis přes port, čtení může mít vlastní. Obojí se hlídá stejným nástrojem v CI. |
 | [Domain Event](../../DDD/DomainEvent/) | Nejběžnější způsob, jak se plní čtecí modely — od stupně 4 výš je to hlavní mechanismus. |
 | [Service Composition](../ServiceComposition/) | Alternativa: místo předpočítaného čtecího modelu poskládej pohled za běhu. Levnější na start, dražší na dostupnost. |
+| [Saga](../Saga/) | Eventuální konzistence je společný jmenovatel obojího. |
 | **Event Sourcing** | **Časté, ale nesprávné ztotožnění.** ES potřebuje CQRS; CQRS nepotřebuje ES a bez něj se používá mnohem častěji. |
 | [Value Object](../../DDD/ValueObject/) | Příkazy i čtecí modely jsou hodnoty — neměnné, bez identity, bez chování. |
 | [Specification](../../DDD/Specification/) | Na zápisové straně dává smysl; na čtecí ji obvykle nahradí `WHERE`, protože databáze to umí líp. |

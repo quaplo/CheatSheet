@@ -2,7 +2,10 @@
 
 > [← zpět na Architecture](../)
 
-> **V jedné větě:** Komponenta, která poskládá operace několika [ohraničených kontextů](../../DDD/BoundedContext/) do jednoho smysluplného celku — a smí přitom volat jen jejich veřejné use-case, nic hlubšího.
+> **V jedné větě:** Komponenta, která poskládá **čtení** z několika [ohraničených kontextů](../../DDD/BoundedContext/) do jednoho smysluplného celku — a smí přitom volat jen jejich veřejné use-case, nic hlubšího.
+
+> [!IMPORTANT]
+> **Tenhle pattern řeší čtení.** Pro operace, které ve víc kontextech něco **mění**, je odpověď [Saga](../Saga/) — ne kompozice. Proč, ukazuje [srovnání níž](#čtení-a-zápis-nejsou-totéž): u čtení výpadek jen ochudí pohled, u zápisu nechá nekonzistentní data.
 
 ---
 
@@ -15,6 +18,7 @@ Tenhle pattern nepochází z DDD ani z GoF, ale ze světa SOA a mikroslužeb —
 | **Service Composition** | Thomas Erl, *SOA Design Patterns*, 2009 | Nejcitovanější pojmenování |
 | **Orchestration** | Peltz, IEEE Computer, 2003 | V protikladu k *choreografii* |
 | **API Composition** | Chris Richardson, *Microservices Patterns*, 2018 | Konkrétně čtecí strana |
+| **Scatter-Gather** | Hohpe & Woolf, *EIP*, 2003 | Rozešli dotaz víc příjemcům, posbírej odpovědi — přesně mechanika níž |
 | **Aggregator** | mikroslužbový žargon | Totéž, méně přesně |
 
 Tenhle text říká **kompozice** a rozlišuje **čtecí** a **zápisovou** — protože to je [rozdíl, na kterém všechno stojí](#čtení-a-zápis-nejsou-totéž).
@@ -114,7 +118,7 @@ Stav po selhání:
     zásilka naplánována:   NE
 ```
 
-Zákazník má fakturu za zboží, které nikdo neodeslal — a systém o tom neví. **Tohle kompozice vyřešit neumí.** Na to je potřeba **Saga** s kompenzačními akcemi.
+Zákazník má fakturu za zboží, které nikdo neodeslal — a systém o tom neví. **Tohle kompozice vyřešit neumí.** Na to je potřeba [Saga](../Saga/) s kompenzačními akcemi.
 
 Praktické pravidlo: **kompozici používej na čtení. U zápisu přes víc kontextů se rovnou ptej, jestli nepotřebuješ Sagu** — nebo jestli ta operace vůbec musí být synchronní.
 
@@ -206,7 +210,7 @@ Ten poslední řádek je ten, na kterém pattern nejčastěji ztroskotá.
 
 ## Kdy nepoužít
 
-- ❌ **Zápis přes víc kontextů bez kompenzací.** Částečné selhání je otázka „kdy“, ne „jestli“ — potřebuješ **Sagu**.
+- ❌ **Zápis přes víc kontextů bez kompenzací.** Částečné selhání je otázka „kdy“, ne „jestli“ — potřebuješ [Sagu](../Saga/).
 - ❌ **Když jde všechno z jednoho kontextu.** Kompozice nad jedním zdrojem je vrstva bez obsahu.
 - ❌ **Jako místo pro doménovou logiku.** Pravidlo patří tomu kontextu, kterého se týká — jinak si vyrobíš čtvrtý model, který nikdo nehlídá.
 - ❌ **Když je časová vazba nepřijatelná.** Na kritické cestě s osmi voláními radši [události](../../DDD/DomainEvent/) a předpočítaný čtecí model.
@@ -219,7 +223,7 @@ Ten poslední řádek je ten, na kterém pattern nejčastěji ztroskotá.
 | Chyba | Proč vadí | Jak správně |
 | ----- | --------- | ----------- |
 | **Kompozice sahá do cizí databáze** | Obchází hranici kontextu stejně jako přímý přístup; při jejich migraci se to rozbije | Jen veřejné use-case |
-| Zápisová kompozice bez kompenzací | Částečné selhání nechá nekonzistentní data a nikdo o tom neví | **Saga**, nebo asynchronně |
+| Zápisová kompozice bez kompenzací | Částečné selhání nechá nekonzistentní data a nikdo o tom neví | [Saga](../Saga/), nebo asynchronně |
 | Chybí rozlišení povinné × doplňkové | Výpadek okrajového zdroje shodí celou obrazovku | Doplňkové části degradují |
 | Pohled neříká, co chybí | Frontend nepozná „neexistuje“ od „nevíme“ | Do DTO patří i seznam nedostupných zdrojů |
 | Doménová pravidla v kompozici | Vznikne čtvrtý model, který nikdo nevlastní | Pravidlo patří svému kontextu |
@@ -244,7 +248,7 @@ Ten poslední řádek je ten, na kterém pattern nejčastěji ztroskotá.
 
 | Pattern | Vztah |
 | ------- | ----- |
-| **Saga** *(plánováno)* | **Přímé pokračování pro zápis.** Kompozice zvládne čtení; jakmile měníš stav ve víc kontextech, potřebuješ kompenzace. |
+| [Saga](../Saga/) | **Přímé pokračování pro zápis.** Kompozice zvládne čtení; jakmile měníš stav ve víc kontextech, potřebuješ kompenzace. |
 | [Bounded Context](../../DDD/BoundedContext/) | Co kompozice skládá — a hranice, které nesmí obcházet. Často je sama novým kontextem. |
 | [Context Map](../../DDD/ContextMap/) | Kompozice je vztah k víc kontextům naráz; do mapy patří stejně jako ostatní. |
 | [Service Layer](../../PoEAA/ServiceLayer/) | Kompozice je vlastně use-case o úroveň výš — jen místo domény volá cizí use-case. |

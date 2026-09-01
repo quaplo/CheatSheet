@@ -15,12 +15,11 @@ Společné mají jedno pozorování: **byznys logika je to jediné, co v aplikac
 | [**Ports & Adapters**](PortsAndAdapters/) | Alistair Cockburn, 2005 | Jádro nezávislé na okolí; závislosti míří dovnitř | ●●●●○ | ✅ |
 | [**Rules Engine**](RulesEngine/) | Forgy 1979, Fowler 2009 | Byznysová pravidla jako seznam objektů, ne jako hromada `if`ů | ●●●●○ | ✅ |
 | [**CQRS**](CQRS/) | Meyer 1988, Greg Young 2010 | Oddělený model pro zápis a pro čtení | ●●●●○ | ✅ |
-| [**Service Composition**](ServiceComposition/) | Peltz 2003, Erl 2009 | Poskládá operace víc kontextů do jednoho celku | ●●●○○ | ✅ |
+| [**Service Composition**](ServiceComposition/) | Peltz 2003, Erl 2009 | Poskládá **čtení** z víc kontextů do jednoho celku | ●●●○○ | ✅ |
+| [**Saga**](Saga/) | Garcia-Molina & Salem 1987; Richardson 2018 | **Zápis** přes víc kontextů s kompenzačními akcemi | ●●●●○ | ✅ |
 | Clean Architecture | Robert C. Martin, 2012 | Soustředné vrstvy s pravidlem závislosti | | ⬜ |
 | Onion Architecture | Jeffrey Palermo, 2008 | Blízký příbuzný obou výše | | ⬜ |
 | Event Sourcing | Martin Fowler, 2005 | Stav jako posloupnost událostí, ne jako snímek | | ⬜ |
-| Saga | Garcia-Molina & Salem 1987; Richardson 2018 | Zápis přes víc kontextů s **kompenzačními akcemi**; orchestrovaná i choreografovaná varianta | | ⬜ |
-| Process Manager | Hohpe & Woolf, *EIP*, 2003 | Centrální koordinátor procesu, který si drží jeho **stav** | | ⬜ |
 
 <sub>⬜ plánováno · 🚧 rozpracováno · ✅ hotovo</sub>
 
@@ -29,10 +28,10 @@ Společné mají jedno pozorování: **byznys logika je to jediné, co v aplikac
 Tři vzory níž tvoří jednu řadu a je dobré vědět, v jakém pořadí se po nich sahá:
 
 1. [**Service Composition**](ServiceComposition/) — poskládá **čtení** z víc kontextů. Bezpečné, běžné, začni tady.
-2. **Saga** ⬜ — když skládáš **zápis** a potřebuješ kompenzace při částečném selhání.
-3. **Process Manager** ⬜ — když proces trvá v čase a někdo si musí pamatovat, kde je.
+2. [**Saga**](Saga/) — když skládáš **zápis** a potřebuješ kompenzace při částečném selhání.
+3. [**Process Manager**](Saga/#process-manager-sága-která-si-pamatuje) — sága, která si drží stav procesu. Není to samostatný vzor, je to sága, která přežije restart.
 
-Čtvrtou možností je se orchestraci vyhnout úplně a nechat kontexty reagovat na [události](../DDD/DomainEvent/) — tomu se říká **choreografie** a je to protipól všech tří výše.
+Čtvrtou možností je se orchestraci vyhnout úplně a nechat kontexty reagovat na [události](../DDD/DomainEvent/) — tomu se říká **choreografie**, je to protipól všech tří výše a [Saga](Saga/#orchestrace-nebo-choreografie) ji rozebírá.
 
 ## Poznámka k obtížnosti
 

@@ -117,9 +117,10 @@ Vzory bez jedné mateřské knihy, které se netýkají jedné třídy, ale **tv
 | [Ports & Adapters](Architecture/PortsAndAdapters/) | Cockburn, 2005 | Jádro nezávislé na okolí; závislosti míří dovnitř | ●●●●○ |
 | [Rules Engine](Architecture/RulesEngine/) | Forgy 1979, Fowler 2009 | Byznysová pravidla jako seznam objektů se strategií a auditní stopou | ●●●●○ |
 | [CQRS](Architecture/CQRS/) | Meyer 1988, Young 2010 | Oddělený model pro zápis a pro čtení — každý optimalizovaný na své | ●●●●○ |
-| [Service Composition](Architecture/ServiceComposition/) | Peltz 2003, Erl 2009 | Poskládá operace víc kontextů do jednoho celku; čtení bezpečně, zápis opatrně | ●●●○○ |
+| [Service Composition](Architecture/ServiceComposition/) | Peltz 2003, Erl 2009 | Poskládá **čtení** z víc kontextů do jednoho celku | ●●●○○ |
+| [Saga](Architecture/Saga/) | Garcia-Molina & Salem 1987 | **Zápis** přes víc kontextů — kroky s kompenzacemi místo transakce | ●●●●○ |
 
-<sub>Plánované — **Saga** (zápis přes víc kontextů s kompenzacemi), **Process Manager** (koordinátor procesu se stavem), Clean Architecture, Onion, Event Sourcing: [Architecture/README.md](Architecture/)</sub>
+<sub>Plánované (Clean Architecture, Onion, Event Sourcing): [Architecture/README.md](Architecture/)</sub>
 
 <sub>⬜ plánováno · 🚧 rozpracováno · ✅ hotovo</sub>
 
@@ -192,7 +193,9 @@ Obrácený rejstřík: začni u toho, co tě pálí.
 | Nevím, jestli koordinace patří do domény, nebo do aplikační vrstvy | [Domain Service](DDD/DomainService/) |
 | Frontend volá pět endpointů a skládá si z nich jednu stránku sám | [Service Composition](Architecture/ServiceComposition/) |
 | Mám kód, který koordinuje víc domén, a nepatří do žádné z nich | [Service Composition](Architecture/ServiceComposition/) |
-| Operace přes tři kontexty spadla v půlce a nikdo první dva kroky nevrátil | [Service Composition](Architecture/ServiceComposition/) → **Saga** |
+| Operace přes tři kontexty spadla v půlce a nikdo první dva kroky nevrátil | [Saga](Architecture/Saga/) |
+| Opakované doručení zprávy vyrobilo zákazníkovi druhý dobropis | [Saga](Architecture/Saga/) |
+| Nevím, v jakém stavu je rozpracovaný proces přes víc služeb | [Saga](Architecture/Saga/) |
 
 ---
 

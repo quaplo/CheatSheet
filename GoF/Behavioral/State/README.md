@@ -352,6 +352,7 @@ $order->cancel();
 | [Rules Engine](../../../Architecture/RulesEngine/) | Když o přechodu nerozhoduje jen stav, ale sada vnějších pravidel. |
 | [Value Object](../../../DDD/ValueObject/) | Stav bez dat je hodnota — proto ho v PHP nejčastěji zastoupí enum. |
 | [Entity](../../../DDD/Entity/) (DDD) | Typický nositel stavového automatu: entita má životní cyklus, hodnota ne. |
+| [Saga](../../../Architecture/Saga/) | Stav ságy je stavový automat; u složitějších procesů se vyplatí ho tak i napsat. |
 | **Singleton** (GoF) | Bezstavové stavy se dají sdílet jako jediné instance. V PHP to díky enumům řeší jazyk sám. |
 
 ---
