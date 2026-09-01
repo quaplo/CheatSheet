@@ -16,8 +16,7 @@ Praktický katalog návrhových vzorů s ukázkami v PHP.
 | Vím... | Jdi na |
 | ------ | ------ |
 | ...jaký mám problém | [Index podle problému](#index-podle-problému) |
-| ...jak se pattern jmenuje | [Přehled patternů](#přehled-patternů) |
-| ...že chci projít celou sbírku | [Sbírky](#sbírky) |
+| ...jak se pattern jmenuje | [Sbírky](#sbírky) — u každé je tabulka jejích patternů |
 | ...že začínám a nevím, kde píchnout | [Kudy začít](#kudy-začít) |
 
 ---
@@ -31,6 +30,12 @@ Patterny jsou uspořádané podle **původu** — podle knihy nebo autora, kde b
 > Gamma, Helm, Johnson, Vlissides · **1994** · *Design Patterns: Elements of Reusable Object-Oriented Software*
 
 23 základních objektových vzorů. Kánon, na který odkazuje skoro všechno ostatní. Dělí se na [Creational](GoF/Creational/) (vytváření objektů), [Structural](GoF/Structural/) (skládání objektů) a [Behavioral](GoF/Behavioral/) (komunikace mezi objekty).
+
+| Pattern | Kategorie | K čemu to je | Obtížnost |
+| ------- | --------- | ------------ | --------- |
+| [Strategy](GoF/Behavioral/Strategy/) | Behavioral | Zaměnitelné algoritmy za jedním rozhraním — místo `if`/`switch` na typ | ●●○○○ |
+
+<sub>Kompletní katalog všech 23 patternů včetně nezpracovaných: [GoF/README.md](GoF/)</sub>
 
 ### PoEAA — Enterprise patterny ⬜
 
@@ -57,14 +62,6 @@ Vzory pro messaging a komunikaci mezi službami — Message Router, Publish-Subs
 Vzory bez jedné mateřské knihy: Hexagonal Architecture (Cockburn, 2005), Clean Architecture (Martin, 2012), CQRS (Young, 2010), Event Sourcing, Saga.
 
 <sub>⬜ plánováno · 🚧 rozpracováno · ✅ hotovo</sub>
-
----
-
-## Přehled patternů
-
-| Pattern | Sbírka | Kategorie | K čemu to je | Obtížnost |
-| ------- | ------ | --------- | ------------ | --------- |
-| [Strategy](GoF/Behavioral/Strategy/) | GoF | Behavioral | Zaměnitelné algoritmy za jedním rozhraním — místo `if`/`switch` na typ | ●●○○○ |
 
 ---
 
