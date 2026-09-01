@@ -225,7 +225,7 @@ Nejčastější konec tohohle patternu: rozhraní, které roste s každou obrazo
 | **Samostatná read-model služba** | Dotaz je pro obrazovku, ne pro doménu | Druhá cesta k datům; ale je to poctivější než ohýbat repository |
 | **Nová doménová metoda** | Dotazů je málo a mají jasný záměr | Nejjednodušší; funguje, dokud jich nejsou desítky |
 
-Prakticky: **repository je pro zápisovou stranu.** Když potřebuješ tabulku s filtry, stránkováním a joiny přes tři agregáty pro výpis v administraci, nepiš to do repository — udělej si `OrderListQuery`, které vrátí čtecí DTO a klidně sáhne přímo na SQL. Doména z toho nic nemá a repository zůstane čitelné. (Domyšleno do konce je tohle CQRS.)
+Prakticky: **repository je pro zápisovou stranu.** Když potřebuješ tabulku s filtry, stránkováním a joiny přes tři agregáty pro výpis v administraci, nepiš to do repository — udělej si `OrderListQuery`, které vrátí čtecí DTO a klidně sáhne přímo na SQL. Doména z toho nic nemá a repository zůstane čitelné. Domyšleno do konce je tohle [CQRS](../../Architecture/CQRS/) — a nepotřebuje k tomu ani druhou databázi, ani Event Sourcing.
 
 ### Kam to dát ve složkách
 
@@ -327,6 +327,7 @@ markOverdue(new DoctrineOrderRepository($entityManager), $now);
 | **Unit of Work** (PoEAA) | Sleduje změny a zapisuje je najednou. Díky němu stačí `add()` a `save()` pro změny netřeba. |
 | **Aggregate** (DDD) | Určuje, pro co repository vůbec smí vzniknout — jeden agregát, jedno repository. |
 | **Identity Map** (PoEAA) | Zaručuje, že tentýž agregát načtený dvakrát je tentýž objekt. V Doctrine je součástí Unit of Work. |
+| [CQRS](../../Architecture/CQRS/) | Odpověď na repository o čtyřiceti metodách dotažená do konce: výpisy dostanou vlastní cestu k datům, repository zůstane jen pro zápis. |
 
 ---
 

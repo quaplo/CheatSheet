@@ -371,6 +371,7 @@ $matching = array_filter(
 | **Interpreter** (GoF) | Strom specifikací je vlastně vyhodnocovaný výraz. Kdybys chtěl pravidla načítat z konfigurace, dostaneš se k Interpreteru. |
 | [Chain of Responsibility](../../GoF/Behavioral/ChainOfResponsibility/) (GoF) | Podmínka článku řetězu je přirozené místo pro specifikaci. |
 | [State](../../GoF/Behavioral/State/) (GoF) | Specifikace jako guard: podmínka, za které je přechod mezi stavy dovolený. |
+| [CQRS](../../Architecture/CQRS/) | Na zápisové straně specifikace dává smysl; na čtecí ji obvykle nahradí `WHERE`, protože databáze to umí líp. |
 | [Rules Engine](../../Architecture/RulesEngine/) | Nadstavba: specifikace je podmínka pravidla, engine k ní přidává důsledek, prioritu a řešení konfliktů. **Nejdřív zkus vystačit se specifikací.** |
 | [First Class Collection](../../ObjectCalisthenics/FirstClassCollection/) | Přirozený příjemce specifikace: `$items->satisfying($spec)` místo `array_filter` venku. |
 

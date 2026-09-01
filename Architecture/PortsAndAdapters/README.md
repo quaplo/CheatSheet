@@ -371,6 +371,7 @@ Core\Port\Driven\OrderRepository: '@Adapter\Driven\Persistence\DoctrineOrderRepo
 | [Repository](../../PoEAA/Repository/) (PoEAA) | Nejběžnější řízený port. Hexagon říká *proč* rozhraní patří do domény; Repository říká, *jak* má vypadat. |
 | [Strategy](../../GoF/Behavioral/Strategy/) | Port se dvěma implementacemi je z pohledu jádra Strategy. Rozdíl je v záměru: Strategy vybírá algoritmus, port odstiňuje vnější svět. |
 | [Value Object](../../DDD/ValueObject/) | Typický obsah příkazů a odpovědí na hranici portu — `PlaceOrderCommand`, `PaymentResult`. |
+| [CQRS](../CQRS/) | Vkládá se dovnitř téhle vrstvy: zápis jde přes port do domény, čtení může mít vlastní, kratší cestu. |
 | **Anticorruption Layer** (DDD) | Řízený adaptér s ambicí navíc: nejen překládá, ale aktivně brání cizímu modelu prosáknout do domény. |
 
 ---

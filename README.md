@@ -93,8 +93,9 @@ Vzory bez jedné mateřské knihy, které se netýkají jedné třídy, ale **tv
 | ------- | ---------- | ------------ | --------- |
 | [Ports & Adapters](Architecture/PortsAndAdapters/) | Cockburn, 2005 | Jádro nezávislé na okolí; závislosti míří dovnitř | ●●●●○ |
 | [Rules Engine](Architecture/RulesEngine/) | Forgy 1979, Fowler 2009 | Byznysová pravidla jako seznam objektů se strategií a auditní stopou | ●●●●○ |
+| [CQRS](Architecture/CQRS/) | Meyer 1988, Young 2010 | Oddělený model pro zápis a pro čtení — každý optimalizovaný na své | ●●●●○ |
 
-<sub>Plánované (Clean Architecture, CQRS, Event Sourcing, Saga): [Architecture/README.md](Architecture/)</sub>
+<sub>Plánované (Clean Architecture, Event Sourcing, Saga): [Architecture/README.md](Architecture/)</sub>
 
 <sub>⬜ plánováno · 🚧 rozpracováno · ✅ hotovo</sub>
 
@@ -147,6 +148,9 @@ Obrácený rejstřík: začni u toho, co tě pálí.
 | `switch ($this->status)` mám v každé metodě objektu a na jednu se vždy zapomene | [State](GoF/Behavioral/State/) |
 | Nikde není napsané, jaké přechody stavů jsou vlastně dovolené | [State](GoF/Behavioral/State/) |
 | Frontend nabídne tlačítko pro operaci, která pak na backendu spadne | [State](GoF/Behavioral/State/) |
+| Výpis dvaceti řádků v administraci načte stovky agregátů a 99 % dat zahodí | [CQRS](Architecture/CQRS/) |
+| Přidání sloupce do tabulky v administraci mě nutí sáhnout do doménového modelu | [CQRS](Architecture/CQRS/) |
+| Entita má gettery, které v doméně nikdo nepoužívá — jsou tam jen pro šablonu | [CQRS](Architecture/CQRS/) |
 
 ---
 
