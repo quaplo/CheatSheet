@@ -105,11 +105,13 @@ Vzory bez jedné mateřské knihy, které se netýkají jedné třídy, ale **tv
 
 Patterny jsou konkrétní řešení; **principy jsou měřítko, podle kterého se pozná, jestli je návrh dobrý**. Většina patternů tady existuje proto, že řeší porušení některého z nich — proto na ně odkazují a nevysvětlují si je pokaždé znovu.
 
-| Principy | O čem to je | Stav |
-| -------- | ----------- | ---- |
-| [**SOLID**](Principles/SOLID.md) | Pět principů objektového návrhu — SRP, OCP, LSP, ISP, DIP | ✅ |
+| Soubor | Co obsahuje | Stav |
+| ------ | ----------- | ---- |
+| [**SOLID**](Principles/SOLID.md) | Jak rozdělit odpovědnosti — SRP, OCP, LSP, ISP, DIP | ✅ |
+| [**Jednoduchost**](Principles/Simplicity.md) | Kolik kódu psát a kdy — KISS, YAGNI, DRY, pravidlo tří | ✅ |
+| [**Objektový návrh**](Principles/ObjectDesign.md) | Jak spolu objekty mluví — Tell Don't Ask, Demeter, kompozice před dědičností, CQS, Fail Fast | ✅ |
 
-<sub>Kompletní seznam včetně plánovaných (DRY, KISS, YAGNI, Law of Demeter): [Principles/README.md](Principles/)</sub>
+<sub>Rozcestník i s vysvětlením členění: [Principles/README.md](Principles/)</sub>
 
 ---
 

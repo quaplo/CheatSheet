@@ -331,7 +331,8 @@ foreach ($order->items as $item) {
 | [SRP](../../Principles/SOLID.md#single-responsibility-principle-srp) | Kolekce má jediný důvod ke změně: pravidla platná pro skupinu položek. Objednávka se kvůli nim už měnit nemusí. |
 | [OCP](../../Principles/SOLID.md#openclosed-principle-ocp) | Nové pravidlo nebo souhrn = nová metoda kolekce; use-case, které ji používají, zůstávají beze změny. |
 
-Silně souvisí i s principy, které v `Principles/` zatím nemáme popsané: **Tell, Don't Ask** (neptáš se kolekce na pole, řekneš jí, ať spočítá součet) a **Law of Demeter** (volající nesahá skrz `$order->items[3]->price`).
+| [Tell, Don't Ask](../../Principles/ObjectDesign.md#tell-dont-ask) | Neptáš se kolekce na její pole — řekneš jí, ať spočítá součet. |
+| [Zákon Demeter](../../Principles/ObjectDesign.md#zákon-demeter-law-of-demeter) | Volající nesahá skrz `$order->items[3]->price`. |
 
 ---
 

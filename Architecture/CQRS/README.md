@@ -352,7 +352,7 @@ $repository->save($order->cancel());
 | [ISP](../../Principles/SOLID.md#interface-segregation-principle-isp) | Repository přestane růst o metody, které konzumenti zápisu nikdy nepoužijí. |
 | [OCP](../../Principles/SOLID.md#openclosed-principle-ocp) | Nová obrazovka = nový dotaz a nový čtecí model. Doména se nemění. |
 
-Souvisí i s principem, který v `Principles/` zatím nemáme: **Command-Query Separation** od Bertranda Meyera — metoda buď mění stav, nebo vrací hodnotu, nikdy obojí. CQRS je tentýž nápad povýšený z metody na celý model.
+| [CQS](../../Principles/ObjectDesign.md#cqs--command-query-separation) | **Přímý předek.** Meyerův princip říká totéž o jedné metodě; CQRS ho povyšuje z metody na celý model. |
 
 ---
 

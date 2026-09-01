@@ -461,7 +461,8 @@ foreach ($result->used() as $rule) {
 | [SRP](../../Principles/SOLID.md#single-responsibility-principle-srp) | Jedno pravidlo = jeden důvod ke změně. Změna VIP sazby se nedotkne ničeho jiného. |
 | [ISP](../../Principles/SOLID.md#interface-segregation-principle-isp) | Kontrakt pravidla má čtyři malé metody, ne jednu velkou `apply()`, která dělá všechno naráz. |
 
-Souvisí i s principem, který v `Principles/` zatím nemáme: **Make the Implicit Explicit** — celý pattern je o tom, že pořadí, priorita a řešení konfliktů přestanou být skryté v kódu a stanou se viditelnými daty.
+| [Zviditelni implicitní](../../Principles/ObjectDesign.md#zviditelni-implicitní) | Celý pattern je o tomhle: pořadí, priorita i řešení konfliktů přestanou být skryté v kódu a stanou se viditelnými daty. |
+| [YAGNI](../../Principles/Simplicity.md#yagni--you-arent-gonna-need-it) | Důvod, proč má tenhle dokument [škálu pěti stupňů](#škála-na-které-si-vyber) — engine je typický kandidát na přeinvestování. |
 
 ---
 

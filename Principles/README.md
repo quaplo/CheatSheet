@@ -2,16 +2,23 @@
 
 Principy nejsou patterny. **Pattern je konkrétní řešení konkrétního problému; princip je měřítko, podle kterého se pozná, jestli je návrh dobrý.** Většina patternů v tomhle katalogu existuje proto, že řeší porušení nějakého principu — proto na ně patterny odkazují a nevysvětlují si je pokaždé znovu.
 
-| Principy | O čem to je | Stav |
-| -------- | ----------- | ---- |
-| [**SOLID**](SOLID.md) | Pět principů objektového návrhu — SRP, OCP, LSP, ISP, DIP | ✅ |
-| DRY | Každá znalost má v systému jediné vyjádření | ⬜ |
-| KISS / YAGNI | Nejjednodušší řešení, které funguje; nedělej, co zatím nikdo nechce | ⬜ |
-| Law of Demeter | Mluv jen se svými nejbližšími sousedy | ⬜ |
-| Composition over Inheritance | Skládej objekty, neděď je | ⬜ |
-| Tell, Don't Ask | Neptej se objektu na stav, řekni mu, co má udělat | ⬜ |
+| Soubor | Co obsahuje | Stav |
+| ------ | ----------- | ---- |
+| [**SOLID**](SOLID.md) | Pět principů objektového návrhu — [SRP](SOLID.md#single-responsibility-principle-srp), [OCP](SOLID.md#openclosed-principle-ocp), [LSP](SOLID.md#liskov-substitution-principle-lsp), [ISP](SOLID.md#interface-segregation-principle-isp), [DIP](SOLID.md#dependency-inversion-principle-dip) | ✅ |
+| [**Jednoduchost**](Simplicity.md) | Kolik kódu psát a kdy — [KISS](Simplicity.md#kiss--keep-it-simple), [YAGNI](Simplicity.md#yagni--you-arent-gonna-need-it), [DRY](Simplicity.md#dry--dont-repeat-yourself), [pravidlo tří](Simplicity.md#pravidlo-tří) | ✅ |
+| [**Objektový návrh**](ObjectDesign.md) | Jak spolu objekty mluví — [Tell Don't Ask](ObjectDesign.md#tell-dont-ask), [Demeter](ObjectDesign.md#zákon-demeter-law-of-demeter), [kompozice před dědičností](ObjectDesign.md#kompozice-před-dědičností), [CQS](ObjectDesign.md#cqs--command-query-separation), [Fail Fast](ObjectDesign.md#fail-fast), [zviditelni implicitní](ObjectDesign.md#zviditelni-implicitní) | ✅ |
 
 <sub>⬜ plánováno · 🚧 rozpracováno · ✅ hotovo</sub>
+
+## Proč jsou seskupené, a ne po jednom souboru
+
+Většina principů je na samostatný dokument příliš krátká, ale do rozcestníku se nevejdou — jedna věta z nich dělá slogan, ne návod. Řešení je stejné jako u SOLID: **jeden soubor na téma, jedna kotva na princip.** Odkazuje se pak vždycky na kotvu, ne na soubor.
+
+Témata jsou tři, protože odpovídají na tři různé otázky:
+
+- **SOLID** — jak rozdělit odpovědnosti mezi třídy
+- **Jednoduchost** — kolik toho vůbec napsat a kdy
+- **Objektový návrh** — jak spolu mají objekty mluvit
 
 ## Odkazování z patternů
 

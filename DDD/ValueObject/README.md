@@ -497,7 +497,8 @@ echo $address->format();                     // Sokolovská 100 / 186 00 Praha /
 | [SRP](../../Principles/SOLID.md#single-responsibility-principle-srp) | Pravidla o jedné hodnotě mají jediné místo. Entita ani use-case je řešit nemusí. |
 | [LSP](../../Principles/SOLID.md#liskov-substitution-principle-lsp) | Value objecty se z definice dědit nemají — `final` je tu záměr, ne zvyk. Potomek s jinými pravidly rovnosti by kontrakt porušil. |
 
-Souvisí i s principy, které v `Principles/` zatím nemáme: **Tell, Don't Ask** (neptáš se na `amountInCents`, řekneš `add()`) a **Fail Fast** (neplatná hodnota spadne při vzniku, ne o tři vrstvy dál).
+| [Tell, Don't Ask](../../Principles/ObjectDesign.md#tell-dont-ask) | Neptáš se na `amountInCents` a nepočítáš venku — řekneš `add()`. |
+| [Fail Fast](../../Principles/ObjectDesign.md#fail-fast) | Neplatná hodnota spadne při vzniku, ne o tři vrstvy dál. |
 
 ---
 

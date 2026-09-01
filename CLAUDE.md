@@ -29,7 +29,9 @@ _template/
     demo/run.php               # kostra spustitelného dema
 Principles/
     README.md                  # rozcestník principů
-    SOLID.md                   # SRP, OCP, LSP, ISP, DIP — jediné místo, kde se vysvětlují
+    SOLID.md                   # SRP, OCP, LSP, ISP, DIP
+    Simplicity.md              # KISS, YAGNI, DRY, pravidlo tří
+    ObjectDesign.md            # Tell Don't Ask, Demeter, kompozice, CQS, Fail Fast
 <Zdroj>/
     README.md                  # původ sbírky (kdo, kdy, proč) + katalog patternů
     <Kategorie>/               # jen u sbírek, které kategorie mají (GoF)
@@ -78,12 +80,18 @@ Ve složce `Principles/` žijí **principy návrhu** (zatím SOLID). Platí stri
   `[OCP](../../../Principles/SOLID.md#openclosed-principle-ocp)`
   Počet `../` odpovídá zanoření: z `<Zdroj>/<Kategorie>/<Pattern>/` tři (GoF),
   z `<Zdroj>/<Pattern>/` dva (sbírky bez kategorií). **Po napsání odkaz ověř**, ne odhadni.
-- Kotvy SOLID: `#single-responsibility-principle-srp` · `#openclosed-principle-ocp` ·
-  `#liskov-substitution-principle-lsp` · `#interface-segregation-principle-isp` ·
-  `#dependency-inversion-principle-dip`
+- Principy jsou ve **třech souborech podle tématu**, každý princip má vlastní kotvu:
+  - `SOLID.md` — `#single-responsibility-principle-srp` · `#openclosed-principle-ocp` ·
+    `#liskov-substitution-principle-lsp` · `#interface-segregation-principle-isp` ·
+    `#dependency-inversion-principle-dip`
+  - `Simplicity.md` — `#kiss--keep-it-simple` · `#yagni--you-arent-gonna-need-it` ·
+    `#dry--dont-repeat-yourself` · `#pravidlo-tří`
+  - `ObjectDesign.md` — `#tell-dont-ask` · `#zákon-demeter-law-of-demeter` ·
+    `#kompozice-před-dědičností` · `#cqs--command-query-separation` · `#fail-fast` ·
+    `#zviditelni-implicitní`
 - Když „špatný“ kód v sekci *Problém* porušuje nějaký princip, **pojmenuj ho a odlinkuj rovnou tam**, u konkrétního symptomu. Junior tak vidí souvislost v momentě, kdy problém poznává.
 - Zkratky principů patří i do metadat (`principles: [OCP, DIP]`).
-- **Nový princip nezakládej jen kvůli jednomu patternu.** Chybí-li princip, na který chceš odkázat, buď ho do `Principles/` doplň pořádně (stejná úroveň jako SOLID.md), nebo o něm napiš prostým textem bez odkazu.
+- **Nový princip nezakládej jen kvůli jednomu patternu.** Chybí-li princip, na který chceš odkázat, buď ho doplň do **existujícího tematického souboru** (nezakládej nový soubor na jeden princip), nebo o něm napiš prostým textem bez odkazu — a pak si to poznamenej jako dluh.
 
 ## Psaní obsahu
 
