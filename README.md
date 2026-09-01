@@ -90,6 +90,7 @@ Vzory bez jedné mateřské knihy, které se netýkají jedné třídy, ale **tv
 | Pattern | Autor, rok | K čemu to je | Obtížnost |
 | ------- | ---------- | ------------ | --------- |
 | [Ports & Adapters](Architecture/PortsAndAdapters/) | Cockburn, 2005 | Jádro nezávislé na okolí; závislosti míří dovnitř | ●●●●○ |
+| [Rules Engine](Architecture/RulesEngine/) | Forgy 1979, Fowler 2009 | Byznysová pravidla jako seznam objektů se strategií a auditní stopou | ●●●●○ |
 
 <sub>Plánované (Clean Architecture, CQRS, Event Sourcing, Saga): [Architecture/README.md](Architecture/)</sub>
 
@@ -134,6 +135,9 @@ Obrácený rejstřík: začni u toho, co tě pálí.
 | SQL nebo `createQueryBuilder()` mám v use-case, v controlleru i ve službě | [Repository](PoEAA/Repository/) |
 | Tentýž dotaz je na pěti místech a jedna kopie zapomněla na podmínku | [Repository](PoEAA/Repository/) |
 | Entita má `id === null`, dokud neproběhne `flush()`, a půlka kódu s tím počítá | [Repository](PoEAA/Repository/) |
+| Na otázku „jaké vlastně máme slevy?“ neumí nikdo odpovědět bez čtení kódu | [Rules Engine](Architecture/RulesEngine/) |
+| Na pořadí `if`ů záleží, ale nikde není napsané proč | [Rules Engine](Architecture/RulesEngine/) |
+| Musím zpětně zdůvodnit, proč konkrétní zákazník dostal konkrétní cenu | [Rules Engine](Architecture/RulesEngine/) |
 
 ---
 

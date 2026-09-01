@@ -13,6 +13,7 @@ Společné mají jedno pozorování: **byznys logika je to jediné, co v aplikac
 | Pattern | Autor, rok | K čemu | Obtížnost | Stav |
 | ------- | ---------- | ------ | --------- | ---- |
 | [**Ports & Adapters**](PortsAndAdapters/) | Alistair Cockburn, 2005 | Jádro nezávislé na okolí; závislosti míří dovnitř | ●●●●○ | ✅ |
+| [**Rules Engine**](RulesEngine/) | Forgy 1979, Fowler 2009 | Byznysová pravidla jako seznam objektů, ne jako hromada `if`ů | ●●●●○ | ✅ |
 | Clean Architecture | Robert C. Martin, 2012 | Soustředné vrstvy s pravidlem závislosti | | ⬜ |
 | Onion Architecture | Jeffrey Palermo, 2008 | Blízký příbuzný obou výše | | ⬜ |
 | CQRS | Greg Young, 2010 | Oddělený model pro zápis a pro čtení | | ⬜ |

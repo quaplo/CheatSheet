@@ -75,7 +75,7 @@ public function shippingCost(Order $order, string $code): int
 }
 ```
 
-**Souvisí s patterny:** [Strategy](../GoF/Behavioral/Strategy/) · [Specification](../DDD/Specification/) (nové pravidlo = nová třída) · Decorator · Template Method · Visitor · Chain of Responsibility
+**Souvisí s patterny:** [Strategy](../GoF/Behavioral/Strategy/) · [Specification](../DDD/Specification/) (nové pravidlo = nová třída) · [Rules Engine](../Architecture/RulesEngine/) · Decorator · Template Method · Visitor · Chain of Responsibility
 
 ---
 

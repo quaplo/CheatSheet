@@ -333,7 +333,7 @@ $matching = array_filter(
 - ❌ **Podmínka je jednoduchá a na jediném místě.** `if ($order->isPaid)` je čitelnější než `(new OrderIsPaid())->isSatisfiedBy($order)`. Pattern zaveď, až když pravidlo dostane jméno nebo druhou kopii.
 - ❌ **Pravidlo patří objektu samotnému.** Když se ptáš jen na vlastní stav, stačí metoda na entitě: `$order->isPaid()`. Specifikace se vyplatí, až když pravidlo kombinuje víc věcí nebo má vlastní parametry.
 - ❌ **Hlavní použití je dotaz nad velkými daty.** Viz výše — tam patří dotaz, ne filtr v paměti.
-- ❌ **Chceš z toho udělat pravidlový engine** konfigurovatelný z administrace. To už je jiná úloha; specifikace je vzor pro kód, ne runtime DSL.
+- ❌ **Chceš z toho udělat pravidlový engine** konfigurovatelný z administrace. To už je jiná úloha — viz [Rules Engine](../../Architecture/RulesEngine/), včetně varování, kdy se do ní nepouštět.
 
 ---
 
@@ -369,6 +369,7 @@ $matching = array_filter(
 | [Value Object](../ValueObject/) | Specifikace se chová jako hodnota — neměnná, bez identity, porovnatelná. Parametry pravidel bývají value objecty. |
 | [Repository](../../PoEAA/Repository/) (PoEAA) | Klasické místo, kde specifikace naráží na databázi. `findSatisfying(Specification $spec)` je lákavé API s netriviální implementací — viz *Specifikace a databáze*. |
 | **Interpreter** (GoF) | Strom specifikací je vlastně vyhodnocovaný výraz. Kdybys chtěl pravidla načítat z konfigurace, dostaneš se k Interpreteru. |
+| [Rules Engine](../../Architecture/RulesEngine/) | Nadstavba: specifikace je podmínka pravidla, engine k ní přidává důsledek, prioritu a řešení konfliktů. **Nejdřív zkus vystačit se specifikací.** |
 | [First Class Collection](../../ObjectCalisthenics/FirstClassCollection/) | Přirozený příjemce specifikace: `$items->satisfying($spec)` místo `array_filter` venku. |
 
 ---
