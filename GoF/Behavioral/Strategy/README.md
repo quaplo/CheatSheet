@@ -13,7 +13,7 @@ Máš operaci, která se dá udělat několika způsoby, a volba mezi nimi padá
 **Poznáš to podle:**
 
 - `switch`/`match` nebo kaskáda `if`ů, která se větví podle typu, kódu nebo konfigurace
-- při přidání nové varianty musíš **editovat existující třídu**, i když jsi nic starého měnit nechtěl
+- při přidání nové varianty musíš **editovat existující třídu**, i když jsi nic starého měnit nechtěl — porušení [OCP](../../../Principles/SOLID.md#openclosed-principle-ocp)
 - větve rostou (do jedné přibude výpočet z hmotnosti, do druhé ze země) a metoda má 80 řádků
 - test třídy musí procházet všechny větve, protože z venku se k jedné dostat nedá
 
@@ -242,6 +242,17 @@ Nový dopravce = nová třída a jeden řádek v registraci. `ShippingCalculator
 
 ---
 
+## Vztah k principům
+
+| Princip | Jak souvisí |
+| ------- | ----------- |
+| [OCP](../../../Principles/SOLID.md#openclosed-principle-ocp) | Hlavní důvod, proč pattern existuje: nová varianta = nová třída, kontext se nemění. |
+| [DIP](../../../Principles/SOLID.md#dependency-inversion-principle-dip) | Kontext závisí na rozhraní `ShippingCost`, ne na konkrétním dopravci. |
+| [SRP](../../../Principles/SOLID.md#single-responsibility-principle-srp) | Každá strategie má jediný důvod ke změně — sazbu vlastního dopravce. |
+| [LSP](../../../Principles/SOLID.md#liskov-substitution-principle-lsp) | Kompozice místo dědičnosti; strategie jsou zaměnitelné z definice. |
+
+---
+
 ## Demo
 
 ```bash
@@ -287,6 +298,7 @@ authors: Gamma, Helm, Johnson, Vlissides
 year: 1994
 difficulty: 2
 tags: [kompozice, polymorfismus, open-closed, testovatelnost]
+principles: [OCP, DIP, SRP, LSP]
 related: [State, TemplateMethod, Decorator, Command]
 status: done
 ```

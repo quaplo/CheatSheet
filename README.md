@@ -18,6 +18,7 @@ Praktický katalog návrhových vzorů s ukázkami v PHP.
 | ...jaký mám problém | [Index podle problému](#index-podle-problému) |
 | ...jak se pattern jmenuje | [Sbírky](#sbírky) — u každé je tabulka jejích patternů |
 | ...že začínám a nevím, kde píchnout | [Kudy začít](#kudy-začít) |
+| ...proč vlastně patterny existují | [Principy](#principy) |
 
 ---
 
@@ -62,6 +63,18 @@ Vzory pro messaging a komunikaci mezi službami — Message Router, Publish-Subs
 Vzory bez jedné mateřské knihy: Hexagonal Architecture (Cockburn, 2005), Clean Architecture (Martin, 2012), CQRS (Young, 2010), Event Sourcing, Saga.
 
 <sub>⬜ plánováno · 🚧 rozpracováno · ✅ hotovo</sub>
+
+---
+
+## Principy
+
+Patterny jsou konkrétní řešení; **principy jsou měřítko, podle kterého se pozná, jestli je návrh dobrý**. Většina patternů tady existuje proto, že řeší porušení některého z nich — proto na ně odkazují a nevysvětlují si je pokaždé znovu.
+
+| Principy | O čem to je | Stav |
+| -------- | ----------- | ---- |
+| [**SOLID**](Principles/SOLID.md) | Pět principů objektového návrhu — SRP, OCP, LSP, ISP, DIP | ✅ |
+
+<sub>Kompletní seznam včetně plánovaných (DRY, KISS, YAGNI, Law of Demeter): [Principles/README.md](Principles/)</sub>
 
 ---
 

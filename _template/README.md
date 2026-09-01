@@ -16,8 +16,10 @@ Podklady pro přidání nového patternu. **Tahle složka se needituje při psan
    cp _template/PATTERN.md <cesta>/README.md
    ```
 
-3. **Vyplň** všechny sekce. Povinné jsou: Původ, Problém, Řešení, Implementace,
-   Kdy použít / Kdy nepoužít, Časté chyby, Související patterny.
+3. **Vyplň** všechny sekce a **neměň jejich pořadí** — dokument jde od problému
+   k řešení, referenční věci (Původ, Zdroje, Metadata) jsou schválně až na konci.
+   Povinné jsou: Problém, Řešení, Účastníci, Implementace, Kdy použít / Kdy nepoužít,
+   Časté chyby, Související patterny, Vztah k principům, Původ.
    Nepovinné nevyplněné sekce **smaž**, nenechávej prázdné nadpisy.
 
 4. **Demo** (jen když je implementace na víc než ~60 řádků nebo má víc spolupracujících tříd):
@@ -33,6 +35,8 @@ Podklady pro přidání nového patternu. **Tahle složka se needituje při psan
    - [ ] `<Zdroj>/<Kategorie>/README.md` → seznam patternů (pokud kategorie existuje)
    - [ ] Sekce **Související patterny** u patternů, na které nový pattern odkazuje
          (odkazy dělej obousměrné)
+   - [ ] Sekce **Vztah k principům** — odkazy na kotvy v [`Principles/SOLID.md`](../Principles/SOLID.md),
+         princip se tam **nevysvětluje**, jen se řekne jednou větou, jak souvisí
 
 ## Konvence
 

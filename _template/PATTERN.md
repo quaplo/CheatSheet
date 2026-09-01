@@ -105,6 +105,19 @@ declare(strict_types=1);
 
 ---
 
+## Vztah k principům
+
+<!-- POVINNÉ, pokud pattern řeší porušení nějakého principu — což platí skoro vždy.
+     Odkazuj na KOTVU konkrétního principu, ne na celý dokument.
+     Princip tady NEVYSVĚTLUJ — jedna věta o tom, JAK spolu souvisejí.
+     Vysvětlení principu žije jen v Principles/. -->
+
+| Princip | Jak souvisí |
+| ------- | ----------- |
+| [OCP](../../../Principles/SOLID.md#openclosed-principle-ocp) | <!-- jedna věta --> |
+
+---
+
 ## Demo
 
 <!-- Jen pokud existuje složka demo/. Jinak celou sekci smaž. -->
@@ -152,6 +165,7 @@ authors: Gamma, Helm, Johnson, Vlissides
 year: 1994
 difficulty: 2
 tags: [tag1, tag2]
+principles: [OCP, DIP]   # zkratky principů, kterých se pattern týká
 related: [OtherPattern, AnotherPattern]
 status: draft | done
 ```
