@@ -368,7 +368,7 @@ Core\Port\Driven\OrderRepository: '@Adapter\Driven\Persistence\DoctrineOrderRepo
 | ------- | ----- |
 | **Adapter** (GoF) | Sdílejí jméno, ne měřítko. GoF Adapter je jeden objekt překládající jedno rozhraní na druhé; adaptér tady je **architektonická role** — celý kus kódu na hranici aplikace. GoF Adapter se často použije uvnitř. |
 | **Clean / Onion Architecture** | Totéž jinými slovy a s jiným obrázkem. Clean Architecture přidává pojmenované vrstvy a explicitní pravidlo závislosti, Onion soustředné kruhy. Rozdíly jsou hlavně v terminologii. |
-| **Repository** (PoEAA) | Nejběžnější řízený port. Hexagon říká *proč* rozhraní patří do domény; Repository říká, *jak* má vypadat. |
+| [Repository](../../PoEAA/Repository/) (PoEAA) | Nejběžnější řízený port. Hexagon říká *proč* rozhraní patří do domény; Repository říká, *jak* má vypadat. |
 | [Strategy](../../GoF/Behavioral/Strategy/) | Port se dvěma implementacemi je z pohledu jádra Strategy. Rozdíl je v záměru: Strategy vybírá algoritmus, port odstiňuje vnější svět. |
 | [Value Object](../../DDD/ValueObject/) | Typický obsah příkazů a odpovědí na hranici portu — `PlaceOrderCommand`, `PaymentResult`. |
 | **Anticorruption Layer** (DDD) | Řízený adaptér s ambicí navíc: nejen překládá, ale aktivně brání cizímu modelu prosáknout do domény. |

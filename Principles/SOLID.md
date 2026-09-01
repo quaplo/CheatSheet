@@ -112,7 +112,7 @@ interface OrderReader { public function find(OrderId $id): ?Order; }
 interface OrderWriter { public function save(Order $order): void; }
 ```
 
-**Souvisí s patterny:** Template Method (kostra v předkovi musí platit pro všechny potomky) · Composite · [Strategy](../GoF/Behavioral/Strategy/) (kompozice místo dědičnosti se LSP vyhne úplně) · [Value Object](../DDD/ValueObject/) (`final` je tu záměr — potomek s jinou rovností poruší kontrakt)
+**Souvisí s patterny:** [Repository](../PoEAA/Repository/) (in-memory implementace musí být plnohodnotná náhrada té ostré — jinak testy lžou) · Template Method (kostra v předkovi musí platit pro všechny potomky) · Composite · [Strategy](../GoF/Behavioral/Strategy/) (kompozice místo dědičnosti se LSP vyhne úplně) · [Value Object](../DDD/ValueObject/) (`final` je tu záměr — potomek s jinou rovností poruší kontrakt)
 
 ---
 
@@ -178,7 +178,7 @@ interface OrderRepository
 // App\Infrastructure\Persistence\DoctrineOrderRepository implements OrderRepository
 ```
 
-**Souvisí s patterny:** [Ports & Adapters](../Architecture/PortsAndAdapters/) (DIP dotažené na úroveň celé aplikace) · Abstract Factory · [Strategy](../GoF/Behavioral/Strategy/) · Adapter · Repository (PoEAA)
+**Souvisí s patterny:** [Ports & Adapters](../Architecture/PortsAndAdapters/) (DIP dotažené na úroveň celé aplikace) · [Repository](../PoEAA/Repository/) (rozhraní vlastní doména, infrastruktura se přizpůsobí) · Abstract Factory · [Strategy](../GoF/Behavioral/Strategy/) · Adapter
 
 ---
 

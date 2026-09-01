@@ -367,7 +367,7 @@ $matching = array_filter(
 | **Composite** (GoF) | `AndSpecification` a `OrSpecification` **jsou** Composite: uzel stromu, se kterým se zachází stejně jako s listem. Tady vidíš pattern použitý v praxi, ne jen na diagramu. |
 | [Strategy](../../GoF/Behavioral/Strategy/) | Oba zabalují chování do objektu. Strategy **něco počítá** (jak spočítat dopravu), Specification **odpovídá ano/ne** (má nárok na dopravu zdarma). Často spolupracují. |
 | [Value Object](../ValueObject/) | Specifikace se chová jako hodnota — neměnná, bez identity, porovnatelná. Parametry pravidel bývají value objecty. |
-| **Repository** (PoEAA) | Klasické místo, kde specifikace naráží na databázi. `findSatisfying(Specification $spec)` je lákavé API s netriviální implementací — viz *Specifikace a databáze*. |
+| [Repository](../../PoEAA/Repository/) (PoEAA) | Klasické místo, kde specifikace naráží na databázi. `findSatisfying(Specification $spec)` je lákavé API s netriviální implementací — viz *Specifikace a databáze*. |
 | **Interpreter** (GoF) | Strom specifikací je vlastně vyhodnocovaný výraz. Kdybys chtěl pravidla načítat z konfigurace, dostaneš se k Interpreteru. |
 | [First Class Collection](../../ObjectCalisthenics/FirstClassCollection/) | Přirozený příjemce specifikace: `$items->satisfying($spec)` místo `array_filter` venku. |
 

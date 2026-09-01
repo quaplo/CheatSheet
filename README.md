@@ -50,11 +50,17 @@ Devět záměrně přísných pravidel objektového návrhu, původně jako **cv
 
 <sub>Všech devět pravidel a co se z nich uchytilo: [ObjectCalisthenics/README.md](ObjectCalisthenics/)</sub>
 
-### PoEAA — Enterprise patterny ⬜
+### [PoEAA — Enterprise patterny](PoEAA/)
 
 > Martin Fowler · **2002** · *Patterns of Enterprise Application Architecture*
 
-Vzory pro aplikace nad databází a s doménovou logikou — Repository, Unit of Work, Data Mapper, Service Layer, Identity Map. Tohle je vrstva, ve které se v našich službách pohybujeme denně.
+Vzory pro aplikace nad databází a s doménovou logikou — Repository, Unit of Work, Data Mapper, Service Layer, Identity Map. Tohle je vrstva, ve které se v našich službách pohybujeme denně. Většinu z nich ti dnes dává ORM hotové; znát je ale musíš, jinak nepochopíš, co pod tebou dělá.
+
+| Pattern | K čemu to je | Obtížnost |
+| ------- | ------------ | --------- |
+| [Repository](PoEAA/Repository/) | Kolekcí se tvářící rozhraní nad persistencí | ●●●○○ |
+
+<sub>Celý katalog (Data Mapper, Unit of Work, Identity Map, …): [PoEAA/README.md](PoEAA/)</sub>
 
 ### [DDD — Domain-Driven Design](DDD/)
 
@@ -125,6 +131,9 @@ Obrácený rejstřík: začni u toho, co tě pálí.
 | Doménová třída importuje `Doctrine\…` nebo `GuzzleHttp\…` | [Ports & Adapters](Architecture/PortsAndAdapters/) |
 | Výměna knihovny znamená sáhnout do dvaceti souborů napříč aplikací | [Ports & Adapters](Architecture/PortsAndAdapters/) |
 | Tatáž operace existuje dvakrát — jednou pro HTTP, podruhé pro frontu | [Ports & Adapters](Architecture/PortsAndAdapters/) |
+| SQL nebo `createQueryBuilder()` mám v use-case, v controlleru i ve službě | [Repository](PoEAA/Repository/) |
+| Tentýž dotaz je na pěti místech a jedna kopie zapomněla na podmínku | [Repository](PoEAA/Repository/) |
+| Entita má `id === null`, dokud neproběhne `flush()`, a půlka kódu s tím počítá | [Repository](PoEAA/Repository/) |
 
 ---
 

@@ -21,7 +21,7 @@ Evans dělí knihu na **taktický** návrh (jak vypadá kód uvnitř jednoho mod
 | [**Value Object**](ValueObject/) | Hodnota bez identity — vlastní typ místo `string` a `int` | ●●○○○ | ✅ |
 | Entity | Objekt s identitou, která přežije změnu všech atributů | | ⬜ |
 | Aggregate | Skupina objektů se společným kořenem a hranicí konzistence | | ⬜ |
-| Repository | Kolekce agregátů, za kterou se schová persistence | | ⬜ |
+| [Repository](../PoEAA/Repository/) | Kolekce agregátů, za kterou se schová persistence. Evans ho popsal rok po Fowlerovi, proto ho vedeme v [PoEAA](../PoEAA/) — rozdíl obou pojetí je rozebraný tam. | ●●●○○ | ✅ |
 | Domain Event | Fakt, který se v doméně stal a jiné části na něj reagují | | ⬜ |
 | Factory | Vytvoření složitého agregátu v platném stavu | | ⬜ |
 | Domain Service | Doménová operace, která nepatří žádné entitě | | ⬜ |
