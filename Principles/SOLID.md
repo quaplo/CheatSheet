@@ -43,7 +43,7 @@ final class InvoiceRenderer { public function render(Order $order): string { /* 
 final class OrderConfirmationMailer { public function send(Order $order): void { /* … */ } }
 ```
 
-**Souvisí s patterny:** Facade (skrývá subsystém, aby jeho části mohly zůstat malé) · Command (jedna operace = jedna třída)
+**Souvisí s patterny:** [First Class Collection](../ObjectCalisthenics/FirstClassCollection/) (pravidla o skupině mají vlastní třídu) · Facade (skrývá subsystém, aby jeho části mohly zůstat malé) · Command (jedna operace = jedna třída)
 
 ---
 

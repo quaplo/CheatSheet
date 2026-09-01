@@ -38,6 +38,18 @@ Patterny jsou uspořádané podle **původu** — podle knihy nebo autora, kde b
 
 <sub>Kompletní katalog všech 23 patternů včetně nezpracovaných: [GoF/README.md](GoF/)</sub>
 
+### [Object Calisthenics](ObjectCalisthenics/)
+
+> Jeff Bay · **2008** · *The ThoughtWorks Anthology*
+
+Devět záměrně přísných pravidel objektového návrhu, původně jako **cvičení**, ne jako předpis pro produkci. Dvě z nich se osamostatnila a dnes fungují jako plnohodnotné patterny.
+
+| Pattern | K čemu to je | Obtížnost |
+| ------- | ------------ | --------- |
+| [First Class Collection](ObjectCalisthenics/FirstClassCollection/) | Pole zabalené do vlastní třídy s doménovými metodami a pravidly skupiny | ●●○○○ |
+
+<sub>Všech devět pravidel a co se z nich uchytilo: [ObjectCalisthenics/README.md](ObjectCalisthenics/)</sub>
+
 ### PoEAA — Enterprise patterny ⬜
 
 > Martin Fowler · **2002** · *Patterns of Enterprise Application Architecture*
@@ -87,6 +99,9 @@ Obrácený rejstřík: začni u toho, co tě pálí.
 | Rozrostlý `if`/`switch`, který se větví podle typu, a přibývají do něj další větve | [Strategy](GoF/Behavioral/Strategy/) |
 | Potřebuju za běhu měnit chování objektu podle konfigurace nebo vstupu | [Strategy](GoF/Behavioral/Strategy/) |
 | Chci algoritmus otestovat izolovaně, ale je zadrátovaný uvnitř velké třídy | [Strategy](GoF/Behavioral/Strategy/) |
+| Entita má veřejné pole a stejný `array_map` nad ním najdu na pěti místech | [First Class Collection](ObjectCalisthenics/FirstClassCollection/) |
+| Z typu `array` nepoznám, co je uvnitř — věřím jen PHPDoc komentáři | [First Class Collection](ObjectCalisthenics/FirstClassCollection/) |
+| Pravidlo o skupině (limit počtu, žádné duplicity) se hlídá na jednom místě a jinde se zapomnělo | [First Class Collection](ObjectCalisthenics/FirstClassCollection/) |
 
 ---
 
@@ -94,7 +109,8 @@ Obrácený rejstřík: začni u toho, co tě pálí.
 
 Doporučené pořadí, pokud je pro tebe téma nové. Každý další pattern staví na předchozím.
 
-1. [Strategy](GoF/Behavioral/Strategy/) — nejlepší první pattern: ukazuje kompozici i polymorfismus na malém kódu.
+1. [First Class Collection](ObjectCalisthenics/FirstClassCollection/) — nejjednodušší vstup: jedna třída navíc a hned je vidět, co je zapouzdření dobré.
+2. [Strategy](GoF/Behavioral/Strategy/) — kompozice a polymorfismus na malém kódu; odsud vede cesta k většině ostatních patternů.
 
 ---
 

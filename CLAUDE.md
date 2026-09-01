@@ -76,7 +76,8 @@ Ve složce `Principles/` žijí **principy návrhu** (zatím SOLID). Platí stri
 - Pattern na princip **odkazuje**: v sekci *Vztah k principům* tabulkou `Princip | Jak souvisí`, kde je **jedna věta o vztahu**, ne definice principu.
 - Odkazuj vždy na **kotvu konkrétního principu**, ne na celý dokument:
   `[OCP](../../../Principles/SOLID.md#openclosed-principle-ocp)`
-  (počet `../` odpovídá zanoření — z `<Zdroj>/<Kategorie>/<Pattern>/` jsou to tři).
+  Počet `../` odpovídá zanoření: z `<Zdroj>/<Kategorie>/<Pattern>/` tři (GoF),
+  z `<Zdroj>/<Pattern>/` dva (sbírky bez kategorií). **Po napsání odkaz ověř**, ne odhadni.
 - Kotvy SOLID: `#single-responsibility-principle-srp` · `#openclosed-principle-ocp` ·
   `#liskov-substitution-principle-lsp` · `#interface-segregation-principle-isp` ·
   `#dependency-inversion-principle-dip`
@@ -91,6 +92,13 @@ Ve složce `Principles/` žijí **principy návrhu** (zatím SOLID). Platí stri
 - Piš konkrétně: skutečné třídy, skutečné knihovny. Žádné `Foo`/`Bar` a žádné obecné fráze.
 - Doménový příklad je napříč patterny **jednotný — e-shop / objednávky** — aby juniorovi odpadalo přepínání kontextu.
 - Zmiň, jestli pattern v moderním PHP ještě dává smysl, nebo ho nahradil jazykový prvek (enum, closure, first-class callable) či DI kontejner.
+
+## Varianty patternu a výkon
+
+- **Zásadní varianta patternu není druhý pattern.** Neměnná vs. měnitelná kolekce, synchronní vs. asynchronní zpracování — pokud se liší jen *jedním rozhodnutím* a zbytek (problém, řešení, účastníci, principy) je společný, popiš ji jako **podsekci v *Implementaci v PHP***, ne jako samostatnou složku. Dva dokumenty by z 80 % duplicitní obsah rozešly a junior by musel vybírat složku dřív, než pochopí rozdíl.
+- Variantu vždy uzavři **tabulkou kompromisů** (`| | Varianta A | Varianta B |`) a větou, která je **výchozí volba**.
+- **Výkonnostní tvrzení podlož měřením, nikdy odhadem.** Když u patternu tvrdíš, že je něco pomalé, přilož `demo/benchmark.php`, spusť ho a do README dej naměřenou tabulku s uvedenou verzí PHP a poznámkou, že jde o řád, ne absolutní čísla.
+- U výkonu vždy rozliš, **co je skutečná příčina**. Často to není vlastnost patternu, ale způsob použití — a pak je správná odpověď lepší API, ne opuštění patternu.
 
 ## Kód
 

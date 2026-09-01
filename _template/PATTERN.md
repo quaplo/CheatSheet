@@ -123,7 +123,7 @@ declare(strict_types=1);
 <!-- Jen pokud existuje složka demo/. Jinak celou sekci smaž. -->
 
 ```bash
-php GoF/Behavioral/PatternName/demo/run.php
+php <Zdroj>/<Kategorie>/<PatternName>/demo/run.php   # cesta od kořene repozitáře
 ```
 
 ---
@@ -135,7 +135,7 @@ php GoF/Behavioral/PatternName/demo/run.php
 | **Zdroj**    | Design Patterns: Elements of Reusable OO Software  |
 | **Autoři**   | Gamma, Helm, Johnson, Vlissides („Gang of Four“)   |
 | **Rok**      | 1994                                              |
-| **Kategorie**| Behavioral                                        |
+| **Kategorie**| Behavioral <!-- u sbírek bez kategorií napiš „—“ a v závorce proč --> |
 | **Obtížnost**| ●●○○○                                             |
 
 <!-- 2–4 věty: v jaké knize/článku pattern vznikl, jaký problém tehdy řešil,
