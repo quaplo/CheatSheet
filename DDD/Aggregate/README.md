@@ -288,6 +288,7 @@ Konkrétní vodítko, když si nejsi jistý:
 | [CQRS](../../Architecture/CQRS/) | Hranice agregátu platí pro zápis. Čtecí strana ji překračuje, a smí to. |
 | [Bounded Context](../BoundedContext/) | O úroveň výš: kontext obsahuje agregáty, agregát nikdy nepřesahuje kontext. |
 | [Service Layer](../../PoEAA/ServiceLayer/) | To, co agregát obsluhuje. Pravidlo „jedna transakce = jeden agregát“ se vynucuje právě tam. |
+| [Domain Service](../DomainService/) | Kam s pravidlem, které se týká **dvou agregátů** a ani jeden ho nevlastní. |
 | [Domain Event](../DomainEvent/) | **Chybějící díl.** Pravidlo „jedna transakce = jeden agregát“ potřebuje způsob, jak dohnat konzistenci mezi agregáty — a to jsou události. |
 | [State](../../GoF/Behavioral/State/) | Životní cyklus kořene, když jsou přechodů víc než dva. |
 

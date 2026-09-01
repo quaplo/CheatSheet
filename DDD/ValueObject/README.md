@@ -488,6 +488,7 @@ echo $address->format();                     // Sokolovská 100 / 186 00 Praha /
 | [Bounded Context](../BoundedContext/) | Identita sdílená mezi kontexty (`CustomerId`) je value object — a zároveň vědomé sdílené jádro. |
 | [Anticorruption Layer](../AnticorruptionLayer/) | Typický výstup překladu z cizího systému: `SupplierId`, částka v haléřích, `DateTimeImmutable`. |
 | [Specification](../Specification/) (DDD) | Specifikace se chová jako hodnota — neměnná, bez identity. Parametry pravidel bývají value objecty. |
+| [Domain Service](../DomainService/) (DDD) | Spousta „doménových služeb“ je ve skutečnosti chybějící hodnota. Zkus to napřed sem. |
 | **Factory Method** | Pojmenované konstruktory (`fromCents`, `fromString`) jsou jeho nejjednodušší podoba. |
 
 ---

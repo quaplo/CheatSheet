@@ -92,6 +92,7 @@ Aggregate, Entity, Value Object, Domain Event, Bounded Context. Ne úplně „de
 | [Value Object](DDD/ValueObject/) | Taktický | Hodnota bez identity — vlastní typ místo `string` a `int` | ●●○○○ |
 | [Aggregate](DDD/Aggregate/) | Taktický | Hranice konzistence — jediný vstup a pravidla platná pro celek | ●●●●○ |
 | [Domain Event](DDD/DomainEvent/) | Taktický | Fakt, který se stal — reakce se přihlašují samy, use-case o nich neví | ●●●●○ |
+| [Domain Service](DDD/DomainService/) | Taktický | Doménová operace, která nepatří žádné entitě — bez transakcí a databáze | ●●○○○ |
 | [Specification](DDD/Specification/) | Taktický | Doménové pravidlo jako objekt — pojmenovatelné, testovatelné, skládatelné | ●●●○○ |
 | [Bounded Context](DDD/BoundedContext/) | Strategický | Model platí jen uvnitř hranice; totéž slovo smí za ní znamenat jinou věc | ●●●●○ |
 | [Context Map](DDD/ContextMap/) | Strategický | Vztahy mezi kontexty — kdo se komu musí přizpůsobit | ●●●○○ |
@@ -184,6 +185,10 @@ Obrácený rejstřík: začni u toho, co tě pálí.
 | Nevím, jestli pravidlo patří do use-case, nebo do entity | [Service Layer](PoEAA/ServiceLayer/) |
 | Nevím, jestli má dotaz dostat vlastní handler, nebo volat čtecí službu rovnou | [Service Layer](PoEAA/ServiceLayer/) |
 | Máme command bus a nikdo neví, kam z controlleru vede volání | [Service Layer](PoEAA/ServiceLayer/) |
+| Pravidlo se týká dvou agregátů a ani jeden není jeho vlastníkem | [Domain Service](DDD/DomainService/) |
+| Vznikají mi třídy `XManager`, `XHelper`, `XUtils` a nikdo neví, co je uvnitř | [Domain Service](DDD/DomainService/) |
+| Entita sahá do cizího agregátu a mění ho | [Domain Service](DDD/DomainService/) |
+| Nevím, jestli koordinace patří do domény, nebo do aplikační vrstvy | [Domain Service](DDD/DomainService/) |
 
 ---
 

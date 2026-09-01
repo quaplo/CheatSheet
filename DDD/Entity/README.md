@@ -271,6 +271,7 @@ Dvě továrny vedle sebe — `register()` a `reconstitute()` — jsou schválně
 | [Repository](../../PoEAA/Repository/) | Načítá a ukládá entity — přesněji kořeny agregátů. Odtud `nextIdentity()` i `reconstitute()`. |
 | [State](../../GoF/Behavioral/State/) | Když má entita netriviální životní cyklus, stavy se vyplatí vytáhnout z podmínek do objektů. |
 | [Specification](../Specification/) | Pravidlo o entitě, které nepatří dovnitř ní — protože kombinuje víc věcí. |
+| [Domain Service](../DomainService/) | Kam s operací, která se nevejde ani sem. **Ale až jako poslední možnost** — jinak z entit zbudou datové struktury. |
 
 ---
 

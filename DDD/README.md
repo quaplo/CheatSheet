@@ -27,7 +27,7 @@ U strategických vzorů se ukázalo, že demo smysl má — jen jiné: [Bounded 
 | [**Domain Event**](DomainEvent/) | Fakt, který se v doméně stal a jiné části na něj reagují | ●●●●○ | ✅ |
 | Factory | Vytvoření složitého agregátu v platném stavu | | ⬜ |
 | [Application Service](../PoEAA/ServiceLayer/) | Orchestrace jedné operace aplikace. Evans ji popsal rok po Fowlerově *Service Layer*, proto ji vedeme v [PoEAA](../PoEAA/) — rozdíl proti **domain service** je rozebraný tam. | ●●○○○ | ✅ |
-| Domain Service | Doménová operace, která nepatří žádné entitě | | ⬜ |
+| [**Domain Service**](DomainService/) | Doménová operace, která nepatří žádné entitě | ●●○○○ | ✅ |
 | [**Specification**](Specification/) | Doménové pravidlo vytažené do samostatného objektu | ●●●○○ | ✅ |
 
 ### Strategický návrh

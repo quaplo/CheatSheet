@@ -422,7 +422,7 @@ Složka `Application/` je pak **čitelný seznam toho, co aplikace umí**. To je
 | [Domain Event](../../DDD/DomainEvent/) | Use-case je místo, kde se události publikují — **až po commitu**. |
 | [Repository](../Repository/) | Nejběžnější závislost use-case. |
 | [Chain of Responsibility](../../GoF/Behavioral/ChainOfResponsibility/) | Middleware kolem sběrnice příkazů: transakce, autorizace, logování. |
-| **Domain Service** (DDD) | **Nezaměňovat.** Domain service obsahuje doménovou logiku a nesmí znát infrastrukturu; use-case je naopak jen orchestrace. |
+| [Domain Service](../../DDD/DomainService/) (DDD) | **Nezaměňovat.** Domain service obsahuje doménovou logiku a nesmí znát infrastrukturu; use-case je naopak jen orchestrace. Obvykle spolu sousedí: use-case načte, služba rozhodne. |
 
 ---
 
