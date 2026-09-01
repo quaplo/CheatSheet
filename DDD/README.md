@@ -35,8 +35,8 @@ U strategických vzorů se ukázalo, že demo smysl má — jen jiné: [Bounded 
 | ------- | ------ | --------- | ---- |
 | [**Bounded Context**](BoundedContext/) | Hranice, uvnitř které mají pojmy jediný význam | ●●●●○ | ✅ |
 | [**Context Map**](ContextMap/) | Vztahy mezi kontexty — kdo se komu přizpůsobuje | ●●●○○ | ✅ |
+| [**Anticorruption Layer**](AnticorruptionLayer/) | Překladová vrstva chránící model před cizím | ●●●○○ | ✅ |
 | Ubiquitous Language | Jeden slovník pro doménové experty i kód | | ⬜ |
-| Anticorruption Layer | Překladová vrstva chránící model před cizím | | ⬜ |
 
 <sub>⬜ plánováno · 🚧 rozpracováno · ✅ hotovo</sub>
 

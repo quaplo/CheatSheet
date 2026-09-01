@@ -76,6 +76,7 @@ Aggregate, Entity, Value Object, Domain Event, Bounded Context. Ne úplně „de
 | [Specification](DDD/Specification/) | Taktický | Doménové pravidlo jako objekt — pojmenovatelné, testovatelné, skládatelné | ●●●○○ |
 | [Bounded Context](DDD/BoundedContext/) | Strategický | Model platí jen uvnitř hranice; totéž slovo smí za ní znamenat jinou věc | ●●●●○ |
 | [Context Map](DDD/ContextMap/) | Strategický | Vztahy mezi kontexty — kdo se komu musí přizpůsobit | ●●●○○ |
+| [Anticorruption Layer](DDD/AnticorruptionLayer/) | Strategický | Překladová vrstva, která nepustí cizí model do tvojí domény | ●●●○○ |
 
 <sub>Taktické i strategické stavební bloky: [DDD/README.md](DDD/)</sub>
 
@@ -161,6 +162,9 @@ Obrácený rejstřík: začni u toho, co tě pálí.
 | Na otázku „když tohle změním, koho rozbiju?“ neumí odpovědět nikdo | [Context Map](DDD/ContextMap/) |
 | Existuje sdílená knihovna, na které závisí všichni a nikdo ji nevlastní | [Context Map](DDD/ContextMap/) |
 | Cizí datový model prosákl do naší domény a nikdo neví kdy | [Context Map](DDD/ContextMap/) |
+| Doménové třídy mají pole pojmenovaná podle sloupců cizího systému | [Anticorruption Layer](DDD/AnticorruptionLayer/) |
+| Mám v kódu `if ($status === '03')` s komentářem, co to znamená u nich | [Anticorruption Layer](DDD/AnticorruptionLayer/) |
+| Cizí systém nejde vyměnit, protože je propletený úplně vším | [Anticorruption Layer](DDD/AnticorruptionLayer/) |
 
 ---
 

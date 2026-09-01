@@ -181,7 +181,7 @@ public function vatRateFor(string $country): float
 }
 ```
 
-**Souvisí s patterny:** [Value Object](../DDD/ValueObject/) (validace v konstruktoru — neplatná instance nevznikne) · [State](../GoF/Behavioral/State/) (zakázaný přechod vyhodí výjimku) · [Chain of Responsibility](../GoF/Behavioral/ChainOfResponsibility/) (ošetřený konec řetězu) · [Repository](../PoEAA/Repository/) (`get()` vyhodí, `find()` vrací `null`)
+**Souvisí s patterny:** [Value Object](../DDD/ValueObject/) (validace v konstruktoru — neplatná instance nevznikne) · [State](../GoF/Behavioral/State/) (zakázaný přechod vyhodí výjimku) · [Chain of Responsibility](../GoF/Behavioral/ChainOfResponsibility/) (ošetřený konec řetězu) · [Repository](../PoEAA/Repository/) (`get()` vyhodí, `find()` vrací `null`) · [Anticorruption Layer](../DDD/AnticorruptionLayer/) (neznámý cizí kód vyhodí výjimku, nespadne do defaultu)
 
 ---
 

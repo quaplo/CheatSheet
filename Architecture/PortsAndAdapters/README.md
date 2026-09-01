@@ -372,7 +372,7 @@ Core\Port\Driven\OrderRepository: '@Adapter\Driven\Persistence\DoctrineOrderRepo
 | [Strategy](../../GoF/Behavioral/Strategy/) | Port se dvěma implementacemi je z pohledu jádra Strategy. Rozdíl je v záměru: Strategy vybírá algoritmus, port odstiňuje vnější svět. |
 | [Value Object](../../DDD/ValueObject/) | Typický obsah příkazů a odpovědí na hranici portu — `PlaceOrderCommand`, `PaymentResult`. |
 | [CQRS](../CQRS/) | Vkládá se dovnitř téhle vrstvy: zápis jde přes port do domény, čtení může mít vlastní, kratší cestu. |
-| **Anticorruption Layer** (DDD) | Řízený adaptér s ambicí navíc: nejen překládá, ale aktivně brání cizímu modelu prosáknout do domény. Kdy se vyplatí, řeší [Context Map](../../DDD/ContextMap/). |
+| [Anticorruption Layer](../../DDD/AnticorruptionLayer/) (DDD) | Řízený adaptér s ambicí navíc: nejen překládá protokol, ale brání cizímu **modelu** prosáknout do domény. Kdy se vyplatí, řeší [Context Map](../../DDD/ContextMap/). |
 | [Bounded Context](../../DDD/BoundedContext/) (DDD) | Hranice kontextu je hranice aplikace, kolem které hexagon staví porty. Bounded Context říká **kudy** ta hranice vede, hexagon **jak** ji držet. |
 
 ---

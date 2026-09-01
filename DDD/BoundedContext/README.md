@@ -284,7 +284,7 @@ Domluva nestačí; za půl roku tam bude první `use Sales\Customer` uprostřed 
 | ------- | ----- |
 | [Context Map](../ContextMap/) | **Přímé pokračování.** Bounded Context řekne, kde jsou hranice; Context Map, jaké vztahy mezi nimi panují a kdo se komu přizpůsobuje. Jeden bez druhého nedává smysl. |
 | [Ports & Adapters](../../Architecture/PortsAndAdapters/) | Hranice kontextu je hranice aplikace; překladač na hranici je řízený adaptér. Vynucuje se stejným nástrojem. |
-| **Anticorruption Layer** (DDD) | Nejsilnější podoba překladu — když se model za hranicí aktivně brání cizímu. |
+| [Anticorruption Layer](../AnticorruptionLayer/) (DDD) | Nejsilnější podoba překladu na hranici — když se model aktivně brání cizímu, ne jen převádí tvary dat. |
 | [Repository](../../PoEAA/Repository/) | Každý kontext má vlastní repository pro vlastní model, i když je pod tím jedna databáze. |
 | [CQRS](../../Architecture/CQRS/) | Aplikuje se **uvnitř** jednoho kontextu, ne přes hranice. |
 | [Value Object](../ValueObject/) | `CustomerId` je hodnota, kterou kontexty sdílejí — a i to je vědomé rozhodnutí. |

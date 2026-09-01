@@ -234,7 +234,7 @@ Existuje na to i hotový nástroj — **[Context Mapper](https://contextmapper.o
 | Pattern | Vztah |
 | ------- | ----- |
 | [Bounded Context](../BoundedContext/) | **Předpoklad.** Nejdřív musíš vědět, jaké kontexty máš; mapa teprve popisuje vztahy mezi nimi. Bez hranic není co mapovat. |
-| **Anticorruption Layer** (DDD) | Jeden ze sedmi vztahů — a ten, který se nejčastěji implementuje jako kód. |
+| [Anticorruption Layer](../AnticorruptionLayer/) (DDD) | Jeden ze sedmi vztahů — a ten, který se nejčastěji implementuje jako kód. Mapa říká, **jestli** ho stavět; ten pattern **jak**. |
 | [Ports & Adapters](../../Architecture/PortsAndAdapters/) | Antikorupční vrstva bývá řízený adaptér. Mapa říká **proč** ho tam mít, hexagon **kam** ho dát. |
 | [Repository](../../PoEAA/Repository/) | Uvnitř kontextu; přes hranice se nesahá repositorym cizího kontextu. |
 | [CQRS](../../Architecture/CQRS/) | Čtecí modely plněné z cizího kontextu jsou často výsledek vztahu Customer/Supplier nebo Published Language. |
