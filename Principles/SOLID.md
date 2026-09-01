@@ -43,7 +43,7 @@ final class InvoiceRenderer { public function render(Order $order): string { /* 
 final class OrderConfirmationMailer { public function send(Order $order): void { /* … */ } }
 ```
 
-**Souvisí s patterny:** [First Class Collection](../ObjectCalisthenics/FirstClassCollection/) (pravidla o skupině mají vlastní třídu) · Facade (skrývá subsystém, aby jeho části mohly zůstat malé) · Command (jedna operace = jedna třída)
+**Souvisí s patterny:** [Value Object](../DDD/ValueObject/) (pravidla o jedné hodnotě mají vlastní třídu) · [First Class Collection](../ObjectCalisthenics/FirstClassCollection/) (pravidla o skupině mají vlastní třídu) · Facade (skrývá subsystém, aby jeho části mohly zůstat malé) · Command (jedna operace = jedna třída)
 
 ---
 
@@ -112,7 +112,7 @@ interface OrderReader { public function find(OrderId $id): ?Order; }
 interface OrderWriter { public function save(Order $order): void; }
 ```
 
-**Souvisí s patterny:** Template Method (kostra v předkovi musí platit pro všechny potomky) · Composite · Strategy (kompozice místo dědičnosti se LSP vyhne úplně)
+**Souvisí s patterny:** Template Method (kostra v předkovi musí platit pro všechny potomky) · Composite · [Strategy](../GoF/Behavioral/Strategy/) (kompozice místo dědičnosti se LSP vyhne úplně) · [Value Object](../DDD/ValueObject/) (`final` je tu záměr — potomek s jinou rovností poruší kontrakt)
 
 ---
 

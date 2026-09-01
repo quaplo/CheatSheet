@@ -317,7 +317,7 @@ foreach ($order->items as $item) {
 | Pattern | Vztah |
 | ------- | ----- |
 | **Iterator** (GoF) | First Class Collection ho v PHP typicky implementuje přes `IteratorAggregate`. Iterator řeší *jak procházet*, tahle kolekce *co skupina znamená*. |
-| **Value Object** (DDD) | Neměnná kolekce je vlastně value object nad seznamem — porovnává se hodnotou, ne identitou. |
+| [Value Object](../../DDD/ValueObject/) (DDD) | Sourozenec: tenhle pattern obaluje pole, Value Object primitiv. Neměnná kolekce je vlastně value object nad seznamem. |
 | **Composite** (GoF) | Také zachází se skupinou jako s jedním prvkem, ale kvůli stromové struktuře; kolekce je plochá. |
 | **Repository** (PoEAA) | Přirozený návratový typ repository — místo `array` vrací rovnou doménovou kolekci. |
 | **Specification** (DDD) | Filtrovací pravidlo vytažené do samostatného objektu, který se kolekci předá. |

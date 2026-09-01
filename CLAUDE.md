@@ -92,6 +92,7 @@ Ve složce `Principles/` žijí **principy návrhu** (zatím SOLID). Platí stri
 - Piš konkrétně: skutečné třídy, skutečné knihovny. Žádné `Foo`/`Bar` a žádné obecné fráze.
 - Doménový příklad je napříč patterny **jednotný — e-shop / objednávky** — aby juniorovi odpadalo přepínání kontextu.
 - Zmiň, jestli pattern v moderním PHP ještě dává smysl, nebo ho nahradil jazykový prvek (enum, closure, first-class callable) či DI kontejner.
+- **Ukotvi pattern v něčem, co junior už zná.** Existuje-li v nativním PHP nebo v běžné knihovně věc, která pattern splňuje, ukaž ji — je to nejrychlejší cesta od definice k pochopení. `DateTimeImmutable` je Value Object, `usort($items, $comparator)` je Strategy, `foreach` je Iterator. Když k tomu jazyk nabízí i **protipříklad** (`DateTime` vedle `DateTimeImmutable`), použij ho: rozdíl učí líp než definice.
 
 ## Varianty patternu a výkon
 

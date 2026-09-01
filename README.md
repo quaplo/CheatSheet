@@ -56,11 +56,17 @@ Devět záměrně přísných pravidel objektového návrhu, původně jako **cv
 
 Vzory pro aplikace nad databází a s doménovou logikou — Repository, Unit of Work, Data Mapper, Service Layer, Identity Map. Tohle je vrstva, ve které se v našich službách pohybujeme denně.
 
-### DDD — Domain-Driven Design ⬜
+### [DDD — Domain-Driven Design](DDD/)
 
 > Eric Evans · **2003** · *Domain-Driven Design* (+ Vaughn Vernon, 2013)
 
 Aggregate, Entity, Value Object, Domain Event, Bounded Context. Ne úplně „design patterny“ v gangofourském smyslu, ale stejný typ znalosti — pojmenované řešení opakujícího se problému.
+
+| Pattern | Kategorie | K čemu to je | Obtížnost |
+| ------- | --------- | ------------ | --------- |
+| [Value Object](DDD/ValueObject/) | Taktický | Hodnota bez identity — vlastní typ místo `string` a `int` | ●●○○○ |
+
+<sub>Taktické i strategické stavební bloky: [DDD/README.md](DDD/)</sub>
 
 ### EIP — Integrační patterny ⬜
 
@@ -102,6 +108,9 @@ Obrácený rejstřík: začni u toho, co tě pálí.
 | Entita má veřejné pole a stejný `array_map` nad ním najdu na pěti místech | [First Class Collection](ObjectCalisthenics/FirstClassCollection/) |
 | Z typu `array` nepoznám, co je uvnitř — věřím jen PHPDoc komentáři | [First Class Collection](ObjectCalisthenics/FirstClassCollection/) |
 | Pravidlo o skupině (limit počtu, žádné duplicity) se hlídá na jednom místě a jinde se zapomnělo | [First Class Collection](ObjectCalisthenics/FirstClassCollection/) |
+| Stejnou validaci (e-mail, IČO, PSČ) mám na třech místech a pokaždé trochu jinak | [Value Object](DDD/ValueObject/) |
+| V signatuře jde prohodit dva argumenty stejného typu a nikdo si toho nevšimne | [Value Object](DDD/ValueObject/) |
+| Počítám s penězi přes `float` nebo sčítám částky v různých měnách | [Value Object](DDD/ValueObject/) |
 
 ---
 
@@ -110,7 +119,8 @@ Obrácený rejstřík: začni u toho, co tě pálí.
 Doporučené pořadí, pokud je pro tebe téma nové. Každý další pattern staví na předchozím.
 
 1. [First Class Collection](ObjectCalisthenics/FirstClassCollection/) — nejjednodušší vstup: jedna třída navíc a hned je vidět, co je zapouzdření dobré.
-2. [Strategy](GoF/Behavioral/Strategy/) — kompozice a polymorfismus na malém kódu; odsud vede cesta k většině ostatních patternů.
+2. [Value Object](DDD/ValueObject/) — tatáž myšlenka o úroveň níž: co zapouzdření udělá s jedinou hodnotou.
+3. [Strategy](GoF/Behavioral/Strategy/) — kompozice a polymorfismus na malém kódu; odsud vede cesta k většině ostatních patternů.
 
 ---
 
