@@ -149,7 +149,7 @@ Sandi Metz to shrnula větou, kterou stojí za to si zapamatovat:
 
 **Kontrolní otázka:** *Když se změní tohle, musí se nutně změnit i to druhé?* Ano → jedna znalost, sjednoť. Ne → dvě znalosti, nech je být.
 
-**Souvisí s patterny:** [Value Object](../DDD/ValueObject/) (pravidlo o hodnotě má jedno místo) · [Specification](../DDD/Specification/) (pravidlo dostane jméno) · [First Class Collection](../ObjectCalisthenics/FirstClassCollection/) (pravidla o skupině)
+**Souvisí s patterny:** [Value Object](../DDD/ValueObject/) (pravidlo o hodnotě má jedno místo) · [Specification](../DDD/Specification/) (pravidlo dostane jméno) · [First Class Collection](../ObjectCalisthenics/FirstClassCollection/) (pravidla o skupině) · [Bounded Context](../DDD/BoundedContext/) — **totéž falešné DRY v měřítku celé firmy**: tři modely `Customer` nejsou duplicita, jsou to tři nezávislé znalosti
 
 ---
 

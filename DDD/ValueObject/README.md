@@ -485,6 +485,7 @@ echo $address->format();                     // Sokolovská 100 / 186 00 Praha /
 | **Aggregate** (DDD) | Value objecty tvoří vnitřek agregátu — nemají vlastní životní cyklus, žijí a umírají s ním. |
 | **Special Case / Null Object** | Zvláštní hodnota (`Money::zero()`, `EmailAddress::unknown()`) místo `null`. |
 | [Ports & Adapters](../../Architecture/PortsAndAdapters/) | Typický obsah příkazů a odpovědí na hranici portu — `PlaceOrderCommand`, `PaymentResult`. |
+| [Bounded Context](../BoundedContext/) | Identita sdílená mezi kontexty (`CustomerId`) je value object — a zároveň vědomé sdílené jádro. |
 | [Specification](../Specification/) (DDD) | Specifikace se chová jako hodnota — neměnná, bez identity. Parametry pravidel bývají value objecty. |
 | **Factory Method** | Pojmenované konstruktory (`fromCents`, `fromString`) jsou jeho nejjednodušší podoba. |
 

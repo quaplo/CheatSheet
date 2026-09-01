@@ -206,7 +206,7 @@ if ($order->isPaid && $order->totalInCents >= 150000 && $order->country === 'CZ'
 if ((new EligibleForFreeShipping())->isSatisfiedBy($order)) { }
 ```
 
-**Souvisí s patterny:** [Specification](../DDD/Specification/) (pravidlo dostane jméno) · [Rules Engine](../Architecture/RulesEngine/) (pořadí a řešení konfliktů přestanou být skryté) · [Value Object](../DDD/ValueObject/) (hodnota dostane typ) · [State](../GoF/Behavioral/State/) (dovolené přechody přestanou být poskládané z podmínek)
+**Souvisí s patterny:** [Specification](../DDD/Specification/) (pravidlo dostane jméno) · [Rules Engine](../Architecture/RulesEngine/) (pořadí a řešení konfliktů přestanou být skryté) · [Value Object](../DDD/ValueObject/) (hodnota dostane typ) · [State](../GoF/Behavioral/State/) (dovolené přechody přestanou být poskládané z podmínek) · [Context Map](../DDD/ContextMap/) (vztahy mezi týmy existují, ať je nakreslíš, nebo ne)
 
 ---
 

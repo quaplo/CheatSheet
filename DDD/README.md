@@ -12,7 +12,9 @@ Vaughn Vernon je v *Implementing Domain-Driven Design* (2013) rozpracoval do imp
 
 ## Členění
 
-Evans dělí knihu na **taktický** návrh (jak vypadá kód uvnitř jednoho modelu) a **strategický** (jak spolu velké modely souvisejí). Ve složkách to nekopírujeme — strategické „patterny“ jako Bounded Context nebo Context Map nejsou věci, které by šly ukázat na PHP kódu s demem, takže je odlišujeme jen tady v katalogu.
+Evans dělí knihu na **taktický** návrh (jak vypadá kód uvnitř jednoho modelu) a **strategický** (jak spolu velké modely souvisejí). Ve složkách to nekopírujeme, odlišujeme to jen tady v katalogu.
+
+U strategických vzorů se ukázalo, že demo smysl má — jen jiné: [Bounded Context](BoundedContext/) ukazuje tentýž pojem ve třech modelech a překlad mezi nimi, [Context Map](ContextMap/) drží mapu jako data, ze kterých vygeneruje diagram a upozorní na rizikové vztahy.
 
 ### Taktické stavební bloky
 
@@ -29,12 +31,12 @@ Evans dělí knihu na **taktický** návrh (jak vypadá kód uvnitř jednoho mod
 
 ### Strategický návrh
 
-| Pattern | K čemu | Stav |
-| ------- | ------ | ---- |
-| Bounded Context | Hranice, uvnitř které mají pojmy jediný význam | ⬜ |
-| Ubiquitous Language | Jeden slovník pro doménové experty i kód | ⬜ |
-| Context Map | Vztahy mezi kontexty a způsob integrace | ⬜ |
-| Anticorruption Layer | Překladová vrstva chránící model před cizím | ⬜ |
+| Pattern | K čemu | Obtížnost | Stav |
+| ------- | ------ | --------- | ---- |
+| [**Bounded Context**](BoundedContext/) | Hranice, uvnitř které mají pojmy jediný význam | ●●●●○ | ✅ |
+| [**Context Map**](ContextMap/) | Vztahy mezi kontexty — kdo se komu přizpůsobuje | ●●●○○ | ✅ |
+| Ubiquitous Language | Jeden slovník pro doménové experty i kód | | ⬜ |
+| Anticorruption Layer | Překladová vrstva chránící model před cizím | | ⬜ |
 
 <sub>⬜ plánováno · 🚧 rozpracováno · ✅ hotovo</sub>
 

@@ -341,6 +341,7 @@ $repository->save($order->cancel());
 | [Value Object](../../DDD/ValueObject/) | Příkazy i čtecí modely jsou hodnoty — neměnné, bez identity, bez chování. |
 | [Specification](../../DDD/Specification/) | Na zápisové straně dává smysl; na čtecí ji obvykle nahradí `WHERE`, protože databáze to umí líp. |
 | **Aggregate** (DDD) | Určuje hranici zápisové strany. Čtecí strana ji směle překračuje — a smí, protože nic nemění. |
+| [Bounded Context](../../DDD/BoundedContext/) | CQRS se aplikuje **uvnitř** jednoho kontextu. Přes hranice kontextů se nečte přímo — tam patří překlad. |
 
 ---
 

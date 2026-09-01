@@ -74,6 +74,8 @@ Aggregate, Entity, Value Object, Domain Event, Bounded Context. Ne úplně „de
 | ------- | --------- | ------------ | --------- |
 | [Value Object](DDD/ValueObject/) | Taktický | Hodnota bez identity — vlastní typ místo `string` a `int` | ●●○○○ |
 | [Specification](DDD/Specification/) | Taktický | Doménové pravidlo jako objekt — pojmenovatelné, testovatelné, skládatelné | ●●●○○ |
+| [Bounded Context](DDD/BoundedContext/) | Strategický | Model platí jen uvnitř hranice; totéž slovo smí za ní znamenat jinou věc | ●●●●○ |
+| [Context Map](DDD/ContextMap/) | Strategický | Vztahy mezi kontexty — kdo se komu musí přizpůsobit | ●●●○○ |
 
 <sub>Taktické i strategické stavební bloky: [DDD/README.md](DDD/)</sub>
 
@@ -153,6 +155,12 @@ Obrácený rejstřík: začni u toho, co tě pálí.
 | Výpis dvaceti řádků v administraci načte stovky agregátů a 99 % dat zahodí | [CQRS](Architecture/CQRS/) |
 | Přidání sloupce do tabulky v administraci mě nutí sáhnout do doménového modelu | [CQRS](Architecture/CQRS/) |
 | Entita má gettery, které v doméně nikdo nepoužívá — jsou tam jen pro šablonu | [CQRS](Architecture/CQRS/) |
+| Entita `Customer` má čtyřicet vlastností a většina je `nullable` | [Bounded Context](DDD/BoundedContext/) |
+| Dvě oddělení říkají „zákazník“ a myslí tím něco jiného | [Bounded Context](DDD/BoundedContext/) |
+| Chystáme dělit monolit a nevíme kudy | [Bounded Context](DDD/BoundedContext/) |
+| Na otázku „když tohle změním, koho rozbiju?“ neumí odpovědět nikdo | [Context Map](DDD/ContextMap/) |
+| Existuje sdílená knihovna, na které závisí všichni a nikdo ji nevlastní | [Context Map](DDD/ContextMap/) |
+| Cizí datový model prosákl do naší domény a nikdo neví kdy | [Context Map](DDD/ContextMap/) |
 
 ---
 

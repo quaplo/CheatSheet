@@ -326,6 +326,7 @@ markOverdue(new DoctrineOrderRepository($entityManager), $now);
 | **Data Mapper** (PoEAA) | Vrstva pod repository, která překládá objekt na řádek. Doctrine je Data Mapper; repository je fasáda nad ním v jazyce domény. |
 | **Unit of Work** (PoEAA) | Sleduje změny a zapisuje je najednou. Díky němu stačí `add()` a `save()` pro změny netřeba. |
 | **Aggregate** (DDD) | Určuje, pro co repository vůbec smí vzniknout — jeden agregát, jedno repository. |
+| [Bounded Context](../../DDD/BoundedContext/) | Repository patří dovnitř kontextu. Do cizího kontextu se nesahá jeho repositorym, ale překladem na hranici. |
 | **Identity Map** (PoEAA) | Zaručuje, že tentýž agregát načtený dvakrát je tentýž objekt. V Doctrine je součástí Unit of Work. |
 | [CQRS](../../Architecture/CQRS/) | Odpověď na repository o čtyřiceti metodách dotažená do konce: výpisy dostanou vlastní cestu k datům, repository zůstane jen pro zápis. |
 
