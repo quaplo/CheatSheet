@@ -287,6 +287,7 @@ Domluva nestačí; za půl roku tam bude první `use Sales\Customer` uprostřed 
 | [Anticorruption Layer](../AnticorruptionLayer/) (DDD) | Nejsilnější podoba překladu na hranici — když se model aktivně brání cizímu, ne jen převádí tvary dat. |
 | [Repository](../../PoEAA/Repository/) | Každý kontext má vlastní repository pro vlastní model, i když je pod tím jedna databáze. |
 | [CQRS](../../Architecture/CQRS/) | Aplikuje se **uvnitř** jednoho kontextu, ne přes hranice. |
+| [Aggregate](../Aggregate/) | O úroveň níž: kontext obsahuje agregáty, agregát nikdy nepřesahuje kontext. |
 | [Value Object](../ValueObject/) | `CustomerId` je hodnota, kterou kontexty sdílejí — a i to je vědomé rozhodnutí. |
 
 ---

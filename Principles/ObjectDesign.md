@@ -44,7 +44,7 @@ if ($order->qualifiesForFreeShipping()) {
 
 **Kde to neplatí.** U **čtecích modelů a DTO** — ty jsou schválně jen data. Řádek tabulky v administraci nemá mít chování, protože to není doménový objekt; viz [CQRS](../Architecture/CQRS/). Tell Don't Ask platí na doménu, ne na všechno, co má property.
 
-**Souvisí s patterny:** [First Class Collection](../ObjectCalisthenics/FirstClassCollection/) (neptáš se na pole, řekneš `total()`) · [Value Object](../DDD/ValueObject/) · [State](../GoF/Behavioral/State/) (neptáš se na stav, zavoláš operaci) · [Specification](../DDD/Specification/)
+**Souvisí s patterny:** [Entity](../DDD/Entity/) — **rozdíl mezi anemickým a doménovým modelem je přesně tenhle princip** · [Aggregate](../DDD/Aggregate/) (kořenu se neptáš na položky, řekneš mu `addItem()`) · [First Class Collection](../ObjectCalisthenics/FirstClassCollection/) (neptáš se na pole, řekneš `total()`) · [Value Object](../DDD/ValueObject/) · [State](../GoF/Behavioral/State/) · [Specification](../DDD/Specification/)
 
 ---
 

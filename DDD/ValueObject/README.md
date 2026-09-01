@@ -478,11 +478,11 @@ echo $address->format();                     // Sokolovská 100 / 186 00 Praha /
 
 | Pattern | Vztah |
 | ------- | ----- |
-| **Entity** (DDD) | Protipól. Entita má identitu, která přežije změnu všech atributů; value object je definován jen svým obsahem. Tohle je nejdůležitější rozhodnutí při návrhu modelu. |
+| [Entity](../Entity/) (DDD) | **Protipól a nejdůležitější rozhodnutí při návrhu modelu.** Entita má identitu, která přežije změnu všech atributů; value object je definován jen svým obsahem. Kontrolní otázka: zajímá mě, *který* to je, nebo *jaký* je? |
 | [First Class Collection](../../ObjectCalisthenics/FirstClassCollection/) | Sourozenec: tenhle pattern obaluje primitiv, ten druhý pole. Neměnná kolekce je vlastně value object nad seznamem. |
 | **Money** (PoEAA) | Fowlerův konkrétní value object; `allocate()` pochází odtud. |
 | **Composite** (GoF) | **Nezaměňovat.** Kompozitní value object je jen hodnota složená z hodnot; GoF Composite řeší stromové struktury s jednotným zacházením s listem i uzlem. |
-| **Aggregate** (DDD) | Value objecty tvoří vnitřek agregátu — nemají vlastní životní cyklus, žijí a umírají s ním. |
+| [Aggregate](../Aggregate/) (DDD) | Value objecty tvoří vnitřek agregátu — nemají vlastní životní cyklus, žijí a umírají s ním. |
 | **Special Case / Null Object** | Zvláštní hodnota (`Money::zero()`, `EmailAddress::unknown()`) místo `null`. |
 | [Ports & Adapters](../../Architecture/PortsAndAdapters/) | Typický obsah příkazů a odpovědí na hranici portu — `PlaceOrderCommand`, `PaymentResult`. |
 | [Bounded Context](../BoundedContext/) | Identita sdílená mezi kontexty (`CustomerId`) je value object — a zároveň vědomé sdílené jádro. |

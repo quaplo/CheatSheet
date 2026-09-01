@@ -72,7 +72,9 @@ Aggregate, Entity, Value Object, Domain Event, Bounded Context. Ne úplně „de
 
 | Pattern | Kategorie | K čemu to je | Obtížnost |
 | ------- | --------- | ------------ | --------- |
+| [Entity](DDD/Entity/) | Taktický | Objekt s identitou, která přežije změnu všech atributů | ●●○○○ |
 | [Value Object](DDD/ValueObject/) | Taktický | Hodnota bez identity — vlastní typ místo `string` a `int` | ●●○○○ |
+| [Aggregate](DDD/Aggregate/) | Taktický | Hranice konzistence — jediný vstup a pravidla platná pro celek | ●●●●○ |
 | [Specification](DDD/Specification/) | Taktický | Doménové pravidlo jako objekt — pojmenovatelné, testovatelné, skládatelné | ●●●○○ |
 | [Bounded Context](DDD/BoundedContext/) | Strategický | Model platí jen uvnitř hranice; totéž slovo smí za ní znamenat jinou věc | ●●●●○ |
 | [Context Map](DDD/ContextMap/) | Strategický | Vztahy mezi kontexty — kdo se komu musí přizpůsobit | ●●●○○ |
@@ -165,6 +167,11 @@ Obrácený rejstřík: začni u toho, co tě pálí.
 | Doménové třídy mají pole pojmenovaná podle sloupců cizího systému | [Anticorruption Layer](DDD/AnticorruptionLayer/) |
 | Mám v kódu `if ($status === '03')` s komentářem, co to znamená u nich | [Anticorruption Layer](DDD/AnticorruptionLayer/) |
 | Cizí systém nejde vyměnit, protože je propletený úplně vším | [Anticorruption Layer](DDD/AnticorruptionLayer/) |
+| Třída má jen gettery a settery a logika k ní bydlí v `XService` | [Entity](DDD/Entity/) |
+| Uložená úroveň / stav se rozešel s hodnotou, ze které se počítá | [Entity](DDD/Entity/) |
+| Každá entita má vlastní repository, i ta, co bez „matky“ nedává smysl | [Aggregate](DDD/Aggregate/) |
+| Pravidlo „součet položek nesmí přesáhnout limit“ nejde nikde vynutit | [Aggregate](DDD/Aggregate/) |
+| Nikdo neví, co má obalit transakce | [Aggregate](DDD/Aggregate/) |
 
 ---
 

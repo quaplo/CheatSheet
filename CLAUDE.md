@@ -116,6 +116,7 @@ Ve složce `Principles/` žijí **principy návrhu** (zatím SOLID). Platí stri
 - **Bez frameworků a bez závislostí** — ukázka musí jít zkopírovat a spustit.
 - Demo se spouští `php <cesta>/demo/run.php`, závislosti přes `require`, žádný composer.
 - Peníze v haléřích jako `int`, nikdy `float`.
+- Ve výpisech dema pozor na dvě opakující se pasti: **`$proměnná` uvnitř dvojitých uvozovek** se interpoluje (chceš-li ji vypsat, použij jednoduché uvozovky) a **`printf('%-20s')` počítá bajty**, takže diakritika rozhodí zarovnání — na to je `mb_str_pad()`.
 - Po každé změně v `demo/` spusť skript a ověř, že proběhne bez chyby.
 
 ## Přidání nového patternu — povinný postup

@@ -21,8 +21,8 @@ U strategických vzorů se ukázalo, že demo smysl má — jen jiné: [Bounded 
 | Pattern | K čemu | Obtížnost | Stav |
 | ------- | ------ | --------- | ---- |
 | [**Value Object**](ValueObject/) | Hodnota bez identity — vlastní typ místo `string` a `int` | ●●○○○ | ✅ |
-| Entity | Objekt s identitou, která přežije změnu všech atributů | | ⬜ |
-| Aggregate | Skupina objektů se společným kořenem a hranicí konzistence | | ⬜ |
+| [**Entity**](Entity/) | Objekt s identitou, která přežije změnu všech atributů | ●●○○○ | ✅ |
+| [**Aggregate**](Aggregate/) | Skupina objektů se společným kořenem a hranicí konzistence | ●●●●○ | ✅ |
 | [Repository](../PoEAA/Repository/) | Kolekce agregátů, za kterou se schová persistence. Evans ho popsal rok po Fowlerovi, proto ho vedeme v [PoEAA](../PoEAA/) — rozdíl obou pojetí je rozebraný tam. | ●●●○○ | ✅ |
 | Domain Event | Fakt, který se v doméně stal a jiné části na něj reagují | | ⬜ |
 | Factory | Vytvoření složitého agregátu v platném stavu | | ⬜ |

@@ -351,6 +351,7 @@ $order->cancel();
 | [Specification](../../../DDD/Specification/) | Přirozený obsah guardu: podmínka, za které je přechod dovolený. |
 | [Rules Engine](../../../Architecture/RulesEngine/) | Když o přechodu nerozhoduje jen stav, ale sada vnějších pravidel. |
 | [Value Object](../../../DDD/ValueObject/) | Stav bez dat je hodnota — proto ho v PHP nejčastěji zastoupí enum. |
+| [Entity](../../../DDD/Entity/) (DDD) | Typický nositel stavového automatu: entita má životní cyklus, hodnota ne. |
 | **Singleton** (GoF) | Bezstavové stavy se dají sdílet jako jediné instance. V PHP to díky enumům řeší jazyk sám. |
 
 ---
