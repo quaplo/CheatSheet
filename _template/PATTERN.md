@@ -11,21 +11,6 @@ Obsah česky, kód a názvy tříd anglicky. Tyhle HTML komentáře po vyplněn�
 
 ---
 
-## Původ
-
-|              |                                                   |
-| ------------ | ------------------------------------------------- |
-| **Zdroj**    | Design Patterns: Elements of Reusable OO Software  |
-| **Autoři**   | Gamma, Helm, Johnson, Vlissides („Gang of Four“)   |
-| **Rok**      | 1994                                              |
-| **Kategorie**| Behavioral                                        |
-| **Obtížnost**| ●●○○○                                             |
-
-<!-- 2–4 věty: v jaké knize/článku pattern vznikl, jaký problém tehdy řešil,
-     proč je dodnes relevantní. Kontext, ne převyprávěná definice. -->
-
----
-
 ## Problém
 
 <!-- Popiš situaci v kódu, ne abstraktní definici. Ideálně krátká ukázka
@@ -127,6 +112,21 @@ declare(strict_types=1);
 ```bash
 php GoF/Behavioral/PatternName/demo/run.php
 ```
+
+---
+
+## Původ
+
+|              |                                                   |
+| ------------ | ------------------------------------------------- |
+| **Zdroj**    | Design Patterns: Elements of Reusable OO Software  |
+| **Autoři**   | Gamma, Helm, Johnson, Vlissides („Gang of Four“)   |
+| **Rok**      | 1994                                              |
+| **Kategorie**| Behavioral                                        |
+| **Obtížnost**| ●●○○○                                             |
+
+<!-- 2–4 věty: v jaké knize/článku pattern vznikl, jaký problém tehdy řešil,
+     proč je dodnes relevantní. Kontext, ne převyprávěná definice. -->
 
 ---
 

@@ -6,22 +6,6 @@
 
 ---
 
-## Původ
-
-|               |                                                                       |
-| ------------- | --------------------------------------------------------------------- |
-| **Zdroj**     | *Design Patterns: Elements of Reusable Object-Oriented Software*       |
-| **Autoři**    | Gamma, Helm, Johnson, Vlissides („Gang of Four“)                       |
-| **Rok**       | 1994                                                                   |
-| **Kategorie** | Behavioral                                                             |
-| **Obtížnost** | ●●○○○                                                                  |
-
-Vzor pochází z prostředí, kde neexistovaly first-class funkce — v C++ roku 1994 se „předání algoritmu jako parametru“ muselo řešit objektem. Autoři ho v knize demonstrují na sazbě textu do řádků: `Composition` má několik způsobů, jak zalomit odstavec, a nechce je mít všechny zadrátované v sobě.
-
-I když má dnešní PHP closures a first-class callables, Strategy nezastaral. Rozdíl je v tom, že strategie **má jméno, vlastní soubor a může mít závislosti** — což je u čehokoli složitějšího než jednořádkový výpočet rozdíl mezi udržovatelným a neudržovatelným kódem.
-
----
-
 ## Problém
 
 Máš operaci, která se dá udělat několika způsoby, a volba mezi nimi padá až za běhu. Nejpřirozenější první řešení je podmínka — a ta postupně nabobtná.
@@ -265,6 +249,22 @@ php GoF/Behavioral/Strategy/demo/run.php
 ```
 
 Spočítá dopravu pro čtyři různé objednávky přes všechny registrované strategie a ukáže, jak se chová neznámý kód dopravy.
+
+---
+
+## Původ
+
+|               |                                                                       |
+| ------------- | --------------------------------------------------------------------- |
+| **Zdroj**     | *Design Patterns: Elements of Reusable Object-Oriented Software*       |
+| **Autoři**    | Gamma, Helm, Johnson, Vlissides („Gang of Four“)                       |
+| **Rok**       | 1994                                                                   |
+| **Kategorie** | Behavioral                                                             |
+| **Obtížnost** | ●●○○○                                                                  |
+
+Vzor pochází z prostředí, kde neexistovaly first-class funkce — v C++ roku 1994 se „předání algoritmu jako parametru“ muselo řešit objektem. Autoři ho v knize demonstrují na sazbě textu do řádků: `Composition` má několik způsobů, jak zalomit odstavec, a nechce je mít všechny zadrátované v sobě.
+
+I když má dnešní PHP closures a first-class callables, Strategy nezastaral. Rozdíl je v tom, že strategie **má jméno, vlastní soubor a může mít závislosti** — což je u čehokoli složitějšího než jednořádkový výpočet rozdíl mezi udržovatelným a neudržovatelným kódem.
 
 ---
 
