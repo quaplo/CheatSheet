@@ -25,7 +25,7 @@ Evans dělí knihu na **taktický** návrh (jak vypadá kód uvnitř jednoho mod
 | Domain Event | Fakt, který se v doméně stal a jiné části na něj reagují | | ⬜ |
 | Factory | Vytvoření složitého agregátu v platném stavu | | ⬜ |
 | Domain Service | Doménová operace, která nepatří žádné entitě | | ⬜ |
-| Specification | Doménové pravidlo vytažené do samostatného objektu | | ⬜ |
+| [**Specification**](Specification/) | Doménové pravidlo vytažené do samostatného objektu | ●●●○○ | ✅ |
 
 ### Strategický návrh
 

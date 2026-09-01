@@ -239,6 +239,7 @@ Nový dopravce = nová třída a jeden řádek v registraci. `ShippingCalculator
 | **Decorator** | Také obaluje chování, ale **přidává** k původnímu; Strategy původní chování **nahrazuje**. |
 | **Command** | Také zabaluje operaci do objektu, ale kvůli odložení, frontě nebo undo — ne kvůli výběru z variant. |
 | **Factory Method** | Častý doplněk: rozhoduje, která strategie se pro daný vstup vytvoří. |
+| [Specification](../../../DDD/Specification/) (DDD) | Také zabaluje chování do objektu, ale odpovídá **ano/ne** místo toho, aby něco počítala. Často spolupracují: specifikace rozhodne, která strategie se použije. |
 
 ---
 

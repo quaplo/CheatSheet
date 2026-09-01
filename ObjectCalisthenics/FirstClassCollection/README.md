@@ -320,7 +320,7 @@ foreach ($order->items as $item) {
 | [Value Object](../../DDD/ValueObject/) (DDD) | Sourozenec: tenhle pattern obaluje pole, Value Object primitiv. Neměnná kolekce je vlastně value object nad seznamem. |
 | **Composite** (GoF) | Také zachází se skupinou jako s jedním prvkem, ale kvůli stromové struktuře; kolekce je plochá. |
 | **Repository** (PoEAA) | Přirozený návratový typ repository — místo `array` vrací rovnou doménovou kolekci. |
-| **Specification** (DDD) | Filtrovací pravidlo vytažené do samostatného objektu, který se kolekci předá. |
+| [Specification](../../DDD/Specification/) (DDD) | Filtrovací pravidlo vytažené do samostatného objektu: `$items->satisfying($spec)` místo `array_filter` venku. |
 
 ---
 

@@ -75,7 +75,7 @@ public function shippingCost(Order $order, string $code): int
 }
 ```
 
-**Souvisí s patterny:** [Strategy](../GoF/Behavioral/Strategy/) · Decorator · Template Method · Visitor · Chain of Responsibility
+**Souvisí s patterny:** [Strategy](../GoF/Behavioral/Strategy/) · [Specification](../DDD/Specification/) (nové pravidlo = nová třída) · Decorator · Template Method · Visitor · Chain of Responsibility
 
 ---
 
@@ -144,7 +144,7 @@ interface OrderReader { public function find(OrderId $id): ?Order; }
 interface OrderWriter { public function save(Order $order): void; }
 ```
 
-**Souvisí s patterny:** Adapter (zúží cizí rozhraní na to, co náš kód opravdu potřebuje) · Facade · Proxy
+**Souvisí s patterny:** [Specification](../DDD/Specification/) (kontrakt o jediné metodě — menší už neuděláš) · Adapter (zúží cizí rozhraní na to, co náš kód opravdu potřebuje) · Facade · Proxy
 
 ---
 

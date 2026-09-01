@@ -65,6 +65,7 @@ Aggregate, Entity, Value Object, Domain Event, Bounded Context. Ne úplně „de
 | Pattern | Kategorie | K čemu to je | Obtížnost |
 | ------- | --------- | ------------ | --------- |
 | [Value Object](DDD/ValueObject/) | Taktický | Hodnota bez identity — vlastní typ místo `string` a `int` | ●●○○○ |
+| [Specification](DDD/Specification/) | Taktický | Doménové pravidlo jako objekt — pojmenovatelné, testovatelné, skládatelné | ●●●○○ |
 
 <sub>Taktické i strategické stavební bloky: [DDD/README.md](DDD/)</sub>
 
@@ -111,6 +112,9 @@ Obrácený rejstřík: začni u toho, co tě pálí.
 | Stejnou validaci (e-mail, IČO, PSČ) mám na třech místech a pokaždé trochu jinak | [Value Object](DDD/ValueObject/) |
 | V signatuře jde prohodit dva argumenty stejného typu a nikdo si toho nevšimne | [Value Object](DDD/ValueObject/) |
 | Počítám s penězi přes `float` nebo sčítám částky v různých měnách | [Value Object](DDD/ValueObject/) |
+| Tutéž podmínku o třech částech mám na třech místech a jedna z kopií je zastaralá | [Specification](DDD/Specification/) |
+| Pravidlo má jméno na poradě, ale v kódu ho nenajdu — je rozpuštěné v `if` | [Specification](DDD/Specification/) |
+| Musím uživateli říct, **proč** neprošel, a z `&&` nezjistím která část selhala | [Specification](DDD/Specification/) |
 
 ---
 
