@@ -100,11 +100,11 @@ Aggregate, Entity, Value Object, Domain Event, Bounded Context. Ne úplně „de
 
 <sub>Taktické i strategické stavební bloky: [DDD/README.md](DDD/)</sub>
 
-### EIP — Integrační patterny ⬜
+### [EIP — Integrační patterny](EIP/) ⬜
 
 > Hohpe, Woolf · **2003** · *Enterprise Integration Patterns*
 
-Vzory pro messaging a komunikaci mezi službami — Message Router, Publish-Subscribe, Idempotent Receiver, Dead Letter Channel.
+Vzory pro messaging a komunikaci mezi službami — Scatter-Gather, Message Router, Publish-Subscribe, Idempotent Receiver, Dead Letter Channel. Zatím žádný nemá vlastní dokument, ale **několik z nich už v katalogu popsané je** — dostaly se tam z jiné strany a [EIP/README.md](EIP/) říká kudy.
 
 ### [Architecture](Architecture/)
 

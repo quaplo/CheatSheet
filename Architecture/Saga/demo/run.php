@@ -14,6 +14,8 @@ require __DIR__ . '/Contexts/ShippingContext.php';
 require __DIR__ . '/Saga/SagaState.php';
 require __DIR__ . '/Saga/SagaStep.php';
 require __DIR__ . '/Saga/SagaOutcome.php';
+require __DIR__ . '/Saga/SagaLog.php';
+require __DIR__ . '/Saga/SagaRecovery.php';
 require __DIR__ . '/Saga/OrderFulfillmentSaga.php';
 require __DIR__ . '/Steps/ReserveStock.php';
 require __DIR__ . '/Steps/ChargePayment.php';
@@ -23,6 +25,8 @@ use Contexts\PaymentContext;
 use Contexts\ShippingContext;
 use Contexts\StockContext;
 use Saga\OrderFulfillmentSaga;
+use Saga\SagaLog;
+use Saga\SagaRecovery;
 use Saga\SagaState;
 use Steps\ChargePayment;
 use Steps\ReserveStock;
@@ -157,3 +161,71 @@ echo "    platba proběhla, zásilka ne. Není to chyba implementace —\n";
 echo "    je to cena za to, že nemáš distribuovanou transakci.\n";
 echo "\n    Řeší se to sémantickými zámky (rezervace = zámek se smyslem)\n";
 echo "    a tím, že se s mezistavem počítá v UI i v pravidlech.\n";
+
+// ==========================================================================
+// 7. Synchronní kompenzace stačí — dokud proces doběhne
+// ==========================================================================
+
+echo "\n\n7. Co synchronní kompenzace neuhlídá\n";
+
+echo "\n    Všechno výše bylo SYNCHRONNÍ — žádné fronty, přímá volání.\n";
+echo "    A fungovalo to. Jenže veškerá informace o rozdělané práci\n";
+echo "    žila jen v paměti běžícího procesu.\n";
+
+$stock = new StockContext();
+$payments = new PaymentContext();
+$shipping = new ShippingContext();
+
+/** Krok, který proces zabije — deploy, OOM, timeout, spadlý kontejner. */
+$crashingStep = new class implements \Saga\SagaStep {
+    public function name(): string { return 'naplánování dopravy'; }
+    public function execute(SagaState $state): void { throw new \Error('Proces zabit (deploy uprostřed operace).'); }
+    public function compensate(SagaState $state): void { }
+    public function isPivot(): bool { return false; }
+};
+
+$state = new SagaState('OBJ-005', 'MON-27', 1, 799000);
+
+echo "\n    BEZ uloženého stavu:\n";
+
+try {
+    (new OrderFulfillmentSaga([new ReserveStock($stock), new ChargePayment($payments), $crashingStep]))->run($state);
+} catch (Error $e) {
+    printf("        %s\n", $e->getMessage());
+}
+
+printf("        rezervací ve skladu:  %d   ← osiřelá\n", count($stock->reserved));
+printf("        saldo plateb:         %s   ← peníze strženy\n", money($payments->balanceFor('OBJ-005')));
+echo "        kompenzace:           ŽÁDNÁ — kód, který o nich věděl, je pryč\n";
+
+// --- 8. Uložený stav + obnova ---------------------------------------------
+
+echo "\n8. Totéž s uloženým stavem\n";
+
+$stock = new StockContext();
+$payments = new PaymentContext();
+$shipping = new ShippingContext();
+$log = new SagaLog();
+
+$steps = [new ReserveStock($stock), new ChargePayment($payments), $crashingStep];
+$state = new SagaState('OBJ-006', 'MON-27', 1, 799000);
+
+try {
+    (new OrderFulfillmentSaga($steps, $log))->run($state);
+} catch (Error $e) {
+    printf("\n        %s\n", $e->getMessage());
+}
+
+printf("        v databázi zůstalo: %s, hotové kroky: %s\n",
+    $log->all()[0]->status, implode(', ', $log->all()[0]->completedSteps));
+
+echo "\n    …a o pět minut později doběhne obnovovací worker:\n";
+
+$recovered = (new SagaRecovery($steps, $log))->recover();
+
+printf("        uklizeno ság:         %s\n", implode(', ', $recovered));
+printf("        rezervací ve skladu:  %d   ← uvolněno\n", count($stock->reserved));
+printf("        saldo plateb:         %s   ← dobropis vystaven\n", money($payments->balanceFor('OBJ-006')));
+
+echo "\n    Rozdíl mezi 7 a 8 není synchronní × asynchronní.\n";
+echo "    Je to ULOŽENÝ STAV — a ten potřebuješ v obou případech.\n";

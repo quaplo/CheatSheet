@@ -5,7 +5,7 @@
 > **V jedné větě:** Komponenta, která poskládá **čtení** z několika [ohraničených kontextů](../../DDD/BoundedContext/) do jednoho smysluplného celku — a smí přitom volat jen jejich veřejné use-case, nic hlubšího.
 
 > [!IMPORTANT]
-> **Tenhle pattern řeší čtení.** Pro operace, které ve víc kontextech něco **mění**, je odpověď [Saga](../Saga/) — ne kompozice. Proč, ukazuje [srovnání níž](#čtení-a-zápis-nejsou-totéž): u čtení výpadek jen ochudí pohled, u zápisu nechá nekonzistentní data.
+> **Tenhle pattern řeší čtení.** Skládat se dá i zápis — ale ve chvíli, kdy k němu přidáš kompenzace pro případ částečného selhání, **napsal jsi [ságu](../Saga/)**, jen jsi ji tak nenazval. A bez kompenzací je to jen naděje. Proč, ukazuje [srovnání níž](#čtení-a-zápis-nejsou-totéž).
 
 ---
 
@@ -18,7 +18,7 @@ Tenhle pattern nepochází z DDD ani z GoF, ale ze světa SOA a mikroslužeb —
 | **Service Composition** | Thomas Erl, *SOA Design Patterns*, 2009 | Nejcitovanější pojmenování |
 | **Orchestration** | Peltz, IEEE Computer, 2003 | V protikladu k *choreografii* |
 | **API Composition** | Chris Richardson, *Microservices Patterns*, 2018 | Konkrétně čtecí strana |
-| **Scatter-Gather** | Hohpe & Woolf, *EIP*, 2003 | Rozešli dotaz víc příjemcům, posbírej odpovědi — přesně mechanika níž |
+| **[Scatter-Gather](../../EIP/)** | Hohpe & Woolf, *EIP*, 2003 | Rozešli dotaz víc příjemcům, posbírej odpovědi — **přesně mechanika čtecí části níž** |
 | **Aggregator** | mikroslužbový žargon | Totéž, méně přesně |
 
 Tenhle text říká **kompozice** a rozlišuje **čtecí** a **zápisovou** — protože to je [rozdíl, na kterém všechno stojí](#čtení-a-zápis-nejsou-totéž).
@@ -120,7 +120,14 @@ Stav po selhání:
 
 Zákazník má fakturu za zboží, které nikdo neodeslal — a systém o tom neví. **Tohle kompozice vyřešit neumí.** Na to je potřeba [Saga](../Saga/) s kompenzačními akcemi.
 
-Praktické pravidlo: **kompozici používej na čtení. U zápisu přes víc kontextů se rovnou ptej, jestli nepotřebuješ Sagu** — nebo jestli ta operace vůbec musí být synchronní.
+Praktické pravidlo: **kompozici používej na čtení.** U zápisu přes víc kontextů si polož jednu otázku:
+
+> **Co uděláš, když třetí krok selže?**
+
+- *„Nic, spadne to a uvidíme.“* → tohle není pattern, to je naděje.
+- *„Zavolám kompenzace.“* → **napsal jsi [ságu](../Saga/)**, i když je synchronní. Podívej se tam, ať ji napíšeš celou — hlavně kvůli uloženému stavu a idempotenci.
+
+Sága nevyžaduje fronty ani asynchronní zpracování; [synchronní varianta](../Saga/#musí-to-být-asynchronní-ne) je legitimní a pro většinu týmů je to správný začátek.
 
 ### Cena za synchronní volání
 
@@ -255,6 +262,7 @@ Ten poslední řádek je ten, na kterém pattern nejčastěji ztroskotá.
 | [CQRS](../CQRS/) | Alternativa ke čtecí kompozici: místo skládání za běhu si pohled poskládej předem. |
 | [Domain Event](../../DDD/DomainEvent/) | Cesta pryč od časové vazby — choreografie místo orchestrace. |
 | [Anticorruption Layer](../../DDD/AnticorruptionLayer/) | Když se cizí model liší od tvého, patří překlad sem, ne do kompozice. |
+| **Scatter-Gather** ([EIP](../../EIP/)) | Jméno pro samotnou mechaniku čtecí kompozice: rozešli, posbírej, slož. Kompozice k tomu přidává rozlišení povinné × doplňkové a práci s výpadky. |
 | **Facade** (GoF) | Tentýž nápad o několik řádů níž: jedno rozhraní před složitým vnitřkem. |
 
 ---

@@ -19,6 +19,7 @@ final readonly class OrderFulfillmentSaga
     /** @param list<SagaStep> $steps */
     public function __construct(
         private array $steps,
+        private ?SagaLog $log = null,
     ) {
     }
 
@@ -26,10 +27,16 @@ final readonly class OrderFulfillmentSaga
     {
         $completed = [];
 
+        $this->log?->save($state);
+
         foreach ($this->steps as $step) {
             try {
                 $step->execute($state);
                 $completed[] = $step;
+
+                // Zápis po KAŽDÉM kroku. Kdyby proces teď zemřel,
+                // obnova ví, co už proběhlo.
+                $this->log?->save($state);
             } catch (\RuntimeException $e) {
                 // Za pivotním krokem už zpět nejde — jen dopředu.
                 if ($this->passedPivot($completed)) {
@@ -40,12 +47,14 @@ final readonly class OrderFulfillmentSaga
 
                 $compensated = $this->compensate($completed, $state);
                 $state->status = 'kompenzovaná';
+                $this->log?->save($state);
 
                 return SagaOutcome::compensated($step->name(), $e->getMessage(), $compensated);
             }
         }
 
         $state->status = 'dokončená';
+        $this->log?->save($state);
 
         return SagaOutcome::completed();
     }

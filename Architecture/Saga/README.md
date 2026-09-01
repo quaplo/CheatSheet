@@ -130,6 +130,52 @@ Doporučení: **začni orchestrací.** Průběh je vidět, kompenzace se dají n
 
 Demo v téhle složce je **orchestrovaná** varianta, protože je to ta, kterou se začíná.
 
+### Musí to být asynchronní? Ne.
+
+Častá představa je, že sága znamená fronty, zprávy a asynchronní zpracování. **Není to pravda** — a stojí za to si to vyjasnit, protože ta představa odrazuje od patternu tam, kde by byl užitečný.
+
+Původní sága z roku 1987 byla **synchronní, v jedné databázi, v jednom procesu**. Demo v téhle složce je taky synchronní: přímá volání, žádná fronta. Asynchronnost přišla až s mikroslužbami a je to **volba, ne součást definice**.
+
+Z toho plyne odpověď na otázku, která přijde dřív nebo později: *„Proč nemůžu prostě složit zápis a kompenzace řešit synchronně?“*
+
+**Můžeš. A ve chvíli, kdy k tomu přidáš kompenzace, jsi napsal ságu** — jen jsi ji tak nenazval. Ta hranice nevede mezi „kompozicí“ a „ságou“, ale jinde:
+
+| | Složit a doufat | **Synchronní sága** | Sága s uloženým stavem | Asynchronní sága |
+| --- | --- | --- | --- | --- |
+| Kompenzace | ❌ | ✅ | ✅ | ✅ |
+| **Přežije smrt procesu** | ❌ | ❌ | ✅ | ✅ |
+| Selhání kompenzace jde dohnat | — | ❌ | ✅ | ✅ |
+| Volající čeká | ano | ano | ano | **ne** |
+| Snese pomalé kroky | ne | ne | ne | **ano** |
+| Složitost | žádná | **malá** | střední | vysoká |
+
+**Ta skutečně důležitá řádka je druhá.** Synchronní kompenzace funguje dokonale — dokud proces doběhne. Když ho uprostřed zabije deploy, OOM killer nebo timeout, informace o rozdělané práci zmizí s ním:
+
+```
+BEZ uloženého stavu:
+    Proces zabit (deploy uprostřed operace).
+    rezervací ve skladu:  1   ← osiřelá
+    saldo plateb:         7 990 Kč   ← peníze strženy
+    kompenzace:           ŽÁDNÁ — kód, který o nich věděl, je pryč
+```
+
+S uloženým stavem přežije záznam o tom, co proběhlo — a obnovovací worker to dojede:
+
+```
+v databázi zůstalo: běží, hotové kroky: rezervace skladu, stržení platby
+
+…a o pět minut později doběhne obnovovací worker:
+    uklizeno ság:         OBJ-006
+    rezervací ve skladu:  0   ← uvolněno
+    saldo plateb:         0 Kč   ← dobropis vystaven
+```
+
+> **Rozdíl mezi tím, co funguje a co ne, není synchronní × asynchronní. Je to uložený stav** — a ten potřebuješ v obou případech.
+
+**Praktické doporučení:** začni **synchronní ságou s uloženým stavem**. Je to pro většinu týmů to správné místo — kompenzace máš, restart přežiješ, a přitom nemusíš provozovat fronty. K asynchronní variantě přejdi, až když ti vadí, že volající čeká, nebo když některý krok trvá dlouho.
+
+A dodatek, na který se zapomíná: **k uloženému stavu patří i ten worker.** Uložený stav bez obnovy je jen podrobnější záznam o tom, co se nepovedlo.
+
 ### Process Manager: sága, která si pamatuje
 
 Když orchestrátor **drží stav procesu**, má vlastní jméno: **Process Manager** (Hohpe & Woolf, *EIP*, 2003).
@@ -190,6 +236,8 @@ Nejjednodušší způsob: kompenzace se **podívá, jestli už proběhla**, a kd
 | **Krok** | `ReserveStock`, `ChargePayment` | `execute()` + `compensate()` + `isPivot()` |
 | **Účastník** | `StockContext`, `PaymentContext` | Cizí kontext s vlastní databází a transakcí |
 | **Výsledek** | `SagaOutcome` | Dokončeno / kompenzováno / zaseknuto |
+| **Úložiště stavu** | `SagaLog` | Aby sága přežila smrt procesu |
+| **Obnova** | `SagaRecovery` | Dojede kompenzace ság, které nikdo nedokončil |
 
 ---
 
@@ -298,6 +346,8 @@ Kroky volají **jen veřejné use-case cizích kontextů** — stejné pravidlo 
 | Nevratný krok je uprostřed | Sága uvízne a nejde ani dopředu, ani zpět | Pivot až nakonec |
 | Kompenzace v pořadí kroků | Ruší se závislosti v opačném pořadí, než vznikly | `array_reverse` |
 | Sága nemá stav | Po pádu procesu nikdo neví, kde to skončilo | Stav ukládej — je to Process Manager |
+| **Uložený stav bez obnovovacího workeru** | Máš podrobný záznam o tom, co se nepovedlo, a nikdo to neuklidí | K uloženému stavu patří worker, který nedokončené ságy dojede |
+| Odmítnutí ságy s tím, že „nechceme fronty“ | Sága nevyžaduje fronty; synchronní varianta je legitimní | [Synchronní sága s uloženým stavem](#musí-to-být-asynchronní-ne) |
 | Kompenzuje se i technický timeout | Zbytečné rušení objednávek kvůli síti | Nejdřív opakuj, kompenzuj až u obchodního selhání |
 | Koordinátor sahá do cizích databází | Obchází hranice kontextů | Jen veřejné use-case |
 | Koordinátor začne rozhodovat o byznysu cizích kontextů | Naroste do distribuovaného monolitu | Řídí **pořadí**, ne pravidla |
@@ -328,7 +378,7 @@ Co s tím jde dělat:
 ## V praxi
 
 - **Symfony Messenger** — kroky jako zprávy, stav ságy v databázi, opakování a *dead letter* transport pro to, co neprošlo ani po opakování.
-- **Stav v databázi, ne v paměti** — bez toho sága nepřežije deploy uprostřed procesu.
+- **Stav v databázi, ne v paměti** — bez toho sága nepřežije deploy uprostřed procesu. Platí to i pro synchronní variantu; [není to o frontách](#musí-to-být-asynchronní-ne).
 - **Monitoring** je součást patternu, ne doplněk: alert na ságy ve stavu „zaseknutá“ déle než X minut.
 - **Ruční dokončení** — počítej s tím, že někdo bude muset zasáhnout. Dej mu na to nástroj dřív, než ho bude potřebovat.
 - **U nás** — kroky přes hranice služeb jdou přes [SDK](../../Glossary.md#sdk-balíček) nebo zprávy; stav ságy patří té službě, která proces vlastní.
@@ -366,7 +416,9 @@ Co s tím jde dělat:
 php Architecture/Saga/demo/run.php
 ```
 
-Projde šťastnou cestu, pak nechá selhat druhý a třetí krok a ukáže kompenzace **pozpátku**. Na účetní knize předvede, že **saldo je nula, ale oba záznamy zůstaly** — rozdíl mezi kompenzací a rollbackem. Pak spustí kompenzace podruhé (idempotence), přesune pivotní krok doprostřed, aby sága uvízla, a skončí tím, co ságou nezískáš: izolací.
+Projde šťastnou cestu, pak nechá selhat druhý a třetí krok a ukáže kompenzace **pozpátku**. Na účetní knize předvede, že **saldo je nula, ale oba záznamy zůstaly** — rozdíl mezi kompenzací a rollbackem. Pak spustí kompenzace podruhé (idempotence), přesune pivotní krok doprostřed, aby sága uvízla, a ukáže, co ságou nezískáš: izolaci.
+
+Poslední dvě části odpovídají na otázku **„proč nestačí synchronní kompenzace?“**: nechají proces zemřít uprostřed operace — jednou bez uloženého stavu (osiřelá rezervace, stržené peníze, nikdo nekompenzuje) a jednou s ním, kdy to obnovovací worker dojede.
 
 ---
 
