@@ -395,7 +395,7 @@ foreach ($result->used() as $rule) {
 | ------- | ----- |
 | [Specification](../../DDD/Specification/) | **Předstupeň, a často dostatečný.** Specifikace je podmínka pravidla; rules engine přidává důsledek, prioritu a řešení konfliktů. Když ti stačí „platí / neplatí“, zůstaň u ní. |
 | [Strategy](../../GoF/Behavioral/Strategy/) | Jednotlivé pravidlo je Strategy pro výpočet důsledku. Rozdíl: Strategy se vybírá jedna, tady se vyhodnocují všechny a pak se rozhoduje. |
-| **Chain of Responsibility** (GoF) | Blízký příbuzný strategie *první podle priority* — řetěz, kde první schopný požadavek obslouží. Rules engine navíc vidí i ty, kteří by ho obsloužili taky. |
+| [Chain of Responsibility](../../GoF/Behavioral/ChainOfResponsibility/) (GoF) | Blízký příbuzný strategie *první podle priority* — řetěz, kde první schopný požadavek obslouží. Rules engine navíc vidí i ty, kteří by ho obsloužili taky. |
 | **Interpreter** (GoF) | Kam se dostaneš, když konfigurační slovník poroste. Užitečné hlavně jako varování. |
 | [Value Object](../../DDD/ValueObject/) | `DiscountContext` i `DiscountResult` jsou hodnoty — neměnné, bez identity. |
 | **Command** (GoF) | Když důsledkem není hodnota, ale akce, přiblíží se pravidlo dvojici podmínka + příkaz. |

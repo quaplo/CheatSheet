@@ -47,7 +47,7 @@ Autoři vzory rozdělili podle toho, čeho se týkají:
 
 | Pattern | K čemu | Stav |
 | ------- | ------ | ---- |
-| Chain of Responsibility | Řetěz zpracovatelů, požadavek putuje k tomu, kdo ho umí obsloužit | ⬜ |
+| [**Chain of Responsibility**](Behavioral/ChainOfResponsibility/) | Řetěz zpracovatelů, požadavek putuje k tomu, kdo ho umí obsloužit | ✅ |
 | Command | Operace zabalená do objektu — jde předat, zařadit do fronty, vrátit zpět | ⬜ |
 | Interpreter | Vyhodnocení vět jednoduchého jazyka | ⬜ |
 | Iterator | Průchod kolekcí bez znalosti její vnitřní struktury | ⬜ |

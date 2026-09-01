@@ -205,7 +205,7 @@ Nový dopravce = nová třída a jeden řádek v registraci. `ShippingCalculator
 - ❌ **Máš dvě varianty a víc jich nebude.** `match` na dvou řádcích je čitelnější než tři soubory. Pattern zaveď, až když tě bolest donutí.
 - ❌ **Varianta je jednořádkový výraz bez závislostí.** Použij closure nebo first-class callable: `array_map($this->rate(...), $items)`.
 - ❌ **Varianty se liší jen daty, ne chováním.** Pak nepotřebuješ třídy, ale konfigurační pole nebo enum s hodnotami.
-- ❌ **Algoritmus se nevybírá, ale postupně prochází celý** — to je **Chain of Responsibility**, ne Strategy.
+- ❌ **Algoritmus se nevybírá, ale postupně prochází celý** — to je [Chain of Responsibility](../ChainOfResponsibility/), ne Strategy.
 
 ---
 
@@ -239,6 +239,7 @@ Nový dopravce = nová třída a jeden řádek v registraci. `ShippingCalculator
 | **Decorator** | Také obaluje chování, ale **přidává** k původnímu; Strategy původní chování **nahrazuje**. |
 | **Command** | Také zabaluje operaci do objektu, ale kvůli odložení, frontě nebo undo — ne kvůli výběru z variant. |
 | **Factory Method** | Častý doplněk: rozhoduje, která strategie se pro daný vstup vytvoří. |
+| [Chain of Responsibility](../ChainOfResponsibility/) | Strategy vybere jednoho zpracovatele předem; řetěz se ptá postupně, dokud někdo neřekne ano. |
 | [Rules Engine](../../../Architecture/RulesEngine/) | Jednotlivé pravidlo je Strategy pro výpočet důsledku. Rozdíl: Strategy se vybírá jedna, v enginu se vyhodnotí všechny a teprve pak se rozhoduje. |
 | [Ports & Adapters](../../../Architecture/PortsAndAdapters/) | Port se dvěma implementacemi je z pohledu jádra Strategy. Liší se záměrem: Strategy vybírá algoritmus, port odstiňuje vnější svět. |
 | [Specification](../../../DDD/Specification/) (DDD) | Také zabaluje chování do objektu, ale odpovídá **ano/ne** místo toho, aby něco počítala. Často spolupracují: specifikace rozhodne, která strategie se použije. |

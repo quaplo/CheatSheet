@@ -10,7 +10,7 @@ Společný jmenovatel většiny z nich: místo aby jedna třída věděla všech
 
 | Pattern | K čemu | Obtížnost | Stav |
 | ------- | ------ | --------- | ---- |
-| Chain of Responsibility | Řetěz zpracovatelů, požadavek putuje k tomu, kdo ho umí obsloužit | | ⬜ |
+| [**Chain of Responsibility**](ChainOfResponsibility/) | Řetěz zpracovatelů, požadavek putuje k tomu, kdo ho umí obsloužit; v moderním PHP známý jako middleware | ●●●○○ | ✅ |
 | Command | Operace zabalená do objektu — jde předat, zařadit do fronty, vrátit zpět | | ⬜ |
 | Interpreter | Vyhodnocení vět jednoduchého jazyka | | ⬜ |
 | Iterator | Průchod kolekcí bez znalosti její vnitřní struktury | | ⬜ |

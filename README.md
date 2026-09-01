@@ -34,6 +34,7 @@ Patterny jsou uspořádané podle **původu** — podle knihy nebo autora, kde b
 
 | Pattern | Kategorie | K čemu to je | Obtížnost |
 | ------- | --------- | ------------ | --------- |
+| [Chain of Responsibility](GoF/Behavioral/ChainOfResponsibility/) | Behavioral | Požadavek putuje řetězem, dokud ho někdo nevyřídí; základ middleware | ●●●○○ |
 | [Strategy](GoF/Behavioral/Strategy/) | Behavioral | Zaměnitelné algoritmy za jedním rozhraním — místo `if`/`switch` na typ | ●●○○○ |
 
 <sub>Kompletní katalog všech 23 patternů včetně nezpracovaných: [GoF/README.md](GoF/)</sub>
@@ -138,6 +139,10 @@ Obrácený rejstřík: začni u toho, co tě pálí.
 | Na otázku „jaké vlastně máme slevy?“ neumí nikdo odpovědět bez čtení kódu | [Rules Engine](Architecture/RulesEngine/) |
 | Na pořadí `if`ů záleží, ale nikde není napsané proč | [Rules Engine](Architecture/RulesEngine/) |
 | Musím zpětně zdůvodnit, proč konkrétní zákazník dostal konkrétní cenu | [Rules Engine](Architecture/RulesEngine/) |
+| Odesílatel obsahuje `if`, kterým vybírá zpracovatele — a tím zná všechny | [Chain of Responsibility](GoF/Behavioral/ChainOfResponsibility/) |
+| Na začátku metody se hromadí kontroly: validace, oprávnění, limity, pak teprve práce | [Chain of Responsibility](GoF/Behavioral/ChainOfResponsibility/) |
+| Potřebuju obalit zpracování logováním, měřením času nebo transakcí | [Chain of Responsibility](GoF/Behavioral/ChainOfResponsibility/) |
+| Nevím, v jakém pořadí mají v API běžet CORS, rate limit, autentizace a validace | [Chain of Responsibility](GoF/Behavioral/ChainOfResponsibility/) |
 
 ---
 
