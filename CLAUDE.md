@@ -44,7 +44,7 @@ Plánované sbírky: GoF (1994) · PoEAA (Fowler, 2002) · DDD (Evans, 2003) · 
 
 Šablona je v `_template/PATTERN.md`. Povinné sekce: **Původ** (zdroj, autoři, rok, kategorie, obtížnost + kontext vzniku) · **Problém** (včetně ukázky „špatného“ kódu) · **Řešení** (+ Mermaid diagram) · **Účastníci** · **Implementace v PHP** · **Kdy použít / Kdy nepoužít** · **Časté chyby** · **Související patterny**. Nepovinné: *V praxi*, *Demo*, *Zdroje*.
 
-Každý pattern má v hlavičce YAML frontmatter (`name`, `category`, `source`, `year`, `difficulty`, `tags`, `related`, `status`) — drž ho konzistentní, do budoucna z něj půjde generovat přehledové tabulky.
+Každý pattern má **na konci souboru** blok `Metadata patternu` — `<details>` s YAML fencem (`name`, `name_cs`, `category`, `source`, `authors`, `year`, `difficulty`, `tags`, `related`, `status`). Drž klíče konzistentní, do budoucna z nich půjde generovat přehledové tabulky. **Nedávej metadata jako YAML frontmatter na začátek** — GitHub ho vykreslí jako tabulku nad nadpisem a zaclání obsahu.
 
 Referenční hotový pattern: **`GoF/Behavioral/Strategy/README.md`**. Když si nejsi jistý tónem, hloubkou nebo formátem, řiď se jím.
 

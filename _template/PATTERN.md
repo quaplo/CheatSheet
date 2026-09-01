@@ -1,16 +1,3 @@
----
-name: PatternName
-name_cs: Český název
-category: Creational | Structural | Behavioral | —
-source: GoF – Design Patterns
-authors: Gamma, Helm, Johnson, Vlissides
-year: 1994
-difficulty: 2
-tags: [tag1, tag2]
-related: [OtherPattern, AnotherPattern]
-status: draft | done
----
-
 <!--
 ŠABLONA PRO POPIS PATTERNU
 Vyplň všechny sekce, nepoužité smaž (kromě povinných: Původ, Problém, Řešení,
@@ -146,3 +133,27 @@ php GoF/Behavioral/PatternName/demo/run.php
 ## Zdroje
 
 - <!-- kniha, kapitola, strana / odkaz -->
+
+---
+
+<details>
+<summary>Metadata patternu</summary>
+
+<!-- Strojově čitelná hlavička. Drž klíče i jejich pořadí, do budoucna z nich
+     půjde generovat přehledové tabulky. Patří na konec souboru, aby
+     nezaclánělo obsahu. -->
+
+```yaml
+name: PatternName
+name_cs: Český název
+category: Creational | Structural | Behavioral | —
+source: GoF – Design Patterns
+authors: Gamma, Helm, Johnson, Vlissides
+year: 1994
+difficulty: 2
+tags: [tag1, tag2]
+related: [OtherPattern, AnotherPattern]
+status: draft | done
+```
+
+</details>

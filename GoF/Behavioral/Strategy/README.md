@@ -1,16 +1,3 @@
----
-name: Strategy
-name_cs: Strategie
-category: Behavioral
-source: GoF – Design Patterns
-authors: Gamma, Helm, Johnson, Vlissides
-year: 1994
-difficulty: 2
-tags: [kompozice, polymorfismus, open-closed, testovatelnost]
-related: [State, TemplateMethod, Decorator, Command]
-status: done
----
-
 # Strategy (Strategie)
 
 > [← zpět na Behavioral](../)
@@ -285,3 +272,23 @@ Spočítá dopravu pro čtyři různé objednávky přes všechny registrované 
 
 - Gamma, Helm, Johnson, Vlissides: *Design Patterns*, Addison-Wesley, 1994 — kapitola 5, str. 315
 - [Symfony: Service Tags](https://symfony.com/doc/current/service_container/tags.html)
+
+---
+
+<details>
+<summary>Metadata patternu</summary>
+
+```yaml
+name: Strategy
+name_cs: Strategie
+category: Behavioral
+source: GoF – Design Patterns
+authors: Gamma, Helm, Johnson, Vlissides
+year: 1994
+difficulty: 2
+tags: [kompozice, polymorfismus, open-closed, testovatelnost]
+related: [State, TemplateMethod, Decorator, Command]
+status: done
+```
+
+</details>
