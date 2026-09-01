@@ -75,11 +75,17 @@ Aggregate, Entity, Value Object, Domain Event, Bounded Context. Ne úplně „de
 
 Vzory pro messaging a komunikaci mezi službami — Message Router, Publish-Subscribe, Idempotent Receiver, Dead Letter Channel.
 
-### Architecture ⬜
+### [Architecture](Architecture/)
 
 > různí autoři, různé roky
 
-Vzory bez jedné mateřské knihy: Hexagonal Architecture (Cockburn, 2005), Clean Architecture (Martin, 2012), CQRS (Young, 2010), Event Sourcing, Saga.
+Vzory bez jedné mateřské knihy, které se netýkají jedné třídy, ale **tvaru celé aplikace** — kudy vedou závislosti a kde jsou hranice. Společné mají pozorování, že byznys logika stárne mnohem pomaleji než frameworky a databáze okolo ní.
+
+| Pattern | Autor, rok | K čemu to je | Obtížnost |
+| ------- | ---------- | ------------ | --------- |
+| [Ports & Adapters](Architecture/PortsAndAdapters/) | Cockburn, 2005 | Jádro nezávislé na okolí; závislosti míří dovnitř | ●●●●○ |
+
+<sub>Plánované (Clean Architecture, CQRS, Event Sourcing, Saga): [Architecture/README.md](Architecture/)</sub>
 
 <sub>⬜ plánováno · 🚧 rozpracováno · ✅ hotovo</sub>
 
@@ -115,6 +121,10 @@ Obrácený rejstřík: začni u toho, co tě pálí.
 | Tutéž podmínku o třech částech mám na třech místech a jedna z kopií je zastaralá | [Specification](DDD/Specification/) |
 | Pravidlo má jméno na poradě, ale v kódu ho nenajdu — je rozpuštěné v `if` | [Specification](DDD/Specification/) |
 | Musím uživateli říct, **proč** neprošel, a z `&&` nezjistím která část selhala | [Specification](DDD/Specification/) |
+| Unit test doménové logiky potřebuje běžící databázi | [Ports & Adapters](Architecture/PortsAndAdapters/) |
+| Doménová třída importuje `Doctrine\…` nebo `GuzzleHttp\…` | [Ports & Adapters](Architecture/PortsAndAdapters/) |
+| Výměna knihovny znamená sáhnout do dvaceti souborů napříč aplikací | [Ports & Adapters](Architecture/PortsAndAdapters/) |
+| Tatáž operace existuje dvakrát — jednou pro HTTP, podruhé pro frontu | [Ports & Adapters](Architecture/PortsAndAdapters/) |
 
 ---
 

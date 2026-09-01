@@ -144,7 +144,7 @@ interface OrderReader { public function find(OrderId $id): ?Order; }
 interface OrderWriter { public function save(Order $order): void; }
 ```
 
-**Souvisí s patterny:** [Specification](../DDD/Specification/) (kontrakt o jediné metodě — menší už neuděláš) · Adapter (zúží cizí rozhraní na to, co náš kód opravdu potřebuje) · Facade · Proxy
+**Souvisí s patterny:** [Specification](../DDD/Specification/) (kontrakt o jediné metodě — menší už neuděláš) · [Ports & Adapters](../Architecture/PortsAndAdapters/) (port popisuje jednu vnější starost, ne celé SDK) · Adapter (zúží cizí rozhraní na to, co náš kód opravdu potřebuje) · Facade · Proxy
 
 ---
 
@@ -178,7 +178,7 @@ interface OrderRepository
 // App\Infrastructure\Persistence\DoctrineOrderRepository implements OrderRepository
 ```
 
-**Souvisí s patterny:** Abstract Factory · Strategy · Adapter · Repository (PoEAA) · Hexagonal Architecture
+**Souvisí s patterny:** [Ports & Adapters](../Architecture/PortsAndAdapters/) (DIP dotažené na úroveň celé aplikace) · Abstract Factory · [Strategy](../GoF/Behavioral/Strategy/) · Adapter · Repository (PoEAA)
 
 ---
 

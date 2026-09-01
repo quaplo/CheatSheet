@@ -484,6 +484,7 @@ echo $address->format();                     // Sokolovská 100 / 186 00 Praha /
 | **Composite** (GoF) | **Nezaměňovat.** Kompozitní value object je jen hodnota složená z hodnot; GoF Composite řeší stromové struktury s jednotným zacházením s listem i uzlem. |
 | **Aggregate** (DDD) | Value objecty tvoří vnitřek agregátu — nemají vlastní životní cyklus, žijí a umírají s ním. |
 | **Special Case / Null Object** | Zvláštní hodnota (`Money::zero()`, `EmailAddress::unknown()`) místo `null`. |
+| [Ports & Adapters](../../Architecture/PortsAndAdapters/) | Typický obsah příkazů a odpovědí na hranici portu — `PlaceOrderCommand`, `PaymentResult`. |
 | [Specification](../Specification/) (DDD) | Specifikace se chová jako hodnota — neměnná, bez identity. Parametry pravidel bývají value objecty. |
 | **Factory Method** | Pojmenované konstruktory (`fromCents`, `fromString`) jsou jeho nejjednodušší podoba. |
 
