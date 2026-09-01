@@ -234,7 +234,7 @@ Nový dopravce = nová třída a jeden řádek v registraci. `ShippingCalculator
 
 | Pattern | Vztah |
 | ------- | ----- |
-| **State** | Strukturou skoro totožný. Rozdíl je v záměru: u Strategy vybírá variantu **klient zvenčí** a ta se během operace nemění; u State si objekt přepíná vlastní chování sám podle toho, co se s ním děje. |
+| [State](../State/) | Strukturou skoro totožný a nejčastěji zaměňovaná dvojice vůbec. Rozdíl je v tom, kdo rozhoduje a co ví: strategii vybírá **klient zvenčí** a ta se během operace nemění; stav si objekt přepíná **sám** a jednotlivé stavy **znají své následníky**. Strategy odpovídá na „jak to udělat“, State na „co teď smím“. |
 | **Template Method** | Řeší totéž — variabilní část algoritmu — ale **dědičností** místo kompozice. Template Method mění kroky uvnitř pevné kostry, Strategy vymění celý algoritmus. |
 | **Decorator** | Také obaluje chování, ale **přidává** k původnímu; Strategy původní chování **nahrazuje**. |
 | **Command** | Také zabaluje operaci do objektu, ale kvůli odložení, frontě nebo undo — ne kvůli výběru z variant. |

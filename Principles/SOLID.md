@@ -112,7 +112,7 @@ interface OrderReader { public function find(OrderId $id): ?Order; }
 interface OrderWriter { public function save(Order $order): void; }
 ```
 
-**Souvisí s patterny:** [Repository](../PoEAA/Repository/) (in-memory implementace musí být plnohodnotná náhrada té ostré — jinak testy lžou) · Template Method (kostra v předkovi musí platit pro všechny potomky) · Composite · [Strategy](../GoF/Behavioral/Strategy/) (kompozice místo dědičnosti se LSP vyhne úplně) · [Value Object](../DDD/ValueObject/) (`final` je tu záměr — potomek s jinou rovností poruší kontrakt)
+**Souvisí s patterny:** [Repository](../PoEAA/Repository/) (in-memory implementace musí být plnohodnotná náhrada té ostré — jinak testy lžou) · [State](../GoF/Behavioral/State/) (poučný hraniční případ: stav záměrně dědí metody, které vyhazují výjimku — a **není** to porušení LSP, protože výjimka je součástí kontraktu předka) · Template Method (kostra v předkovi musí platit pro všechny potomky) · Composite · [Strategy](../GoF/Behavioral/Strategy/) (kompozice místo dědičnosti se LSP vyhne úplně) · [Value Object](../DDD/ValueObject/) (`final` je tu záměr — potomek s jinou rovností poruší kontrakt)
 
 ---
 

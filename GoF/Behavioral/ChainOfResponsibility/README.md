@@ -350,6 +350,7 @@ $result = $pipeline->process($order);
 | [Rules Engine](../../../Architecture/RulesEngine/) | Řetěz zná jen prvního schopného. Rules engine vidí **všechny**, kdo by vyhověli, a teprve pak se rozhoduje — a proto umí auditní stopu i řešení konfliktů. |
 | **Composite** (GoF) | Často spolu: řetěz může být článkem jiného řetězu. |
 | [Specification](../../../DDD/Specification/) | Přirozený obsah metody `canApprove()` — podmínka článku jako samostatný objekt. |
+| [State](../State/) | Také deleguje na vyměnitelný objekt, ale ví přesně na který. Řetěz hledá, stav ne. |
 | **Command** (GoF) | Požadavek putující řetězem bývá právě příkaz. |
 
 ---

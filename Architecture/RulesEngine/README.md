@@ -434,7 +434,7 @@ foreach ($result->used() as $rule) {
 
 - **Symfony** — tagované služby dají sadu pravidel do konstruktoru enginu automaticky; nové pravidlo je jedna třída, nic dalšího.
 - **Symfony ExpressionLanguage** — hotový vyhodnocovač výrazů, když opravdu potřebuješ stupeň 4. Lepší než psát vlastní parser, ale platí u něj tytéž výhrady k typové bezpečnosti.
-- **Symfony Workflow** — pravidlový systém specializovaný na přechody stavů. Když se tvá „pravidla“ točí kolem toho, co smí následovat po čem, sáhni radši po něm.
+- **Symfony Workflow** — pravidlový systém specializovaný na přechody stavů. Když se tvá „pravidla“ točí kolem toho, co smí následovat po čem, jsi u patternu [State](../../GoF/Behavioral/State/) a sáhni radši po Workflow.
 - **Drools / OpenL Tablets** — plnohodnotné inferenční enginy ze světa Javy. Zmiňujeme je hlavně proto, abys věděl, kde je hranice, za kterou tenhle pattern nejde.
 - **Auditní stopa v praxi** — ukládej ji k objednávce, ne do logu. Za půl roku se někdo zeptá, proč konkrétní objednávka dostala konkrétní cenu.
 

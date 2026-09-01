@@ -54,7 +54,7 @@ Autoři vzory rozdělili podle toho, čeho se týkají:
 | Mediator | Prostředník, přes kterého objekty komunikují místo napřímo | ⬜ |
 | Memento | Uložení a obnovení stavu objektu bez porušení zapouzdření | ⬜ |
 | Observer | Objekt informuje odběratele o své změně | ⬜ |
-| State | Objekt mění chování podle vnitřního stavu | ⬜ |
+| [**State**](Behavioral/State/) | Objekt mění chování podle vnitřního stavu | ✅ |
 | [**Strategy**](Behavioral/Strategy/) | Zaměnitelné algoritmy za jedním rozhraním | ✅ |
 | Template Method | Kostra algoritmu v předkovi, kroky v potomcích | ⬜ |
 | Visitor | Nová operace nad strukturou objektů bez zásahu do jejich tříd | ⬜ |

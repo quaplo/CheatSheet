@@ -36,6 +36,7 @@ Patterny jsou uspořádané podle **původu** — podle knihy nebo autora, kde b
 | ------- | --------- | ------------ | --------- |
 | [Chain of Responsibility](GoF/Behavioral/ChainOfResponsibility/) | Behavioral | Požadavek putuje řetězem, dokud ho někdo nevyřídí; základ middleware | ●●●○○ |
 | [Strategy](GoF/Behavioral/Strategy/) | Behavioral | Zaměnitelné algoritmy za jedním rozhraním — místo `if`/`switch` na typ | ●●○○○ |
+| [State](GoF/Behavioral/State/) | Behavioral | Objekt mění chování podle svého stavu; zakázané přechody nejde přehlédnout | ●●●○○ |
 
 <sub>Kompletní katalog všech 23 patternů včetně nezpracovaných: [GoF/README.md](GoF/)</sub>
 
@@ -143,6 +144,9 @@ Obrácený rejstřík: začni u toho, co tě pálí.
 | Na začátku metody se hromadí kontroly: validace, oprávnění, limity, pak teprve práce | [Chain of Responsibility](GoF/Behavioral/ChainOfResponsibility/) |
 | Potřebuju obalit zpracování logováním, měřením času nebo transakcí | [Chain of Responsibility](GoF/Behavioral/ChainOfResponsibility/) |
 | Nevím, v jakém pořadí mají v API běžet CORS, rate limit, autentizace a validace | [Chain of Responsibility](GoF/Behavioral/ChainOfResponsibility/) |
+| `switch ($this->status)` mám v každé metodě objektu a na jednu se vždy zapomene | [State](GoF/Behavioral/State/) |
+| Nikde není napsané, jaké přechody stavů jsou vlastně dovolené | [State](GoF/Behavioral/State/) |
+| Frontend nabídne tlačítko pro operaci, která pak na backendu spadne | [State](GoF/Behavioral/State/) |
 
 ---
 

@@ -17,7 +17,7 @@ Společný jmenovatel většiny z nich: místo aby jedna třída věděla všech
 | Mediator | Prostředník, přes kterého objekty komunikují místo napřímo | | ⬜ |
 | Memento | Uložení a obnovení stavu objektu bez porušení zapouzdření | | ⬜ |
 | Observer | Objekt informuje odběratele o své změně | | ⬜ |
-| State | Objekt mění chování podle vnitřního stavu | | ⬜ |
+| [**State**](State/) | Objekt mění chování podle vnitřního stavu; v PHP 8.1+ často stačí enum | ●●●○○ | ✅ |
 | [**Strategy**](Strategy/) | Zaměnitelné algoritmy za jedním rozhraním | ●●○○○ | ✅ |
 | Template Method | Kostra algoritmu v předkovi, kroky v potomcích | | ⬜ |
 | Visitor | Nová operace nad strukturou objektů bez zásahu do jejich tříd | | ⬜ |
