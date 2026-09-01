@@ -156,35 +156,86 @@ Tohle je ta nejdůležitější sekce celého dokumentu. „Rules engine“ nen�
 | 1 | **Pojmenovaná podmínka** | `if ($this->isEligibleForFreeShipping($order))` | žádná | Pravidel je pár a nemění se |
 | 2 | **[Specification](../../DDD/Specification/)** | Pravidlo jako objekt, skládá se přes and/or | malá | Pravidla se kombinují, ale vyhodnocuje je kód |
 | 3 | **Tenhle pattern** | Sada pravidel + engine se strategií, vše v PHP | střední | Pravidel je hodně, potřebuješ katalog a zdůvodnění |
-| 4 | **Pravidla jako data** | Definice v konfiguraci nebo v databázi | vysoká | Sazby a prahy se mění častěji než kód |
+| 4 | **[Pravidla jako data](#stupeň-4-pravidla-jako-data)** | Pravidlo přestane být třídou a stane se záznamem (YAML, DB) | vysoká | Sazby a prahy se mění častěji než kód |
 | 5 | **Inferenční engine** | Řetězení, Rete, pravidla spouštějí pravidla (Drools) | velmi vysoká | Stovky pravidel se vzájemnými závislostmi |
 
 Hranice mezi 3 a 4 je **typová bezpečnost**, hranice mezi 4 a 5 je **předvídatelnost**. Obě se překračují jednosměrně a obě stojí mnohem víc, než se při rozhodování zdá.
 
-### Co konkrétně stojí stupeň 4
+### Stupeň 4: pravidla jako data
 
-Demo obsahuje `ConfiguredRule`, které se skládá z pole:
+Nejdřív o co jde, protože ten pojem se používá pro dvě dost odlišné věci.
+
+**Pravidlo přestane být kódem a stane se záznamem.** Místo třídy, kterou napíše programátor, je pravidlo řádek v YAML nebo v databázi, který engine přečte a interpretuje **až za běhu**:
 
 ```php
-ConfiguredRule::fromArray([
-    'name' => 'Objednávka nad 5 000 Kč −5 %',
-    'priority' => 70,
-    'when' => ['field' => 'orderTotalInCents', 'op' => '>=', 'value' => 500000],
-    'then' => ['percent' => 5],
-]);
+// Stupeň 3 — pravidlo je třída. Změna znamená úpravu kódu a deploy.
+final class VipCustomerRule implements DiscountRule
+{
+    public function appliesTo(DiscountContext $context): bool
+    {
+        return $context->isVipCustomer;
+    }
+
+    public function discountFor(DiscountContext $context): int
+    {
+        return intdiv($context->orderTotalInCents, 10);
+    }
+}
+
+// Stupeň 4 — pravidlo je záznam. Změna znamená úpravu dat.
+[
+    'name' => 'VIP zákazník 10 %',
+    'priority' => 100,
+    'when' => ['field' => 'isVipCustomer', 'op' => '==', 'value' => true],
+    'then' => ['percent' => 10],
+]
 ```
 
-Vypadá to lákavě — pravidlo bez deploye. Účet přijde takhle:
+Engine dostane místo hotových objektů seznam záznamů a poskládá si z nich pravidla sám — v demu to dělá `ConfiguredRule::fromArray()`. Klíčové slovo je **interpretuje**: `'op' => '>='` není kód, je to řetězec, který engine musí za běhu přeložit na porovnání.
+
+**Znáš to, i když jsi tomu takhle neříkal.** Tohle je `security.yaml` v Symfony:
+
+```yaml
+access_control:
+    - { path: ^/admin, roles: ROLE_ADMIN }
+    - { path: ^/api,   roles: ROLE_USER }
+    - { path: ^/,      roles: PUBLIC_ACCESS }
+```
+
+Seznam pravidel, seřazený podle priority, vyhodnocovaný shora dolů se strategií *první, které sedne*. Pravidlový engine i s řešením konfliktů — jen ho nikdo tak nenazývá. Stejně fungují Prometheus alert rules, validační pravidla v XML/YAML nebo přesměrování v konfiguraci webserveru.
+
+#### Dva dost odlišné stupně
+
+Tohle rozlišení je v praxi důležitější než celý zbytek sekce, protože většina týmů říká „4b“ a potřebuje „4a“:
+
+| | **4a — data v repozitáři** | **4b — data v databázi** |
+| --- | --- | --- |
+| Kde pravidlo žije | YAML/JSON v gitu | Řádek v tabulce, obvykle s admin rozhraním |
+| Kdo ho mění | Programátor | Kdokoli s přístupem |
+| Deploy | **Pořád potřeba** | Není |
+| Code review | Ano | Ne |
+| Verzování a návrat zpět | Zdarma, přes git | Musíš si ho postavit |
+| Testy nad novým pravidlem | Můžou být v CI | Nejsou |
+| Co tím reálně získáš | Přehlednost, pravidla na jednom místě | Změny bez deploye |
+| Riziko | Malé | **Velké** |
+
+**4a je skoro vždycky dobrý nápad**, a je levné. Pravidla máš pohromadě, dají se přečíst bez znalosti PHP, a přitom pořád procházejí gitem, review a CI.
+
+**4b je ten drahý krok**, o kterém je zbytek téhle sekce. Rozdíl mezi nimi není technický (v obou případech čteš pole a skládáš z něj pravidlo) — je v tom, že u 4b vypadne z cesty všechno, co tě dosud chránilo.
+
+#### Co konkrétně platíš
+
+Vypadá to lákavě: pravidlo bez deploye. Účet přijde takhle — demo si na to schválně sáhne:
 
 ```
 Pravidlo „Překlep v konfiguraci“ se ptá na neznámý údaj „orderTotalCents“.
 ↑ v pravidle psaném v PHP by tohle nepustil ani PHPStan
 ```
 
-Konkrétně platíš:
+Konkrétně:
 
-- **Typová kontrola končí.** Překlep se pozná za běhu, u zákazníka.
-- **IDE přestane pomáhat.** Přejmenování `orderTotalInCents` tenhle záznam tiše mine.
+- **Typová kontrola končí.** Překlep se pozná za běhu, u zákazníka. U 4a to aspoň chytí test v CI; u 4b až produkce.
+- **IDE přestane pomáhat.** Přejmenuješ `orderTotalInCents` a refactoring tenhle záznam tiše mine.
 - **Slovník je konečný.** Cokoli, co v něm není, se musí doprogramovat — a tlak na jeho růst je nekonečný.
 - **Vzniká ti jazyk.** Jakmile má slovník `and`, `or` a závorky, píšeš interpret. To je jiný projekt, než jaký jsi zadal.
 
@@ -198,7 +249,7 @@ Nejčastější důvod pro stupeň 4 a 5 zní „aby si to byznys měnil sám“
 2. **Kdo to bude opravovat?** Když si analytik nastaví pravidlo špatně, spadne to na tebe — a ladíš cizí konfiguraci bez typů a bez testů.
 3. **Kdo za to ponese odpovědnost?** Pravidlo, které rozdává slevy, je stejně kritické jako kód. Potřebuje review, verzování a možnost návratu. Pokud to admin rozhraní neumí, dal jsi produkční kontrolu ven bez záchranné sítě.
 
-Praktický kompromis, který funguje dobře: **pravidla v PHP, ale jejich parametry v konfiguraci.** Sazby a prahy se mění bez deploye, struktura pravidla zůstává typovaná a otestovaná.
+Praktický kompromis, který funguje dobře: **pravidla v PHP, ale jejich parametry v konfiguraci.** Struktura pravidla zůstává typovaná a otestovaná, mění se jen sazby a prahy. Je to v podstatě [stupeň 4a](#dva-dost-odlišné-stupně) omezený na čísla — levné a bez většiny rizik.
 
 ---
 
