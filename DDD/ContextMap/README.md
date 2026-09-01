@@ -239,6 +239,7 @@ Existuje na to i hotový nástroj — **[Context Mapper](https://contextmapper.o
 | [Repository](../../PoEAA/Repository/) | Uvnitř kontextu; přes hranice se nesahá repositorym cizího kontextu. |
 | [CQRS](../../Architecture/CQRS/) | Čtecí modely plněné z cizího kontextu jsou často výsledek vztahu Customer/Supplier nebo Published Language. |
 | [Domain Event](../DomainEvent/) | Integrační události **jsou** Published Language. Doménové události přes hranici nikdy neposílej. |
+| [Service Composition](../../Architecture/ServiceComposition/) | Vztah k víc kontextům naráz — do mapy patří stejně jako ostatní. |
 
 ---
 

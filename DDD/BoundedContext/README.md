@@ -289,6 +289,7 @@ Domluva nestačí; za půl roku tam bude první `use Sales\Customer` uprostřed 
 | [CQRS](../../Architecture/CQRS/) | Aplikuje se **uvnitř** jednoho kontextu, ne přes hranice. |
 | [Aggregate](../Aggregate/) | O úroveň níž: kontext obsahuje agregáty, agregát nikdy nepřesahuje kontext. |
 | [Domain Service](../DomainService/) | Platí pro ni totéž: doménová služba smí sáhnout na víc agregátů, ale **jen uvnitř svého kontextu**. |
+| [Service Composition](../../Architecture/ServiceComposition/) | Co dělat, když operace dává smysl až složením z víc kontextů — a proč z toho často vzniká nový kontext. |
 | [Value Object](../ValueObject/) | `CustomerId` je hodnota, kterou kontexty sdílejí — a i to je vědomé rozhodnutí. |
 
 ---
