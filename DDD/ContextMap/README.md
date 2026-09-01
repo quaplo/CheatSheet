@@ -238,6 +238,7 @@ Existuje na to i hotový nástroj — **[Context Mapper](https://contextmapper.o
 | [Ports & Adapters](../../Architecture/PortsAndAdapters/) | Antikorupční vrstva bývá řízený adaptér. Mapa říká **proč** ho tam mít, hexagon **kam** ho dát. |
 | [Repository](../../PoEAA/Repository/) | Uvnitř kontextu; přes hranice se nesahá repositorym cizího kontextu. |
 | [CQRS](../../Architecture/CQRS/) | Čtecí modely plněné z cizího kontextu jsou často výsledek vztahu Customer/Supplier nebo Published Language. |
+| [Domain Event](../DomainEvent/) | Integrační události **jsou** Published Language. Doménové události přes hranici nikdy neposílej. |
 
 ---
 

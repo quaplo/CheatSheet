@@ -272,7 +272,7 @@ Konkrétní vodítko, když si nejsi jistý:
 
 - **Doctrine** — kaskády (`cascade: ['persist', 'remove']`) a `orphanRemoval` na kolekci uvnitř kořene jsou technická podoba hranice agregátu. Repository dělej jen pro kořeny.
 - **Optimistické zamykání** — verze na kořeni, ne na vnitřních entitách. Agregát je jednotka souběžnosti.
-- **Doménové události** — standardní způsob, jak dohnat konzistenci mezi agregáty bez toho, abys je měnil v jedné transakci.
+- **[Doménové události](../DomainEvent/)** — standardní způsob, jak dohnat konzistenci mezi agregáty bez toho, abys je měnil v jedné transakci. Bez nich pravidlo „jedna transakce = jeden agregát“ nejde dodržet.
 - **Vaughn Vernon: *Effective Aggregate Design*** — tři články, které jsou dodnes nejlepší praktický text na tohle téma. Kdo má navrhovat agregáty, ať si je přečte.
 
 ---
@@ -287,6 +287,7 @@ Konkrétní vodítko, když si nejsi jistý:
 | [First Class Collection](../../ObjectCalisthenics/FirstClassCollection/) | Přirozený způsob, jak kořen drží své vnitřní entity — i s pravidly o skupině. |
 | [CQRS](../../Architecture/CQRS/) | Hranice agregátu platí pro zápis. Čtecí strana ji překračuje, a smí to. |
 | [Bounded Context](../BoundedContext/) | O úroveň výš: kontext obsahuje agregáty, agregát nikdy nepřesahuje kontext. |
+| [Domain Event](../DomainEvent/) | **Chybějící díl.** Pravidlo „jedna transakce = jeden agregát“ potřebuje způsob, jak dohnat konzistenci mezi agregáty — a to jsou události. |
 | [State](../../GoF/Behavioral/State/) | Životní cyklus kořene, když jsou přechodů víc než dva. |
 
 ---

@@ -21,7 +21,7 @@ Komunikace s uživatelem: **slovensky**.
 ## Struktura
 
 ```
-README.md                      # rozcestník: sbírky (každá s tabulkou svých patternů) + index podle problému
+README.md                      # rozcestník: principy → sbírky (každá s tabulkou patternů) → index podle problému
 CLAUDE.md
 _template/
     README.md                  # postup přidání patternu + checklist
@@ -126,6 +126,7 @@ Po vytvoření nebo úpravě patternu **vždy aktualizuj i navazující dokument
 1. `<Zdroj>/<Kategorie>/<PatternName>/README.md` — vyplněná šablona
 2. `demo/` — jen když je implementace na víc než ~60 řádků nebo má víc spolupracujících tříd; ověř spuštěním
 3. **`README.md` v kořeni** → sekce *Sbírky*, tabulka patternů **pod popisem odpovídající sbírky**
+   (pořadí sekcí je záměrné: *Principy* jsou nahoře, protože jsou stabilní a je jich pár, kdežto *Sbírky* rostou — nepřehazuj to)
    (jde-li o první pattern dané sbírky: sundej u ní `⬜`, založ tabulku a doplň pod ni odkaz na kompletní katalog)
 4. **`README.md` v kořeni** → *Index podle problému* (aspoň jeden řádek, formulovaný jako symptom, ne jako název patternu)
 5. **`README.md` v kořeni** → *Kudy začít*, pokud jde o pattern vhodný pro začátečníky

@@ -337,6 +337,7 @@ $repository->save($order->cancel());
 | ------- | ----- |
 | [Repository](../../PoEAA/Repository/) | Přímý předchůdce téhle úvahy. Repository říká „na výpisy si udělej samostatný dotaz“; CQRS z toho dělá záměrné rozdělení celé cesty k datům. |
 | [Ports & Adapters](../PortsAndAdapters/) | Vrstva, do které se CQRS vkládá: zápis přes port, čtení může mít vlastní. Obojí se hlídá stejným nástrojem v CI. |
+| [Domain Event](../../DDD/DomainEvent/) | Nejběžnější způsob, jak se plní čtecí modely — od stupně 4 výš je to hlavní mechanismus. |
 | **Event Sourcing** | **Časté, ale nesprávné ztotožnění.** ES potřebuje CQRS; CQRS nepotřebuje ES a bez něj se používá mnohem častěji. |
 | [Value Object](../../DDD/ValueObject/) | Příkazy i čtecí modely jsou hodnoty — neměnné, bez identity, bez chování. |
 | [Specification](../../DDD/Specification/) | Na zápisové straně dává smysl; na čtecí ji obvykle nahradí `WHERE`, protože databáze to umí líp. |

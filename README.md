@@ -16,9 +16,23 @@ Praktický katalog návrhových vzorů s ukázkami v PHP.
 | Vím... | Jdi na |
 | ------ | ------ |
 | ...jaký mám problém | [Index podle problému](#index-podle-problému) |
-| ...jak se pattern jmenuje | [Sbírky](#sbírky) — u každé je tabulka jejích patternů |
 | ...že začínám a nevím, kde píchnout | [Kudy začít](#kudy-začít) |
-| ...proč vlastně patterny existují | [Principy](#principy) |
+| ...jak se pattern jmenuje | [Sbírky](#sbírky) — u každé je tabulka jejích patternů |
+| ...že chci vědět, proč patterny vůbec existují | [Principy](#principy) |
+
+---
+
+## Principy
+
+Patterny jsou konkrétní řešení; **principy jsou měřítko, podle kterého se pozná, jestli je návrh dobrý**. Většina patternů tady existuje proto, že řeší porušení některého z nich — proto na ně odkazují a nevysvětlují si je pokaždé znovu.
+
+| Soubor | Co obsahuje | Stav |
+| ------ | ----------- | ---- |
+| [**SOLID**](Principles/SOLID.md) | Jak rozdělit odpovědnosti — SRP, OCP, LSP, ISP, DIP | ✅ |
+| [**Jednoduchost**](Principles/Simplicity.md) | Kolik kódu psát a kdy — KISS, YAGNI, DRY, pravidlo tří | ✅ |
+| [**Objektový návrh**](Principles/ObjectDesign.md) | Jak spolu objekty mluví — Tell Don't Ask, Demeter, kompozice před dědičností, CQS, Fail Fast | ✅ |
+
+<sub>Rozcestník i s vysvětlením členění: [Principles/README.md](Principles/)</sub>
 
 ---
 
@@ -75,6 +89,7 @@ Aggregate, Entity, Value Object, Domain Event, Bounded Context. Ne úplně „de
 | [Entity](DDD/Entity/) | Taktický | Objekt s identitou, která přežije změnu všech atributů | ●●○○○ |
 | [Value Object](DDD/ValueObject/) | Taktický | Hodnota bez identity — vlastní typ místo `string` a `int` | ●●○○○ |
 | [Aggregate](DDD/Aggregate/) | Taktický | Hranice konzistence — jediný vstup a pravidla platná pro celek | ●●●●○ |
+| [Domain Event](DDD/DomainEvent/) | Taktický | Fakt, který se stal — reakce se přihlašují samy, use-case o nich neví | ●●●○○ |
 | [Specification](DDD/Specification/) | Taktický | Doménové pravidlo jako objekt — pojmenovatelné, testovatelné, skládatelné | ●●●○○ |
 | [Bounded Context](DDD/BoundedContext/) | Strategický | Model platí jen uvnitř hranice; totéž slovo smí za ní znamenat jinou věc | ●●●●○ |
 | [Context Map](DDD/ContextMap/) | Strategický | Vztahy mezi kontexty — kdo se komu musí přizpůsobit | ●●●○○ |
@@ -106,19 +121,6 @@ Vzory bez jedné mateřské knihy, které se netýkají jedné třídy, ale **tv
 
 ---
 
-## Principy
-
-Patterny jsou konkrétní řešení; **principy jsou měřítko, podle kterého se pozná, jestli je návrh dobrý**. Většina patternů tady existuje proto, že řeší porušení některého z nich — proto na ně odkazují a nevysvětlují si je pokaždé znovu.
-
-| Soubor | Co obsahuje | Stav |
-| ------ | ----------- | ---- |
-| [**SOLID**](Principles/SOLID.md) | Jak rozdělit odpovědnosti — SRP, OCP, LSP, ISP, DIP | ✅ |
-| [**Jednoduchost**](Principles/Simplicity.md) | Kolik kódu psát a kdy — KISS, YAGNI, DRY, pravidlo tří | ✅ |
-| [**Objektový návrh**](Principles/ObjectDesign.md) | Jak spolu objekty mluví — Tell Don't Ask, Demeter, kompozice před dědičností, CQS, Fail Fast | ✅ |
-
-<sub>Rozcestník i s vysvětlením členění: [Principles/README.md](Principles/)</sub>
-
----
 
 ## Index podle problému
 
@@ -172,6 +174,9 @@ Obrácený rejstřík: začni u toho, co tě pálí.
 | Každá entita má vlastní repository, i ta, co bez „matky“ nedává smysl | [Aggregate](DDD/Aggregate/) |
 | Pravidlo „součet položek nesmí přesáhnout limit“ nejde nikde vynutit | [Aggregate](DDD/Aggregate/) |
 | Nikdo neví, co má obalit transakce | [Aggregate](DDD/Aggregate/) |
+| Use-case má šest závislostí: mailer, sklad, statistiky, audit, cache… | [Domain Event](DDD/DomainEvent/) |
+| E-mail se posílá uvnitř transakce a odejde i po jejím rollbacku | [Domain Event](DDD/DomainEvent/) |
+| Potřebuju změnit jiný agregát, ale nesmím ho měnit ve stejné transakci | [Domain Event](DDD/DomainEvent/) |
 
 ---
 

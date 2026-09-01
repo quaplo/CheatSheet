@@ -351,6 +351,7 @@ $result = $pipeline->process($order);
 | **Composite** (GoF) | Často spolu: řetěz může být článkem jiného řetězu. |
 | [Specification](../../../DDD/Specification/) | Přirozený obsah metody `canApprove()` — podmínka článku jako samostatný objekt. |
 | [State](../State/) | Také deleguje na vyměnitelný objekt, ale ví přesně na který. Řetěz hledá, stav ne. |
+| [Domain Event](../../../DDD/DomainEvent/) (DDD) | Rozdíl v záměru: řetěz hledá **jednoho** zpracovatele a čeká na výsledek, událost oznamuje **všem** a nečeká na nikoho. |
 | **Command** (GoF) | Požadavek putující řetězem bývá právě příkaz. |
 
 ---
