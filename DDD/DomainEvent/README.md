@@ -320,6 +320,7 @@ Rozhodnutí, které je potřeba udělat vědomě, protože výchozí chování b
 | **Event Sourcing** | **Nezaměňovat.** Publikovat události ≠ ukládat je jako zdroj pravdy. Event Sourcing tenhle pattern předpokládá, opačně to neplatí. |
 | [Context Map](../ContextMap/) | Integrační události jsou Published Language — jeden ze sedmi vztahů. |
 | [Anticorruption Layer](../AnticorruptionLayer/) | Překlad doménové události na integrační je tatáž práce, jen opačným směrem. |
+| [Service Layer](../../PoEAA/ServiceLayer/) | Místo, kde se události publikují — a kde se hlídá, že až **po commitu**. |
 | [Chain of Responsibility](../../GoF/Behavioral/ChainOfResponsibility/) | Rozdíl: řetěz hledá **jednoho** zpracovatele, událost oznamuje **všem** a nikoho nečeká. |
 
 ---

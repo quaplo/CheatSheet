@@ -329,6 +329,7 @@ markOverdue(new DoctrineOrderRepository($entityManager), $now);
 | [Entity](../../DDD/Entity/) (DDD) | To, co repository načítá a ukládá. Odtud pochází `nextIdentity()` i oddělené `reconstitute()`. |
 | [Bounded Context](../../DDD/BoundedContext/) | Repository patří dovnitř kontextu. Do cizího kontextu se nesahá jeho repositorym, ale překladem na hranici. |
 | **Identity Map** (PoEAA) | Zaručuje, že tentýž agregát načtený dvakrát je tentýž objekt. V Doctrine je součástí Unit of Work. |
+| [Service Layer](../ServiceLayer/) | Nejběžnější konzument repository — use-case si o něj řekne v konstruktoru. |
 | [CQRS](../../Architecture/CQRS/) | Odpověď na repository o čtyřiceti metodách dotažená do konce: výpisy dostanou vlastní cestu k datům, repository zůstane jen pro zápis. |
 
 ---

@@ -323,7 +323,7 @@ $repository->save($order->cancel());
 
 ## V praxi
 
-- **Symfony Messenger** — dvě sběrnice (`command.bus`, `query.bus`) jsou obvyklé rozdělení. Middleware kolem nich (transakce na zápisu, cache na čtení) se pak liší, což je přesně smysl.
+- **Symfony Messenger** — dvě sběrnice (`command.bus`, `query.bus`) jsou obvyklé rozdělení. Middleware kolem nich (transakce na zápisu, cache na čtení) se pak liší, což je přesně smysl. Kdy sběrnici vůbec zavádět, rozebírá [Service Layer](../../PoEAA/ServiceLayer/#sběrnice-nebo-přímé-volání).
 - **Doctrine** — zápis přes ORM, čtení přes `Connection` a čisté SQL do DTO. Tohle je v PHP nejběžnější podoba stupně 3 a nepotřebuje nic navíc.
 - **Databázové pohledy** — levný způsob, jak udělat kus stupně 4 bez projekcí a bez eventuální konzistence.
 - **`json_agg` / materializované pohledy v PostgreSQL** — když čtecí model potřebuje víc než plochý řádek.
@@ -335,6 +335,7 @@ $repository->save($order->cancel());
 
 | Pattern | Vztah |
 | ------- | ----- |
+| [Service Layer](../../PoEAA/ServiceLayer/) | Vrstva, kterou CQRS rozděluje na příkazovou a dotazovací stranu. Dotazy obvykle žádnou orchestraci nepotřebují. |
 | [Repository](../../PoEAA/Repository/) | Přímý předchůdce téhle úvahy. Repository říká „na výpisy si udělej samostatný dotaz“; CQRS z toho dělá záměrné rozdělení celé cesty k datům. |
 | [Ports & Adapters](../PortsAndAdapters/) | Vrstva, do které se CQRS vkládá: zápis přes port, čtení může mít vlastní. Obojí se hlídá stejným nástrojem v CI. |
 | [Domain Event](../../DDD/DomainEvent/) | Nejběžnější způsob, jak se plní čtecí modely — od stupně 4 výš je to hlavní mechanismus. |

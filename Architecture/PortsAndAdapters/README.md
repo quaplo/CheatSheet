@@ -371,6 +371,7 @@ Core\Port\Driven\OrderRepository: '@Adapter\Driven\Persistence\DoctrineOrderRepo
 | [Repository](../../PoEAA/Repository/) (PoEAA) | Nejběžnější řízený port. Hexagon říká *proč* rozhraní patří do domény; Repository říká, *jak* má vypadat. |
 | [Strategy](../../GoF/Behavioral/Strategy/) | Port se dvěma implementacemi je z pohledu jádra Strategy. Rozdíl je v záměru: Strategy vybírá algoritmus, port odstiňuje vnější svět. |
 | [Value Object](../../DDD/ValueObject/) | Typický obsah příkazů a odpovědí na hranici portu — `PlaceOrderCommand`, `PaymentResult`. |
+| [Service Layer](../../PoEAA/ServiceLayer/) | To, co sedí uvnitř hexagonu za řídicím portem. Hexagon říká *kde* ta vrstva je, Service Layer *co* v ní je. |
 | [CQRS](../CQRS/) | Vkládá se dovnitř téhle vrstvy: zápis jde přes port do domény, čtení může mít vlastní, kratší cestu. |
 | [Anticorruption Layer](../../DDD/AnticorruptionLayer/) (DDD) | Řízený adaptér s ambicí navíc: nejen překládá protokol, ale brání cizímu **modelu** prosáknout do domény. Kdy se vyplatí, řeší [Context Map](../../DDD/ContextMap/). |
 | [Bounded Context](../../DDD/BoundedContext/) (DDD) | Hranice kontextu je hranice aplikace, kolem které hexagon staví porty. Bounded Context říká **kudy** ta hranice vede, hexagon **jak** ji držet. |

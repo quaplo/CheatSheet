@@ -287,6 +287,7 @@ Konkrétní vodítko, když si nejsi jistý:
 | [First Class Collection](../../ObjectCalisthenics/FirstClassCollection/) | Přirozený způsob, jak kořen drží své vnitřní entity — i s pravidly o skupině. |
 | [CQRS](../../Architecture/CQRS/) | Hranice agregátu platí pro zápis. Čtecí strana ji překračuje, a smí to. |
 | [Bounded Context](../BoundedContext/) | O úroveň výš: kontext obsahuje agregáty, agregát nikdy nepřesahuje kontext. |
+| [Service Layer](../../PoEAA/ServiceLayer/) | To, co agregát obsluhuje. Pravidlo „jedna transakce = jeden agregát“ se vynucuje právě tam. |
 | [Domain Event](../DomainEvent/) | **Chybějící díl.** Pravidlo „jedna transakce = jeden agregát“ potřebuje způsob, jak dohnat konzistenci mezi agregáty — a to jsou události. |
 | [State](../../GoF/Behavioral/State/) | Životní cyklus kořene, když jsou přechodů víc než dva. |
 

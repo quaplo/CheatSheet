@@ -76,6 +76,7 @@ Vzory pro aplikace nad databází a s doménovou logikou — Repository, Unit of
 | Pattern | K čemu to je | Obtížnost |
 | ------- | ------------ | --------- |
 | [Repository](PoEAA/Repository/) | Kolekcí se tvářící rozhraní nad persistencí | ●●●○○ |
+| [Service Layer](PoEAA/ServiceLayer/) | Aplikační vrstva — jedna třída na jeden use-case, orchestrace bez rozhodování | ●●○○○ |
 
 <sub>Celý katalog (Data Mapper, Unit of Work, Identity Map, …): [PoEAA/README.md](PoEAA/)</sub>
 
@@ -178,6 +179,11 @@ Obrácený rejstřík: začni u toho, co tě pálí.
 | Use-case má šest závislostí: mailer, sklad, statistiky, audit, cache… | [Domain Event](DDD/DomainEvent/) |
 | E-mail se posílá uvnitř transakce a odejde i po jejím rollbacku | [Domain Event](DDD/DomainEvent/) |
 | Potřebuju změnit jiný agregát, ale nesmím ho měnit ve stejné transakci | [Domain Event](DDD/DomainEvent/) |
+| `OrderService` má osm závislostí a čtrnáct metod, žádná nepotřebuje víc než tři | [Service Layer](PoEAA/ServiceLayer/) |
+| V controlleru mám transakci, oprávnění i rozhodování o doméně | [Service Layer](PoEAA/ServiceLayer/) |
+| Nevím, jestli pravidlo patří do use-case, nebo do entity | [Service Layer](PoEAA/ServiceLayer/) |
+| Nevím, jestli má dotaz dostat vlastní handler, nebo volat čtecí službu rovnou | [Service Layer](PoEAA/ServiceLayer/) |
+| Máme command bus a nikdo neví, kam z controlleru vede volání | [Service Layer](PoEAA/ServiceLayer/) |
 
 ---
 
