@@ -323,6 +323,7 @@ markOverdue(new DoctrineOrderRepository($entityManager), $now);
 | [Value Object](../../DDD/ValueObject/) | `OrderId` je value object. Repository jimi mluví místo `int` a `string`. |
 | [First Class Collection](../../ObjectCalisthenics/FirstClassCollection/) | Přirozený návratový typ místo `array` — výsledek pak nese doménové operace. |
 | [Data Mapper](../DataMapper/) (PoEAA) | **Vrstva pod repository**, která překládá objekt na řádek. Doctrine je Data Mapper; repository je fasáda nad ním v jazyce domény. |
+| [Optimistic Offline Lock](../OptimisticOfflineLock/) (PoEAA) | Místo, kde se kontroluje verze — `save()` buď projde, nebo vyhodí konflikt. |
 | **Unit of Work** (PoEAA) | Sleduje změny a zapisuje je najednou. Díky němu stačí `add()` a `save()` pro změny netřeba. |
 | [Aggregate](../../DDD/Aggregate/) (DDD) | Určuje, pro co repository vůbec smí vzniknout — **jeden agregát, jedno repository**. Repository pro vnitřní entitu je druhá cesta dovnitř, která obchází všechna pravidla celku. |
 | [Entity](../../DDD/Entity/) (DDD) | To, co repository načítá a ukládá. Odtud pochází `nextIdentity()` i oddělené `reconstitute()`. |

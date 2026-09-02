@@ -89,6 +89,7 @@ Vzory pro aplikace nad databází a s doménovou logikou — Repository, Unit of
 | [Repository](PoEAA/Repository/) | Kolekcí se tvářící rozhraní nad persistencí | ●●●○○ |
 | [Service Layer](PoEAA/ServiceLayer/) | Aplikační vrstva — jedna třída na jeden use-case, orchestrace bez rozhodování | ●●○○○ |
 | [Data Mapper](PoEAA/DataMapper/) | Překlad objekt ↔ řádek; doména ani schéma o sobě nevědí | ●●●○○ |
+| [Optimistic Offline Lock](PoEAA/OptimisticOfflineLock/) | Souběžné změny se poznají podle verze — místo aby se jim předcházelo | ●●○○○ |
 
 <sub>Celý katalog (Data Mapper, Unit of Work, Identity Map, …): [PoEAA/README.md](PoEAA/)</sub>
 
@@ -210,6 +211,9 @@ Obrácený rejstřík: začni u toho, co tě pálí.
 | Doménová třída má `save()` nebo drží spojení do databáze | [Data Mapper](PoEAA/DataMapper/) |
 | Model má tvar tabulky, ne domény — samé skaláry, žádné hodnoty | [Data Mapper](PoEAA/DataMapper/) |
 | Nevím, jestli zvolit Doctrine, nebo Eloquent | [Data Mapper](PoEAA/DataMapper/#data-mapper-vs-active-record) |
+| „Někomu zmizely změny“ a nejde to reprodukovat | [Optimistic Offline Lock](PoEAA/OptimisticOfflineLock/) |
+| Dva lidé editují týž záznam a druhý přepíše prvního beze stopy | [Optimistic Offline Lock](PoEAA/OptimisticOfflineLock/) |
+| Formulář se vyplňuje pět minut a transakce tak dlouho držet nejde | [Optimistic Offline Lock](PoEAA/OptimisticOfflineLock/) |
 | Frontend volá pět endpointů a skládá si z nich jednu stránku sám | [Service Composition](Architecture/ServiceComposition/) |
 | Mám kód, který koordinuje víc domén, a nepatří do žádné z nich | [Service Composition](Architecture/ServiceComposition/) |
 | Operace přes tři kontexty spadla v půlce a nikdo první dva kroky nevrátil | [Saga](Architecture/Saga/) |

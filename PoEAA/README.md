@@ -18,7 +18,10 @@ Sbírka **nemá kategorie** — je to plochý katalog.
 | [**Service Layer**](ServiceLayer/) | Hranice aplikace jako sada operací — dnes spíš třída na use-case | ●●○○○ | ✅ |
 | [**Data Mapper**](DataMapper/) | Překlad mezi objektem a řádkem, bez vazby v obou směrech | ●●●○○ | ✅ |
 | Unit of Work | Sledování změn a jeden zápis na konci | | ⬜ |
+| [**Optimistic Offline Lock**](OptimisticOfflineLock/) | Souběžné změny se nepoznají zámkem, ale verzí | ●●○○○ | ✅ |
 | Identity Map | Tentýž záznam načtený dvakrát je tentýž objekt | | ⬜ |
+| Pessimistic Offline Lock | Záznam se při otevření zamkne — [srovnání](OptimisticOfflineLock/#optimistické-nebo-pesimistické) je u optimistického | | ⬜ |
+| Coarse-Grained Lock | Jeden zámek na celý agregát, ne na každou část | | ⬜ |
 | Active Record | Objekt, který si sám umí uložit — protipól Data Mapperu; [srovnání](DataMapper/#data-mapper-vs-active-record) je u něj | | ⬜ |
 | Money | Konkrétní value object pro peníze | | ⬜ |
 | Lazy Load | Data se načtou, až když je někdo potřebuje | | ⬜ |

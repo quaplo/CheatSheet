@@ -271,7 +271,7 @@ Konkrétní vodítko, když si nejsi jistý:
 ## V praxi
 
 - **Doctrine** — kaskády (`cascade: ['persist', 'remove']`) a `orphanRemoval` na kolekci uvnitř kořene jsou technická podoba hranice agregátu. Repository dělej jen pro kořeny.
-- **Optimistické zamykání** — verze na kořeni, ne na vnitřních entitách. Agregát je jednotka souběžnosti.
+- **[Optimistické zamykání](../../PoEAA/OptimisticOfflineLock/)** — verze na kořeni, ne na vnitřních entitách. Agregát je jednotka souběžnosti.
 - **[Doménové události](../DomainEvent/)** — standardní způsob, jak dohnat konzistenci mezi agregáty bez toho, abys je měnil v jedné transakci. Bez nich pravidlo „jedna transakce = jeden agregát“ nejde dodržet.
 - **Vaughn Vernon: *Effective Aggregate Design*** — tři články, které jsou dodnes nejlepší praktický text na tohle téma. Kdo má navrhovat agregáty, ať si je přečte.
 
@@ -289,6 +289,7 @@ Konkrétní vodítko, když si nejsi jistý:
 | [Bounded Context](../BoundedContext/) | O úroveň výš: kontext obsahuje agregáty, agregát nikdy nepřesahuje kontext. |
 | [Service Layer](../../PoEAA/ServiceLayer/) | To, co agregát obsluhuje. Pravidlo „jedna transakce = jeden agregát“ se vynucuje právě tam. |
 | [Domain Service](../DomainService/) | Kam s pravidlem, které se týká **dvou agregátů** a ani jeden ho nevlastní. |
+| [Optimistic Offline Lock](../../PoEAA/OptimisticOfflineLock/) | Agregát je **jednotka souběžnosti** — verze patří na jeho kořen, ne na části. |
 | [Saga](../../Architecture/Saga/) | Co dělat, když operace musí změnit **víc agregátů ve víc kontextech** — kroky s kompenzacemi místo jedné transakce. |
 | [Domain Event](../DomainEvent/) | **Chybějící díl.** Pravidlo „jedna transakce = jeden agregát“ potřebuje způsob, jak dohnat konzistenci mezi agregáty — a to jsou události. |
 | [State](../../GoF/Behavioral/State/) | Životní cyklus kořene, když jsou přechodů víc než dva. |
