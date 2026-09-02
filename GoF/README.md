@@ -26,7 +26,7 @@ Autoři vzory rozdělili podle toho, čeho se týkají:
 | Pattern | K čemu | Stav |
 | ------- | ------ | ---- |
 | Abstract Factory | Rodiny souvisejících objektů bez vazby na konkrétní třídy | ⬜ |
-| Builder | Postupné sestavení složitého objektu | ⬜ |
+| [**Builder**](Creational/Builder/) | Postupné sestavení složitého objektu | ✅ |
 | [**Factory Method**](Creational/FactoryMethod/) | Vytvoření objektu delegované na potomka; pojmenované konstruktory | ✅ |
 | Prototype | Nový objekt klonováním existujícího | ⬜ |
 | [**Singleton**](Creational/Singleton/) | Jediná instance v aplikaci — a proč ho skoro nikdy nechceš | ✅ |

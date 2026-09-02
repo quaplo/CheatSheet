@@ -247,7 +247,7 @@ Pravidlo: **statická továrna smí použít jen to, co dostane v parametrech.**
 - ❌ **Továrna jen přeposílá do konstruktoru.** `Foo::create($a, $b)` s tělem `return new self($a, $b)` nepřidává nic.
 - ❌ **Chceš vybrat implementaci podle vstupu.** To je [Strategy](../../Behavioral/Strategy/), nebo prostá továrna se `match` — ne dědičnost.
 - ❌ **DI kontejner to udělá za tebe.** *(GoF varianta)* Injektáž produktu je kratší a testovatelnější.
-- ❌ **Sestavení je opravdu složité, s mnoha volitelnými částmi.** Na to je **Builder**.
+- ❌ **Sestavení je opravdu složité, s mnoha volitelnými částmi.** Na to je [Builder](../Builder/).
 
 ---
 
@@ -281,7 +281,7 @@ Pravidlo: **statická továrna smí použít jen to, co dostane v parametrech.**
 | ------- | ----- |
 | [Value Object](../../../DDD/ValueObject/) | Pojmenovaný konstruktor je jeho standardní výbava — bez něj nejde zaručit, že neplatná hodnota nevznikne. |
 | [Entity](../../../DDD/Entity/) | Dvojice `place()` a `reconstitute()`: zakládání s pravidly, obnovení bez nich. |
-| **Builder** | Když je sestavení složité a má mnoho volitelných částí, továrna nestačí. |
+| [Builder](../Builder/) | Když je sestavení složité, má mnoho volitelných částí nebo probíhá **postupně**, továrna nestačí — ta vyrobí objekt jedním voláním. |
 | **Abstract Factory** (GoF) | O úroveň výš: vyrábí **rodiny** souvisejících objektů, ne jeden. |
 | [Singleton](../Singleton/) | Sdílí mechaniku (privátní konstruktor, statická metoda), ale ne záměr: továrna vytváří **nové** instance, singleton vrací **pořád tutéž**. |
 | [Strategy](../../Behavioral/Strategy/) | Když jde o výběr implementace podle vstupu, ne o způsob vytvoření. |

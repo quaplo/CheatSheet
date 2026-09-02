@@ -69,6 +69,7 @@ Patterny jsou uspořádané podle **původu** — podle knihy nebo autora, kde b
 | [Factory Method](GoF/Creational/FactoryMethod/) | Creational | Vytvoření objektu má jméno a hlídá si pravidla | ●○○○○ |
 | [Observer](GoF/Behavioral/Observer/) | Behavioral | Objekt oznámí změnu všem, kdo o to stáli — a nezná je | ●●○○○ |
 | [Singleton](GoF/Creational/Singleton/) | Creational | Jediná instance dostupná odkudkoli — **a proč ho skoro nikdy nechceš** | ●○○○○ |
+| [Builder](GoF/Creational/Builder/) | Creational | Objekt se sestaví po částech a vznikne až na konci | ●○○○○ |
 
 <sub>Kompletní katalog všech 23 patternů včetně nezpracovaných: [GoF/README.md](GoF/)</sub>
 
@@ -240,6 +241,9 @@ Obrácený rejstřík: začni u toho, co tě pálí.
 | V kódu mám `Config::getInstance()` a nejde napsat test s jinou konfigurací | [Singleton](GoF/Creational/Singleton/) |
 | Testy mi selhávají podle pořadí, ve kterém běží | [Singleton](GoF/Creational/Singleton/) |
 | Třída má prázdný konstruktor, ale závislosti si tahá zevnitř metod | [Singleton](GoF/Creational/Singleton/) |
+| Konstruktor má devět parametrů a z volání nepoznám, co je co | [Builder](GoF/Creational/Builder/) |
+| Objekt se skládá postupně (košík, dotaz) a mezi kroky je nehotový | [Builder](GoF/Creational/Builder/) |
+| V každém testu opakuju devět parametrů, ze kterých mě zajímá jeden | [Builder](GoF/Creational/Builder/#test-data-builder) |
 | Frontend volá pět endpointů a skládá si z nich jednu stránku sám | [Service Composition](Architecture/ServiceComposition/) |
 | Mám kód, který koordinuje víc domén, a nepatří do žádné z nich | [Service Composition](Architecture/ServiceComposition/) |
 | Operace přes tři kontexty spadla v půlce a nikdo první dva kroky nevrátil | [Saga](Architecture/Saga/) |
