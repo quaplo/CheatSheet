@@ -370,7 +370,7 @@ Skoro nikdy — a je dobré to říct rovnou, aby z toho nevznikl zbytečný pro
 | [Repository](../Repository/) | **Vrstva nad mapperem.** Repository dává rozhraní v jazyce domény, mapper pod ním překládá. Používají se spolu. |
 | **Active Record** (PoEAA) | Protipól ze stejné knihy. [Srovnání výše](#data-mapper-vs-active-record). |
 | [Unit of Work](../UnitOfWork/) (PoEAA) | Rozhoduje **co** zapsat, mapper **jak**. V Doctrine je to tentýž `EntityManager`. |
-| **Identity Map** (PoEAA) | Zaručuje, že tentýž záznam načtený dvakrát je tentýž objekt. |
+| [Identity Map](../IdentityMap/) (PoEAA) | Zaručuje, že tentýž záznam načtený dvakrát je tentýž objekt — bez ní by mapper z téhož řádku vyrobil pokaždé nový. |
 | [Optimistic Offline Lock](../OptimisticOfflineLock/) (PoEAA) | Verze je sloupec navíc, který mapper drží mimo doménový model. |
 | [Value Object](../../DDD/ValueObject/) | To, co bez mapperu neuděláš pohodlně — jedna hodnota, víc sloupců. |
 | [Entity](../../DDD/Entity/) | Objekt, který mapper překládá; odtud i dvojice `place()` / `reconstitute()`. |

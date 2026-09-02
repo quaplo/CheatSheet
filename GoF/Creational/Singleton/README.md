@@ -303,6 +303,7 @@ V dlouho běžících procesech (Swoole, RoadRunner, workery) se to obrací — 
 | [Strategy](../../Behavioral/Strategy/) | Totéž — bezstavová strategie může být sdílená instance a kontejner to udělá sám. |
 | [Value Object](../../../DDD/ValueObject/) | Enum jako value object je ta „správná“ podoba jedinečnosti: garantovaná jazykem a bez stavu. |
 | [Repository](../../../PoEAA/Repository/) | Častá oběť: `Repository::getInstance()` znemožní in-memory implementaci v testech. |
+| [Identity Map](../../../PoEAA/IdentityMap/) (PoEAA) | Časté lákadlo udělat mapu statickou. Znamená to únik paměti a data jednoho uživatele u druhého. |
 
 ---
 

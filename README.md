@@ -99,6 +99,7 @@ Vzory pro aplikace nad databází a s doménovou logikou — Repository, Unit of
 | [Service Layer](PoEAA/ServiceLayer/) | Aplikační vrstva — jedna třída na jeden use-case, orchestrace bez rozhodování | ●●○○○ |
 | [Data Mapper](PoEAA/DataMapper/) | Překlad objekt ↔ řádek; doména ani schéma o sobě nevědí | ●●●○○ |
 | [Optimistic Offline Lock](PoEAA/OptimisticOfflineLock/) | Souběžné změny se poznají podle verze — místo aby se jim předcházelo | ●●○○○ |
+| [Identity Map](PoEAA/IdentityMap/) | Tentýž záznam načtený dvakrát je tentýž objekt; proč se v importech volá `clear()` | ●●○○○ |
 | [Unit of Work](PoEAA/UnitOfWork/) | Změny se sbírají v paměti a zapíší najednou — co dělá Doctrine `flush()` | ●●●○○ |
 
 <sub>Celý katalog (Data Mapper, Unit of Work, Identity Map, …): [PoEAA/README.md](PoEAA/)</sub>
@@ -245,6 +246,11 @@ Obrácený rejstřík: začni u toho, co tě pálí.
 | Skupina kroků se má provést i vrátit jako jeden celek | [Command](GoF/Behavioral/Command/#makro-skupina-příkazů-jako-jeden-příkaz) |
 | Kolega říká „command“ a nevím, jestli myslí objekt s chováním, nebo data | [Command](GoF/Behavioral/Command/#command-v-gof-a-command-v-cqrs) |
 | Úloha ve frontě spadne, protože v ní byl objekt s připojením k databázi | [Command](GoF/Behavioral/Command/#fronta-operace-kterou-provede-někdo-jiný-a-jindy) |
+| Změna, kterou jsem prokazatelně udělal, není v databázi — a nic nespadlo | [Identity Map](PoEAA/IdentityMap/) |
+| `$a == $b` je true, ale `$a === $b` ne, a entity se chovají divně | [Identity Map](PoEAA/IdentityMap/) |
+| Dávkový import postupně sežere paměť a spadne | [Identity Map](PoEAA/IdentityMap/#dávky-proč-se-v-cyklu-volá-clear) |
+| Nevím, jestli chci cache, nebo mapu identit | [Identity Map](PoEAA/IdentityMap/#identity-map-není-cache) |
+| Po `clear()` se mi změny na entitách přestaly ukládat | [Identity Map](PoEAA/IdentityMap/#dávky-proč-se-v-cyklu-volá-clear) |
 | Z `new Money(129000)` nepoznám, jestli jsou to koruny nebo haléře | [Factory Method](GoF/Creational/FactoryMethod/) |
 | Konstruktor má šest nepovinných parametrů a půlku z nich předávám `null` | [Factory Method](GoF/Creational/FactoryMethod/) |
 | Objekt jde vytvořit v neplatném stavu, protože validace je jinde než konstruktor | [Factory Method](GoF/Creational/FactoryMethod/) |

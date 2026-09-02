@@ -90,6 +90,8 @@ Dva `find()` na tentýž záznam vrátí **jednu a tutéž instanci**. Kdyby ne,
 
 Vedlejším efektem je úspora dotazů, ale to není hlavní důvod. **Hlavní důvod je konzistence uvnitř jedné operace.**
 
+Identity Map je samostatný vzor a má [vlastní dokument](../IdentityMap/) — tam najdeš, proč to není cache, jak dlouho má mapa žít a proč se v dávkových importech volá `clear()`.
+
 ### Všechno, nebo nic
 
 Nejviditelnější přínos. Když operace selže uprostřed:
@@ -245,7 +247,7 @@ Ten poslední řádek je praktický: **události se publikují až po `commit()`
 | Pattern | Vztah |
 | ------- | ----- |
 | [Data Mapper](../DataMapper/) | Unit of Work rozhoduje **co** zapsat, Data Mapper **jak**. V Doctrine to je tentýž `EntityManager`. |
-| **Identity Map** (PoEAA) | Samostatný pattern, ale v praxi součást Unit of Work — je to jeho paměť. |
+| [Identity Map](../IdentityMap/) (PoEAA) | Samostatný pattern, ale v praxi součást Unit of Work — je to jeho paměť. Bez jistoty, že jde o jeden objekt, nelze porovnávat se snímky. |
 | [Repository](../Repository/) | Repository objekty načítá a registruje; Unit of Work je zapisuje. `save()` v repository často jen registruje. |
 | [Service Layer](../ServiceLayer/) | Určuje **hranici** — kdy se transakce otevře a kdy zavolá `commit()`. |
 | [Optimistic Offline Lock](../OptimisticOfflineLock/) | Doplňuje se: Unit of Work řeší souběh **uvnitř** transakce, optimistický zámek **mezi** requesty. |

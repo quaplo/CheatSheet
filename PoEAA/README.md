@@ -19,7 +19,7 @@ Sbírka **nemá kategorie** — je to plochý katalog.
 | [**Data Mapper**](DataMapper/) | Překlad mezi objektem a řádkem, bez vazby v obou směrech | ●●●○○ | ✅ |
 | [**Unit of Work**](UnitOfWork/) | Sledování změn a jeden zápis na konci — tohle dělá `flush()` | ●●●○○ | ✅ |
 | [**Optimistic Offline Lock**](OptimisticOfflineLock/) | Souběžné změny se nepoznají zámkem, ale verzí | ●●○○○ | ✅ |
-| Identity Map | Tentýž záznam načtený dvakrát je tentýž objekt | | ⬜ |
+| [**Identity Map**](IdentityMap/) | Tentýž záznam načtený dvakrát je tentýž objekt — a proč to není cache | ●●○○○ | ✅ |
 | Pessimistic Offline Lock | Záznam se při otevření zamkne — [srovnání](OptimisticOfflineLock/#optimistické-nebo-pesimistické) je u optimistického | | ⬜ |
 | Coarse-Grained Lock | Jeden zámek na celý agregát, ne na každou část | | ⬜ |
 | Active Record | Objekt, který si sám umí uložit — protipól Data Mapperu; [srovnání](DataMapper/#data-mapper-vs-active-record) je u něj | | ⬜ |

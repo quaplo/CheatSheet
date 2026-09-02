@@ -273,6 +273,7 @@ Dvě továrny vedle sebe — `register()` a `reconstitute()` — jsou schválně
 | [Specification](../Specification/) | Pravidlo o entitě, které nepatří dovnitř ní — protože kombinuje víc věcí. |
 | [Factory Method](../../GoF/Creational/FactoryMethod/) | Dvojice `place()` a `reconstitute()` je jeho aplikace: zakládání s pravidly, obnovení bez nich. |
 | [Domain Service](../DomainService/) | Kam s operací, která se nevejde ani sem. **Ale až jako poslední možnost** — jinak z entit zbudou datové struktury. |
+| [Identity Map](../../PoEAA/IdentityMap/) (PoEAA) | Rejstřík, díky kterému je tatáž entita v jedné operaci **jedna instance**. Bez něj `===` nefunguje a změny se tiše přepisují. |
 
 ---
 

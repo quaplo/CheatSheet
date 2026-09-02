@@ -347,6 +347,7 @@ $repository->save($order->cancel());
 | [Command](../../GoF/Behavioral/Command/) (GoF) | **Stejné jméno, jiná věc.** Tamní příkaz se umí provést sám a nese si příjemce; command v CQRS je data a práci dělá handler. |
 | [Iterator](../../GoF/Behavioral/Iterator/) (GoF) | Čtecí strana u velkých exportů stojí na líném průchodu — jinak výpis nad milionem řádků skončí na paměti. |
 | [Bounded Context](../../DDD/BoundedContext/) | CQRS se aplikuje **uvnitř** jednoho kontextu. Přes hranice kontextů se nečte přímo — tam patří překlad. |
+| [Identity Map](../../PoEAA/IdentityMap/) (PoEAA) | Čtecí strana ji nepotřebuje: read modely se nemění, takže není co udržovat konzistentní. |
 
 ---
 

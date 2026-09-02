@@ -295,6 +295,7 @@ Konkrétní vodítko, když si nejsi jistý:
 | [Saga](../../Architecture/Saga/) | Co dělat, když operace musí změnit **víc agregátů ve víc kontextech** — kroky s kompenzacemi místo jedné transakce. |
 | [Domain Event](../DomainEvent/) | **Chybějící díl.** Pravidlo „jedna transakce = jeden agregát“ potřebuje způsob, jak dohnat konzistenci mezi agregáty — a to jsou události. |
 | [State](../../GoF/Behavioral/State/) | Životní cyklus kořene, když jsou přechodů víc než dva. |
+| [Identity Map](../../PoEAA/IdentityMap/) (PoEAA) | Agregát určuje, co se načítá jako celek — a tím i co v mapě obvykle je. |
 
 ---
 

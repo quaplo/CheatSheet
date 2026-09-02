@@ -289,6 +289,7 @@ U API totéž přes `ETag` a `If-Match` — a je to jeho standardní použití, 
 | [Unit of Work](../UnitOfWork/) | Doplňují se: Unit of Work řeší souběh **uvnitř** transakce, optimistický zámek **mezi** requesty. |
 | [Saga](../../Architecture/Saga/) | Souběh **napříč službami** tohle neřeší. Tam jsou kompenzace. |
 | [Entity](../../DDD/Entity/) | Verze není doménový pojem — je to technický údaj přilepený k entitě. |
+| [Identity Map](../IdentityMap/) (PoEAA) | Dělba práce: mapa hlídá konzistenci **uvnitř** jedné operace, verze souběh **mezi** requesty. |
 
 ---
 
