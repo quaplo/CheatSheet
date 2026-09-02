@@ -68,6 +68,7 @@ Patterny jsou uspořádané podle **původu** — podle knihy nebo autora, kde b
 | [Composite](GoF/Structural/Composite/) | Structural | Strom, kde se s listem zachází stejně jako s celou větví | ●●○○○ |
 | [Factory Method](GoF/Creational/FactoryMethod/) | Creational | Vytvoření objektu má jméno a hlídá si pravidla | ●○○○○ |
 | [Observer](GoF/Behavioral/Observer/) | Behavioral | Objekt oznámí změnu všem, kdo o to stáli — a nezná je | ●●○○○ |
+| [Singleton](GoF/Creational/Singleton/) | Creational | Jediná instance dostupná odkudkoli — **a proč ho skoro nikdy nechceš** | ●○○○○ |
 
 <sub>Kompletní katalog všech 23 patternů včetně nezpracovaných: [GoF/README.md](GoF/)</sub>
 
@@ -236,6 +237,9 @@ Obrácený rejstřík: začni u toho, co tě pálí.
 | Objekt jde vytvořit v neplatném stavu, protože validace je jinde než konstruktor | [Factory Method](GoF/Creational/FactoryMethod/) |
 | Objekt, který se mění, zná mailer, cache i statistiky | [Observer](GoF/Behavioral/Observer/) |
 | Nevím, jestli použít Observer, nebo doménovou událost | [Observer](GoF/Behavioral/Observer/#observer-nebo-doménová-událost) |
+| V kódu mám `Config::getInstance()` a nejde napsat test s jinou konfigurací | [Singleton](GoF/Creational/Singleton/) |
+| Testy mi selhávají podle pořadí, ve kterém běží | [Singleton](GoF/Creational/Singleton/) |
+| Třída má prázdný konstruktor, ale závislosti si tahá zevnitř metod | [Singleton](GoF/Creational/Singleton/) |
 | Frontend volá pět endpointů a skládá si z nich jednu stránku sám | [Service Composition](Architecture/ServiceComposition/) |
 | Mám kód, který koordinuje víc domén, a nepatří do žádné z nich | [Service Composition](Architecture/ServiceComposition/) |
 | Operace přes tři kontexty spadla v půlce a nikdo první dva kroky nevrátil | [Saga](Architecture/Saga/) |

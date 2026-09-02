@@ -283,6 +283,7 @@ Pravidlo: **statická továrna smí použít jen to, co dostane v parametrech.**
 | [Entity](../../../DDD/Entity/) | Dvojice `place()` a `reconstitute()`: zakládání s pravidly, obnovení bez nich. |
 | **Builder** | Když je sestavení složité a má mnoho volitelných částí, továrna nestačí. |
 | **Abstract Factory** (GoF) | O úroveň výš: vyrábí **rodiny** souvisejících objektů, ne jeden. |
+| [Singleton](../Singleton/) | Sdílí mechaniku (privátní konstruktor, statická metoda), ale ne záměr: továrna vytváří **nové** instance, singleton vrací **pořád tutéž**. |
 | [Strategy](../../Behavioral/Strategy/) | Když jde o výběr implementace podle vstupu, ne o způsob vytvoření. |
 | [Repository](../../../PoEAA/Repository/) | `nextIdentity()` je továrna na identitu — a proto může agregát vzniknout platný ještě před uložením. |
 | **Template Method** (GoF) | GoF Factory Method je jeho speciální případ: kostra v předkovi, jeden krok v potomkovi. |

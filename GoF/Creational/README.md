@@ -14,6 +14,6 @@ V moderním PHP část téhle práce přebírá **DI kontejner**. U každého pa
 | Builder | Postupné sestavení složitého objektu | | ⬜ |
 | [**Factory Method**](FactoryMethod/) | Pojmenované konstruktory + vytvoření delegované na potomka | ●○○○○ | ✅ |
 | Prototype | Nový objekt klonováním existujícího | | ⬜ |
-| Singleton | Jediná instance v aplikaci | | ⬜ |
+| [**Singleton**](Singleton/) | Jediná instance v aplikaci — a proč ho skoro nikdy nechceš | ●○○○○ | ✅ |
 
 <sub>⬜ plánováno · 🚧 rozpracováno · ✅ hotovo</sub>

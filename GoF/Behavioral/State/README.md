@@ -354,7 +354,7 @@ $order->cancel();
 | [Entity](../../../DDD/Entity/) (DDD) | Typický nositel stavového automatu: entita má životní cyklus, hodnota ne. |
 | [Saga](../../../Architecture/Saga/) | Stav ságy je stavový automat; u složitějších procesů se vyplatí ho tak i napsat. |
 | [Observer](../Observer/) (GoF) | Oznámení o změně stavu je nejčastější důvod, proč subjekt Observer vůbec dostane. |
-| **Singleton** (GoF) | Bezstavové stavy se dají sdílet jako jediné instance. V PHP to díky enumům řeší jazyk sám. |
+| [Singleton](../../Creational/Singleton/) (GoF) | Bezstavové stavy se dají sdílet jako jediné instance. V PHP to díky enumům řeší jazyk sám — a je to [jediná podoba singletonu, která se doporučuje](../../Creational/Singleton/#enum-jako-jedináček-který-nevadí). |
 
 ---
 

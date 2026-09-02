@@ -120,7 +120,7 @@ Constantine je seřadil od nejhorší po nejlepší. Není to akademické — d�
 | Stupeň | Co to je | V PHP vypadá jako |
 | ------ | -------- | ----------------- |
 | ❌ **Obsahová** | Modul sahá do vnitřku jiného | Sahání na `private` přes reflexi, `$order->items[0]->price = 0` |
-| ❌ **Společná** | Sdílený globální stav | `global`, statické proměnné, singleton s daty, `$_SESSION` napříč |
+| ❌ **Společná** | Sdílený globální stav | `global`, statické proměnné, [singleton s daty](../GoF/Creational/Singleton/), `$_SESSION` napříč |
 | ❌ **Řídicí** | Předáváš příznak, který řídí chování druhého | `save($order, isDraft: true)` — volající rozhoduje o vnitřku |
 | ⚠️ **Otisková** | Předáváš celý objekt, když potřebuješ jednu hodnotu | `calculate(Order $order)`, když stačí `int $totalInCents` |
 | ✅ **Datová** | Předáváš přesně to, co je potřeba | `calculate(int $totalInCents, int $percent)` |

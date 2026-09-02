@@ -29,7 +29,7 @@ Autoři vzory rozdělili podle toho, čeho se týkají:
 | Builder | Postupné sestavení složitého objektu | ⬜ |
 | [**Factory Method**](Creational/FactoryMethod/) | Vytvoření objektu delegované na potomka; pojmenované konstruktory | ✅ |
 | Prototype | Nový objekt klonováním existujícího | ⬜ |
-| Singleton | Jediná instance v aplikaci | ⬜ |
+| [**Singleton**](Creational/Singleton/) | Jediná instance v aplikaci — a proč ho skoro nikdy nechceš | ✅ |
 
 ### Structural
 
