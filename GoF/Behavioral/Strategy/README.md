@@ -238,7 +238,7 @@ Nový dopravce = nová třída a jeden řádek v registraci. `ShippingCalculator
 | **Template Method** | Řeší totéž — variabilní část algoritmu — ale **dědičností** místo kompozice. Template Method mění kroky uvnitř pevné kostry, Strategy vymění celý algoritmus. |
 | [Decorator](../../Structural/Decorator/) | Také obaluje chování, ale **přidává** k původnímu; Strategy původní chování **nahrazuje**. |
 | **Command** | Také zabaluje operaci do objektu, ale kvůli odložení, frontě nebo undo — ne kvůli výběru z variant. |
-| **Factory Method** | Častý doplněk: rozhoduje, která strategie se pro daný vstup vytvoří. |
+| [Factory Method](../../Creational/FactoryMethod/) | Častý doplněk: rozhoduje, která strategie se pro daný vstup vytvoří. |
 | [Chain of Responsibility](../ChainOfResponsibility/) | Strategy vybere jednoho zpracovatele předem; řetěz se ptá postupně, dokud někdo neřekne ano. |
 | [Rules Engine](../../../Architecture/RulesEngine/) | Jednotlivé pravidlo je Strategy pro výpočet důsledku. Rozdíl: Strategy se vybírá jedna, v enginu se vyhodnotí všechny a teprve pak se rozhoduje. |
 | [Adapter](../../Structural/Adapter/) | Za adaptéry se cizí dodavatelé stanou zaměnitelnými — a tím i strategiemi. |

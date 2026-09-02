@@ -489,7 +489,7 @@ echo $address->format();                     // Sokolovská 100 / 186 00 Praha /
 | [Anticorruption Layer](../AnticorruptionLayer/) | Typický výstup překladu z cizího systému: `SupplierId`, částka v haléřích, `DateTimeImmutable`. |
 | [Specification](../Specification/) (DDD) | Specifikace se chová jako hodnota — neměnná, bez identity. Parametry pravidel bývají value objecty. |
 | [Domain Service](../DomainService/) (DDD) | Spousta „doménových služeb“ je ve skutečnosti chybějící hodnota. Zkus to napřed sem. |
-| **Factory Method** | Pojmenované konstruktory (`fromCents`, `fromString`) jsou jeho nejjednodušší podoba. |
+| [Factory Method](../../GoF/Creational/FactoryMethod/) | Pojmenované konstruktory (`fromCents`, `fromString`) jsou jeho nejužitečnější podoba v PHP — a standardní výbava value objectu. |
 
 ---
 

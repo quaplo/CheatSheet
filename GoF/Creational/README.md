@@ -12,7 +12,7 @@ V moderním PHP část téhle práce přebírá **DI kontejner**. U každého pa
 | ------- | ------ | --------- | ---- |
 | Abstract Factory | Rodiny souvisejících objektů bez vazby na konkrétní třídy | | ⬜ |
 | Builder | Postupné sestavení složitého objektu | | ⬜ |
-| Factory Method | Vytvoření objektu delegované na potomka | | ⬜ |
+| [**Factory Method**](FactoryMethod/) | Pojmenované konstruktory + vytvoření delegované na potomka | ●○○○○ | ✅ |
 | Prototype | Nový objekt klonováním existujícího | | ⬜ |
 | Singleton | Jediná instance v aplikaci | | ⬜ |
 
