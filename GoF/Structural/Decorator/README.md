@@ -245,6 +245,7 @@ Kontejner podstrčí původní službu jako `.inner` a všem, kdo si žádají `
 | [Strategy](../../Behavioral/Strategy/) | Strategy chování **nahradí**, dekorátor ho **obalí**. |
 | [Service Layer](../../../PoEAA/ServiceLayer/) | Typické místo použití: transakce, autorizace a měření kolem use-case. |
 | [Repository](../../../PoEAA/Repository/) | Nejčastěji dekorovaná věc v PHP aplikacích. |
+| [Iterator](../../Behavioral/Iterator/) (GoF) | SPL iterátory (`LimitIterator`, `CallbackFilterIterator`) jsou dekorátory nad iterátorem — obalují ho, rozhraní nechávají. |
 
 ---
 

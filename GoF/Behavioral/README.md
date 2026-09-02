@@ -13,7 +13,7 @@ Společný jmenovatel většiny z nich: místo aby jedna třída věděla všech
 | [**Chain of Responsibility**](ChainOfResponsibility/) | Řetěz zpracovatelů, požadavek putuje k tomu, kdo ho umí obsloužit; v moderním PHP známý jako middleware | ●●●○○ | ✅ |
 | Command | Operace zabalená do objektu — jde předat, zařadit do fronty, vrátit zpět | | ⬜ |
 | Interpreter | Vyhodnocení vět jednoduchého jazyka | | ⬜ |
-| Iterator | Průchod kolekcí bez znalosti její vnitřní struktury | | ⬜ |
+| [**Iterator**](Iterator/) | Průchod kolekcí bez znalosti její vnitřní struktury; v PHP hlavně generátory a práce s daty, která se nevejdou do paměti | ●○○○○ | ✅ |
 | Mediator | Prostředník, přes kterého objekty komunikují místo napřímo | | ⬜ |
 | Memento | Uložení a obnovení stavu objektu bez porušení zapouzdření | | ⬜ |
 | [**Observer**](Observer/) | Objekt informuje odběratele o své změně; předchůdce doménových událostí | ●●○○○ | ✅ |

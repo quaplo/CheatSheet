@@ -50,7 +50,7 @@ Autoři vzory rozdělili podle toho, čeho se týkají:
 | [**Chain of Responsibility**](Behavioral/ChainOfResponsibility/) | Řetěz zpracovatelů, požadavek putuje k tomu, kdo ho umí obsloužit | ✅ |
 | Command | Operace zabalená do objektu — jde předat, zařadit do fronty, vrátit zpět | ⬜ |
 | Interpreter | Vyhodnocení vět jednoduchého jazyka | ⬜ |
-| Iterator | Průchod kolekcí bez znalosti její vnitřní struktury | ⬜ |
+| [**Iterator**](Behavioral/Iterator/) | Průchod kolekcí bez znalosti její vnitřní struktury | ✅ |
 | Mediator | Prostředník, přes kterého objekty komunikují místo napřímo | ⬜ |
 | Memento | Uložení a obnovení stavu objektu bez porušení zapouzdření | ⬜ |
 | [**Observer**](Behavioral/Observer/) | Objekt informuje odběratele o své změně | ✅ |

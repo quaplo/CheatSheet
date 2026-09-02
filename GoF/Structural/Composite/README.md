@@ -261,7 +261,7 @@ U kategorií e-shopu (desítky uzlů) nic z toho nevadí. U stromu s milionem uz
 | [Decorator](../Decorator/) | Také obaluje se stejným rozhraním, ale **právě jeden** objekt a kvůli přidání chování. Composite jich obaluje víc a kvůli struktuře. |
 | [First Class Collection](../../../ObjectCalisthenics/FirstClassCollection/) | Co použít, když **struktura není rekurzivní**. Plochý seznam Composite nepotřebuje. |
 | [Chain of Responsibility](../../Behavioral/ChainOfResponsibility/) | Články řetězu bývají uspořádané do stromu právě přes Composite. |
-| **Iterator** (GoF) | Přirozený doplněk: jak strom projít, aniž bys znal jeho tvar. |
+| [Iterator](../../Behavioral/Iterator/) (GoF) | Přirozený doplněk: jak strom projít, aniž bys znal jeho tvar. `yield from` je na to v PHP nejjednodušší nástroj. |
 | **Visitor** (GoF) | Jak nad stromem přidat operaci, aniž bys sahal do uzlů. |
 | [Aggregate](../../../DDD/Aggregate/) | **Nezaměňovat.** Agregát drží části, ale ne rekurzivně — a hlavně jde o hranici konzistence, ne o strukturu. |
 

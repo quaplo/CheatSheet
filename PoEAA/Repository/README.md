@@ -332,6 +332,7 @@ markOverdue(new DoctrineOrderRepository($entityManager), $now);
 | [Bounded Context](../../DDD/BoundedContext/) | Repository patří dovnitř kontextu. Do cizího kontextu se nesahá jeho repositorym, ale překladem na hranici. |
 | **Identity Map** (PoEAA) | Zaručuje, že tentýž agregát načtený dvakrát je tentýž objekt. V Doctrine je součástí Unit of Work. |
 | [Service Layer](../ServiceLayer/) | Nejběžnější konzument repository — use-case si o něj řekne v konstruktoru. |
+| [Iterator](../../GoF/Behavioral/Iterator/) (GoF) | Nad velkými výsledky vrací repository iterátor místo pole (`toIterable()` v Doctrine). Agregace ale patří do databáze, ne do průchodu. |
 | [CQRS](../../Architecture/CQRS/) | Odpověď na repository o čtyřiceti metodách dotažená do konce: výpisy dostanou vlastní cestu k datům, repository zůstane jen pro zápis. |
 
 ---

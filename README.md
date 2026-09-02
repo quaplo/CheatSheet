@@ -68,6 +68,7 @@ Patterny jsou uspořádané podle **původu** — podle knihy nebo autora, kde b
 | [Composite](GoF/Structural/Composite/) | Structural | Strom, kde se s listem zachází stejně jako s celou větví | ●●○○○ |
 | [Factory Method](GoF/Creational/FactoryMethod/) | Creational | Vytvoření objektu má jméno a hlídá si pravidla | ●○○○○ |
 | [Observer](GoF/Behavioral/Observer/) | Behavioral | Objekt oznámí změnu všem, kdo o to stáli — a nezná je | ●●○○○ |
+| [Iterator](GoF/Behavioral/Iterator/) | Behavioral | Průchod kolekcí bez znalosti vnitřku; generátory a data, která se nevejdou do paměti | ●○○○○ |
 | [Singleton](GoF/Creational/Singleton/) | Creational | Jediná instance dostupná odkudkoli — **a proč ho skoro nikdy nechceš** | ●○○○○ |
 | [Builder](GoF/Creational/Builder/) | Creational | Objekt se sestaví po částech a vznikne až na konci | ●○○○○ |
 
@@ -233,6 +234,11 @@ Obrácený rejstřík: začni u toho, co tě pálí.
 | Doménový kód ví, že „ten druhý dodavatel počítá v dolarech“ | [Adapter](GoF/Structural/Adapter/) |
 | Při procházení stromu mám všude `if ($node instanceof Category)` | [Composite](GoF/Structural/Composite/) |
 | Hloubka kategorií je zadrátovaná a přidat čtvrtou úroveň znamená přepsat metody | [Composite](GoF/Structural/Composite/) |
+| Kolekce vydává `toArray()` a volající si nad vnitřkem dělá `foreach` | [Iterator](GoF/Behavioral/Iterator/) |
+| Export načte milion řádků do pole a spadne na paměti | [Iterator](GoF/Behavioral/Iterator/#generátor-co-s-polem-nejde) |
+| Potřebuju projít data, která vznikají za chodu, nebo posloupnost bez konce | [Iterator](GoF/Behavioral/Iterator/#líné-vyhodnocení) |
+| Druhý `foreach` skončí na „Cannot traverse an already closed generator“ | [Iterator](GoF/Behavioral/Iterator/#past-na-kterou-narazí-každý) |
+| Nevím, jestli psát `IteratorAggregate`, `Iterator`, nebo generátor | [Iterator](GoF/Behavioral/Iterator/#kdy-si-iterátor-psát-a-jaký) |
 | Z `new Money(129000)` nepoznám, jestli jsou to koruny nebo haléře | [Factory Method](GoF/Creational/FactoryMethod/) |
 | Konstruktor má šest nepovinných parametrů a půlku z nich předávám `null` | [Factory Method](GoF/Creational/FactoryMethod/) |
 | Objekt jde vytvořit v neplatném stavu, protože validace je jinde než konstruktor | [Factory Method](GoF/Creational/FactoryMethod/) |
