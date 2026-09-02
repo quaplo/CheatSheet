@@ -214,7 +214,7 @@ Nejspolehlivější test kvality doménové služby: **dá se o ní mluvit s pro
 | `CurrencyUtils` | `ExchangeRateConverter` |
 | `CustomerService` | `CustomerMerger` |
 
-Jména na `-Manager`, `-Helper`, `-Utils` a `-Service` nepopisují operaci, jen prozrazují, že autor nevěděl, co to je. Navíc **přitahují smetí**: do třídy s takovým jménem přibude za rok všechno, co se nikam nevešlo.
+Jména na `-Manager`, `-Helper`, `-Utils` a `-Service` nepopisují operaci, jen prozrazují, že autor nevěděl, co to je — a jsou to zároveň klasické příznaky [náhodné soudržnosti](../../Principles/CohesionAndCoupling.md#stupnice-soudržnosti). Navíc **přitahují smetí**: do třídy s takovým jménem přibude za rok všechno, co se nikam nevešlo.
 
 ---
 

@@ -30,6 +30,7 @@ _template/
     demo/run.php               # kostra spustitelného dema
 Principles/
     README.md                  # rozcestník principů
+    CohesionAndCoupling.md     # soudržnost a provázanost — cíl, ke kterému ostatní vedou
     SOLID.md                   # SRP, OCP, LSP, ISP, DIP
     Simplicity.md              # KISS, YAGNI, DRY, pravidlo tří
     ObjectDesign.md            # Tell Don't Ask, Demeter, kompozice, CQS, Fail Fast
@@ -81,7 +82,8 @@ Ve složce `Principles/` žijí **principy návrhu** (zatím SOLID). Platí stri
   `[OCP](../../../Principles/SOLID.md#openclosed-principle-ocp)`
   Počet `../` odpovídá zanoření: z `<Zdroj>/<Kategorie>/<Pattern>/` tři (GoF),
   z `<Zdroj>/<Pattern>/` dva (sbírky bez kategorií). **Po napsání odkaz ověř**, ne odhadni.
-- Principy jsou ve **třech souborech podle tématu**, každý princip má vlastní kotvu:
+- Principy jsou ve **čtyřech souborech podle tématu**, každý princip má vlastní kotvu:
+  - `CohesionAndCoupling.md` — `#stupnice-provázanosti` · `#stupnice-soudržnosti`
   - `SOLID.md` — `#single-responsibility-principle-srp` · `#openclosed-principle-ocp` ·
     `#liskov-substitution-principle-lsp` · `#interface-segregation-principle-isp` ·
     `#dependency-inversion-principle-dip`

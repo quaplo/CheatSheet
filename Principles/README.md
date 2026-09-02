@@ -4,6 +4,7 @@ Principy nejsou patterny. **Pattern je konkrétní řešení konkrétního probl
 
 | Soubor | Co obsahuje | Stav |
 | ------ | ----------- | ---- |
+| [**Soudržnost a provázanost**](CohesionAndCoupling.md) | Měřítko, které je pod vším ostatním — [soudržnost](CohesionAndCoupling.md#stupnice-soudržnosti), [provázanost](CohesionAndCoupling.md#stupnice-provázanosti) a jejich stupnice | ✅ |
 | [**SOLID**](SOLID.md) | Pět principů objektového návrhu — [SRP](SOLID.md#single-responsibility-principle-srp), [OCP](SOLID.md#openclosed-principle-ocp), [LSP](SOLID.md#liskov-substitution-principle-lsp), [ISP](SOLID.md#interface-segregation-principle-isp), [DIP](SOLID.md#dependency-inversion-principle-dip) | ✅ |
 | [**Jednoduchost**](Simplicity.md) | Kolik kódu psát a kdy — [KISS](Simplicity.md#kiss--keep-it-simple), [YAGNI](Simplicity.md#yagni--you-arent-gonna-need-it), [DRY](Simplicity.md#dry--dont-repeat-yourself), [pravidlo tří](Simplicity.md#pravidlo-tří) | ✅ |
 | [**Objektový návrh**](ObjectDesign.md) | Jak spolu objekty mluví — [Tell Don't Ask](ObjectDesign.md#tell-dont-ask), [Demeter](ObjectDesign.md#zákon-demeter-law-of-demeter), [kompozice před dědičností](ObjectDesign.md#kompozice-před-dědičností), [CQS](ObjectDesign.md#cqs--command-query-separation), [Fail Fast](ObjectDesign.md#fail-fast), [zviditelni implicitní](ObjectDesign.md#zviditelni-implicitní) | ✅ |
@@ -14,11 +15,14 @@ Principy nejsou patterny. **Pattern je konkrétní řešení konkrétního probl
 
 Většina principů je na samostatný dokument příliš krátká, ale do rozcestníku se nevejdou — jedna věta z nich dělá slogan, ne návod. Řešení je stejné jako u SOLID: **jeden soubor na téma, jedna kotva na princip.** Odkazuje se pak vždycky na kotvu, ne na soubor.
 
-Témata jsou tři, protože odpovídají na tři různé otázky:
+Témata odpovídají na různé otázky a jedno z nich je pod těmi ostatními:
 
+- **Soudržnost a provázanost** — **cíl**, ke kterému ostatní principy vedou. Nejstarší (1974) a nejobecnější: platí na funkce, třídy, moduly, služby i týmy.
 - **SOLID** — jak rozdělit odpovědnosti mezi třídy
 - **Jednoduchost** — kolik toho vůbec napsat a kdy
 - **Objektový návrh** — jak spolu mají objekty mluvit
+
+Ta hierarchie stojí za zapamatování: **soudržnost a provázanost jsou cíl, SOLID jsou taktiky, patterny jsou konkrétní řešení.** Když si nejsi jistý, jestli má nějaké pravidlo v konkrétní situaci smysl, ptej se o úroveň výš.
 
 ## Odkazování z patternů
 

@@ -4,7 +4,9 @@
 
 > **V jedné větě:** Pět principů, které drží objektový návrh v takovém stavu, aby se dal měnit bez toho, že se při každé změně rozbije něco jinde.
 
-SOLID nejsou patterny. Patterny jsou **konkrétní řešení konkrétních problémů**; principy jsou **měřítko, podle kterého se pozná, jestli je návrh dobrý**. Většina patternů v tomhle katalogu existuje právě proto, že řeší porušení některého z těchhle pěti bodů.
+SOLID nejsou patterny. Patterny jsou **konkrétní řešení konkrétních problémů**; principy jsou **měřítko, podle kterého se pozná, jestli je návrh dobrý**.
+
+A jedno upřesnění, které stojí za to znát: **SOLID nejsou to nejzákladnější patro.** Všech pět principů je způsob, jak dosáhnout [vysoké soudržnosti a nízké provázanosti](CohesionAndCoupling.md) — pojmů o třicet let starších. Když si nejsi jistý, jestli má nějaký z nich v konkrétní situaci smysl, ptej se o úroveň výš. Většina patternů v tomhle katalogu existuje právě proto, že řeší porušení některého z těchhle pěti bodů.
 
 | Zkratka | Princip | V jedné větě |
 | ------- | ------- | ------------ |

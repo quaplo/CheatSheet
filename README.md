@@ -29,6 +29,7 @@ Patterny jsou konkrétní řešení; **principy jsou měřítko, podle kterého 
 
 | Soubor | Co obsahuje | Stav |
 | ------ | ----------- | ---- |
+| [**Soudržnost a provázanost**](Principles/CohesionAndCoupling.md) | Měřítko pod vším ostatním — co spolu souvisí ať je pohromadě, co ne ať na sobě nezávisí | ✅ |
 | [**SOLID**](Principles/SOLID.md) | Jak rozdělit odpovědnosti — SRP, OCP, LSP, ISP, DIP | ✅ |
 | [**Jednoduchost**](Principles/Simplicity.md) | Kolik kódu psát a kdy — KISS, YAGNI, DRY, pravidlo tří | ✅ |
 | [**Objektový návrh**](Principles/ObjectDesign.md) | Jak spolu objekty mluví — Tell Don't Ask, Demeter, kompozice před dědičností, CQS, Fail Fast | ✅ |
@@ -201,6 +202,9 @@ Obrácený rejstřík: začni u toho, co tě pálí.
 | Vznikají mi třídy `XManager`, `XHelper`, `XUtils` a nikdo neví, co je uvnitř | [Domain Service](DDD/DomainService/) |
 | Entita sahá do cizího agregátu a mění ho | [Domain Service](DDD/DomainService/) |
 | Nevím, jestli koordinace patří do domény, nebo do aplikační vrstvy | [Domain Service](DDD/DomainService/) |
+| Jedna změna si vynutí úpravu v pěti souborech | [Soudržnost a provázanost](Principles/CohesionAndCoupling.md) |
+| Mám třídu `Utils` / `Helper` / `Manager` a nikdo neví, co je uvnitř | [Soudržnost a provázanost](Principles/CohesionAndCoupling.md#stupnice-soudržnosti) |
+| Metoda má `bool` parametr, který mění, co uvnitř dělá | [Soudržnost a provázanost](Principles/CohesionAndCoupling.md#řídicí-provázanost-protože-ta-je-nejzákeřnější) |
 | Frontend volá pět endpointů a skládá si z nich jednu stránku sám | [Service Composition](Architecture/ServiceComposition/) |
 | Mám kód, který koordinuje víc domén, a nepatří do žádné z nich | [Service Composition](Architecture/ServiceComposition/) |
 | Operace přes tři kontexty spadla v půlce a nikdo první dva kroky nevrátil | [Saga](Architecture/Saga/) |

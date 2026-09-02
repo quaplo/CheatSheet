@@ -4,7 +4,7 @@
 
 > **V jedné větě:** Šest pravidel o tom, **jak spolu objekty mluví** — a proč se kód rozpadá, když se nedodržují.
 
-Zatímco [SOLID](SOLID.md) řeší, jak rozdělit odpovědnosti, a [KISS/YAGNI/DRY](Simplicity.md), kolik toho psát, tyhle principy řeší **komunikaci**: kdo se koho na co smí ptát, kdo o kom smí vědět a co se má stát, když je něco špatně.
+Zatímco [SOLID](SOLID.md) řeší, jak rozdělit odpovědnosti, [KISS/YAGNI/DRY](Simplicity.md), kolik toho psát, a [soudržnost s provázaností](CohesionAndCoupling.md) je měřítkem nad tím vším, tyhle principy řeší **komunikaci**: kdo se koho na co smí ptát, kdo o kom smí vědět a co se má stát, když je něco špatně.
 
 | Princip | V jedné větě |
 | ------- | ------------ |

@@ -251,6 +251,7 @@ Nový dopravce = nová třída a jeden řádek v registraci. `ShippingCalculator
 | Princip | Jak souvisí |
 | ------- | ----------- |
 | [OCP](../../../Principles/SOLID.md#openclosed-principle-ocp) | Hlavní důvod, proč pattern existuje: nová varianta = nová třída, kontext se nemění. |
+| [Nízká provázanost](../../../Principles/CohesionAndCoupling.md#řídicí-provázanost-protože-ta-je-nejzákeřnější) | Nahrazuje **řídicí provázanost** — místo `bool` příznaku, kterým volající řídí vnitřek, polymorfismus. |
 | [DIP](../../../Principles/SOLID.md#dependency-inversion-principle-dip) | Kontext závisí na rozhraní `ShippingCost`, ne na konkrétním dopravci. |
 | [SRP](../../../Principles/SOLID.md#single-responsibility-principle-srp) | Každá strategie má jediný důvod ke změně — sazbu vlastního dopravce. |
 | [LSP](../../../Principles/SOLID.md#liskov-substitution-principle-lsp) | Kompozice místo dědičnosti; strategie jsou zaměnitelné z definice. |
