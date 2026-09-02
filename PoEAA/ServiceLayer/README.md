@@ -420,6 +420,7 @@ Složka `Application/` je pak **čitelný seznam toho, co aplikace umí**. To je
 | [Aggregate](../../DDD/Aggregate/) | To, co use-case obsluhuje. Pravidlo „jedna transakce = jeden agregát“ platí právě tady. |
 | [Domain Event](../../DDD/DomainEvent/) | Use-case je místo, kde se události publikují — **až po commitu**. |
 | [Repository](../Repository/) | Nejběžnější závislost use-case. |
+| [Unit of Work](../UnitOfWork/) | Use-case určuje **hranici** — kdy se transakce otevře a kdy se zavolá commit. |
 | [Service Composition](../../Architecture/ServiceComposition/) | Use-case o úroveň výš: místo domény volá veřejné use-case jiných kontextů. |
 | [Chain of Responsibility](../../GoF/Behavioral/ChainOfResponsibility/) | Middleware kolem sběrnice příkazů: transakce, autorizace, logování. |
 | [Domain Service](../../DDD/DomainService/) (DDD) | **Nezaměňovat.** Domain service obsahuje doménovou logiku a nesmí znát infrastrukturu; use-case je naopak jen orchestrace. Obvykle spolu sousedí: use-case načte, služba rozhodne. |

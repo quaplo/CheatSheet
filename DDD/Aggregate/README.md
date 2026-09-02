@@ -289,6 +289,7 @@ Konkrétní vodítko, když si nejsi jistý:
 | [Bounded Context](../BoundedContext/) | O úroveň výš: kontext obsahuje agregáty, agregát nikdy nepřesahuje kontext. |
 | [Service Layer](../../PoEAA/ServiceLayer/) | To, co agregát obsluhuje. Pravidlo „jedna transakce = jeden agregát“ se vynucuje právě tam. |
 | [Domain Service](../DomainService/) | Kam s pravidlem, které se týká **dvou agregátů** a ani jeden ho nevlastní. |
+| [Unit of Work](../../PoEAA/UnitOfWork/) | Pravidlo „jedna transakce = jeden agregát“ mluví přesně o rozsahu jedné jednotky práce. |
 | [Composite](../../GoF/Structural/Composite/) (GoF) | **Nezaměňovat.** Agregát drží části, ale ne rekurzivně — položka není objednávka. Composite je o struktuře, agregát o hranici konzistence. |
 | [Optimistic Offline Lock](../../PoEAA/OptimisticOfflineLock/) | Agregát je **jednotka souběžnosti** — verze patří na jeho kořen, ne na části. |
 | [Saga](../../Architecture/Saga/) | Co dělat, když operace musí změnit **víc agregátů ve víc kontextech** — kroky s kompenzacemi místo jedné transakce. |

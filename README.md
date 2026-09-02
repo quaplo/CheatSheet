@@ -93,6 +93,7 @@ Vzory pro aplikace nad databází a s doménovou logikou — Repository, Unit of
 | [Service Layer](PoEAA/ServiceLayer/) | Aplikační vrstva — jedna třída na jeden use-case, orchestrace bez rozhodování | ●●○○○ |
 | [Data Mapper](PoEAA/DataMapper/) | Překlad objekt ↔ řádek; doména ani schéma o sobě nevědí | ●●●○○ |
 | [Optimistic Offline Lock](PoEAA/OptimisticOfflineLock/) | Souběžné změny se poznají podle verze — místo aby se jim předcházelo | ●●○○○ |
+| [Unit of Work](PoEAA/UnitOfWork/) | Změny se sbírají v paměti a zapíší najednou — co dělá Doctrine `flush()` | ●●●○○ |
 
 <sub>Celý katalog (Data Mapper, Unit of Work, Identity Map, …): [PoEAA/README.md](PoEAA/)</sub>
 
@@ -217,6 +218,9 @@ Obrácený rejstřík: začni u toho, co tě pálí.
 | „Někomu zmizely změny“ a nejde to reprodukovat | [Optimistic Offline Lock](PoEAA/OptimisticOfflineLock/) |
 | Dva lidé editují týž záznam a druhý přepíše prvního beze stopy | [Optimistic Offline Lock](PoEAA/OptimisticOfflineLock/) |
 | Formulář se vyplňuje pět minut a transakce tak dlouho držet nejde | [Optimistic Offline Lock](PoEAA/OptimisticOfflineLock/) |
+| Nechápu, co vlastně dělá Doctrine `flush()` a proč tam není `save()` | [Unit of Work](PoEAA/UnitOfWork/) |
+| Jeden objekt se během operace uloží třikrát, protože se třikrát změnil | [Unit of Work](PoEAA/UnitOfWork/) |
+| Operace spadla v půlce a část změn už je v databázi | [Unit of Work](PoEAA/UnitOfWork/) |
 | Do fungující třídy přibývá cache, logování a měření, které s její prací nesouvisí | [Decorator](GoF/Structural/Decorator/) |
 | Mám `CachedFooRepository`, `LoggedFooRepository` a teď potřebuju obojí naráz | [Decorator](GoF/Structural/Decorator/) |
 | Chci rozšířit třídu, která je `final` nebo z cizí knihovny | [Decorator](GoF/Structural/Decorator/) |

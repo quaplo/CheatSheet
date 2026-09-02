@@ -286,6 +286,7 @@ U API totéž přes `ETag` a `If-Match` — a je to jeho standardní použití, 
 | **Coarse-Grained Lock** (PoEAA) | Fowlerovo jméno pro „jeden zámek na celý agregát“. |
 | [Repository](../Repository/) | Místo, kde se verze kontroluje — `save()` buď projde, nebo vyhodí konflikt. |
 | [Data Mapper](../DataMapper/) | Verze je sloupec navíc; mapper ji drží mimo doménový model. |
+| [Unit of Work](../UnitOfWork/) | Doplňují se: Unit of Work řeší souběh **uvnitř** transakce, optimistický zámek **mezi** requesty. |
 | [Saga](../../Architecture/Saga/) | Souběh **napříč službami** tohle neřeší. Tam jsou kompenzace. |
 | [Entity](../../DDD/Entity/) | Verze není doménový pojem — je to technický údaj přilepený k entitě. |
 

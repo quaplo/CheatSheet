@@ -17,7 +17,7 @@ Sbírka **nemá kategorie** — je to plochý katalog.
 | [**Repository**](Repository/) | Kolekcí se tvářící rozhraní nad persistencí | ●●●○○ | ✅ |
 | [**Service Layer**](ServiceLayer/) | Hranice aplikace jako sada operací — dnes spíš třída na use-case | ●●○○○ | ✅ |
 | [**Data Mapper**](DataMapper/) | Překlad mezi objektem a řádkem, bez vazby v obou směrech | ●●●○○ | ✅ |
-| Unit of Work | Sledování změn a jeden zápis na konci | | ⬜ |
+| [**Unit of Work**](UnitOfWork/) | Sledování změn a jeden zápis na konci — tohle dělá `flush()` | ●●●○○ | ✅ |
 | [**Optimistic Offline Lock**](OptimisticOfflineLock/) | Souběžné změny se nepoznají zámkem, ale verzí | ●●○○○ | ✅ |
 | Identity Map | Tentýž záznam načtený dvakrát je tentýž objekt | | ⬜ |
 | Pessimistic Offline Lock | Záznam se při otevření zamkne — [srovnání](OptimisticOfflineLock/#optimistické-nebo-pesimistické) je u optimistického | | ⬜ |

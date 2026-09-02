@@ -303,7 +303,7 @@ Rozhodnutí, které je potřeba udělat vědomě, protože výchozí chování b
 ## V praxi
 
 - **Symfony Messenger** — middleware `DispatchAfterCurrentBus` řeší přesně to „až po commitu“. Pro asynchronní doručení stačí přepnout transport.
-- **Doctrine** — události z agregátů se sbírají v posluchači na `postFlush`. Sahat na `preFlush` nebo `onFlush` je zdroj problémů: transakce ještě neskončila.
+- **Doctrine** — události z agregátů se sbírají v posluchači na `postFlush`, tedy až po commitu [Unit of Work](../../PoEAA/UnitOfWork/). Sahat na `preFlush` nebo `onFlush` je zdroj problémů: transakce ještě neskončila.
 - **Outbox** — tabulka `outbox` zapsaná ve stejné transakci plus samostatný odesílač. Jediná varianta, u které událost nezmizí při pádu procesu.
 
 ---
