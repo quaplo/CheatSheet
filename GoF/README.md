@@ -53,7 +53,7 @@ Autoři vzory rozdělili podle toho, čeho se týkají:
 | Iterator | Průchod kolekcí bez znalosti její vnitřní struktury | ⬜ |
 | Mediator | Prostředník, přes kterého objekty komunikují místo napřímo | ⬜ |
 | Memento | Uložení a obnovení stavu objektu bez porušení zapouzdření | ⬜ |
-| Observer | Objekt informuje odběratele o své změně | ⬜ |
+| [**Observer**](Behavioral/Observer/) | Objekt informuje odběratele o své změně | ✅ |
 | [**State**](Behavioral/State/) | Objekt mění chování podle vnitřního stavu | ✅ |
 | [**Strategy**](Behavioral/Strategy/) | Zaměnitelné algoritmy za jedním rozhraním | ✅ |
 | Template Method | Kostra algoritmu v předkovi, kroky v potomcích | ⬜ |
