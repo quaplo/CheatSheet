@@ -348,7 +348,7 @@ $result = $pipeline->process($order);
 | [Decorator](../../Structural/Decorator/) (GoF) | Strukturou skoro totožné — objekt drží objekt a deleguje. Rozdíl je v záměru: Decorator **přidává chování ke každému volání** a vždycky pustí dál; řetěz předává dál, **dokud někdo nevyřídí**. Pipeline varianta stojí přesně na hranici mezi nimi. |
 | [Strategy](../Strategy/) | Strategy vybere **jednoho** zpracovatele předem a zavolá ho. Řetěz se ptá postupně, dokud někdo neřekne ano. |
 | [Rules Engine](../../../Architecture/RulesEngine/) | Řetěz zná jen prvního schopného. Rules engine vidí **všechny**, kdo by vyhověli, a teprve pak se rozhoduje — a proto umí auditní stopu i řešení konfliktů. |
-| **Composite** (GoF) | Často spolu: řetěz může být článkem jiného řetězu. |
+| [Composite](../../Structural/Composite/) (GoF) | Často spolu: řetěz může být článkem jiného řetězu. |
 | [Specification](../../../DDD/Specification/) | Přirozený obsah metody `canApprove()` — podmínka článku jako samostatný objekt. |
 | [State](../State/) | Také deleguje na vyměnitelný objekt, ale ví přesně na který. Řetěz hledá, stav ne. |
 | [Domain Event](../../../DDD/DomainEvent/) (DDD) | Rozdíl v záměru: řetěz hledá **jednoho** zpracovatele a čeká na výsledek, událost oznamuje **všem** a nečeká na nikoho. |

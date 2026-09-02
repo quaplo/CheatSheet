@@ -241,7 +241,7 @@ Kontejner podstrčí původní službu jako `.inner` a všem, kdo si žádají `
 | [Chain of Responsibility](../../Behavioral/ChainOfResponsibility/) | **Nejbližší příbuzný a nejčastější záměna.** Struktura stejná, záměr jiný: dekorátor **vždycky pustí dál** a přidává; řetěz hledá, **kdo požadavek vyřídí**, a končí u prvního schopného. Middleware stojí přesně na hranici obojího. |
 | [Adapter](../Adapter/) | Také obaluje, ale **mění rozhraní**. Dekorátor ho zachovává. |
 | **Proxy** (GoF) | Také obaluje se stejným rozhraním, ale kvůli **řízení přístupu** (lazy loading, oprávnění), ne kvůli přidání chování. |
-| **Composite** (GoF) | Obaluje **víc** objektů najednou; dekorátor právě jeden. |
+| [Composite](../Composite/) (GoF) | Obaluje **víc** objektů najednou a kvůli struktuře; dekorátor právě jeden a kvůli chování. |
 | [Strategy](../../Behavioral/Strategy/) | Strategy chování **nahradí**, dekorátor ho **obalí**. |
 | [Service Layer](../../../PoEAA/ServiceLayer/) | Typické místo použití: transakce, autorizace a měření kolem use-case. |
 | [Repository](../../../PoEAA/Repository/) | Nejčastěji dekorovaná věc v PHP aplikacích. |

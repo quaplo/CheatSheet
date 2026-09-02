@@ -12,7 +12,7 @@ Většina z nich vypadá na diagramu podobně (A drží B a deleguje na něj); l
 | ------- | ------ | --------- | ---- |
 | [**Adapter**](Adapter/) | Přizpůsobení cizího rozhraní tomu, co očekává náš kód | ●○○○○ | ✅ |
 | Bridge | Oddělení abstrakce od implementace, aby šly měnit nezávisle | | ⬜ |
-| Composite | Strom objektů, se kterým se pracuje jako s jedním prvkem | | ⬜ |
+| [**Composite**](Composite/) | Strom objektů, se kterým se pracuje jako s jedním prvkem | ●●○○○ | ✅ |
 | [**Decorator**](Decorator/) | Přidání chování obalením objektu, bez dědičnosti | ●●○○○ | ✅ |
 | Facade | Jednoduché rozhraní před složitým subsystémem | | ⬜ |
 | Flyweight | Sdílení paměťově náročných dat mezi instancemi | | ⬜ |

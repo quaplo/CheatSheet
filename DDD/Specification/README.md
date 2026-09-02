@@ -364,7 +364,7 @@ $matching = array_filter(
 
 | Pattern | Vztah |
 | ------- | ----- |
-| **Composite** (GoF) | `AndSpecification` a `OrSpecification` **jsou** Composite: uzel stromu, se kterým se zachází stejně jako s listem. Tady vidíš pattern použitý v praxi, ne jen na diagramu. |
+| [Composite](../../GoF/Structural/Composite/) (GoF) | `AndSpecification` a `OrSpecification` **jsou** Composite: uzel stromu, se kterým se zachází stejně jako s listem. Tady vidíš pattern použitý v praxi, ne jen na diagramu. |
 | [Strategy](../../GoF/Behavioral/Strategy/) | Oba zabalují chování do objektu. Strategy **něco počítá** (jak spočítat dopravu), Specification **odpovídá ano/ne** (má nárok na dopravu zdarma). Často spolupracují. |
 | [Value Object](../ValueObject/) | Specifikace se chová jako hodnota — neměnná, bez identity, porovnatelná. Parametry pravidel bývají value objecty. |
 | [Entity](../Entity/) | Pravidlo o entitě, které nepatří dovnitř ní — protože kombinuje víc věcí nebo má vlastní parametry. |

@@ -65,6 +65,7 @@ Patterny jsou uspořádané podle **původu** — podle knihy nebo autora, kde b
 | [State](GoF/Behavioral/State/) | Behavioral | Objekt mění chování podle svého stavu; zakázané přechody nejde přehlédnout | ●●●○○ |
 | [Adapter](GoF/Structural/Adapter/) | Structural | Překlad cizího rozhraní na to, které očekává tvůj kód | ●○○○○ |
 | [Decorator](GoF/Structural/Decorator/) | Structural | Přidání chování obalením — cache, log, měření bez zásahu do původní třídy | ●●○○○ |
+| [Composite](GoF/Structural/Composite/) | Structural | Strom, kde se s listem zachází stejně jako s celou větví | ●●○○○ |
 
 <sub>Kompletní katalog všech 23 patternů včetně nezpracovaných: [GoF/README.md](GoF/)</sub>
 
@@ -222,6 +223,8 @@ Obrácený rejstřík: začni u toho, co tě pálí.
 | Dvě knihovny dělají totéž, ale každá jinak — nejde je porovnat | [Adapter](GoF/Structural/Adapter/) |
 | V kódu mám `if ($provider === '…')` a pod ním převod jednotek | [Adapter](GoF/Structural/Adapter/) |
 | Doménový kód ví, že „ten druhý dodavatel počítá v dolarech“ | [Adapter](GoF/Structural/Adapter/) |
+| Při procházení stromu mám všude `if ($node instanceof Category)` | [Composite](GoF/Structural/Composite/) |
+| Hloubka kategorií je zadrátovaná a přidat čtvrtou úroveň znamená přepsat metody | [Composite](GoF/Structural/Composite/) |
 | Frontend volá pět endpointů a skládá si z nich jednu stránku sám | [Service Composition](Architecture/ServiceComposition/) |
 | Mám kód, který koordinuje víc domén, a nepatří do žádné z nich | [Service Composition](Architecture/ServiceComposition/) |
 | Operace přes tři kontexty spadla v půlce a nikdo první dva kroky nevrátil | [Saga](Architecture/Saga/) |
