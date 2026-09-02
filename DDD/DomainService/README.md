@@ -328,7 +328,6 @@ Use-case načítá, ukládá a publikuje. **Rozhoduje doménová služba.**
 - **Symfony DI** — doménová služba je obyčejná bezstavová služba; autowiring ji předá use-case bez konfigurace.
 - **Testy** — poznávací znamení dobré doménové služby: test se obejde **bez mocků**. Dovnitř jdou skutečné doménové objekty.
 - **Typické případy** — přepočet měn, výpočet ceny podle víc vstupů, slučování zákazníků, převody mezi účty, rozdělení částky mezi příjemce.
-- **U nás** — dobrý test při review: kdyby ta třída měla v konstruktoru repository nebo klienta cizí služby, patří do aplikační vrstvy, ne do domény.
 
 ---
 

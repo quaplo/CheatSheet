@@ -381,7 +381,6 @@ Co s tím jde dělat:
 - **Stav v databázi, ne v paměti** — bez toho sága nepřežije deploy uprostřed procesu. Platí to i pro synchronní variantu; [není to o frontách](#musí-to-být-asynchronní-ne).
 - **Monitoring** je součást patternu, ne doplněk: alert na ságy ve stavu „zaseknutá“ déle než X minut.
 - **Ruční dokončení** — počítej s tím, že někdo bude muset zasáhnout. Dej mu na to nástroj dřív, než ho bude potřebovat.
-- **U nás** — kroky přes hranice služeb jdou přes [SDK](../../Glossary.md#sdk-balíček) nebo zprávy; stav ságy patří té službě, která proces vlastní.
 
 ---
 

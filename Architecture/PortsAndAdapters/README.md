@@ -358,7 +358,6 @@ Core\Port\Driven\OrderRepository: '@Adapter\Driven\Persistence\DoctrineOrderRepo
 - **Doctrine** — `OrderRepository` jako rozhraní v doméně, `DoctrineOrderRepository` v infrastruktuře. Doctrine samo tenhle rozpad podporuje, ale nevynucuje.
 - **deptrac / PHPStan** — jediný způsob, jak směr závislostí udržet dlouhodobě. Bez kontroly v CI se hranice rozpadne, i když s ní všichni souhlasí.
 - **Testy** — praktické měřítko: když unit test use-case potřebuje databázi, port někde chybí nebo netěsní.
-- **U nás** — hexagonální členění je základ struktury našich služeb; tenhle pattern je jeho zdroj.
 
 ---
 

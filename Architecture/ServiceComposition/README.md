@@ -247,7 +247,6 @@ Ten poslední řádek je ten, na kterém pattern nejčastěji ztroskotá.
 - **Symfony HttpClient** — `stream()` umožní pustit nezávislá volání paralelně; u čtecí kompozice to je hlavní páka na latenci.
 - **Circuit breaker a timeout** — nepovinné, dokud nemáš první incident, kdy jeden pomalý kontext vyčerpal celý fond spojení.
 - **Čtecí model místo kompozice** — když je kompozice na kritické cestě a volá pořád totéž, poskládej si ten pohled předem z [událostí](../../DDD/DomainEvent/) a čti ho z jednoho místa. Viz [CQRS](../CQRS/), stupeň 4.
-- **U nás** — kompozice smí volat cizí službu jen přes její [SDK](../../Glossary.md#sdk-balíček), nikdy přímo do její databáze. Když skládáš pořád dokola totéž, patří to spíš do [read-model služby](../../Glossary.md#read-model-služba) plněné [DX zprávami](../../Glossary.md#dx-zpráva).
 
 ---
 

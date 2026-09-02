@@ -274,7 +274,6 @@ Domluva nestačí; za půl roku tam bude první `use Sales\Customer` uprostřed 
 - **Composer balíčky nebo adresářové moduly** — nejlevnější hranice v monolitu.
 - **deptrac / PHPStan** — jediný způsob, jak hranici udržet déle než půl roku.
 - **Oddělené schéma nebo prefix tabulek** — zabrání tomu, aby si kontexty sahaly do dat přes `JOIN`.
-- **U nás** — [každá služba na platformě](../../Glossary.md#služba-na-platformě) je bounded context; [DX zprávy](../../Glossary.md#dx-zpráva) a [SDK](../../Glossary.md#sdk-balíček) jsou právě ten překlad na hranici. Že „objednávka“ znamená v každé službě trochu něco jiného, je vlastnost, ne nedostatek.
 
 ---
 

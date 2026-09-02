@@ -327,7 +327,6 @@ $repository->save($order->cancel());
 - **Doctrine** — zápis přes ORM, čtení přes `Connection` a čisté SQL do DTO. Tohle je v PHP nejběžnější podoba stupně 3 a nepotřebuje nic navíc.
 - **Databázové pohledy** — levný způsob, jak udělat kus stupně 4 bez projekcí a bez eventuální konzistence.
 - **`json_agg` / materializované pohledy v PostgreSQL** — když čtecí model potřebuje víc než plochý řádek.
-- **U nás** — čtecí modely plněné z [DX zpráv](../../Glossary.md#dx-zpráva) jsou v podstatě stupeň 4: [read-model služba](../../Glossary.md#read-model-služba) dostane dokumentový event a poskládá si vlastní pohled. Eventuální konzistence tam **je** a počítá se s ní.
 
 ---
 

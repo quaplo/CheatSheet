@@ -41,10 +41,7 @@ Patterny jsou konkrétní řešení; **principy jsou měřítko, podle kterého 
 
 Pojmy, které se v katalogu opakují napříč patterny, ale nemají vlastní dokument — **[Glossary.md](Glossary.md)**.
 
-| | |
-| --- | --- |
-| **Obecné** | [idempotence](Glossary.md#idempotence) · [neměnnost](Glossary.md#neměnnost-immutability) · [invariant](Glossary.md#invariant) · [eventuální konzistence](Glossary.md#eventuální-konzistence) · [DTO](Glossary.md#dto--data-transfer-object) · [bezstavovost](Glossary.md#bezstavovost-stateless) · [N+1](Glossary.md#n1) · [časová vazba](Glossary.md#časová-vazba-temporal-coupling) |
-| **Naše platforma** | [DX zpráva](Glossary.md#dx-zpráva) · [SDK balíček](Glossary.md#sdk-balíček) · [read-model služba](Glossary.md#read-model-služba) · [služba na platformě](Glossary.md#služba-na-platformě) |
+[idempotence](Glossary.md#idempotence) · [neměnnost](Glossary.md#neměnnost-immutability) · [invariant](Glossary.md#invariant) · [eventuální konzistence](Glossary.md#eventuální-konzistence) · [DTO](Glossary.md#dto--data-transfer-object) · [bezstavovost](Glossary.md#bezstavovost-stateless) · [N+1](Glossary.md#n1) · [časová vazba](Glossary.md#časová-vazba-temporal-coupling)
 
 <sub>Pojmy, které mají vlastní pattern (agregát, port, kompenzace…), se vysvětlují tam — slovníček na ně [odkazuje](Glossary.md#pojmy-které-mají-vlastní-dokument).</sub>
 
@@ -84,7 +81,7 @@ Devět záměrně přísných pravidel objektového návrhu, původně jako **cv
 
 > Martin Fowler · **2002** · *Patterns of Enterprise Application Architecture*
 
-Vzory pro aplikace nad databází a s doménovou logikou — Repository, Unit of Work, Data Mapper, Service Layer, Identity Map. Tohle je vrstva, ve které se v našich službách pohybujeme denně. Většinu z nich ti dnes dává ORM hotové; znát je ale musíš, jinak nepochopíš, co pod tebou dělá.
+Vzory pro aplikace nad databází a s doménovou logikou — Repository, Unit of Work, Data Mapper, Service Layer, Identity Map. Většinu z nich ti dnes dává ORM hotové; znát je ale musíš, jinak nepochopíš, co pod tebou dělá.
 
 | Pattern | K čemu to je | Obtížnost |
 | ------- | ------------ | --------- |
@@ -236,4 +233,4 @@ Ve zkratce: zkopíruj `_template/PATTERN.md` jako `README.md` do složky pattern
 - **PHP 8.3+**, `declare(strict_types=1)`, bez frameworků — ukázky mají jít zkopírovat a spustit.
 - Složitější implementace mají složku `demo/` se spustitelným příkladem: `php <cesta>/demo/run.php`.
 - Kde to jde, používáme **jeden doménový příklad napříč patterny** (e-shop / objednávky), aby se nemusel při každém patternu chytat nový kontext.
-- Sekce **„U nás“** spojuje obecný pattern s konkrétními věcmi na naší platformě. Pojmy z ní i obecné pojmy napříč katalogem vysvětluje **[slovníček](Glossary.md)**.
+- Pojmy, které se opakují napříč patterny a nemají vlastní dokument, vysvětluje **[slovníček](Glossary.md)**.

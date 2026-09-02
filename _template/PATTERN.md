@@ -93,7 +93,6 @@ declare(strict_types=1);
      Konkrétní třídy/rozhraní, ne obecné fráze. -->
 
 - **Symfony / Doctrine / PSR:** <!-- konkrétní příklad -->
-- **U nás:** <!-- konkrétní příklad z našich služeb, pokud existuje -->
 
 ---
 

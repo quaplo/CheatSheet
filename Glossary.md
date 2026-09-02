@@ -1,13 +1,11 @@
 # Slovníček
 
-Pojmy, které se v katalogu opakují napříč patterny, ale nemají vlastní dokument. První část je obecná, druhá se týká naší platformy.
+Pojmy, které se v katalogu opakují napříč patterny, ale nemají vlastní dokument.
 
 > [!NOTE]
 > **Co tady schválně není:** pojmy, které mají vlastní dokument. Ty se nevysvětlují dvakrát — [seznam s odkazy](#pojmy-které-mají-vlastní-dokument) je na konci.
 
 ---
-
-## Obecné pojmy
 
 ### Idempotence
 
@@ -117,53 +115,6 @@ Kde v katalogu: [Repository](PoEAA/Repository/) · [CQRS](Architecture/CQRS/)
 Cena se dá spočítat: každá služba má 99,9 %, ale při synchronním volání se jejich nedostupnosti sčítají — u osmi služeb je z 43 minut výpadku měsíčně **skoro šest hodin**.
 
 Kde v katalogu: [Service Composition](Architecture/ServiceComposition/#cena-za-synchronní-volání)
-
----
-
-## Naše platforma
-
-### DX zpráva
-
-**DX = data exchange.** Asynchronní zpráva, kterou služba **publikuje** o změně svých dat, aby si z ní ostatní služby mohly poskládat vlastní pohled.
-
-| | |
-| --- | --- |
-| **Směr** | Producent publikuje, konzumenti si berou. Producent nezná své konzumenty. |
-| **Tvar** | *Dokumentový* — nese ucelený stav entity, ne popis změny. |
-| **Kontrakt** | Veřejný a **verzovaný**. Změna tvaru je změna dohody. |
-| **Doručení** | Asynchronní, přes frontu. Konzistence je [eventuální](#eventuální-konzistence). |
-
-**V pojmech katalogu** je DX zpráva [integrační událost](DDD/DomainEvent/#doménová-událost-není-integrační-událost) — tedy něco jiného než [doménová událost](DDD/DomainEvent/), která zůstává uvnitř služby. Z pohledu [mapy kontextů](DDD/ContextMap/) je to **Published Language**.
-
-Praktický důsledek: **doménovou událost ven neposílej.** Kdyby DX zpráva kopírovala vnitřní model služby, stal by se z něj veřejné API, které nejde měnit.
-
----
-
-### SDK balíček
-
-Knihovna, kterou služba vydává pro ty, kdo ji volají — hotový klient jejího API včetně typů požadavků a odpovědí.
-
-**V pojmech katalogu** je to [Open Host Service](DDD/ContextMap/#katalog-vztahů): publikovaný kontrakt pro víc konzumentů najednou.
-
-Upřesnění, které se plete: **SDK není [antikorupční vrstva](DDD/AnticorruptionLayer/).** SDK mluví pojmy té *druhé* služby — je to pohodlnější způsob, jak si zavolat cizí API, ale cizí model tím do tvé domény pořád může prosáknout.
-
----
-
-### Read-model služba
-
-Služba (nebo její část), která si z přijatých DX zpráv skládá vlastní pohled na data, optimalizovaný pro čtení.
-
-**V pojmech katalogu** je to [CQRS](Architecture/CQRS/) na [čtvrtém stupni](Architecture/CQRS/#škála-na-které-si-vyber): oddělené čtecí úložiště plněné projekcemi — se vším, co k tomu patří, hlavně s [eventuální konzistencí](#eventuální-konzistence).
-
----
-
-### Služba na platformě
-
-Samostatně nasazovaná aplikace s vlastní doménou a vlastním úložištěm.
-
-**V pojmech katalogu** je každá služba [ohraničený kontext](DDD/BoundedContext/) — a plyne z toho, že **týž pojem znamená v každé službě něco trochu jiného**, a je to tak správně.
-
-Uvnitř služby je členění [hexagonální](Architecture/PortsAndAdapters/): doménové jádro, kolem něj porty, na okrajích adaptéry.
 
 ---
 

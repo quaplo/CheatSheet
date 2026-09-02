@@ -408,7 +408,6 @@ Složka `Application/` je pak **čitelný seznam toho, co aplikace umí**. To je
 - **Autowiring** — s třídou na use-case dostane každý handler jen své závislosti, aniž bys je vypisoval.
 - **Dekorátory** — autorizace, měření času a audit patří kolem handleru, ne do něj. Bez sběrnice je zabalíš ručně v DI, se sběrnicí je z nich middleware.
 - **Pozor na záměnu** — sběrnice a use-case jsou dvě nezávislá rozhodnutí. Handler volaný přímo z controlleru je pořád use-case.
-- **U nás** — hexagonální členění služeb má aplikační vrstvu jako samostatný adresář; use-case je vstupní bod, který volají REST handlery i konzumenti zpráv.
 
 ---
 

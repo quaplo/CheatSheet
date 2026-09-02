@@ -311,7 +311,6 @@ markOverdue(new DoctrineOrderRepository($entityManager), $now);
 - **Doctrine `Criteria`** — most mezi repository a [Specification](../../DDD/Specification/); běží v paměti i v SQL.
 - **Symfony DI** — vazba rozhraní na implementaci jedním řádkem v `services.yaml`.
 - **Testy** — praktické měřítko: když unit test use-case sahá na databázi, repository buď chybí, nebo netěsní.
-- **U nás** — repository rozhraní v doméně a Doctrine implementace v infrastruktuře je standardní rozvržení našich služeb.
 
 ---
 

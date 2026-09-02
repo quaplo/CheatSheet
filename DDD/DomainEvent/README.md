@@ -305,7 +305,6 @@ Rozhodnutí, které je potřeba udělat vědomě, protože výchozí chování b
 - **Symfony Messenger** — middleware `DispatchAfterCurrentBus` řeší přesně to „až po commitu“. Pro asynchronní doručení stačí přepnout transport.
 - **Doctrine** — události z agregátů se sbírají v posluchači na `postFlush`. Sahat na `preFlush` nebo `onFlush` je zdroj problémů: transakce ještě neskončila.
 - **Outbox** — tabulka `outbox` zapsaná ve stejné transakci plus samostatný odesílač. Jediná varianta, u které událost nezmizí při pádu procesu.
-- **U nás** — [DX zprávy](../../Glossary.md#dx-zpráva) jsou **integrační** události: verzovaný dokumentový kontrakt pro cizí služby. Vnitřní doménové události služby ven nikdy neposílají, právě proto, aby šel vnitřní model měnit.
 
 ---
 
