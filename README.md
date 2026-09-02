@@ -88,6 +88,7 @@ Vzory pro aplikace nad databází a s doménovou logikou — Repository, Unit of
 | ------- | ------------ | --------- |
 | [Repository](PoEAA/Repository/) | Kolekcí se tvářící rozhraní nad persistencí | ●●●○○ |
 | [Service Layer](PoEAA/ServiceLayer/) | Aplikační vrstva — jedna třída na jeden use-case, orchestrace bez rozhodování | ●●○○○ |
+| [Data Mapper](PoEAA/DataMapper/) | Překlad objekt ↔ řádek; doména ani schéma o sobě nevědí | ●●●○○ |
 
 <sub>Celý katalog (Data Mapper, Unit of Work, Identity Map, …): [PoEAA/README.md](PoEAA/)</sub>
 
@@ -205,6 +206,9 @@ Obrácený rejstřík: začni u toho, co tě pálí.
 | Jedna změna si vynutí úpravu v pěti souborech | [Soudržnost a provázanost](Principles/CohesionAndCoupling.md) |
 | Mám třídu `Utils` / `Helper` / `Manager` a nikdo neví, co je uvnitř | [Soudržnost a provázanost](Principles/CohesionAndCoupling.md#stupnice-soudržnosti) |
 | Metoda má `bool` parametr, který mění, co uvnitř dělá | [Soudržnost a provázanost](Principles/CohesionAndCoupling.md#řídicí-provázanost-protože-ta-je-nejzákeřnější) |
+| Doménová třída má `save()` nebo drží spojení do databáze | [Data Mapper](PoEAA/DataMapper/) |
+| Model má tvar tabulky, ne domény — samé skaláry, žádné hodnoty | [Data Mapper](PoEAA/DataMapper/) |
+| Nevím, jestli zvolit Doctrine, nebo Eloquent | [Data Mapper](PoEAA/DataMapper/#data-mapper-vs-active-record) |
 | Frontend volá pět endpointů a skládá si z nich jednu stránku sám | [Service Composition](Architecture/ServiceComposition/) |
 | Mám kód, který koordinuje víc domén, a nepatří do žádné z nich | [Service Composition](Architecture/ServiceComposition/) |
 | Operace přes tři kontexty spadla v půlce a nikdo první dva kroky nevrátil | [Saga](Architecture/Saga/) |

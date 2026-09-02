@@ -361,6 +361,7 @@ Antikorupční vrstva je jediné místo, které cizí systém opravdu zná — t
 | **Facade** (GoF) | Jeden ze tří dílů — zúží cizí systém na to, co potřebuješ. |
 | [Repository](../../PoEAA/Repository/) | Když cizí systém slouží jako úložiště, vrstva se často schová právě za repository. |
 | [Value Object](../ValueObject/) | Typický výstup překladu — `SupplierId`, částka v haléřích, `DateTimeImmutable`. |
+| [Data Mapper](../../PoEAA/DataMapper/) | Táž myšlenka o patro níž: tam se překládá cizí **schéma**, tady cizí **model**. |
 
 ---
 

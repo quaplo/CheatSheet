@@ -463,7 +463,7 @@ echo $address->format();                     // Sokolovská 100 / 186 00 Praha /
 
 ## V praxi
 
-- **Doctrine** — [embeddables](https://www.doctrine-project.org/projects/doctrine-orm/en/current/tutorials/embeddables.html) (`#[Embeddable]` / `#[Embedded]`) mapují value object do sloupců rodičovské tabulky. Přesně na tohle jsou.
+- **Doctrine** — value object jde mapovat dvěma způsoby a oba stojí za znalost: **custom DBAL type** pro jednu hodnotu (`EmailAddress` → `VARCHAR`, dotazovatelné a indexovatelné) a **[embeddable](https://www.doctrine-project.org/projects/doctrine-orm/en/current/tutorials/embeddables.html)** pro víc složek (`Money` → dva sloupce). [Jak na to](../../PoEAA/DataMapper/#jak-v-doctrine-udržet-doménu-opravdu-čistou).
 - **PHP samotné** — `DateTimeImmutable` je value object jako z učebnice (viz [výše](#value-object-který-už-znáš)); `DateTime` je jeho varovná mutable verze.
 - **PHP 8.1+** — backed enumy pokryjí každý value object s uzavřenou množinou hodnot.
 - **PHP 8.2+** — `readonly` třídy udělaly z neměnnosti jednořádkovou záležitost. Předtím to znamenalo privátní property a ruční gettery.

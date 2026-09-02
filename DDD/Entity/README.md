@@ -255,7 +255,7 @@ Dvě továrny vedle sebe — `register()` a `reconstitute()` — jsou schválně
 
 ## V praxi
 
-- **Doctrine** — „entity“ v Doctrine je mapovaná třída, což **není totéž** co doménová entita. Doménová entita může být Doctrine entitou, ale nemusí; a Doctrine entita s dvaceti settery doménovou entitou rozhodně není.
+- **Doctrine** — je to [Data Mapper](../../PoEAA/DataMapper/); „entity“ v Doctrine je mapovaná třída, což **není totéž** co doménová entita. Doménová entita může být Doctrine entitou, ale nemusí; a Doctrine entita s dvaceti settery doménovou entitou rozhodně není. Že by entita kvůli Doctrine musela mít atributy, **není pravda** — [XML mapování](../../PoEAA/DataMapper/#1-xml-mapování--entita-zůstane-bez-jediného-atributu) ji nechá čistou.
 - **`readonly` identita** — od PHP 8.1 jde `public readonly CustomerId $id`, což je nejjednodušší způsob, jak identitu ochránit.
 - **Enumy** — ideální pro stavy a úrovně uvnitř entity; `match` navíc PHPStan kontroluje na vyčerpanost.
 - **Sledování změn** — Doctrine Unit of Work pozná změněné atributy sám, takže u měnitelné entity nepotřebuješ explicitní `save()` po každé operaci.

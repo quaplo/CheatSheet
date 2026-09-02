@@ -222,6 +222,7 @@ Skoro všude — a to je pointa. Tenhle princip je **cíl**, patterny jsou cesty
 | [Bounded Context](../DDD/BoundedContext/) | **Totéž v měřítku celé firmy**: vysoká soudržnost uvnitř kontextu, nízká provázanost mezi nimi |
 | [Aggregate](../DDD/Aggregate/) | Hranice, uvnitř které je soudržnost nutná |
 | [Domain Event](../DDD/DomainEvent/) | Rozvazuje: producent nezná konzumenty |
+| [Data Mapper](../PoEAA/DataMapper/) | Rozvazuje doménu a databázové schéma — demo měří, že nemají společný ani sloupec |
 | [Strategy](../GoF/Behavioral/Strategy/) | Nahrazuje řídicí provázanost (`bool` příznak) polymorfismem |
 
 ---

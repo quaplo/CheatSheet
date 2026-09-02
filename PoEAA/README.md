@@ -16,10 +16,10 @@ Sbírka **nemá kategorie** — je to plochý katalog.
 | ------- | ------ | --------- | ---- |
 | [**Repository**](Repository/) | Kolekcí se tvářící rozhraní nad persistencí | ●●●○○ | ✅ |
 | [**Service Layer**](ServiceLayer/) | Hranice aplikace jako sada operací — dnes spíš třída na use-case | ●●○○○ | ✅ |
-| Data Mapper | Překlad mezi objektem a řádkem, bez vazby v obou směrech | | ⬜ |
+| [**Data Mapper**](DataMapper/) | Překlad mezi objektem a řádkem, bez vazby v obou směrech | ●●●○○ | ✅ |
 | Unit of Work | Sledování změn a jeden zápis na konci | | ⬜ |
 | Identity Map | Tentýž záznam načtený dvakrát je tentýž objekt | | ⬜ |
-| Active Record | Objekt, který si sám umí uložit — protipól Data Mapperu | | ⬜ |
+| Active Record | Objekt, který si sám umí uložit — protipól Data Mapperu; [srovnání](DataMapper/#data-mapper-vs-active-record) je u něj | | ⬜ |
 | Money | Konkrétní value object pro peníze | | ⬜ |
 | Lazy Load | Data se načtou, až když je někdo potřebuje | | ⬜ |
 | Special Case | Zvláštní instance místo `null` | | ⬜ |

@@ -344,7 +344,7 @@ Core\Port\Driven\OrderRepository: '@Adapter\Driven\Persistence\DoctrineOrderRepo
 | Rozhraní portu leží v adaptéru (u implementace) | Závislost míří ven; jádro pak závisí na infrastruktuře, jen přes jeden mezistupeň | Port vlastní a definuje **jádro** |
 | Port kopíruje API ORM — `flush()`, `createQueryBuilder()`, `getReference()` | Doctrine proteče do jádra; výměna persistence znamená přepsat i jádro | Port mluví pojmy domény: `save()`, `findByNumber()` |
 | Adaptér vrací cizí typ (`Stripe\Charge`, `ResponseInterface`, `QueryBuilder`) | Cizí pojmy jsou v jádře, jen o patro níž | Adaptér **překládá** do typů jádra |
-| Doménová entita je zároveň Doctrine entita s anotacemi | Nejčastější kompromis vůbec. Někdy vědomě přijatelný, ale plaťte ho vědomě: mapování v jádře znamená, že persistence tvar domény ovlivňuje | Buď oddělený persistenční model + mapper, nebo si u toho aspoň napište, proč jste to nechali |
+| Doménová entita je zároveň Doctrine entita s anotacemi | Mapování v jádře znamená, že persistence ovlivňuje tvar domény | **Nemusí to tak být** — [XML mapování a custom types](../../PoEAA/DataMapper/#jak-v-doctrine-udržet-doménu-opravdu-čistou) udrží jádro bez jediného `use Doctrine\…` |
 | Byznys pravidlo v controlleru | Pravidlo platí jen pro tu jednu cestu; z fronty se tatáž operace zavolá bez něj | Pravidla do jádra, adaptér jen překládá |
 | Jeden adaptér na třídu, ne na vnější systém | Vznikne padesát rozhraní o jedné metodě a struktura přestane něco říkat | Port na **vnější starost**, ne na každou třídu |
 | Hexagon zaveden „pro jistotu“ všude | Zaplatíš cenu za flexibilitu, kterou nikdy nevyužiješ | Porty tam, kde je reálná varianta výměny nebo potřeba testu |
