@@ -237,7 +237,7 @@ Nový dopravce = nová třída a jeden řádek v registraci. `ShippingCalculator
 | [State](../State/) | Strukturou skoro totožný a nejčastěji zaměňovaná dvojice vůbec. Rozdíl je v tom, kdo rozhoduje a co ví: strategii vybírá **klient zvenčí** a ta se během operace nemění; stav si objekt přepíná **sám** a jednotlivé stavy **znají své následníky**. Strategy odpovídá na „jak to udělat“, State na „co teď smím“. |
 | **Template Method** | Řeší totéž — variabilní část algoritmu — ale **dědičností** místo kompozice. Template Method mění kroky uvnitř pevné kostry, Strategy vymění celý algoritmus. |
 | [Decorator](../../Structural/Decorator/) | Také obaluje chování, ale **přidává** k původnímu; Strategy původní chování **nahrazuje**. |
-| **Command** | Také zabaluje operaci do objektu, ale kvůli odložení, frontě nebo undo — ne kvůli výběru z variant. |
+| [Command](../Command/) | Také zabaluje operaci do objektu, ale kvůli odložení, frontě nebo undo — ne kvůli výběru z variant. |
 | [Factory Method](../../Creational/FactoryMethod/) | Častý doplněk: rozhoduje, která strategie se pro daný vstup vytvoří. |
 | [Chain of Responsibility](../ChainOfResponsibility/) | Strategy vybere jednoho zpracovatele předem; řetěz se ptá postupně, dokud někdo neřekne ano. |
 | [Rules Engine](../../../Architecture/RulesEngine/) | Jednotlivé pravidlo je Strategy pro výpočet důsledku. Rozdíl: Strategy se vybírá jedna, v enginu se vyhodnotí všechny a teprve pak se rozhoduje. |

@@ -11,7 +11,7 @@ Společný jmenovatel většiny z nich: místo aby jedna třída věděla všech
 | Pattern | K čemu | Obtížnost | Stav |
 | ------- | ------ | --------- | ---- |
 | [**Chain of Responsibility**](ChainOfResponsibility/) | Řetěz zpracovatelů, požadavek putuje k tomu, kdo ho umí obsloužit; v moderním PHP známý jako middleware | ●●●○○ | ✅ |
-| Command | Operace zabalená do objektu — jde předat, zařadit do fronty, vrátit zpět | | ⬜ |
+| [**Command**](Command/) | Operace zabalená do objektu — jde předat, zařadit do fronty, vrátit zpět; pozor na záměnu s commandem z CQRS | ●●○○○ | ✅ |
 | Interpreter | Vyhodnocení vět jednoduchého jazyka | | ⬜ |
 | [**Iterator**](Iterator/) | Průchod kolekcí bez znalosti její vnitřní struktury; v PHP hlavně generátory a práce s daty, která se nevejdou do paměti | ●○○○○ | ✅ |
 | Mediator | Prostředník, přes kterého objekty komunikují místo napřímo | | ⬜ |

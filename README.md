@@ -69,6 +69,7 @@ Patterny jsou uspořádané podle **původu** — podle knihy nebo autora, kde b
 | [Factory Method](GoF/Creational/FactoryMethod/) | Creational | Vytvoření objektu má jméno a hlídá si pravidla | ●○○○○ |
 | [Observer](GoF/Behavioral/Observer/) | Behavioral | Objekt oznámí změnu všem, kdo o to stáli — a nezná je | ●●○○○ |
 | [Iterator](GoF/Behavioral/Iterator/) | Behavioral | Průchod kolekcí bez znalosti vnitřku; generátory a data, která se nevejdou do paměti | ●○○○○ |
+| [Command](GoF/Behavioral/Command/) | Behavioral | Operace jako objekt — undo, fronta, makro; a proč to není totéž co command v CQRS | ●●○○○ |
 | [Singleton](GoF/Creational/Singleton/) | Creational | Jediná instance dostupná odkudkoli — **a proč ho skoro nikdy nechceš** | ●○○○○ |
 | [Builder](GoF/Creational/Builder/) | Creational | Objekt se sestaví po částech a vznikne až na konci | ●○○○○ |
 
@@ -239,6 +240,11 @@ Obrácený rejstřík: začni u toho, co tě pálí.
 | Potřebuju projít data, která vznikají za chodu, nebo posloupnost bez konce | [Iterator](GoF/Behavioral/Iterator/#líné-vyhodnocení) |
 | Druhý `foreach` skončí na „Cannot traverse an already closed generator“ | [Iterator](GoF/Behavioral/Iterator/#past-na-kterou-narazí-každý) |
 | Nevím, jestli psát `IteratorAggregate`, `Iterator`, nebo generátor | [Iterator](GoF/Behavioral/Iterator/#kdy-si-iterátor-psát-a-jaký) |
+| Uživatel chce krok zpět a nikde není zapsané, co se vlastně stalo | [Command](GoF/Behavioral/Command/) |
+| Operace se má provést později nebo jiným procesem | [Command](GoF/Behavioral/Command/#fronta-operace-kterou-provede-někdo-jiný-a-jindy) |
+| Skupina kroků se má provést i vrátit jako jeden celek | [Command](GoF/Behavioral/Command/#makro-skupina-příkazů-jako-jeden-příkaz) |
+| Kolega říká „command“ a nevím, jestli myslí objekt s chováním, nebo data | [Command](GoF/Behavioral/Command/#command-v-gof-a-command-v-cqrs) |
+| Úloha ve frontě spadne, protože v ní byl objekt s připojením k databázi | [Command](GoF/Behavioral/Command/#fronta-operace-kterou-provede-někdo-jiný-a-jindy) |
 | Z `new Money(129000)` nepoznám, jestli jsou to koruny nebo haléře | [Factory Method](GoF/Creational/FactoryMethod/) |
 | Konstruktor má šest nepovinných parametrů a půlku z nich předávám `null` | [Factory Method](GoF/Creational/FactoryMethod/) |
 | Objekt jde vytvořit v neplatném stavu, protože validace je jinde než konstruktor | [Factory Method](GoF/Creational/FactoryMethod/) |

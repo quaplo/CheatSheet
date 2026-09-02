@@ -449,7 +449,7 @@ foreach ($result->used() as $rule) {
 | [Chain of Responsibility](../../GoF/Behavioral/ChainOfResponsibility/) (GoF) | Blízký příbuzný strategie *první podle priority* — řetěz, kde první schopný požadavek obslouží. Rules engine navíc vidí i ty, kteří by ho obsloužili taky. |
 | **Interpreter** (GoF) | Kam se dostaneš, když konfigurační slovník poroste. Užitečné hlavně jako varování. |
 | [Value Object](../../DDD/ValueObject/) | `DiscountContext` i `DiscountResult` jsou hodnoty — neměnné, bez identity. |
-| **Command** (GoF) | Když důsledkem není hodnota, ale akce, přiblíží se pravidlo dvojici podmínka + příkaz. |
+| [Command](../../GoF/Behavioral/Command/) (GoF) | Když důsledkem není hodnota, ale akce, přiblíží se pravidlo dvojici podmínka + příkaz. |
 
 ---
 

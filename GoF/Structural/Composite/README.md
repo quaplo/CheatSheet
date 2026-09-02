@@ -264,6 +264,7 @@ U kategorií e-shopu (desítky uzlů) nic z toho nevadí. U stromu s milionem uz
 | [Iterator](../../Behavioral/Iterator/) (GoF) | Přirozený doplněk: jak strom projít, aniž bys znal jeho tvar. `yield from` je na to v PHP nejjednodušší nástroj. |
 | **Visitor** (GoF) | Jak nad stromem přidat operaci, aniž bys sahal do uzlů. |
 | [Aggregate](../../../DDD/Aggregate/) | **Nezaměňovat.** Agregát drží části, ale ne rekurzivně — a hlavně jde o hranici konzistence, ne o strukturu. |
+| [Command](../../Behavioral/Command/) (GoF) | `MacroCommand` je Composite doslova: skupina příkazů se chová jako jeden. Vrácení ale běží v opačném pořadí. |
 
 ---
 

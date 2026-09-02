@@ -353,7 +353,7 @@ $result = $pipeline->process($order);
 | [State](../State/) | Také deleguje na vyměnitelný objekt, ale ví přesně na který. Řetěz hledá, stav ne. |
 | [Observer](../Observer/) | Řetěz hledá **jednoho** a čeká na výsledek; Observer oznamuje **všem** a nečeká. |
 | [Domain Event](../../../DDD/DomainEvent/) (DDD) | Rozdíl v záměru: řetěz hledá **jednoho** zpracovatele a čeká na výsledek, událost oznamuje **všem** a nečeká na nikoho. |
-| **Command** (GoF) | Požadavek putující řetězem bývá právě příkaz. |
+| [Command](../Command/) (GoF) | Požadavek putující řetězem bývá právě příkaz. Command bus je pak řetěz middleware — validace, transakce a logování kolem provedení. |
 
 ---
 

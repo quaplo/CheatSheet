@@ -395,6 +395,7 @@ Co s tím jde dělat:
 | [CQRS](../CQRS/) | Eventuální konzistence je společný jmenovatel obojího. |
 | [Chain of Responsibility](../../GoF/Behavioral/ChainOfResponsibility/) | Podobná mechanika řetězu kroků — bez kompenzací a bez stavu. |
 | [State](../../GoF/Behavioral/State/) | Stav ságy je stavový automat; u složitějších procesů se vyplatí ho tak i napsat. |
+| [Command](../../GoF/Behavioral/Command/) (GoF) | Kroky ságy jsou příkazy. Rozdíl je v tom, že přes hranice služeb nejde undo — jen kompenzace. |
 
 ---
 

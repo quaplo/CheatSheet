@@ -323,6 +323,7 @@ Rozhodnutí, které je potřeba udělat vědomě, protože výchozí chování b
 | [Saga](../../Architecture/Saga/) | Choreografovaná sága stojí celá na událostech; i orchestrovaná jimi obvykle komunikuje. |
 | [Observer](../../GoF/Behavioral/Observer/) (GoF) | **Předchůdce.** Řeší totéž o vrstvu níž a s tím rozdílem, že oznamuje **okamžitě** — takže reakce proběhnou i pro operaci, která se vrátila zpět. To je přesně důvod, proč doménové události vznikly. |
 | [Chain of Responsibility](../../GoF/Behavioral/ChainOfResponsibility/) | Rozdíl: řetěz hledá **jednoho** zpracovatele, událost oznamuje **všem** a nikoho nečeká. |
+| [Command](../../GoF/Behavioral/Command/) (GoF) | Zrcadlový pár: příkaz je **rozkaz do budoucna** a smí být odmítnut, událost je **fakt z minulosti** a odmítnout nejde. |
 
 ---
 
