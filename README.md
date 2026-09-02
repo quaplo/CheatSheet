@@ -42,7 +42,7 @@ Patterny jsou konkrétní řešení; **principy jsou měřítko, podle kterého 
 
 Pojmy, které se v katalogu opakují napříč patterny, ale nemají vlastní dokument — **[Glossary.md](Glossary.md)**.
 
-[idempotence](Glossary.md#idempotence) · [neměnnost](Glossary.md#neměnnost-immutability) · [invariant](Glossary.md#invariant) · [eventuální konzistence](Glossary.md#eventuální-konzistence) · [DTO](Glossary.md#dto--data-transfer-object) · [bezstavovost](Glossary.md#bezstavovost-stateless) · [N+1](Glossary.md#n1) · [časová vazba](Glossary.md#časová-vazba-temporal-coupling)
+[idempotence](Glossary.md#idempotence) · [neměnnost](Glossary.md#neměnnost-immutability) · [invariant](Glossary.md#invariant) · [eventuální konzistence](Glossary.md#eventuální-konzistence) · [DTO](Glossary.md#dto--data-transfer-object) · [bezstavovost](Glossary.md#bezstavovost-stateless) · [N+1](Glossary.md#n1) · [persistence](Glossary.md#persistence) · [hydratace a rekonstrukce](Glossary.md#hydratace-a-dehydratace) · [časová vazba](Glossary.md#časová-vazba-temporal-coupling)
 
 <sub>Pojmy, které mají vlastní pattern (agregát, port, kompenzace…), se vysvětlují tam — slovníček na ně [odkazuje](Glossary.md#pojmy-které-mají-vlastní-dokument).</sub>
 

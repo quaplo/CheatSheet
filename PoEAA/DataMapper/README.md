@@ -88,7 +88,7 @@ Dvě řešení, a obě se používají:
 | **Druhá továrna** | `Order::reconstitute()` — obchází zakládací pravidla, protože rekonstruuje, nezakládá | Ruční mapper, tenhle katalog |
 | **Obejít konstruktor** | Reflexí vytvořit instanci a nastavit vlastnosti | **Doctrine** |
 
-Doctrine používá `newInstanceWithoutConstructor()` a hydratuje reflexí. Výsledek je stejný, jen to není vidět — a je dobré vědět, že se to děje, protože z toho plyne pár překvapení (konstruktor se při načtení nezavolá, `readonly` vlastnosti jdou naplnit).
+Doctrine používá `newInstanceWithoutConstructor()` a [hydratuje](../../Glossary.md#hydratace-a-dehydratace) reflexí. Výsledek je stejný, jen to není vidět — a je dobré vědět, že se to děje, protože z toho plyne pár překvapení (konstruktor se při načtení nezavolá, `readonly` vlastnosti jdou naplnit).
 
 ---
 
@@ -356,7 +356,7 @@ Skoro nikdy — a je dobré to říct rovnou, aby z toho nevznikl zbytečný pro
 - **Doctrine ORM** je Data Mapper — to je jeho oficiální i faktické zařazení. Entity nemají `save()`, ukládá je `EntityManager`.
 - **Eloquent** je Active Record. Když srovnáváš Laravel a Symfony, tohle je jeden z podstatných rozdílů.
 - **Doctrine embeddables** mapují [value object](../../DDD/ValueObject/) do sloupců rodičovské tabulky — přesně ten první řádek tabulky nesouladu.
-- **Doctrine hydratace reflexí** — konstruktor se při načtení entity nezavolá. Dobré vědět, než na to narazíš.
+- **Doctrine [hydratace](../../Glossary.md#hydratace-a-dehydratace) reflexí** — konstruktor se při načtení entity nezavolá. Dobré vědět, než na to narazíš.
 - **XML mapování** — jediný způsob, jak mít doménovou entitu úplně bez stopy po ORM. Viz [výše](#1-xml-mapování--entita-zůstane-bez-jediného-atributu).
 - **Custom DBAL types** — value object rovnou jako sloupec: v databázi `VARCHAR`, v doméně `EmailAddress`. Vyplatí se skoro vždycky, nezávisle na tom, jak mapuješ zbytek.
 - **Ruční mapper** má smysl u cizích API, importů a čtecích projekcí — tam, kam ORM nedosáhne.

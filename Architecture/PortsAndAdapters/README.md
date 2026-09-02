@@ -134,7 +134,7 @@ Kvůli ničemu. Cockburn potřeboval obrázek, na kterém má „krabice“ víc
 | **Doména** | `Order` | Pravidla, která platí bez ohledu na okolí |
 | **Use-case** | `PlaceOrderHandler` | Jeden scénář aplikace; skládá doménu a porty |
 | **Řídicí port** | `PlaceOrder` | Kontrakt „co aplikace umí“; implementuje ho jádro |
-| **Řízený port** | `OrderRepository`, `PaymentGateway` | Kontrakt „co aplikace potřebuje“; implementuje ho adaptér |
+| **Řízený port** | `OrderRepository`, `PaymentGateway` | Kontrakt „co aplikace potřebuje“ — typicky [persistence](../../Glossary.md#persistence) nebo cizí služba; implementuje ho adaptér |
 | **Řídicí adaptér** | `CliPlaceOrderController` | Přeloží podnět zvenčí na volání portu |
 | **Řízený adaptér** | `JsonFileOrderRepository`, `LimitedPaymentGateway` | Naplní port konkrétní technologií |
 | **Composition root** | `run.php`, DI kontejner | Jediné místo, které zná jádro i adaptéry a spojí je |

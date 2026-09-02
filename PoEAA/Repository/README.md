@@ -2,7 +2,7 @@
 
 > [← zpět na PoEAA](../)
 
-> **V jedné větě:** Rozhraní, které se tváří jako kolekce doménových objektů v paměti — a schová za sebe všechno, co se ve skutečnosti děje s databází.
+> **V jedné větě:** Rozhraní, které se tváří jako kolekce doménových objektů v paměti — a schová za sebe všechno, co se ve skutečnosti děje s [persistencí](../../Glossary.md#persistence).
 
 ---
 

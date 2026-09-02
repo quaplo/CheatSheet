@@ -108,6 +108,50 @@ Kde v katalogu: [Repository](PoEAA/Repository/) · [CQRS](Architecture/CQRS/)
 
 ---
 
+### Persistence
+
+**Trvalé uložení stavu tak, aby přežil konec běhu programu.**
+
+Není to synonymum pro „databáze“ — persistence je i soubor, cizí API nebo fronta. Opakem je stav, který **žije jen v paměti** a s koncem requestu zmizí.
+
+**Proč na tom v katalogu záleží:** hranice mezi doménou a persistencí je jedno z hlavních témat. Doménová pravidla stárnou pomalu, úložiště se mění — a celá [sbírka PoEAA](PoEAA/) je o tom, jak je udržet oddělené.
+
+Kde v katalogu: [Repository](PoEAA/Repository/) · [Data Mapper](PoEAA/DataMapper/) · [Ports & Adapters](Architecture/PortsAndAdapters/)
+
+---
+
+### Hydratace a dehydratace
+
+**Hydratace** = naplnění objektu daty z úložiště. **Dehydratace** = opačný směr, tedy převod objektu na plochá data (řádek, pole, JSON).
+
+Ta metafora sedí: v databázi leží „suchá“ data, hydratací z nich vznikne živý objekt s chováním.
+
+```
+řádek v DB   ──hydratace──▶   Order (objekt)
+Order        ──dehydratace─▶  řádek v DB
+```
+
+**Poznámka k názvosloví:** *hydratace* je ustálený pojem (Doctrine má hydratační režimy `OBJECT`, `ARRAY`, `SCALAR`; Laminas má komponentu Hydrator). *Dehydratace* se používá míň — Laminas Hydrator tomu říká `extract()`, jinde prostě „mapování“ nebo „serializace“.
+
+#### Hydratace není rekonstrukce
+
+Rozlišení, které se v praxi plete a stojí za to ho znát:
+
+| | **Hydratace** | **Rekonstrukce** |
+| --- | --- | --- |
+| Co to je | **Technický** krok: naplň vlastnosti | **Doménový** krok: vytvoř platný objekt z uložených dat |
+| Jak se dělá | Reflexí, settery, přímý zápis | Pojmenovanou továrnou (`Order::reconstitute()`) |
+| Konstruktor | Doctrine ho **nezavolá vůbec** | Zavolá, jen obejde *zakládací* pravidla |
+| Zná doména | Ne | Ano — je to její metoda |
+
+Doctrine hydratuje přes `newInstanceWithoutConstructor()` a nastaví vlastnosti reflexí. Ruční mapper místo toho volá továrnu, kterou doména sama nabízí. Výsledek je stejný, ale ta druhá cesta je **záměrná a viditelná** — a proto se dá kontrolovat.
+
+Proč se obojí liší od běžného vytvoření objektu: **načítaná data už jednou platná byla.** Kdyby procházela zakládacími pravidly, nešel by načíst historický záznam, na který dnešní pravidlo tehdy neplatilo.
+
+Kde v katalogu: [Data Mapper](PoEAA/DataMapper/#jak-se-mapper-dostane-objektu-dovnitř) · [Entity](DDD/Entity/) · [Repository](PoEAA/Repository/)
+
+---
+
 ### Časová vazba (temporal coupling)
 
 **Aby fungovalo A, musí zrovna teď běžet i B.** Vzniká vždy, když voláš cizí službu synchronně.
