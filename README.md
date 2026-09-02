@@ -159,6 +159,7 @@ Obrácený rejstřík: začni u toho, co tě pálí.
 | Musím uživateli říct, **proč** neprošel, a z `&&` nezjistím která část selhala | [Specification](DDD/Specification/) |
 | Unit test doménové logiky potřebuje běžící databázi | [Ports & Adapters](Architecture/PortsAndAdapters/) |
 | Doménová třída importuje `Doctrine\…` nebo `GuzzleHttp\…` | [Ports & Adapters](Architecture/PortsAndAdapters/) |
+| Vím o repository interface, ale netuším, co je „řídicí“ a „řízený“ port | [Ports & Adapters](Architecture/PortsAndAdapters/#dvě-strany-na-jednu-se-zapomíná) |
 | Výměna knihovny znamená sáhnout do dvaceti souborů napříč aplikací | [Ports & Adapters](Architecture/PortsAndAdapters/) |
 | Tatáž operace existuje dvakrát — jednou pro HTTP, podruhé pro frontu | [Ports & Adapters](Architecture/PortsAndAdapters/) |
 | SQL nebo `createQueryBuilder()` mám v use-case, v controlleru i ve službě | [Repository](PoEAA/Repository/) |

@@ -131,7 +131,8 @@ Tyhle se tady schválně nevysvětlují — mají svůj pattern:
 | Doménová vs integrační událost | [Domain Event](DDD/DomainEvent/) |
 | Doménová vs aplikační služba | [Domain Service](DDD/DomainService/) |
 | Kompenzace, pivotní krok | [Saga](Architecture/Saga/) |
-| Port, adaptér, řídicí vs řízená strana | [Ports & Adapters](Architecture/PortsAndAdapters/) |
+| Port, adaptér | [Ports & Adapters](Architecture/PortsAndAdapters/) |
+| **Řídicí vs řízený port** (primary/driving × secondary/driven) | [Ports & Adapters → Dvě strany](Architecture/PortsAndAdapters/#dvě-strany-na-jednu-se-zapomíná) |
 | Příkaz vs dotaz, čtecí model | [CQRS](Architecture/CQRS/) |
 | Repository, identita z aplikace | [Repository](PoEAA/Repository/) |
 | Use-case, command handler, sběrnice | [Service Layer](PoEAA/ServiceLayer/) |

@@ -89,7 +89,7 @@ flowchart LR
 
 Dvě věci na tom diagramu jsou podstatné:
 
-1. **Rozhraní patří do domény**, implementace do infrastruktury. Šipky míří dovnitř — je to tentýž princip jako u [Ports & Adapters](../../Architecture/PortsAndAdapters/), repository je jeho nejběžnější řízený port.
+1. **Rozhraní patří do domény**, implementace do infrastruktury. Šipky míří dovnitř — je to tentýž princip jako u [Ports & Adapters](../../Architecture/PortsAndAdapters/), repository je jeho nejběžnější [řízený port](../../Architecture/PortsAndAdapters/#dvě-strany-na-jednu-se-zapomíná).
 2. **Implementace může být víc.** Ta v paměti není hračka na ukázku; je to ta, kterou pouštíš v testech.
 
 ### Iluze kolekce
@@ -318,7 +318,7 @@ markOverdue(new DoctrineOrderRepository($entityManager), $now);
 
 | Pattern | Vztah |
 | ------- | ----- |
-| [Ports & Adapters](../../Architecture/PortsAndAdapters/) | Repository **je** řízený port — ten nejběžnější. Hexagon říká *proč* rozhraní patří do domény, Repository *jak* má vypadat. |
+| [Ports & Adapters](../../Architecture/PortsAndAdapters/) | Repository **je [řízený port](../../Architecture/PortsAndAdapters/#dvě-strany-na-jednu-se-zapomíná)** — ten nejběžnější. Hexagon říká *proč* rozhraní patří do domény, Repository *jak* má vypadat. |
 | [Specification](../../DDD/Specification/) | Odpověď na repository o čtyřiceti metodách: kritérium se předá jako objekt. Pozor na překlad do SQL. |
 | [Value Object](../../DDD/ValueObject/) | `OrderId` je value object. Repository jimi mluví místo `int` a `string`. |
 | [First Class Collection](../../ObjectCalisthenics/FirstClassCollection/) | Přirozený návratový typ místo `array` — výsledek pak nese doménové operace. |

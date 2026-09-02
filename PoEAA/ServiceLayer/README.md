@@ -415,7 +415,7 @@ Složka `Application/` je pak **čitelný seznam toho, co aplikace umí**. To je
 
 | Pattern | Vztah |
 | ------- | ----- |
-| [Ports & Adapters](../../Architecture/PortsAndAdapters/) | Use-case je to, co sedí uvnitř hexagonu za řídicím portem. Pattern říká *kde* vrstva je, tenhle *co* v ní je. |
+| [Ports & Adapters](../../Architecture/PortsAndAdapters/) | Use-case je to, co sedí uvnitř hexagonu za **[řídicím portem](../../Architecture/PortsAndAdapters/#dvě-strany-na-jednu-se-zapomíná)**. Pattern říká *kde* vrstva je, tenhle *co* v ní je. |
 | [CQRS](../../Architecture/CQRS/) | Pokračování dotazovací strany: vlastní čtecí modely, vlastní úložiště, projekce. Tenhle pattern se zastavuje u otázky, jestli má dotaz dostat handler. |
 | [Aggregate](../../DDD/Aggregate/) | To, co use-case obsluhuje. Pravidlo „jedna transakce = jeden agregát“ platí právě tady. |
 | [Domain Event](../../DDD/DomainEvent/) | Use-case je místo, kde se události publikují — **až po commitu**. |

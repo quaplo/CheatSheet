@@ -343,7 +343,7 @@ Antikorupční vrstva je jediné místo, které cizí systém opravdu zná — t
 
 ## V praxi
 
-- **Ports & Adapters** — antikorupční vrstva **je** řízený adaptér. Rozdíl je v ambici: běžný adaptér překládá protokol, antikorupční vrstva se aktivně brání cizímu **modelu**.
+- **Ports & Adapters** — antikorupční vrstva **je [řízený adaptér](../../Architecture/PortsAndAdapters/#dvě-strany-na-jednu-se-zapomíná)**. Rozdíl je v ambici: běžný adaptér překládá protokol, antikorupční vrstva se aktivně brání cizímu **modelu**.
 - **Symfony DI** — port v doméně, vrstva v infrastruktuře, spojení jedním řádkem v `services.yaml`.
 - **deptrac** — jediný způsob, jak uhlídat, že se cizí jméno neobjeví v doméně.
 - **Golden files** v testech — uložené skutečné odpovědi cizího systému jako fixture.
@@ -356,7 +356,7 @@ Antikorupční vrstva je jediné místo, které cizí systém opravdu zná — t
 | ------- | ----- |
 | [Context Map](../ContextMap/) | **Odsud pochází rozhodnutí, jestli tuhle vrstvu vůbec stavět.** Je to jeden ze sedmi vztahů; alternativou je Conformist. |
 | [Bounded Context](../BoundedContext/) | Vrstva stojí přesně na hranici kontextu a je to nejsilnější podoba překladu, o kterém tenhle pattern mluví. |
-| [Ports & Adapters](../../Architecture/PortsAndAdapters/) | Technická podoba: port v doméně, vrstva jako řízený adaptér. |
+| [Ports & Adapters](../../Architecture/PortsAndAdapters/) | Technická podoba: port v doméně, vrstva jako [řízený adaptér](../../Architecture/PortsAndAdapters/#dvě-strany-na-jednu-se-zapomíná). |
 | **Adapter** (GoF) | Sdílejí princip, ne měřítko. GoF Adapter překládá **rozhraní** jednoho objektu; tahle vrstva překládá **model** celého systému. |
 | **Facade** (GoF) | Jeden ze tří dílů — zúží cizí systém na to, co potřebuješ. |
 | [Repository](../../PoEAA/Repository/) | Když cizí systém slouží jako úložiště, vrstva se často schová právě za repository. |
