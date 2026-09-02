@@ -38,7 +38,7 @@ Autoři vzory rozdělili podle toho, čeho se týkají:
 | Adapter | Přizpůsobení cizího rozhraní tomu, co očekává náš kód | ⬜ |
 | Bridge | Oddělení abstrakce od implementace, aby šly měnit nezávisle | ⬜ |
 | Composite | Strom objektů, se kterým se pracuje jako s jedním prvkem | ⬜ |
-| Decorator | Přidání chování obalením objektu, bez dědičnosti | ⬜ |
+| [**Decorator**](Structural/Decorator/) | Přidání chování obalením objektu, bez dědičnosti | ✅ |
 | Facade | Jednoduché rozhraní před složitým subsystémem | ⬜ |
 | Flyweight | Sdílení paměťově náročných dat mezi instancemi | ⬜ |
 | Proxy | Zástupce objektu, který řídí přístup k němu | ⬜ |

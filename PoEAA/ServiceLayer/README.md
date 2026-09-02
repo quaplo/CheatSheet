@@ -314,7 +314,7 @@ final readonly class TransactionalHandler
 }
 ```
 
-To je [Decorator](../../GoF/Behavioral/ChainOfResponsibility/) — a v Symfony Messengeru je to přímo middleware kolem sběrnice, takže si to psát nemusíš.
+To je [Decorator](../../GoF/Structural/Decorator/) — a v Symfony Messengeru je to přímo middleware kolem sběrnice, takže si to psát nemusíš.
 
 ### Sběrnice, nebo přímé volání?
 

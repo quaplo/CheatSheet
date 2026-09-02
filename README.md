@@ -63,6 +63,7 @@ Patterny jsou uspořádané podle **původu** — podle knihy nebo autora, kde b
 | [Chain of Responsibility](GoF/Behavioral/ChainOfResponsibility/) | Behavioral | Požadavek putuje řetězem, dokud ho někdo nevyřídí; základ middleware | ●●●○○ |
 | [Strategy](GoF/Behavioral/Strategy/) | Behavioral | Zaměnitelné algoritmy za jedním rozhraním — místo `if`/`switch` na typ | ●●○○○ |
 | [State](GoF/Behavioral/State/) | Behavioral | Objekt mění chování podle svého stavu; zakázané přechody nejde přehlédnout | ●●●○○ |
+| [Decorator](GoF/Structural/Decorator/) | Structural | Přidání chování obalením — cache, log, měření bez zásahu do původní třídy | ●●○○○ |
 
 <sub>Kompletní katalog všech 23 patternů včetně nezpracovaných: [GoF/README.md](GoF/)</sub>
 
@@ -214,6 +215,9 @@ Obrácený rejstřík: začni u toho, co tě pálí.
 | „Někomu zmizely změny“ a nejde to reprodukovat | [Optimistic Offline Lock](PoEAA/OptimisticOfflineLock/) |
 | Dva lidé editují týž záznam a druhý přepíše prvního beze stopy | [Optimistic Offline Lock](PoEAA/OptimisticOfflineLock/) |
 | Formulář se vyplňuje pět minut a transakce tak dlouho držet nejde | [Optimistic Offline Lock](PoEAA/OptimisticOfflineLock/) |
+| Do fungující třídy přibývá cache, logování a měření, které s její prací nesouvisí | [Decorator](GoF/Structural/Decorator/) |
+| Mám `CachedFooRepository`, `LoggedFooRepository` a teď potřebuju obojí naráz | [Decorator](GoF/Structural/Decorator/) |
+| Chci rozšířit třídu, která je `final` nebo z cizí knihovny | [Decorator](GoF/Structural/Decorator/) |
 | Frontend volá pět endpointů a skládá si z nich jednu stránku sám | [Service Composition](Architecture/ServiceComposition/) |
 | Mám kód, který koordinuje víc domén, a nepatří do žádné z nich | [Service Composition](Architecture/ServiceComposition/) |
 | Operace přes tři kontexty spadla v půlce a nikdo první dva kroky nevrátil | [Saga](Architecture/Saga/) |

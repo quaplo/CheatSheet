@@ -224,6 +224,7 @@ Skoro všude — a to je pointa. Tenhle princip je **cíl**, patterny jsou cesty
 | [Domain Event](../DDD/DomainEvent/) | Rozvazuje: producent nezná konzumenty |
 | [Data Mapper](../PoEAA/DataMapper/) | Rozvazuje doménu a databázové schéma — demo měří, že nemají společný ani sloupec |
 | [Strategy](../GoF/Behavioral/Strategy/) | Nahrazuje řídicí provázanost (`bool` příznak) polymorfismem |
+| [Decorator](../GoF/Structural/Decorator/) | Totéž jinak: příznaky v konstruktoru nahradí skládání obalů |
 
 ---
 

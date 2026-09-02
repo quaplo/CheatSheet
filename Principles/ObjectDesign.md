@@ -118,7 +118,7 @@ $shipping = new DiscountedShipping(new ExpressShipping(), $discount);
 
 **Kde dědičnost je správně.** Když je vztah opravdu „je to“ **a** kontrakt předka platí pro každého potomka beze zbytku. V tomhle katalogu ji záměrně používají [State](../GoF/Behavioral/State/) (základní třída definuje, že vše je zakázané) a [Chain of Responsibility](../GoF/Behavioral/ChainOfResponsibility/) (`final` metoda drží průchod řetězem). Obojí je dědičnost **kvůli kontraktu**, ne kvůli sdílení kódu — a to je ta hranice.
 
-**Souvisí s patterny:** [Strategy](../GoF/Behavioral/Strategy/) · **Decorator** · **Bridge** — všechny tři jsou kompozice tam, kde by se nabízela dědičnost.
+**Souvisí s patterny:** [Strategy](../GoF/Behavioral/Strategy/) · [Decorator](../GoF/Structural/Decorator/) — **učebnicová ukázka**: 3 vlastnosti znamenají 8 podtříd, ale jen 3 dekorátory · **Bridge**
 
 ---
 

@@ -345,7 +345,7 @@ $result = $pipeline->process($order);
 
 | Pattern | Vztah |
 | ------- | ----- |
-| **Decorator** (GoF) | Strukturou skoro totožné — objekt drží objekt a deleguje. Rozdíl je v záměru: Decorator **přidává chování ke každému volání** a vždycky pustí dál; řetěz předává dál, **dokud někdo nevyřídí**. Pipeline varianta stojí přesně na hranici mezi nimi. |
+| [Decorator](../../Structural/Decorator/) (GoF) | Strukturou skoro totožné — objekt drží objekt a deleguje. Rozdíl je v záměru: Decorator **přidává chování ke každému volání** a vždycky pustí dál; řetěz předává dál, **dokud někdo nevyřídí**. Pipeline varianta stojí přesně na hranici mezi nimi. |
 | [Strategy](../Strategy/) | Strategy vybere **jednoho** zpracovatele předem a zavolá ho. Řetěz se ptá postupně, dokud někdo neřekne ano. |
 | [Rules Engine](../../../Architecture/RulesEngine/) | Řetěz zná jen prvního schopného. Rules engine vidí **všechny**, kdo by vyhověli, a teprve pak se rozhoduje — a proto umí auditní stopu i řešení konfliktů. |
 | **Composite** (GoF) | Často spolu: řetěz může být článkem jiného řetězu. |
