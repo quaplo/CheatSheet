@@ -63,6 +63,7 @@ Patterny jsou uspořádané podle **původu** — podle knihy nebo autora, kde b
 | [Chain of Responsibility](GoF/Behavioral/ChainOfResponsibility/) | Behavioral | Požadavek putuje řetězem, dokud ho někdo nevyřídí; základ middleware | ●●●○○ |
 | [Strategy](GoF/Behavioral/Strategy/) | Behavioral | Zaměnitelné algoritmy za jedním rozhraním — místo `if`/`switch` na typ | ●●○○○ |
 | [State](GoF/Behavioral/State/) | Behavioral | Objekt mění chování podle svého stavu; zakázané přechody nejde přehlédnout | ●●●○○ |
+| [Adapter](GoF/Structural/Adapter/) | Structural | Překlad cizího rozhraní na to, které očekává tvůj kód | ●○○○○ |
 | [Decorator](GoF/Structural/Decorator/) | Structural | Přidání chování obalením — cache, log, měření bez zásahu do původní třídy | ●●○○○ |
 
 <sub>Kompletní katalog všech 23 patternů včetně nezpracovaných: [GoF/README.md](GoF/)</sub>
@@ -218,6 +219,9 @@ Obrácený rejstřík: začni u toho, co tě pálí.
 | Do fungující třídy přibývá cache, logování a měření, které s její prací nesouvisí | [Decorator](GoF/Structural/Decorator/) |
 | Mám `CachedFooRepository`, `LoggedFooRepository` a teď potřebuju obojí naráz | [Decorator](GoF/Structural/Decorator/) |
 | Chci rozšířit třídu, která je `final` nebo z cizí knihovny | [Decorator](GoF/Structural/Decorator/) |
+| Dvě knihovny dělají totéž, ale každá jinak — nejde je porovnat | [Adapter](GoF/Structural/Adapter/) |
+| V kódu mám `if ($provider === '…')` a pod ním převod jednotek | [Adapter](GoF/Structural/Adapter/) |
+| Doménový kód ví, že „ten druhý dodavatel počítá v dolarech“ | [Adapter](GoF/Structural/Adapter/) |
 | Frontend volá pět endpointů a skládá si z nich jednu stránku sám | [Service Composition](Architecture/ServiceComposition/) |
 | Mám kód, který koordinuje víc domén, a nepatří do žádné z nich | [Service Composition](Architecture/ServiceComposition/) |
 | Operace přes tři kontexty spadla v půlce a nikdo první dva kroky nevrátil | [Saga](Architecture/Saga/) |

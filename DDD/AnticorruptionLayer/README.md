@@ -357,7 +357,7 @@ Antikorupční vrstva je jediné místo, které cizí systém opravdu zná — t
 | [Context Map](../ContextMap/) | **Odsud pochází rozhodnutí, jestli tuhle vrstvu vůbec stavět.** Je to jeden ze sedmi vztahů; alternativou je Conformist. |
 | [Bounded Context](../BoundedContext/) | Vrstva stojí přesně na hranici kontextu a je to nejsilnější podoba překladu, o kterém tenhle pattern mluví. |
 | [Ports & Adapters](../../Architecture/PortsAndAdapters/) | Technická podoba: port v doméně, vrstva jako [řízený adaptér](../../Architecture/PortsAndAdapters/#dvě-strany-na-jednu-se-zapomíná). |
-| **Adapter** (GoF) | Sdílejí princip, ne měřítko. GoF Adapter překládá **rozhraní** jednoho objektu; tahle vrstva překládá **model** celého systému. |
+| [Adapter](../../GoF/Structural/Adapter/) (GoF) | Sdílejí princip, ne měřítko. GoF Adapter překládá **rozhraní** jednoho objektu; tahle vrstva překládá **model** celého systému — a bývá z adaptérů složená. |
 | **Facade** (GoF) | Jeden ze tří dílů — zúží cizí systém na to, co potřebuješ. |
 | [Repository](../../PoEAA/Repository/) | Když cizí systém slouží jako úložiště, vrstva se často schová právě za repository. |
 | [Value Object](../ValueObject/) | Typický výstup překladu — `SupplierId`, částka v haléřích, `DateTimeImmutable`. |

@@ -10,7 +10,7 @@ Většina z nich vypadá na diagramu podobně (A drží B a deleguje na něj); l
 
 | Pattern | K čemu | Obtížnost | Stav |
 | ------- | ------ | --------- | ---- |
-| Adapter | Přizpůsobení cizího rozhraní tomu, co očekává náš kód | | ⬜ |
+| [**Adapter**](Adapter/) | Přizpůsobení cizího rozhraní tomu, co očekává náš kód | ●○○○○ | ✅ |
 | Bridge | Oddělení abstrakce od implementace, aby šly měnit nezávisle | | ⬜ |
 | Composite | Strom objektů, se kterým se pracuje jako s jedním prvkem | | ⬜ |
 | [**Decorator**](Decorator/) | Přidání chování obalením objektu, bez dědičnosti | ●●○○○ | ✅ |

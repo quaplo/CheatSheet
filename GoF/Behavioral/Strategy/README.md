@@ -241,6 +241,7 @@ Nový dopravce = nová třída a jeden řádek v registraci. `ShippingCalculator
 | **Factory Method** | Častý doplněk: rozhoduje, která strategie se pro daný vstup vytvoří. |
 | [Chain of Responsibility](../ChainOfResponsibility/) | Strategy vybere jednoho zpracovatele předem; řetěz se ptá postupně, dokud někdo neřekne ano. |
 | [Rules Engine](../../../Architecture/RulesEngine/) | Jednotlivé pravidlo je Strategy pro výpočet důsledku. Rozdíl: Strategy se vybírá jedna, v enginu se vyhodnotí všechny a teprve pak se rozhoduje. |
+| [Adapter](../../Structural/Adapter/) | Za adaptéry se cizí dodavatelé stanou zaměnitelnými — a tím i strategiemi. |
 | [Ports & Adapters](../../../Architecture/PortsAndAdapters/) | Port se dvěma implementacemi je z pohledu jádra Strategy. Liší se záměrem: Strategy vybírá algoritmus, port odstiňuje vnější svět. |
 | [Specification](../../../DDD/Specification/) (DDD) | Také zabaluje chování do objektu, ale odpovídá **ano/ne** místo toho, aby něco počítala. Často spolupracují: specifikace rozhodne, která strategie se použije. |
 

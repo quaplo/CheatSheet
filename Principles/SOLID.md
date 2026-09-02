@@ -146,7 +146,7 @@ interface OrderReader { public function find(OrderId $id): ?Order; }
 interface OrderWriter { public function save(Order $order): void; }
 ```
 
-**Souvisí s patterny:** [Specification](../DDD/Specification/) (kontrakt o jediné metodě — menší už neuděláš) · [Ports & Adapters](../Architecture/PortsAndAdapters/) (port popisuje jednu vnější starost, ne celé SDK) · Adapter (zúží cizí rozhraní na to, co náš kód opravdu potřebuje) · Facade · Proxy
+**Souvisí s patterny:** [Specification](../DDD/Specification/) (kontrakt o jediné metodě — menší už neuděláš) · [Ports & Adapters](../Architecture/PortsAndAdapters/) (port popisuje jednu vnější starost, ne celé SDK) · [Adapter](../GoF/Structural/Adapter/) (cílové rozhraní obsahuje jen to, co aplikace potřebuje) · Facade · Proxy
 
 ---
 
@@ -180,7 +180,7 @@ interface OrderRepository
 // App\Infrastructure\Persistence\DoctrineOrderRepository implements OrderRepository
 ```
 
-**Souvisí s patterny:** [Ports & Adapters](../Architecture/PortsAndAdapters/) (DIP dotažené na úroveň celé aplikace) · [Repository](../PoEAA/Repository/) (rozhraní vlastní doména, infrastruktura se přizpůsobí) · Abstract Factory · [Strategy](../GoF/Behavioral/Strategy/) · Adapter
+**Souvisí s patterny:** [Ports & Adapters](../Architecture/PortsAndAdapters/) (DIP dotažené na úroveň celé aplikace) · [Repository](../PoEAA/Repository/) (rozhraní vlastní doména, infrastruktura se přizpůsobí) · Abstract Factory · [Strategy](../GoF/Behavioral/Strategy/) · [Adapter](../GoF/Structural/Adapter/)
 
 ---
 

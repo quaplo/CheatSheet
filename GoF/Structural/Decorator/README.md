@@ -204,7 +204,7 @@ Kontejner podstrčí původní službu jako `.inner` a všem, kdo si žádají `
 
 - ❌ **Přidávané chování patří dovnitř.** Když je to vlastní práce té třídy, patří tam a ne do obalu.
 - ❌ **Je to jedna vlastnost a nikdy nebude druhá.** Jedna třída navíc kvůli jednomu `if` je režie.
-- ❌ **Dekorátor by potřeboval metodu navíc.** Pak už není zaměnitelný a je to jiný pattern — nejspíš **Adapter** nebo prostě nová služba.
+- ❌ **Dekorátor by potřeboval metodu navíc.** Pak už není zaměnitelný a je to jiný pattern — nejspíš [Adapter](../Adapter/) nebo prostě nová služba.
 - ❌ **Chceš hledat zpracovatele.** To je [Chain of Responsibility](../../Behavioral/ChainOfResponsibility/): řetěz hledá, kdo to vyřídí; dekorátor pouští dál vždycky.
 - ❌ **Stack má osm vrstev.** Stack trace se stane nečitelným a nikdo nepozná, kde se co stalo.
 
@@ -239,7 +239,7 @@ Kontejner podstrčí původní službu jako `.inner` a všem, kdo si žádají `
 | Pattern | Vztah |
 | ------- | ----- |
 | [Chain of Responsibility](../../Behavioral/ChainOfResponsibility/) | **Nejbližší příbuzný a nejčastější záměna.** Struktura stejná, záměr jiný: dekorátor **vždycky pustí dál** a přidává; řetěz hledá, **kdo požadavek vyřídí**, a končí u prvního schopného. Middleware stojí přesně na hranici obojího. |
-| **Adapter** | Také obaluje, ale **mění rozhraní**. Dekorátor ho zachovává. |
+| [Adapter](../Adapter/) | Také obaluje, ale **mění rozhraní**. Dekorátor ho zachovává. |
 | **Proxy** (GoF) | Také obaluje se stejným rozhraním, ale kvůli **řízení přístupu** (lazy loading, oprávnění), ne kvůli přidání chování. |
 | **Composite** (GoF) | Obaluje **víc** objektů najednou; dekorátor právě jeden. |
 | [Strategy](../../Behavioral/Strategy/) | Strategy chování **nahradí**, dekorátor ho **obalí**. |
