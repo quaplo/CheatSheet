@@ -298,7 +298,7 @@ markOverdue(new DoctrineOrderRepository($entityManager), $now);
 | Repository pro každou entitu, i pro položku agregátu | Části agregátu jde měnit mimo něj a přestanou platit jeho pravidla | Repository jen pro **kořeny agregátů** |
 | `find()` vrací `null` a volající to nikde neřeší | Chyba se projeví o tři vrstvy dál jako „call on null“ | `get()` vyhodí doménovou výjimku, `find()` nechej jen tam, kde je nepřítomnost normální stav |
 | Repository roste o metodu za každou obrazovku | Po roce má čtyřicet metod a nikdo neví, které se používají | Specification, nebo samostatné read-modely |
-| Filtrování a počítání v PHP nad `all()` | Funguje na 50 řádcích, položí aplikaci na 500 000 | `WHERE` a `COUNT()` patří do databáze |
+| Filtrování a počítání v PHP nad `all()` | Funguje na 50 řádcích, položí aplikaci na 500 000; typicky se k tomu přidá [N+1](../../Glossary.md#n1) | `WHERE` a `COUNT()` patří do databáze |
 | In-memory implementace se chová jinak než ostrá | Testy zeleně, produkce jinak. **Typicky řazení** — SQL má `ORDER BY`, paměťová vrací pořadí vložení | Napiš jednu sadu testů proti rozhraní a **pusť ji na obě implementace** |
 | Rekonstrukce z databáze prochází zakládacími pravidly | Historický záznam nejde načíst, protože dnešní pravidlo tehdy neplatilo | Oddělená továrna `reconstitute()` vedle `place()` |
 | Repository vrací `array` | Volající si dělá `array_map`/`array_filter` sám a logika se rozutíká | Zvaž návrat [First Class Collection](../../ObjectCalisthenics/FirstClassCollection/) |

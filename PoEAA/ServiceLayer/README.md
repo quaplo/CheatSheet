@@ -174,7 +174,7 @@ Dvě pravidla, která drží hranici:
 
 **Vstup je pojmenovaný příkaz, ne hromada parametrů.** `PlaceOrder`, ne `place(string $a, int $b, ?string $c = null)`. Adaptér přeloží HTTP request, CLI argumenty nebo zprávu z fronty do téhož tvaru — a use-case pak nemusí vědět, odkud podnět přišel.
 
-**Ven jde identita nebo čtecí DTO, nikdy agregát.** Kdyby use-case vracel `Order`, mohl by ho controller změnit mimo transakci a mimo pravidla. A šablona by si na něm začala volat gettery, čímž by se doména začala ohýbat kvůli zobrazení — viz [CQRS](../../Architecture/CQRS/).
+**Ven jde identita nebo čtecí [DTO](../../Glossary.md#dto--data-transfer-object), nikdy agregát.** Kdyby use-case vracel `Order`, mohl by ho controller změnit mimo transakci a mimo pravidla. A šablona by si na něm začala volat gettery, čímž by se doména začala ohýbat kvůli zobrazení — viz [CQRS](../../Architecture/CQRS/).
 
 ### A co dotazy?
 

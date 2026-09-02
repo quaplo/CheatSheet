@@ -152,7 +152,7 @@ Praktické doporučení: **u rodiny B si nejdřív ověř, jestli to není chyb�
 
 | Vlastnost | Proč |
 | --------- | ---- |
-| **Bezstavová** | Jedna instance obslouží libovolně mnoho operací a nic si mezi nimi nepamatuje. Stav patří agregátům. |
+| **[Bezstavová](../../Glossary.md#bezstavovost-stateless)** | Jedna instance obslouží libovolně mnoho operací a nic si mezi nimi nepamatuje. Stav patří agregátům. |
 | **Bez infrastruktury** | Žádné repository, žádná transakce, žádný HTTP klient. Když by je potřebovala, je to use-case, ne doménová služba. |
 | **Mluví doménou** | Dovnitř jdou doménové objekty, ven doménový výsledek nebo doménová výjimka. Žádná pole, žádné skaláry bez významu. |
 

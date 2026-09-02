@@ -140,7 +140,7 @@ Sága nevyžaduje fronty ani asynchronní zpracování; [synchronní varianta](.
 | 5 | 99,50 % | 216 min |
 | 8 | 99,20 % | 344 min |
 
-Tomu se říká **časová vazba**: kompozice je dole vždy, když je dole kterýkoli z volaných — i kdyby s tou operací logicky nesouvisel.
+Tomu se říká **[časová vazba](../../Glossary.md#časová-vazba-temporal-coupling)**: kompozice je dole vždy, když je dole kterýkoli z volaných — i kdyby s tou operací logicky nesouvisel.
 
 Co s tím:
 

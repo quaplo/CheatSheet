@@ -87,7 +87,7 @@ Value object stojí na pěti vlastnostech. První dvě ho definují, zbylé tři
 | --------- | ------------- |
 | **Nemá identitu** | Dvě stokoruny jsou tatáž hodnota. Nezajímá tě *která* instance, jen *jaká*. Tím se liší od entity. |
 | **Rovnost podle obsahu** | `$a->equals($b)` porovnává atributy, ne reference. |
-| **Neměnnost** | Každá operace vrací novou instanci. Hodnota se nemění — 5 se taky nikdy nestane šestkou. |
+| **[Neměnnost](../../Glossary.md#neměnnost-immutability)** | Každá operace vrací novou instanci. Hodnota se nemění — 5 se taky nikdy nestane šestkou. |
 | **Sebevalidace** | Kontrola je v konstruktoru, takže **neplatná instance nemůže vzniknout**. Kdekoli takový objekt dostaneš, je platný. |
 | **Nese chování** | `add()`, `allocate()`, `format()`, `domain()`. Není to jen typovaný obal, je to místo, kde žije logika té hodnoty. |
 

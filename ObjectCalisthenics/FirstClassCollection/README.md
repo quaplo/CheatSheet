@@ -89,7 +89,7 @@ Tři vlastnosti, které z toho plynou a kvůli kterým to celé stojí za tu jed
 | --------- | --------------------- |
 | **Typová bezpečnost** | Dovnitř se nedostane nic než `OrderItem`. Žádný PHPDoc, na který se nedá spolehnout. |
 | **Invarianty na jednom místě** | Limit počtu položek se hlídá v konstruktoru. Nejde ho obejít ani zapomenout. |
-| **Neměnnost** | Každá úprava vrací novou instanci, takže kolekci jde bezpečně sdílet a předávat dál. |
+| **[Neměnnost](../../Glossary.md#neměnnost-immutability)** | Každá úprava vrací novou instanci, takže kolekci jde bezpečně sdílet a předávat dál. |
 
 Zásadní detail: **operace nad kolekcí vracejí zase kolekci**, ne pole. Díky tomu jde na výsledku filtru rovnou volat `total()` a řetězit dál.
 

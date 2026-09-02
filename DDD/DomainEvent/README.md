@@ -261,7 +261,7 @@ Rozhodnutí, které je potřeba udělat vědomě, protože výchozí chování b
 
 - **Selhání posluchače nemá shodit původní operaci.** Objednávka je uložená; to, že nedošel e-mail, není důvod ji rušit.
 - Chytej výjimky **kolem každého posluchače zvlášť** a loguj je, jinak jeden rozbitý posluchač zabrání ostatním.
-- U asynchronních reakcí počítej s tím, že událost dorazí **víckrát** — posluchač má být idempotentní. „Rezervuj sklad“ voláno dvakrát nesmí rezervovat dvakrát.
+- U asynchronních reakcí počítej s tím, že událost dorazí **víckrát** — posluchač má být [idempotentní](../../Glossary.md#idempotence). „Rezervuj sklad“ voláno dvakrát nesmí rezervovat dvakrát.
 
 ---
 

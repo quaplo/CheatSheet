@@ -19,7 +19,7 @@ Praktický katalog návrhových vzorů s ukázkami v PHP.
 | ...že začínám a nevím, kde píchnout | [Kudy začít](#kudy-začít) |
 | ...jak se pattern jmenuje | [Sbírky](#sbírky) — u každé je tabulka jejích patternů |
 | ...že chci vědět, proč patterny vůbec existují | [Principy](#principy) |
-| ...co znamená pojem ze sekce „U nás“ | [Slovníček](Glossary.md) |
+| ...co znamená nějaký pojem | [Slovníček](Glossary.md) |
 
 ---
 
@@ -34,6 +34,19 @@ Patterny jsou konkrétní řešení; **principy jsou měřítko, podle kterého 
 | [**Objektový návrh**](Principles/ObjectDesign.md) | Jak spolu objekty mluví — Tell Don't Ask, Demeter, kompozice před dědičností, CQS, Fail Fast | ✅ |
 
 <sub>Rozcestník i s vysvětlením členění: [Principles/README.md](Principles/)</sub>
+
+---
+
+## Slovníček
+
+Pojmy, které se v katalogu opakují napříč patterny, ale nemají vlastní dokument — **[Glossary.md](Glossary.md)**.
+
+| | |
+| --- | --- |
+| **Obecné** | [idempotence](Glossary.md#idempotence) · [neměnnost](Glossary.md#neměnnost-immutability) · [invariant](Glossary.md#invariant) · [eventuální konzistence](Glossary.md#eventuální-konzistence) · [DTO](Glossary.md#dto--data-transfer-object) · [bezstavovost](Glossary.md#bezstavovost-stateless) · [N+1](Glossary.md#n1) · [časová vazba](Glossary.md#časová-vazba-temporal-coupling) |
+| **Naše platforma** | [DX zpráva](Glossary.md#dx-zpráva) · [SDK balíček](Glossary.md#sdk-balíček) · [read-model služba](Glossary.md#read-model-služba) · [služba na platformě](Glossary.md#služba-na-platformě) |
+
+<sub>Pojmy, které mají vlastní pattern (agregát, port, kompenzace…), se vysvětlují tam — slovníček na ně [odkazuje](Glossary.md#pojmy-které-mají-vlastní-dokument).</sub>
 
 ---
 
@@ -223,4 +236,4 @@ Ve zkratce: zkopíruj `_template/PATTERN.md` jako `README.md` do složky pattern
 - **PHP 8.3+**, `declare(strict_types=1)`, bez frameworků — ukázky mají jít zkopírovat a spustit.
 - Složitější implementace mají složku `demo/` se spustitelným příkladem: `php <cesta>/demo/run.php`.
 - Kde to jde, používáme **jeden doménový příklad napříč patterny** (e-shop / objednávky), aby se nemusel při každém patternu chytat nový kontext.
-- Sekce **„U nás“** spojuje obecný pattern s konkrétními věcmi na naší platformě. Pojmy, které v ní zaznívají (DX zpráva, SDK balíček, read-model služba), vysvětluje **[slovníček](Glossary.md)**.
+- Sekce **„U nás“** spojuje obecný pattern s konkrétními věcmi na naší platformě. Pojmy z ní i obecné pojmy napříč katalogem vysvětluje **[slovníček](Glossary.md)**.

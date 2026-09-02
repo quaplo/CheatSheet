@@ -73,7 +73,7 @@ flowchart TB
 
 | Pravidlo | Proč |
 | -------- | ---- |
-| **Chraň skutečné invarianty uvnitř hranice** | To, co musí platit **vždycky**, musí jít vynutit na jednom místě |
+| **Chraň skutečné [invarianty](../../Glossary.md#invariant) uvnitř hranice** | To, co musí platit **vždycky**, musí jít vynutit na jednom místě |
 | **Navrhuj agregáty malé** | Velký agregát načítá zbytečně mnoho a blokuje souběžné změny |
 | **Na cizí agregáty odkazuj identitou** | Ne objektem — jinak se hranice slije a načte se půl databáze |
 | **Jedna transakce = jeden agregát** | Přes hranici se konzistence dohání až potom, ne v témže zápisu |

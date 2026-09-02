@@ -125,7 +125,7 @@ Stejně jako u [Rules Engine](../RulesEngine/) platí, že „CQRS“ označuje 
 | 4 | **Oddělené čtecí úložiště** | Denormalizované tabulky nebo pohledy, plněné projekcemi | vysoká | Čtení je řádově náročnější než zápis |
 | 5 | **Oddělená databáze + Event Sourcing** | Zápis jako proud událostí, čtení z projekcí | velmi vysoká | Potřebuješ historii, audit a nezávislé škálování |
 
-**Hranice mezi 3 a 4 je eventuální konzistence** — a to je ta drahá. Od stupně 4 výš platí, že uživatel může uložit objednávku a hned ji ve výpisu nevidět. Každá obrazovka to od té chvíle musí umět ošetřit a každý tester to nahlásí jako chybu.
+**Hranice mezi 3 a 4 je [eventuální konzistence](../../Glossary.md#eventuální-konzistence)** — a to je ta drahá. Od stupně 4 výš platí, že uživatel může uložit objednávku a hned ji ve výpisu nevidět. Každá obrazovka to od té chvíle musí umět ošetřit a každý tester to nahlásí jako chybu.
 
 Stupeň 3 tenhle problém **nemá**: obě strany čtou tutéž databázi ve stejné transakci. Získáš rychlost i čistotu modelu a nezaplatíš nic z toho, kvůli čemu má CQRS pověst složité věci. Demo v téhle složce je přesně stupeň 3.
 

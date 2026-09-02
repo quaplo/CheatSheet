@@ -215,7 +215,7 @@ Kompenzovat kvůli timeoutu je drahé a zbytečné: nejdřív to zkus znovu.
 
 ### Idempotence není volitelná
 
-Zprávy se doručují **aspoň jednou**, což znamená, že kompenzace přijde i podruhé. Bez ochrany dostane zákazník dva dobropisy:
+Zprávy se doručují **aspoň jednou**, což znamená, že kompenzace přijde i podruhé. ([Co je idempotence](../../Glossary.md#idempotence).) Bez ochrany dostane zákazník dva dobropisy:
 
 ```
 záznamů v knize před opakováním: 2

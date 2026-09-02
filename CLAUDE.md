@@ -21,7 +21,8 @@ Komunikace s uživatelem: **slovensky**.
 ## Struktura
 
 ```
-README.md                      # rozcestník: principy → sbírky (každá s tabulkou patternů) → index podle problému
+README.md                      # rozcestník: principy → slovníček → sbírky → index podle problému
+Glossary.md                    # pojmy bez vlastního dokumentu (obecné + naše platforma)
 CLAUDE.md
 _template/
     README.md                  # postup přidání patternu + checklist
@@ -99,7 +100,7 @@ Ve složce `Principles/` žijí **principy návrhu** (zatím SOLID). Platí stri
 - Sekce *Kdy nepoužít* a *Časté chyby* jsou stejně důležité jako popis řešení — právě ony brání tomu, aby junior cpal patterny všude.
 - Piš konkrétně: skutečné třídy, skutečné knihovny. Žádné `Foo`/`Bar` a žádné obecné fráze.
 - Doménový příklad je napříč patterny **jednotný — e-shop / objednávky** — aby juniorovi odpadalo přepínání kontextu.
-- **Pojem z naší platformy nepoužívej bez vysvětlení.** Sekce *V praxi → U nás* je pro juniory často první setkání s tím pojmem. Buď ho vysvětli na místě jednou větou, nebo — když se opakuje ve víc patternech — přidej heslo do [`Glossary.md`](Glossary.md) a odkazuj na kotvu.
+- **Pojem z naší platformy ani obecný technický pojem nepoužívej bez vysvětlení.** Sekce *V praxi → U nás* je pro juniory často první setkání s tím pojmem. Buď ho vysvětli na místě jednou větou, nebo — když se opakuje ve víc patternech — přidej heslo do [`Glossary.md`](Glossary.md) a odkazuj na kotvu. Platí to i pro obecné pojmy (idempotence, invariant, eventuální konzistence). **Pojem, který má vlastní pattern, do slovníčku nepatří** — odkazuje se rovnou na ten dokument.
 - Zmiň, jestli pattern v moderním PHP ještě dává smysl, nebo ho nahradil jazykový prvek (enum, closure, first-class callable) či DI kontejner.
 - **Termín vysvětli dřív, než ho použiješ.** Nový pojem nesmí poprvé zaznít v tabulce, v porovnání nebo v seznamu — tam už musí být známý. A vysvětlení začni tím, **co to je**, ne tím, co to stojí nebo kdy to nepoužít.
 - **Obtížnost měř cenou správného nasazení v produkci, ne složitostí té třídy.** Počítá se do ní i infrastruktura, kterou si pattern táhne s sebou (transakce, fronty, idempotence, migrace, provoz) a to, jak snadno se dá udělat tiše špatně. Pattern, který je na jednu `readonly` třídu, ale správně funguje až s Unit of Work a outboxem, není dvojka.
