@@ -12,7 +12,7 @@ Není to knihovna ani balíček — je to **dokumentace se spustitelnými přík
 | ----- | ----------- | ---- |
 | [**Software Design**](SoftwareDesign/) | Návrhové vzory a architektura — GoF, PoEAA, DDD, principy návrhu. Spustitelné PHP ukázky u každého vzoru. | ✅ 34 vzorů |
 | [**Git Workflows**](GitWorkflows/) | Modely větvení — jak tým pracuje s větvemi, kdy co slučuje a odkud nasazuje. | ✅ 5 workflow |
-| [**Procesy**](Processes/) | Jak u nás probíhá práce — code review, a dál podle toho, co je potřeba vysvětlovat. | 🚧 4 dokumenty |
+| [**Procesy**](Processes/) | Jak u nás probíhá práce — code review, a dál podle toho, co je potřeba vysvětlovat. | 🚧 5 dokumentů |
 | [**Nástroje**](Tooling/) | Nástroje a konvence kolem vývoje — Makefile, Docker, statická analýza. | 🚧 1 nástroj |
 
 <sub>Další sekce přibudou. Návod, jak založit novou, je [níž](#přidání-nové-sekce).</sub>
