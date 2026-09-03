@@ -95,6 +95,7 @@ Poslední dva řádky ušetří obvykle nejvíc času.
 ## Než požádáš o review
 
 - [ ] CI je zelená — **recenzent nemá být první, kdo zjistí, že to nejede**
+      (lokálně to prověří [`make check`](../../../Tooling/Makefile/#skládání-cílů))
 - [ ] Prošel jsem si vlastní diff v rozhraní
 - [ ] V diffu není nic, co s úkolem nesouvisí
 - [ ] Popis říká **co a proč**, ne jen co
