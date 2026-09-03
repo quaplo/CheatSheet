@@ -16,17 +16,6 @@ Není to knihovna ani balíček — je to **dokumentace se spustitelnými přík
 
 ---
 
-## Jak v tom hledat
-
-| Vím... | Jdi na |
-| ------ | ------ |
-| ...že řeším návrh kódu nebo architekturu | [Software Design](SoftwareDesign/) |
-| ...jaký mám problém v kódu | [Index podle problému](SoftwareDesign/#index-podle-problému) — přes sto symptomů |
-| ...že začínám a nevím, kde píchnout | [Kudy začít](SoftwareDesign/#kudy-začít) |
-| ...co znamená nějaký technický pojem | [Slovníček](SoftwareDesign/Glossary.md) |
-
----
-
 ## Proč to takhle
 
 Každý dokument v repozitáři drží stejný tvar, protože se tím pozná, jestli je hotový:

@@ -17,7 +17,7 @@ Praktický katalog návrhových vzorů a architektonických principů s ukázkam
 
 | Vím... | Jdi na |
 | ------ | ------ |
-| ...jaký mám problém | [Index podle problému](#index-podle-problému) |
+| ...jaký mám problém | [Index podle problému](#index-podle-problému) — přes sto symptomů |
 | ...že začínám a nevím, kde píchnout | [Kudy začít](#kudy-začít) |
 | ...jak se pattern jmenuje | [Sbírky](#sbírky) — u každé je tabulka jejích patternů |
 | ...že chci vědět, proč patterny vůbec existují | [Principy](#principy) |
