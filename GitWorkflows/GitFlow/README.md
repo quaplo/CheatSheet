@@ -299,6 +299,7 @@ Nejčastější směr je pryč od GitFlow, obvykle ve chvíli, kdy tým přejde 
 | Workflow | Vztah |
 | -------- | ----- |
 | [GitHub Flow](../GitHubFlow/) | **Přímý protipól a nástupce.** Vznikl v roce 2011 jako reakce na složitost GitFlow; sám Driessen ho dnes doporučuje týmům s continuous delivery. |
+| [Waterfall](../../Processes/Waterfall/) (proces) | Způsob dodávání, ke kterému tenhle model sedí nejlíp — stabilizační fáze a plánovaná vydání. |
 | [Trunk-Based Development](../TrunkBasedDevelopment/) | **Opačný konec škály.** Kde tenhle model odděluje vývoj od vydání větvemi, tam se to řeší přepínači v kódu. Nezná zapomenutý druhý merge, protože se do hlavní větve nikdy nic nevrací. |
 | [GitLab Flow](../GitLabFlow/) | **Vědomé zjednodušení tohohle modelu.** Řeší tutéž cestu k vydání, ale jednou trvalou větví a buď prostředími, nebo větvemi na verzi — ne obojím. |
 | [OneFlow](../OneFlow/) | **Tenhle model bez `develop`.** Zachovává release i hotfix větve, ubírá jednu trvalou — a s ní i zapomenutý druhý merge. Vznikl z přímé kritiky GitFlow. |

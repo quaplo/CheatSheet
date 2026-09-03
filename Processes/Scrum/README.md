@@ -303,6 +303,7 @@ Scrum neurčuje, jak se vyvíjí ani nasazuje — to si tým doplní sám. Tady 
 
 | Dokument | Souvislost |
 | -------- | ---------- |
+| [Waterfall](../Waterfall/) | Fázový protiklad — hodnota se dodává až na konci, ne každý Sprint. |
 | [Kanban](../Kanban/) | Druhý přístup ke stejné práci — plynulý tok místo Sprintů, WIP limity místo závazku na Sprint. **Nevylučují se**, kombinace je běžná. |
 | [Scrumban](../Scrumban/) | Název pro tu kombinaci. Pozor: **nemá normativní dokument**, takže Průvodce Scrum je u něj jediné měřítko. |
 | [Agile Manifesto](../AgileManifesto/) | Schwaber i Sutherland jsou signatáři. Scrum byl jedním z přístupů zastoupených v Snowbirdu roku 2001. |

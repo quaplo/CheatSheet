@@ -133,6 +133,7 @@ Kent Beck · Mike Beedle · Arie van Bennekum · Alistair Cockburn · Ward Cunni
 | Dokument | Vztah |
 | -------- | ----- |
 | [Scrum](../Scrum/) | Jeden z přístupů, jejichž zástupci se v Snowbirdu sešli. **Ken Schwaber i Jeff Sutherland jsou mezi signatáři** manifestu. |
+| [Waterfall](../Waterfall/) | Způsob dodávání, na který manifest reagoval. Hodnota „Reagování na změny před dodržováním plánu“ míří přímo sem. |
 | [Code review](../CodeReview/) | Navazuje na hodnotu „Jednotlivci a interakce" — review je místo, kde se tým potkává nad kódem. |
 
 ---

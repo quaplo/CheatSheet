@@ -17,6 +17,7 @@ Na rozdíl od [návrhových vzorů](../SoftwareDesign/) nebo [modelů větvení]
 | [**Scrum**](Scrum/) | Rámec podle Průvodce Scrum 2020 — tři odpovědnosti, pět událostí, tři artefakty | ✅ |
 | [**Kanban**](Kanban/) | Optimalizace toku — vizualizace, WIP limity, metriky; Kanban Method i Kanban Guide | ✅ |
 | [**Scrumban**](Scrumban/) | Spojení obou — a proč u něj neexistuje závazný popis | ✅ |
+| [**Waterfall**](Waterfall/) | Fázový vývoj — a proč je pojmenovaný podle článku, který ho kritizoval | ✅ |
 | Onboarding | První dny nového člena týmu | ⬜ |
 | Incident | Co dělat, když hoří produkce | ⬜ |
 | Release | Jak se vydává a nasazuje | ⬜ |
