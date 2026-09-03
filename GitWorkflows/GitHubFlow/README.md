@@ -185,7 +185,7 @@ První tři jsou nepodkročitelné. **Tým, který nesplní ani je, si vybírá 
 
 ## Kdy nepoužít
 
-- ❌ **Podporuješ víc verzí naraz.** Zákazník na verzi 2.3 potřebuje opravu, ale ne novinky z 3.0 — a GitHub Flow nemá větev, ze které by to šlo vydat. Tohle je [GitFlow](../GitFlow/) nebo **GitLab Flow**.
+- ❌ **Podporuješ víc verzí naraz.** Zákazník na verzi 2.3 potřebuje opravu, ale ne novinky z 3.0 — a GitHub Flow nemá větev, ze které by to šlo vydat. Tohle je [GitFlow](../GitFlow/) nebo [GitLab Flow](../GitLabFlow/).
 - ❌ **Mezi „hotovo“ a „v produkci“ je testovací cyklus.** Když kód po dokončení čeká na QA, musí někde počkat — a v tomhle modelu není kde.
 - ❌ **Nasazení je událost**, kterou se schvaluje, plánuje na termín nebo dělá jednou za kvartál. Pak `main` nemá jak zůstat totožný s produkcí.
 - ❌ **Nemáš CI ani rychlý rollback.** Model se spoléhá na to, že se chyba najde rychle a opraví ještě rychleji.
@@ -198,7 +198,7 @@ První tři jsou nepodkročitelné. **Tým, který nesplní ani je, si vybírá 
 | Chyba | Proč vadí | Jak správně |
 | ----- | --------- | ----------- |
 | Větve žijí týdny | Konflikty rostou s časem, review je nezvladatelné a autor mezitím zapomněl kontext | Rozděl úkol; horní hranice jsou dny |
-| Vezme se model, ale nasazuje se jednou za měsíc | `main` přestane odpovídat produkci, hotfix vezme s sebou pět cizích změn | Buď nasazuj po merge, nebo zvol **GitLab Flow** |
+| Vezme se model, ale nasazuje se jednou za měsíc | `main` přestane odpovídat produkci, hotfix vezme s sebou pět cizích změn | Buď nasazuj po merge, nebo zvol [GitLab Flow](../GitLabFlow/) |
 | Vznikne `develop`, „aby byl `main` čistý“ | Tím je z toho poloviční [GitFlow](../GitFlow/) bez jeho výhod — a `main` stejně nikdo nenasazuje | Jedna trvalá větev, nebo přejdi celý |
 | Pull request se otevře až v okamžiku, kdy je hotovo | Zpětná vazba přijde, když už se nedá nic změnit | Otevři ho hned jako draft |
 | Nikdo se do review nehrne | Větev čeká a stárne; časem to model rozloží | Review má přednost před vlastní prací |
@@ -235,7 +235,7 @@ Ke squashi: hodí se právě proto, že větve jsou krátké. Když má větev t
 | -------- | ----- |
 | [GitFlow](../GitFlow/) | **Model, proti kterému GitHub Flow vznikl.** Sáhni po něm, když podporuješ víc verzí nebo máš mezi „hotovo“ a produkcí testovací cyklus. |
 | [Trunk-Based Development](../TrunkBasedDevelopment/) | **Tentýž směr dotažený dál:** integruje se každý den, `main` není totožný s produkcí a nedokončená práce se skrývá přepínačem. Vyžaduje zralejší CI. |
-| **GitLab Flow** | GitHub Flow plus větve pro prostředí. Odpověď pro tým, který nemůže nasazovat po každém merge. *(zatím nezpracováno)* |
+| [GitLab Flow](../GitLabFlow/) | **Přímá nadstavba tohohle modelu.** Přidává to, co tady chybí: větve pro prostředí a vydání. Pro vývojáře je běžný den totožný. |
 | **OneFlow** | Zjednodušený [GitFlow](../GitFlow/) s jednou trvalou větví — někde mezi tímhle a jím. *(zatím nezpracováno)* |
 
 ---

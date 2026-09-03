@@ -300,7 +300,7 @@ Nejčastější směr je pryč od GitFlow, obvykle ve chvíli, kdy tým přejde 
 | -------- | ----- |
 | [GitHub Flow](../GitHubFlow/) | **Přímý protipól a nástupce.** Vznikl v roce 2011 jako reakce na složitost GitFlow; sám Driessen ho dnes doporučuje týmům s continuous delivery. |
 | [Trunk-Based Development](../TrunkBasedDevelopment/) | **Opačný konec škály.** Kde tenhle model odděluje vývoj od vydání větvemi, tam se to řeší přepínači v kódu. Nezná zapomenutý druhý merge, protože se do hlavní větve nikdy nic nevrací. |
-| **GitLab Flow** | Kompromis — jedna trvalá větev jako GitHub Flow, ale s větvemi pro prostředí místo release větví. *(zatím nezpracováno)* |
+| [GitLab Flow](../GitLabFlow/) | **Vědomé zjednodušení tohohle modelu.** Řeší tutéž cestu k vydání, ale jednou trvalou větví a buď prostředími, nebo větvemi na verzi — ne obojím. |
 | **OneFlow** | GitFlow bez `develop`. Zachovává release a hotfix větve, ubírá jednu trvalou. *(zatím nezpracováno)* |
 
 ---
