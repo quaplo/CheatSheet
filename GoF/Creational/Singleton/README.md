@@ -304,6 +304,7 @@ V dlouho běžících procesech (Swoole, RoadRunner, workery) se to obrací — 
 | [Value Object](../../../DDD/ValueObject/) | Enum jako value object je ta „správná“ podoba jedinečnosti: garantovaná jazykem a bez stavu. |
 | [Repository](../../../PoEAA/Repository/) | Častá oběť: `Repository::getInstance()` znemožní in-memory implementaci v testech. |
 | [Identity Map](../../../PoEAA/IdentityMap/) (PoEAA) | Časté lákadlo udělat mapu statickou. Znamená to únik paměti a data jednoho uživatele u druhého. |
+| [Active Record](../../../PoEAA/ActiveRecord/) (PoEAA) | Statické spojení do databáze je Singleton se vším všudy — neviditelná závislost, kterou v testu nevyměníš lokálně. |
 
 ---
 

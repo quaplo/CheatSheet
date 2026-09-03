@@ -288,6 +288,7 @@ To je zároveň užitečný test: **pokud u objektu nedokážeš říct, co je j
 | [CQRS](../../Architecture/CQRS/) | Čtecí strana mapu nepotřebuje: read modely se nemění. |
 | [Singleton](../../GoF/Creational/Singleton/) | **Lákadlo, kterému neustupuj.** Globální mapa vypadá pohodlně a znamená únik paměti a data mezi uživateli. |
 | **Lazy Load** (PoEAA) | Odložené načtení vazeb; spolu s mapou zabraňuje tomu, aby jeden objekt vznikl vícekrát. |
+| [Active Record](../ActiveRecord/) (PoEAA) | Mapu **nemá** — dvě volání `find(1)` vrátí dvě instance. Není tu vrstva, kam by patřila. |
 
 ---
 
@@ -326,7 +327,7 @@ Fowler zařadil Identity Map mezi vzory chování objektově-relačního mapová
 
 Obtížnost je dvojka, i když **samotná třída je asociativní pole**. Cena není v napsání, ale v životním cyklu: mapa, která žije o něco déle, než má, vrací zastaralá data; mapa, která se nevyprazdňuje, sežere paměť; a mapa vedle té, kterou už má ORM, vyrobí dvě pravdy. Tohle jsou přesně chyby, které se dělají tiše.
 
-Dnes je vzor **zabudovaný** — v Doctrine, Hibernate i Entity Framework. Za zmínku stojí, že [Active Record](../DataMapper/#data-mapper-vs-active-record) ho typicky nemá: v Eloquentu vrátí dvě volání `find(1)` dvě instance. Není to nedopatření, ale důsledek toho, že Active Record nemá vrstvu, kam by mapa patřila.
+Dnes je vzor **zabudovaný** — v Doctrine, Hibernate i Entity Framework. Za zmínku stojí, že [Active Record](../ActiveRecord/) ho typicky nemá: v Eloquentu vrátí dvě volání `find(1)` dvě instance. Není to nedopatření, ale důsledek toho, že Active Record nemá vrstvu, kam by mapa patřila.
 
 ---
 

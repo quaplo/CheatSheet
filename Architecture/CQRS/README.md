@@ -348,6 +348,7 @@ $repository->save($order->cancel());
 | [Iterator](../../GoF/Behavioral/Iterator/) (GoF) | Čtecí strana u velkých exportů stojí na líném průchodu — jinak výpis nad milionem řádků skončí na paměti. |
 | [Bounded Context](../../DDD/BoundedContext/) | CQRS se aplikuje **uvnitř** jednoho kontextu. Přes hranice kontextů se nečte přímo — tam patří překlad. |
 | [Identity Map](../../PoEAA/IdentityMap/) (PoEAA) | Čtecí strana ji nepotřebuje: read modely se nemění, takže není co udržovat konzistentní. |
+| [Active Record](../../PoEAA/ActiveRecord/) (PoEAA) | Čtecí strana s ním sedí dobře; zápisová narazí první — tam začnou chybět agregáty a value objecty. |
 
 ---
 

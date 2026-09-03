@@ -100,6 +100,7 @@ Vzory pro aplikace nad databází a s doménovou logikou — Repository, Unit of
 | [Data Mapper](PoEAA/DataMapper/) | Překlad objekt ↔ řádek; doména ani schéma o sobě nevědí | ●●●○○ |
 | [Optimistic Offline Lock](PoEAA/OptimisticOfflineLock/) | Souběžné změny se poznají podle verze — místo aby se jim předcházelo | ●●○○○ |
 | [Identity Map](PoEAA/IdentityMap/) | Tentýž záznam načtený dvakrát je tentýž objekt; proč se v importech volá `clear()` | ●●○○○ |
+| [Active Record](PoEAA/ActiveRecord/) | Objekt je řádek tabulky a umí se sám uložit — `$order->save()`; na čem stojí Eloquent | ●○○○○ |
 | [Unit of Work](PoEAA/UnitOfWork/) | Změny se sbírají v paměti a zapíší najednou — co dělá Doctrine `flush()` | ●●●○○ |
 
 <sub>Celý katalog (Data Mapper, Unit of Work, Identity Map, …): [PoEAA/README.md](PoEAA/)</sub>
@@ -251,6 +252,11 @@ Obrácený rejstřík: začni u toho, co tě pálí.
 | Dávkový import postupně sežere paměť a spadne | [Identity Map](PoEAA/IdentityMap/#dávky-proč-se-v-cyklu-volá-clear) |
 | Nevím, jestli chci cache, nebo mapu identit | [Identity Map](PoEAA/IdentityMap/#identity-map-není-cache) |
 | Po `clear()` se mi změny na entitách přestaly ukládat | [Identity Map](PoEAA/IdentityMap/#dávky-proč-se-v-cyklu-volá-clear) |
+| Na jednoduchý číselník mám entitu, repository, mapper i konfiguraci | [Active Record](PoEAA/ActiveRecord/) |
+| `$order->customer()` v cyklu vyrobí dotaz na každý řádek | [Active Record](PoEAA/ActiveRecord/#hranice-první-vazby-se-načítají-potichu) |
+| Test jednoho `if` v modelu potřebuje schéma, spojení a data | [Active Record](PoEAA/ActiveRecord/#hranice-druhá-pravidlo-neotestuješ-bez-schématu) |
+| Přejmenování sloupce znamená refaktoring napříč aplikací | [Active Record](PoEAA/ActiveRecord/#hranice-třetí-jména-sloupců-se-rozlezou-po-aplikaci) |
+| Model přerostl tabulku, ale přepisovat aplikaci na Doctrine nechci | [Active Record](PoEAA/ActiveRecord/#zásadní-varianta-active-record-jen-jako-persistence) |
 | Z `new Money(129000)` nepoznám, jestli jsou to koruny nebo haléře | [Factory Method](GoF/Creational/FactoryMethod/) |
 | Konstruktor má šest nepovinných parametrů a půlku z nich předávám `null` | [Factory Method](GoF/Creational/FactoryMethod/) |
 | Objekt jde vytvořit v neplatném stavu, protože validace je jinde než konstruktor | [Factory Method](GoF/Creational/FactoryMethod/) |

@@ -425,6 +425,7 @@ Složka `Application/` je pak **čitelný seznam toho, co aplikace umí**. To je
 | [Chain of Responsibility](../../GoF/Behavioral/ChainOfResponsibility/) | Middleware kolem sběrnice příkazů: transakce, autorizace, logování. |
 | [Domain Service](../../DDD/DomainService/) (DDD) | **Nezaměňovat.** Domain service obsahuje doménovou logiku a nesmí znát infrastrukturu; use-case je naopak jen orchestrace. Obvykle spolu sousedí: use-case načte, služba rozhodne. |
 | [Command](../../GoF/Behavioral/Command/) (GoF) | Příkaz na vstupu use-case je verze **bez chování** — práci dělá handler. GoF příkaz si ji nese uvnitř. |
+| [Active Record](../ActiveRecord/) (PoEAA) | Kam patří logika, která přerostla jeden model — orchestrace přes víc modelů do modelu nepatří. |
 
 ---
 

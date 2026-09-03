@@ -296,6 +296,7 @@ Konkrétní vodítko, když si nejsi jistý:
 | [Domain Event](../DomainEvent/) | **Chybějící díl.** Pravidlo „jedna transakce = jeden agregát“ potřebuje způsob, jak dohnat konzistenci mezi agregáty — a to jsou události. |
 | [State](../../GoF/Behavioral/State/) | Životní cyklus kořene, když jsou přechodů víc než dva. |
 | [Identity Map](../../PoEAA/IdentityMap/) (PoEAA) | Agregát určuje, co se načítá jako celek — a tím i co v mapě obvykle je. |
+| [Active Record](../../PoEAA/ActiveRecord/) (PoEAA) | Nejostřejší hranice toho vzoru: agregát je celek uložený přes víc tabulek, a to Active Record neumí. |
 
 ---
 

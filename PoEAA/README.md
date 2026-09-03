@@ -22,7 +22,7 @@ Sbírka **nemá kategorie** — je to plochý katalog.
 | [**Identity Map**](IdentityMap/) | Tentýž záznam načtený dvakrát je tentýž objekt — a proč to není cache | ●●○○○ | ✅ |
 | Pessimistic Offline Lock | Záznam se při otevření zamkne — [srovnání](OptimisticOfflineLock/#optimistické-nebo-pesimistické) je u optimistického | | ⬜ |
 | Coarse-Grained Lock | Jeden zámek na celý agregát, ne na každou část | | ⬜ |
-| Active Record | Objekt, který si sám umí uložit — protipól Data Mapperu; [srovnání](DataMapper/#data-mapper-vs-active-record) je u něj | | ⬜ |
+| [**Active Record**](ActiveRecord/) | Objekt, který si sám umí uložit — protipól Data Mapperu; [srovnání](DataMapper/#data-mapper-vs-active-record) je u něj | ●○○○○ | ✅ |
 | Money | Konkrétní value object pro peníze | | ⬜ |
 | Lazy Load | Data se načtou, až když je někdo potřebuje | | ⬜ |
 | Special Case | Zvláštní instance místo `null` | | ⬜ |

@@ -492,6 +492,7 @@ echo $address->format();                     // Sokolovská 100 / 186 00 Praha /
 | [Factory Method](../../GoF/Creational/FactoryMethod/) | Pojmenované konstruktory (`fromCents`, `fromString`) jsou jeho nejužitečnější podoba v PHP — a standardní výbava value objectu. |
 | [Builder](../../GoF/Creational/Builder/) | Typický produkt builderu je neměnná hodnota. Pozor: fluent metody value objectu **nejsou** builder — vracejí hotový produkt, ne rozdělanou práci. |
 | [Identity Map](../../PoEAA/IdentityMap/) (PoEAA) | Protipól: mapuje objekty **podle identity**, kterou value object nemá. Užitečný test — když nevíš, co je identita objektu, není to entita. |
+| [Active Record](../../PoEAA/ActiveRecord/) (PoEAA) | Špatně se snáší: hodnota bez identity nemá vlastní řádek. Odtud „doména se tvaruje podle tabulky“. |
 
 ---
 

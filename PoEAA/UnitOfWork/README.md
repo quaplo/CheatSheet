@@ -254,6 +254,7 @@ Ten poslední řádek je praktický: **události se publikují až po `commit()`
 | [Domain Event](../../DDD/DomainEvent/) | Události se publikují až po commitu, a Unit of Work je to místo. |
 | [Aggregate](../../DDD/Aggregate/) | Pravidlo „jedna transakce = jeden agregát“ mluví přesně o rozsahu jedné Unit of Work. |
 | [Command](../../GoF/Behavioral/Command/) (GoF) | Také drží seznam operací a provede je najednou — jen odvozený ze změn objektů, ne sestavený volajícím. |
+| [Active Record](../ActiveRecord/) (PoEAA) | Unit of Work **nemá**: `save()` zapisuje hned. Proto v Eloquentu neexistuje `flush()`. |
 
 ---
 
