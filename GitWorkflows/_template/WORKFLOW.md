@@ -143,10 +143,20 @@ a nefunguje potichu.
 | | |
 | --- | --- |
 | **Velikost týmu** | <…> |
-| **Frekvence nasazení** | <…> |
+| **Způsob dodávání** | <průběžně (agile, continuous delivery) / plánovaná vydání (fázový vývoj)> |
+| **Stabilizační fáze před vydáním** | <ano — QA cyklus, regresní testy / ne — nasazuje se rovnou> |
+| **Frekvence nasazení** | <několikrát denně / týdně / jednou za sprint / jednou za kvartál> |
 | **Typ produktu** | <SaaS / instalovaný software / knihovna / mobilní aplikace> |
 | **Kolik verzí se podporuje** | <jedna / několik současně> |
 | **Provozní náročnost** | ●●●○○ |
+
+<!--
+Řádek „Stabilizační fáze“ rozhoduje víc než metodika. Existuje-li mezi
+„hotovo“ a „v produkci“ testovací cyklus, musí kód někde počkat —
+a to jsou release větve. Když se nasazuje rovnou, jsou jen režie.
+Tým může dělat Scrum a přitom vydávat jednou za dva měsíce; pak mu
+sedí model, který se tváří „neagilně“.
+-->
 
 **Hodí se, když:**
 

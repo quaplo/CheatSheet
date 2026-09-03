@@ -52,6 +52,8 @@ Dokument jde **od situace k řešení**. Vše referenční — původ, zdroje, m
 Platí [pravidla psaní pro celý repozitář](../CLAUDE.md#psaní-obsahu--platí-v-celém-repozitáři). Navíc pro tuhle sekci:
 
 - **Žádný workflow není „ten správný“.** Piš o kompromisu, ne o vítězi. Když u nějakého nedokážeš napsat poctivou sekci *Kdy nepoužít*, nerozumíš mu dost.
+- **Nedělej sekci „Výhody a nevýhody“.** Pokrývají je *Co si to vyžaduje* (cena), *Kdy nepoužít* (kdy se nevyplatí) a *Časté chyby* (co se kazí) — a to formou, podle které se dá jednat: „nepoužívej, když nasazuješ denně“ místo „nevýhoda: nevhodné pro velké týmy“. Výhoda je navíc pojem relativní; porovnání patří do [srovnávací tabulky](README.md) v rozcestníku, kde stojí workflow vedle sebe.
+- **Ptej se na stabilizační fázi, ne na metodiku.** „Agile nebo waterfall“ je nepřesný zástupný znak. Rozhoduje, jestli mezi „hotovo“ a „v produkci“ existuje testovací cyklus — pak musí kód někde počkat a k tomu jsou release větve. Tým může dělat Scrum a vydávat jednou za dva měsíce.
 - **Předpoklady jsou důležitější než popis větví.** Trunk-Based bez CI a feature flagů není Trunk-Based, je to chaos na `main`. GitFlow bez někoho, kdo řídí vydání, je ceremonie bez užitku. Sekce *Co si to vyžaduje* je jádro dokumentu, ne dodatek.
 - **Provozní náročnost měř cenou v běžném provozu**, ne počtem větví na diagramu. Počítá se do ní, kolik toho musí tým dodržet, jak snadno se to dá udělat tiše špatně a co se stane, když se na to vykašle.
 - **Příkazy piš tak, jak se opravdu píšou** — včetně `git push -u origin`, ne jen abstraktní popis kroku.
