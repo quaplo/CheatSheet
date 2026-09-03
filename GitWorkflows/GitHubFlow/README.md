@@ -11,7 +11,7 @@
 
 ## Pro koho a proč vznikl
 
-V roce 2011 byl standardem **GitFlow** — pět typů větví, dvě trvalé, k tomu pomocný skript. Scott Chacon z GitHubu napsal, že je to na jejich práci zbytečně složité:
+V roce 2011 byl standardem [**GitFlow**](../GitFlow/) — pět typů větví, dvě trvalé, k tomu pomocný skript. Scott Chacon z GitHubu napsal, že je to na jejich práci zbytečně složité:
 
 > „…it's more complicated than I think most developers and development teams actually require. It's complicated enough that a big helper script was developed to help enforce the flow.“
 
@@ -185,7 +185,7 @@ První tři jsou nepodkročitelné. **Tým, který nesplní ani je, si vybírá 
 
 ## Kdy nepoužít
 
-- ❌ **Podporuješ víc verzí naraz.** Zákazník na verzi 2.3 potřebuje opravu, ale ne novinky z 3.0 — a GitHub Flow nemá větev, ze které by to šlo vydat. Tohle je **GitFlow** nebo **GitLab Flow**.
+- ❌ **Podporuješ víc verzí naraz.** Zákazník na verzi 2.3 potřebuje opravu, ale ne novinky z 3.0 — a GitHub Flow nemá větev, ze které by to šlo vydat. Tohle je [GitFlow](../GitFlow/) nebo **GitLab Flow**.
 - ❌ **Mezi „hotovo“ a „v produkci“ je testovací cyklus.** Když kód po dokončení čeká na QA, musí někde počkat — a v tomhle modelu není kde.
 - ❌ **Nasazení je událost**, kterou se schvaluje, plánuje na termín nebo dělá jednou za kvartál. Pak `main` nemá jak zůstat totožný s produkcí.
 - ❌ **Nemáš CI ani rychlý rollback.** Model se spoléhá na to, že se chyba najde rychle a opraví ještě rychleji.
@@ -199,7 +199,7 @@ První tři jsou nepodkročitelné. **Tým, který nesplní ani je, si vybírá 
 | ----- | --------- | ----------- |
 | Větve žijí týdny | Konflikty rostou s časem, review je nezvladatelné a autor mezitím zapomněl kontext | Rozděl úkol; horní hranice jsou dny |
 | Vezme se model, ale nasazuje se jednou za měsíc | `main` přestane odpovídat produkci, hotfix vezme s sebou pět cizích změn | Buď nasazuj po merge, nebo zvol **GitLab Flow** |
-| Vznikne `develop`, „aby byl `main` čistý“ | Tím je z toho poloviční **GitFlow** bez jeho výhod — a `main` stejně nikdo nenasazuje | Jedna trvalá větev, nebo přejdi celý |
+| Vznikne `develop`, „aby byl `main` čistý“ | Tím je z toho poloviční [GitFlow](../GitFlow/) bez jeho výhod — a `main` stejně nikdo nenasazuje | Jedna trvalá větev, nebo přejdi celý |
 | Pull request se otevře až v okamžiku, kdy je hotovo | Zpětná vazba přijde, když už se nedá nic změnit | Otevři ho hned jako draft |
 | Nikdo se do review nehrne | Větev čeká a stárne; časem to model rozloží | Review má přednost před vlastní prací |
 | Větve se po merge nemažou | Za půl roku stovky větví a nikdo nepozná, které žijí | Zapni automatické mazání po merge |
@@ -233,10 +233,10 @@ Ke squashi: hodí se právě proto, že větve jsou krátké. Když má větev t
 
 | Workflow | Vztah |
 | -------- | ----- |
-| **GitFlow** | Model, proti kterému GitHub Flow vznikl. Sáhni po něm, když podporuješ víc verzí nebo máš stabilizační fázi. *(zatím nezpracováno)* |
+| [GitFlow](../GitFlow/) | **Model, proti kterému GitHub Flow vznikl.** Sáhni po něm, když podporuješ víc verzí nebo máš mezi „hotovo“ a produkcí testovací cyklus. |
 | **Trunk-Based Development** | Tentýž směr dotažený dál: větve žijí hodiny, nebo vůbec. Vyžaduje zralejší CI a feature flagy. *(zatím nezpracováno)* |
 | **GitLab Flow** | GitHub Flow plus větve pro prostředí. Odpověď pro tým, který nemůže nasazovat po každém merge. *(zatím nezpracováno)* |
-| **OneFlow** | Zjednodušený GitFlow s jednou trvalou větví — někde mezi tímhle a GitFlow. *(zatím nezpracováno)* |
+| **OneFlow** | Zjednodušený [GitFlow](../GitFlow/) s jednou trvalou větví — někde mezi tímhle a jím. *(zatím nezpracováno)* |
 
 ---
 
@@ -249,7 +249,7 @@ Ke squashi: hodí se právě proto, že větve jsou krátké. Když má větev t
 | **Zdroj**   | článek *GitHub Flow* na osobním blogu |
 | **Provozní náročnost** | ●●○○○ |
 
-Chacon model popsal v srpnu 2011 jako **reakci na GitFlow**, který byl tehdy de facto standardem. Jeho argument nebyl, že je GitFlow špatný — psal o něm, že je pro spoustu týmů zbytečně složitý a že složitost, kterou nejde vynutit nástrojem, si tým stejně zjednoduší po svém.
+Chacon model popsal v srpnu 2011 jako **reakci na [GitFlow](../GitFlow/)**, který byl tehdy de facto standardem. Jeho argument nebyl, že je GitFlow špatný — psal o něm, že je pro spoustu týmů zbytečně složitý a že složitost, kterou nejde vynutit nástrojem, si tým stejně zjednoduší po svém.
 
 Původních šest pravidel:
 
