@@ -128,6 +128,15 @@ Kent Beck · Mike Beedle · Arie van Bennekum · Alistair Cockburn · Ward Cunni
 
 ---
 
+## Souvisí
+
+| Dokument | Vztah |
+| -------- | ----- |
+| [Scrum](../Scrum/) | Jeden z přístupů, jejichž zástupci se v Snowbirdu sešli. **Ken Schwaber i Jeff Sutherland jsou mezi signatáři** manifestu. |
+| [Code review](../CodeReview/) | Navazuje na hodnotu „Jednotlivci a interakce" — review je místo, kde se tým potkává nad kódem. |
+
+---
+
 ## Zdroje
 
 - [agilemanifesto.org](https://agilemanifesto.org/) — původní znění

@@ -14,6 +14,7 @@ Na rozdíl od [návrhových vzorů](../SoftwareDesign/) nebo [modelů větvení]
 | ------ | ------------ | ---- |
 | [**Code review**](CodeReview/) | Jak se změna dostane od autora přes recenzenta do hlavní větve | ✅ |
 | [**Agile Manifesto**](AgileManifesto/) | Přepis původního textu z roku 2001 — čtyři hodnoty a dvanáct principů | ✅ |
+| [**Scrum**](Scrum/) | Rámec podle Průvodce Scrum 2020 — tři odpovědnosti, pět událostí, tři artefakty | ✅ |
 | Onboarding | První dny nového člena týmu | ⬜ |
 | Incident | Co dělat, když hoří produkce | ⬜ |
 | Release | Jak se vydává a nasazuje | ⬜ |
