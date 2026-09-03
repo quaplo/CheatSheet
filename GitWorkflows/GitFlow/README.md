@@ -254,7 +254,7 @@ Poslední řádek je i Chaconův argument z [GitHub Flow](../GitHubFlow/#pro-koh
 | `feature/*` vzniká z `main` | Staví se na staré vydané verzi | Vždy z `develop` |
 | Nasazuje se z `develop` | `develop` není vydání a nikdy neprošel stabilizací | Nasazuje se z `main`, případně z `release/*` na testovací prostředí |
 | Release větev je otevřená měsíce | Stane se druhým `develop` a přestane plnit účel | Release větev jsou dny; co se nestihlo, jde do příští |
-| Do release větve přibývají funkce | Zmrazení kódu přestane platit a vydání se odkládá donekonečna | Do `release/*` jen opravy nalezené při testování |
+| Do release větve přibývají funkce | [Zmrazení kódu](../Glossary.md#code-freeze-zmrazení-kódu) přestane platit a vydání se odkládá donekonečna | Do `release/*` jen opravy nalezené při testování |
 | Model se zavede na SaaS s denním nasazováním | Veškerá režie, žádná výhoda | [GitHub Flow](../GitHubFlow/) |
 | `git merge` bez `--no-ff` | [Fast-forward](../Glossary.md#fast-forward) smaže stopu po větvi a v historii nepoznáš, co bylo vydání | `--no-ff` u všech merge do `main` a `develop` |
 | Zapomenutá značka u vydání | Nedohledáš, co přesně bylo v produkci | Značka při každém merge do `main` |
@@ -299,7 +299,7 @@ Nejčastější směr je pryč od GitFlow, obvykle ve chvíli, kdy tým přejde 
 | Workflow | Vztah |
 | -------- | ----- |
 | [GitHub Flow](../GitHubFlow/) | **Přímý protipól a nástupce.** Vznikl v roce 2011 jako reakce na složitost GitFlow; sám Driessen ho dnes doporučuje týmům s continuous delivery. |
-| **Trunk-Based Development** | Opačný konec škály: větve na hodiny a žádná stabilizační fáze. *(zatím nezpracováno)* |
+| [Trunk-Based Development](../TrunkBasedDevelopment/) | **Opačný konec škály.** Kde tenhle model odděluje vývoj od vydání větvemi, tam se to řeší přepínači v kódu. Nezná zapomenutý druhý merge, protože se do hlavní větve nikdy nic nevrací. |
 | **GitLab Flow** | Kompromis — jedna trvalá větev jako GitHub Flow, ale s větvemi pro prostředí místo release větví. *(zatím nezpracováno)* |
 | **OneFlow** | GitFlow bez `develop`. Zachovává release a hotfix větve, ubírá jednu trvalou. *(zatím nezpracováno)* |
 

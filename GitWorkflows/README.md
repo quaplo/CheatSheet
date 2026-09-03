@@ -27,7 +27,7 @@ Metodika (agile, waterfall) je až důsledek. **Tým může dělat Scrum a vydá
 
 ## Srovnání
 
-| | [GitHub Flow](GitHubFlow/) | [GitFlow](GitFlow/) | **Trunk-Based** | **GitLab Flow** | **OneFlow** |
+| | [GitHub Flow](GitHubFlow/) | [GitFlow](GitFlow/) | [Trunk-Based](TrunkBasedDevelopment/) | **GitLab Flow** | **OneFlow** |
 | --- | --- | --- | --- | --- | --- |
 | Trvalých větví | 1 | 2 | 1 | 1 + prostředí | 1 |
 | Jak dlouho žije větev | dny | **týdny** | **hodiny** | dny | dny |
@@ -51,7 +51,7 @@ Metodika (agile, waterfall) je až důsledek. **Tým může dělat Scrum a vydá
 | -------- | ---------- | ---------------- | --------- | ---- |
 | [**GitHub Flow**](GitHubFlow/) | Scott Chacon, 2011 | Jedna trvalá větev, krátké větve, nasazení po každém merge | ●●○○○ | ✅ |
 | [**GitFlow**](GitFlow/) | Vincent Driessen, 2010 | Pět typů větví, oddělený vývoj a vydání; autor ho dnes pro web nedoporučuje | ●●●●○ | ✅ |
-| Trunk-Based Development | Paul Hammant a další | Větve na hodiny, nebo rovnou do hlavní větve | ●●●○○ | ⬜ |
+| [**Trunk-Based Development**](TrunkBasedDevelopment/) | Paul Hammant (sepsání), praxe starší | Integrace každý den; nedokončená práce za přepínačem, ne ve větvi | ●●●○○ | ✅ |
 | GitLab Flow | GitLab, 2014 | GitHub Flow doplněný o větve pro prostředí | ●●●○○ | ⬜ |
 | OneFlow | Adam Ruka, 2017 | Zjednodušený GitFlow s jedinou trvalou větví | ●●●○○ | ⬜ |
 

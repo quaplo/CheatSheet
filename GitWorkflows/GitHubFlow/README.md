@@ -124,7 +124,7 @@ Automatické po merge do `main`. Když automatické není, je to **ruční krok,
 
 Tady je vidět, čím se GitHub Flow liší od všeho ostatního: **nemá vydání ani hotfixy jako zvláštní případ.**
 
-**Vydání** je merge pull requestu. Žádná `release/*` větev, žádné zmrazení kódu, žádný termín. Když chce tým označit stav pro sebe nebo pro zákazníky, udělá to značkou:
+**Vydání** je merge pull requestu. Žádná `release/*` větev, žádné [zmrazení kódu](../Glossary.md#code-freeze-zmrazení-kódu), žádný termín. Když chce tým označit stav pro sebe nebo pro zákazníky, udělá to značkou:
 
 ```bash
 git tag -a v1.4.0 -m "Fakturace s DPH"
@@ -234,7 +234,7 @@ Ke squashi: hodí se právě proto, že větve jsou krátké. Když má větev t
 | Workflow | Vztah |
 | -------- | ----- |
 | [GitFlow](../GitFlow/) | **Model, proti kterému GitHub Flow vznikl.** Sáhni po něm, když podporuješ víc verzí nebo máš mezi „hotovo“ a produkcí testovací cyklus. |
-| **Trunk-Based Development** | Tentýž směr dotažený dál: větve žijí hodiny, nebo vůbec. Vyžaduje zralejší CI a feature flagy. *(zatím nezpracováno)* |
+| [Trunk-Based Development](../TrunkBasedDevelopment/) | **Tentýž směr dotažený dál:** integruje se každý den, `main` není totožný s produkcí a nedokončená práce se skrývá přepínačem. Vyžaduje zralejší CI. |
 | **GitLab Flow** | GitHub Flow plus větve pro prostředí. Odpověď pro tým, který nemůže nasazovat po každém merge. *(zatím nezpracováno)* |
 | **OneFlow** | Zjednodušený [GitFlow](../GitFlow/) s jednou trvalou větví — někde mezi tímhle a jím. *(zatím nezpracováno)* |
 

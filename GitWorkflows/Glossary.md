@@ -133,3 +133,21 @@ git cherry-pick 9a1f3d2
 Typické použití: oprava vznikla na hlavní větvi a musí se dostat i do starší podporované verze. Vzniká tím **kopie commitu s jiným identifikátorem**, takže Git obě větve nadále považuje za rozdílné — a při každém dalším slučování to musí někdo hlídat.
 
 Pravidelný cherry-pick je signál, že model větvení neodpovídá tomu, jak tým ve skutečnosti dodává.
+
+---
+
+### Code freeze (zmrazení kódu)
+
+Období před vydáním, kdy se do vydávané větve **smějí dostat už jen opravy**, ne nové funkce. Účel je dát testování pevný cíl: kdyby během něj přibývaly změny, testovalo by se pokaždé něco jiného.
+
+Má smysl tam, kde mezi „hotovo“ a „u zákazníka“ existuje testovací cyklus — typicky u [GitFlow](GitFlow/), kde tuhle roli plní `release/*` větev. Modely s průběžným nasazováním ho nemají a [Trunk-Based Development](TrunkBasedDevelopment/) ho výslovně nedoporučuje.
+
+Za pozor stojí, že zmrazení **nezastaví práci** — vývoj pokračuje do vývojové větve a půjde v příštím vydání. Zmrazená je jen ta jedna větev, ze které se vydává.
+
+---
+
+### Merge queue (fronta na sloučení)
+
+Nastavení, které u velkých týmů řeší situaci, kdy dva pull requesty projdou testy samostatně, ale **dohromady se rozbijí**. Místo okamžitého sloučení se změny zařadí do fronty, kde se otestují v tom pořadí, ve kterém se budou slučovat — a do hlavní větve se dostanou, jen když projdou i takhle.
+
+Vyplatí se od desítek sloučení denně. U menších týmů je to režie, kterou vyváží prostě to, že se rozbitý stav rychle opraví.
