@@ -147,6 +147,7 @@ Manifest ale ve své závěrečné větě dodává něco, co se cituje méně:
 | -------- | ---------- |
 | [Agile Manifesto](../AgileManifesto/) | Vznikl jako reakce na dodávání v téhle podobě. |
 | [Scrum](../Scrum/) · [Kanban](../Kanban/) | Iterativní protiklady; oba dodávají hodnotu průběžně. |
+| [Extreme Programming](../ExtremeProgramming/) | Protiklad na úrovni inženýrské práce — návrh průběžně a po částech místo dopředu a celý. |
 | [Git Workflows](../../GitWorkflows/#jak-vybrat) | Volba modelu větvení se ptá přesně na tohle: **je mezi „hotovo" a „v produkci" stabilizační fáze?** Fázový vývoj ji má. |
 | [GitFlow](../../GitWorkflows/GitFlow/) | Model větvení, který s plánovanými vydáními a stabilizační fází počítá — proto k fázovému dodávání sedí nejlíp. |
 | [GitHub Flow](../../GitWorkflows/GitHubFlow/) · [Trunk-Based](../../GitWorkflows/TrunkBasedDevelopment/) | Naopak předpokládají průběžné nasazování; s fázovým vývojem se nepotkají. |

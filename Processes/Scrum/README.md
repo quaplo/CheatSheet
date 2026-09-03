@@ -303,6 +303,7 @@ Scrum neurčuje, jak se vyvíjí ani nasazuje — to si tým doplní sám. Tady 
 
 | Dokument | Souvislost |
 | -------- | ---------- |
+| [Extreme Programming](../ExtremeProgramming/) | **Nejčastější doplněk.** Scrum říká, jak se tým organizuje, XP jak psát kód — Průvodce Scrum o technických praktikách mlčí. |
 | [Waterfall](../Waterfall/) | Fázový protiklad — hodnota se dodává až na konci, ne každý Sprint. |
 | [Kanban](../Kanban/) | Druhý přístup ke stejné práci — plynulý tok místo Sprintů, WIP limity místo závazku na Sprint. **Nevylučují se**, kombinace je běžná. |
 | [Scrumban](../Scrumban/) | Název pro tu kombinaci. Pozor: **nemá normativní dokument**, takže Průvodce Scrum je u něj jediné měřítko. |

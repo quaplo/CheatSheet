@@ -170,6 +170,7 @@ Obojí zároveň se dělá běžně — bývá to Scrum jako rámec a z Kanbanu 
 | [Scrumban](../Scrumban/) | Název pro kombinaci obou. Kanban se přidávat **má** — a Definition of Workflow je to, co u Scrumbanu chybí nejvíc. |
 | [Agile Manifesto](../AgileManifesto/) | Kanban vznikl mimo Snowbird a **není mezi přístupy, které tam byly zastoupené**; s manifestem se ale potkává v důrazu na reagování na změny. |
 | [Code review](../CodeReview/) | Typický sloupec s WIP limitem. Čekající review je nejčastější místo, kde se tok zadrhne — a [rychlost odpovědi](../CodeReview/#do-kdy-odpovědět) je tím pádem otázka průtoku, ne zdvořilosti. |
+| [Extreme Programming](../ExtremeProgramming/) | Doplňuje inženýrskou stránku, kterou Kanban neřeší — ten se zabývá tokem, ne tím, jak se píše kód. |
 | [Waterfall](../Waterfall/) | Protiklad plynulého toku — práce postupuje po velkých dávkách, které se schvalují. |
 | [Trunk-Based Development](../../GitWorkflows/TrunkBasedDevelopment/) | Sdílí myšlenku malých dávek a průběžného toku; „větev nemá žít déle než den" je WIP limit vyjádřený jinak. |
 | [Git Workflows](../../GitWorkflows/) | Kanban neurčuje, jak větvit ani nasazovat — to je samostatné rozhodnutí. |

@@ -55,7 +55,7 @@ foreach ($rows as $row) {
 
 > Implementuj věci ve chvíli, kdy je opravdu potřebuješ — ne když tušíš, že je jednou potřebovat budeš.
 
-Pochází z **extrémního programování**, formuloval ho **Ron Jeffries** kolem roku **1998**. Argument není „nepřemýšlej dopředu“, ale ekonomický: za funkci, kterou postavíš předčasně, platíš **čtyřikrát**.
+Pochází z [extrémního programování](../../Processes/ExtremeProgramming/), formuloval ho **Ron Jeffries** kolem roku **1998**. Argument není „nepřemýšlej dopředu“, ale ekonomický: za funkci, kterou postavíš předčasně, platíš **čtyřikrát**.
 
 | Cena | Co to je |
 | ---- | -------- |
