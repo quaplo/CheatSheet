@@ -65,6 +65,10 @@ Vyplatí se ho přečíst dřív než jednotlivé workflow — rozdíl mezi [mer
 
 ---
 
+## Související
+
+Všech pět modelů počítá s tím, že změnu před sloučením někdo přečte — liší se jen tím, kam se slučuje. Jak ten krok probíhá, řeší [**Code review**](../Processes/CodeReview/).
+
 ## Přidání nového workflow
 
 Postup, šablona a checklist: **[`_template/README.md`](_template/README.md)**.
