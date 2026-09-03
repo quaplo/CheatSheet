@@ -27,19 +27,17 @@ Metodika (agile, waterfall) je až důsledek. **Tým může dělat Scrum a vydá
 
 ## Srovnání
 
-| | [GitHub Flow](GitHubFlow/) | [GitFlow](GitFlow/) | [Trunk-Based](TrunkBasedDevelopment/) | [GitLab Flow](GitLabFlow/) | **OneFlow** |
+| | [GitHub Flow](GitHubFlow/) | [GitFlow](GitFlow/) | [Trunk-Based](TrunkBasedDevelopment/) | [GitLab Flow](GitLabFlow/) | [OneFlow](OneFlow/) |
 | --- | --- | --- | --- | --- | --- |
 | Trvalých větví | 1 | 2 | 1 | 1 + prostředí | 1 |
 | Jak dlouho žije větev | dny | **týdny** | **hodiny** | dny | dny |
-| Release větve | ne | ano | ne | ne | ano |
-| Podpora víc verzí | ne | **ano** | ne | omezeně | ano |
+| Release větve | ne | ano | jen k vydání | **jen v podobě B** | ano |
+| Podpora víc verzí | ne | **ano** | ne | jen v podobě B | omezeně |
 | Stabilizační fáze | ne | **ano** | ne | ano | ano |
 | Vyžaduje CI | ano | doporučeno | **nutně** | ano | doporučeno |
 | Vyžaduje feature flagy | doporučeno | ne | **nutně** | doporučeno | ne |
 | Frekvence nasazení | denně až týdně | plánovaně | **několikrát denně** | podle prostředí | plánovaně |
 | Provozní náročnost | ●●○○○ | ●●●●○ | ●●●○○ | ●●●○○ | ●●●○○ |
-
-<sub>Hodnoty u nezpracovaných modelů jsou orientační a upřesní se s jejich dokumenty.</sub>
 
 **Jak číst řádek „provozní náročnost“:** není to počet větví, ale kolik toho musí tým dodržet a jak snadno se to dá udělat tiše špatně. Trunk-Based má jednu větev a přesto trojku — protože bez zralé CI a feature flagů rozbije produkci.
 
@@ -53,7 +51,7 @@ Metodika (agile, waterfall) je až důsledek. **Tým může dělat Scrum a vydá
 | [**GitFlow**](GitFlow/) | Vincent Driessen, 2010 | Pět typů větví, oddělený vývoj a vydání; autor ho dnes pro web nedoporučuje | ●●●●○ | ✅ |
 | [**Trunk-Based Development**](TrunkBasedDevelopment/) | Paul Hammant (sepsání), praxe starší | Integrace každý den; nedokončená práce za přepínačem, ne ve větvi | ●●●○○ | ✅ |
 | [**GitLab Flow**](GitLabFlow/) | GitLab, 2014 | GitHub Flow doplněný o větve pro prostředí, nebo o release větve | ●●●○○ | ✅ |
-| OneFlow | Adam Ruka, 2017 | Zjednodušený GitFlow s jedinou trvalou větví | ●●●○○ | ⬜ |
+| [**OneFlow**](OneFlow/) | Adam Ruka, 2017 | GitFlow bez `develop`; release a hotfix větve zůstávají | ●●●○○ | ✅ |
 
 <sub>⬜ plánováno · 🚧 rozpracováno · ✅ hotovo</sub>
 

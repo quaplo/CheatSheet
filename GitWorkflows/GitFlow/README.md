@@ -290,7 +290,7 @@ Nejčastější směr je pryč od GitFlow, obvykle ve chvíli, kdy tým přejde 
 4. Zaveď automatické nasazení po merge — bez toho vznikne jen `main` bez pravidel.
 5. Zkrať feature větve; dokud žijí týdny, změnil jsi jen jména.
 
-**Na OneFlow** je krok menší: zůstanou release i hotfix větve, zmizí jen `develop`. Pro tým, který potřebuje vydání, ale ne dvě trvalé větve.
+**Na [OneFlow](../OneFlow/)** je krok menší: zůstanou release i hotfix větve, zmizí jen `develop`. Pro tým, který potřebuje vydání, ale ne dvě trvalé větve.
 
 ---
 
@@ -301,7 +301,7 @@ Nejčastější směr je pryč od GitFlow, obvykle ve chvíli, kdy tým přejde 
 | [GitHub Flow](../GitHubFlow/) | **Přímý protipól a nástupce.** Vznikl v roce 2011 jako reakce na složitost GitFlow; sám Driessen ho dnes doporučuje týmům s continuous delivery. |
 | [Trunk-Based Development](../TrunkBasedDevelopment/) | **Opačný konec škály.** Kde tenhle model odděluje vývoj od vydání větvemi, tam se to řeší přepínači v kódu. Nezná zapomenutý druhý merge, protože se do hlavní větve nikdy nic nevrací. |
 | [GitLab Flow](../GitLabFlow/) | **Vědomé zjednodušení tohohle modelu.** Řeší tutéž cestu k vydání, ale jednou trvalou větví a buď prostředími, nebo větvemi na verzi — ne obojím. |
-| **OneFlow** | GitFlow bez `develop`. Zachovává release a hotfix větve, ubírá jednu trvalou. *(zatím nezpracováno)* |
+| [OneFlow](../OneFlow/) | **Tenhle model bez `develop`.** Zachovává release i hotfix větve, ubírá jednu trvalou — a s ní i zapomenutý druhý merge. Vznikl z přímé kritiky GitFlow. |
 
 ---
 

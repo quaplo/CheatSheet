@@ -317,7 +317,7 @@ Nedá se udělat přepnutím — chybějící předpoklady je potřeba doplnit *
 | [GitHub Flow](../GitHubFlow/) | **Nejbližší příbuzný.** Stejný směr, mírnější pravidla: větve smějí žít dny a `main` se rovná produkci. Nejčastější odrazový můstek. |
 | [GitFlow](../GitFlow/) | **Opačný konec škály.** Kde GitFlow odděluje vývoj od vydání větvemi, tenhle model to řeší přepínači v kódu. |
 | [GitLab Flow](../GitLabFlow/) | **Sdílí pravidlo upstream first** — oprava jde nejdřív do hlavní větve, teprve pak do vydání. Na rozdíl od tohohle modelu ale připouští výjimku u spěchajícího hotfixu. |
-| **OneFlow** | Míří opačným směrem — k vydáním, ne k průběžné integraci. *(zatím nezpracováno)* |
+| [OneFlow](../OneFlow/) | Míří opačným směrem — k plánovaným vydáním. Sdílí ale důraz na krátké větve a čitelnou historii. |
 
 ---
 

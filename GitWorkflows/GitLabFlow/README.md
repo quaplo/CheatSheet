@@ -279,7 +279,7 @@ Z [GitFlow](../GitFlow/) se sem jde tak, že zrušíš `develop` a `release/*` n
 | [GitHub Flow](../GitHubFlow/) | **Základ, ze kterého vychází.** Přidává jen to, co v něm chybí: prostředí a vydání. Pro vývojáře je běžný den totožný. |
 | [GitFlow](../GitFlow/) | Řeší totéž — cestu k vydání — ale dvěma trvalými větvemi a čtyřmi typy pomocných. Tenhle model je vůči němu vědomé zjednodušení. |
 | [Trunk-Based Development](../TrunkBasedDevelopment/) | Sdílí pravidlo **upstream first**: oprava jde nejdřív do hlavní větve, pak do vydání. TBD ho drží bez výjimky, tenhle model připouští spěchající hotfix. |
-| **OneFlow** | Druhá cesta, jak zjednodušit GitFlow — ubere `develop`, ale nechá release a hotfix větve. *(zatím nezpracováno)* |
+| [OneFlow](../OneFlow/) | **Zjednodušuje GitFlow z opačné strany než tenhle model.** OneFlow z GitFlow ubírá, GitLab Flow ke GitHub Flow přidává — a potkávají se přibližně uprostřed. |
 
 ---
 

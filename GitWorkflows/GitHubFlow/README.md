@@ -236,7 +236,7 @@ Ke squashi: hodí se právě proto, že větve jsou krátké. Když má větev t
 | [GitFlow](../GitFlow/) | **Model, proti kterému GitHub Flow vznikl.** Sáhni po něm, když podporuješ víc verzí nebo máš mezi „hotovo“ a produkcí testovací cyklus. |
 | [Trunk-Based Development](../TrunkBasedDevelopment/) | **Tentýž směr dotažený dál:** integruje se každý den, `main` není totožný s produkcí a nedokončená práce se skrývá přepínačem. Vyžaduje zralejší CI. |
 | [GitLab Flow](../GitLabFlow/) | **Přímá nadstavba tohohle modelu.** Přidává to, co tady chybí: větve pro prostředí a vydání. Pro vývojáře je běžný den totožný. |
-| **OneFlow** | Zjednodušený [GitFlow](../GitFlow/) s jednou trvalou větví — někde mezi tímhle a jím. *(zatím nezpracováno)* |
+| [OneFlow](../OneFlow/) | Druhá cesta pryč od [GitFlow](../GitFlow/), která ubere míň než tenhle model: nechá release a hotfix větve. Volba je o tom, jestli vydáváš verze, nebo nasazuješ. |
 
 ---
 
