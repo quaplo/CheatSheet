@@ -29,6 +29,7 @@ Existující sekce:
 | Sekce | Čím se řídí |
 | ----- | ----------- |
 | [`SoftwareDesign/`](SoftwareDesign/) | [`SoftwareDesign/CLAUDE.md`](SoftwareDesign/CLAUDE.md) |
+| [`GitWorkflows/`](GitWorkflows/) | [`GitWorkflows/CLAUDE.md`](GitWorkflows/CLAUDE.md) |
 
 ## Jazyková konvence — dodržuj bez výjimky
 

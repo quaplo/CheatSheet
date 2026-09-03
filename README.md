@@ -11,6 +11,7 @@ Není to knihovna ani balíček — je to **dokumentace se spustitelnými přík
 | Sekce | Co obsahuje | Stav |
 | ----- | ----------- | ---- |
 | [**Software Design**](SoftwareDesign/) | Návrhové vzory a architektura — GoF, PoEAA, DDD, principy návrhu. Spustitelné PHP ukázky u každého vzoru. | ✅ 34 vzorů |
+| [**Git Workflows**](GitWorkflows/) | Modely větvení — jak tým pracuje s větvemi, kdy co slučuje a odkud nasazuje. | 🚧 1 z 5 |
 
 <sub>Další sekce přibudou. Návod, jak založit novou, je [níž](#přidání-nové-sekce).</sub>
 
