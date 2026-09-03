@@ -186,6 +186,7 @@ Předposlední řádek stojí za rozvedení. Zvyk, že junior je jen recenzovan�
 | [Trunk-Based Development](../../GitWorkflows/TrunkBasedDevelopment/) | Klade na rychlost review největší nároky — větev musí zmizet tentýž den. |
 | [Principy návrhu](../../SoftwareDesign/Principles/) | Společný jazyk pro věcnou diskusi nad návrhem. Odkaz na princip je lepší argument než „mně se to nelíbí“. |
 | [Scrum](../Scrum/) | Review bývá součástí **[Definice Hotovo](../Scrum/#inkrement-a-definice-hotovo)** — položka není hotová, dokud jí neprošla. |
+| [Kanban](../Kanban/) | Čekající review je nejčastější místo, kde se zadrhne tok. Sloupec „review“ s WIP limitem to zviditelní. |
 
 ---
 
