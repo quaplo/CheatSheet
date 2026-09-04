@@ -124,6 +124,8 @@ Aggregate, Entity, Value Object, Domain Event, Bounded Context. Ne úplně „de
 | [Bounded Context](DDD/BoundedContext/) | Strategický | Model platí jen uvnitř hranice; totéž slovo smí za ní znamenat jinou věc | ●●●●○ |
 | [Context Map](DDD/ContextMap/) | Strategický | Vztahy mezi kontexty — kdo se komu musí přizpůsobit | ●●●○○ |
 | [Anticorruption Layer](DDD/AnticorruptionLayer/) | Strategický | Překladová vrstva, která nepustí cizí model do tvojí domény | ●●●○○ |
+| [Cohesive Mechanism](DDD/CohesiveMechanism/) | Složitý výpočet do vlastního rámce — doména vyjadřuje „co“, mechanismus „jak“ | ●●●○○ |
+| [Segregated Core](DDD/SegregatedCore/) | Jádro do vlastního balíčku; závislosti míří jen dovnitř | ●●●●○ |
 
 <sub>Taktické i strategické stavební bloky: [DDD/README.md](DDD/)</sub>
 
@@ -264,6 +266,12 @@ Obrácený rejstřík: začni u toho, co tě pálí.
 | Objekt jde vytvořit v neplatném stavu, protože validace je jinde než konstruktor | [Factory Method](GoF/Creational/FactoryMethod/) |
 | Objekt, který se mění, zná mailer, cache i statistiky | [Observer](GoF/Behavioral/Observer/) |
 | Nevím, jestli použít Observer, nebo doménovou událost | [Observer](GoF/Behavioral/Observer/#observer-nebo-doménová-událost) |
+| Ve třídě je víc metod o algoritmu než o doméně | [Cohesive Mechanism](DDD/CohesiveMechanism/) |
+| Problém má jméno v matematice — bin packing, hledání cesty, rozvrh | [Cohesive Mechanism](DDD/CohesiveMechanism/#watch-for-formalisms) |
+| Konstruktor entity si žádá mailer, převodník měn a číselník | [Segregated Core](DDD/SegregatedCore/) |
+| Test jednoho pravidla potřebuje sestavit půl aplikace | [Segregated Core](DDD/SegregatedCore/) |
+| Zrušení objednávky v testu odešle e-mail | [Segregated Core](DDD/SegregatedCore/#kam-se-poděly-ty-odstraněné-metody) |
+| Nikdo nepozná, která část modelu je ta důležitá | [Segregated Core](DDD/SegregatedCore/) |
 | V kódu mám `Config::getInstance()` a nejde napsat test s jinou konfigurací | [Singleton](GoF/Creational/Singleton/) |
 | Testy mi selhávají podle pořadí, ve kterém běží | [Singleton](GoF/Creational/Singleton/) |
 | Třída má prázdný konstruktor, ale závislosti si tahá zevnitř metod | [Singleton](GoF/Creational/Singleton/) |

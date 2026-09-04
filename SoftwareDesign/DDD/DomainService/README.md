@@ -345,6 +345,7 @@ Use-case načítá, ukládá a publikuje. **Rozhoduje doménová služba.**
 | [Service Composition](../../Architecture/ServiceComposition/) | **Kam patří to, co doménová služba nesmí** — koordinace napříč kontexty. Volá jen jejich veřejné use-case. |
 | [Saga](../../Architecture/Saga/) | Když ta koordinace navíc **mění stav** ve víc kontextech a potřebuje kompenzace. |
 | [Strategy](../../GoF/Behavioral/Strategy/) | Doménová služba s víc variantami výpočtu je Strategy — jen pojmenovaná doménově. |
+| [Cohesive Mechanism](../CohesiveMechanism/) (DDD) | **Nejčastější záměna.** Domain service obsahuje doménové rozhodnutí, mechanismus výpočet — a ten nezná doménové typy. |
 
 ---
 

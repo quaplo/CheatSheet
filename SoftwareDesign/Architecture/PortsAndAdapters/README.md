@@ -374,6 +374,7 @@ Core\Port\Driven\OrderRepository: '@Adapter\Driven\Persistence\DoctrineOrderRepo
 | [CQRS](../CQRS/) | Vkládá se dovnitř téhle vrstvy: zápis jde přes port do domény, čtení může mít vlastní, kratší cestu. |
 | [Anticorruption Layer](../../DDD/AnticorruptionLayer/) (DDD) | Řízený adaptér s ambicí navíc: nejen překládá protokol, ale brání cizímu **modelu** prosáknout do domény. Kdy se vyplatí, řeší [Context Map](../../DDD/ContextMap/). |
 | [Bounded Context](../../DDD/BoundedContext/) (DDD) | Hranice kontextu je hranice aplikace, kolem které hexagon staví porty. Bounded Context říká **kudy** ta hranice vede, hexagon **jak** ji držet. |
+| [Segregated Core](../../DDD/SegregatedCore/) (DDD) | Táž myšlenka o patro níž — závislosti míří dovnitř, jen uvnitř modelu místo vůči okolnímu světu. |
 
 ---
 

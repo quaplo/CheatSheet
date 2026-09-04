@@ -279,6 +279,7 @@ Modelu se snadno stane, že do sebe nasaje celou aplikaci — je po ruce a nic m
 | [Service Layer](../ServiceLayer/) (PoEAA) | Kam patří logika, která přerostla jeden model — orchestrace přes víc modelů do modelu nepatří. |
 | [Specification](../../DDD/Specification/) (DDD) | Query scope je jeho zjednodušená obdoba: pojmenovaná podmínka, ale vyhodnocená v SQL. |
 | [CQRS](../../Architecture/CQRS/) | Čtecí strana Active Recordu sedí dobře; zápisová narazí první. |
+| [Segregated Core](../../DDD/SegregatedCore/) (DDD) | Protipól: tam se jádro odděluje do vlastního balíčku, tady se doména záměrně tvaruje podle tabulky. |
 
 ---
 

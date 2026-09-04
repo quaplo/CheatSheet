@@ -39,6 +39,18 @@ U strategických vzorů se ukázalo, že demo smysl má — jen jiné: [Bounded 
 | [**Anticorruption Layer**](AnticorruptionLayer/) | Překladová vrstva chránící model před cizím | ●●●○○ | ✅ |
 | Ubiquitous Language | Jeden slovník pro doménové experty i kód | | ⬜ |
 
+### Destilace
+
+Kapitola 15 knihy — jak z modelu vydestilovat to, co je na něm cenné, a zbavit to všeho ostatního. **Pořadí je záměrné:** nejdřív vytěsni obecné části a výpočty, teprve pak sahej po strukturálním řezu.
+
+| Pattern | K čemu | Obtížnost | Stav |
+| ------- | ------ | --------- | ---- |
+| Core Domain | Pojmenování toho, čím se produkt liší od ostatních | | ⬜ |
+| Generic Subdomains | Vytěsnění obecných částí, které nejsou tvoje specialita | | ⬜ |
+| [**Cohesive Mechanism**](CohesiveMechanism/) | Složitý výpočet do vlastního rámce — doména říká „co“, mechanismus řeší „jak“ | ●●●○○ | ✅ |
+| [**Segregated Core**](SegregatedCore/) | Strukturální oddělení jádra od podpůrných částí | ●●●●○ | ✅ |
+| Abstract Core | Nejdůležitější pojmy jako abstrakce ve vlastním modulu | | ⬜ |
+
 <sub>⬜ plánováno · 🚧 rozpracováno · ✅ hotovo</sub>
 
 ## Zdroje

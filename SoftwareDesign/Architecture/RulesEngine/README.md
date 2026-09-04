@@ -450,6 +450,7 @@ foreach ($result->used() as $rule) {
 | **Interpreter** (GoF) | Kam se dostaneš, když konfigurační slovník poroste. Užitečné hlavně jako varování. |
 | [Value Object](../../DDD/ValueObject/) | `DiscountContext` i `DiscountResult` jsou hodnoty — neměnné, bez identity. |
 | [Command](../../GoF/Behavioral/Command/) (GoF) | Když důsledkem není hodnota, ale akce, přiblíží se pravidlo dvojici podmínka + příkaz. |
+| [Cohesive Mechanism](../../DDD/CohesiveMechanism/) (DDD) | Rules engine **je** soudržný mechanismus — jen natolik svébytný, že má vlastní dokument. |
 
 ---
 

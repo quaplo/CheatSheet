@@ -379,6 +379,7 @@ $matching = array_filter(
 | [Iterator](../../GoF/Behavioral/Iterator/) (GoF) | Průchod, kterému se specifikace předá jako filtr — dokud jsou data v paměti. Nad velkým objemem patří podmínka do `WHERE`. |
 | [First Class Collection](../../ObjectCalisthenics/FirstClassCollection/) | Přirozený příjemce specifikace: `$items->satisfying($spec)` místo `array_filter` venku. |
 | [Active Record](../../PoEAA/ActiveRecord/) (PoEAA) | Query scope je jeho zjednodušená obdoba: pojmenovaná podmínka, ale vyhodnocená rovnou v SQL. |
+| [Cohesive Mechanism](../CohesiveMechanism/) (DDD) | Když je „mechanismus“ jen podmínka ano/ne, je to specifikace a nepotřebuje vlastní rámec. |
 
 ---
 

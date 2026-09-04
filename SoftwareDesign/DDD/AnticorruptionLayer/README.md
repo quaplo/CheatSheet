@@ -362,6 +362,7 @@ Antikorupční vrstva je jediné místo, které cizí systém opravdu zná — t
 | [Repository](../../PoEAA/Repository/) | Když cizí systém slouží jako úložiště, vrstva se často schová právě za repository. |
 | [Value Object](../ValueObject/) | Typický výstup překladu — `SupplierId`, částka v haléřích, `DateTimeImmutable`. |
 | [Data Mapper](../../PoEAA/DataMapper/) | Táž myšlenka o patro níž: tam se překládá cizí **schéma**, tady cizí **model**. |
+| [Segregated Core](../SegregatedCore/) (DDD) | Chrání model před **vlastními** podpůrnými částmi; anticorruption layer před cizím modelem. |
 
 ---
 

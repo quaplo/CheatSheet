@@ -244,6 +244,7 @@ Nový dopravce = nová třída a jeden řádek v registraci. `ShippingCalculator
 | [Adapter](../../Structural/Adapter/) | Za adaptéry se cizí dodavatelé stanou zaměnitelnými — a tím i strategiemi. |
 | [Ports & Adapters](../../../Architecture/PortsAndAdapters/) | Port se dvěma implementacemi je z pohledu jádra Strategy. Liší se záměrem: Strategy vybírá algoritmus, port odstiňuje vnější svět. |
 | [Specification](../../../DDD/Specification/) (DDD) | Také zabaluje chování do objektu, ale odpovídá **ano/ne** místo toho, aby něco počítala. Často spolupracují: specifikace rozhodne, která strategie se použije. |
+| [Cohesive Mechanism](../../../DDD/CohesiveMechanism/) (DDD) | Říká **proč a co** vytáhnout z domény; Strategy **jak** to technicky udělat. Rozhraní mechanismu bývá Strategy. |
 
 ---
 

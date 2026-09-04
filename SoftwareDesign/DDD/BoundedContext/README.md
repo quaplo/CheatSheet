@@ -291,6 +291,7 @@ Domluva nestačí; za půl roku tam bude první `use Sales\Customer` uprostřed 
 | [Service Composition](../../Architecture/ServiceComposition/) | Co dělat, když operace dává smysl až složením z víc kontextů — a proč z toho často vzniká nový kontext. |
 | **Soudržnost a provázanost** ([princip](../../Principles/CohesionAndCoupling.md)) | **Totéž v měřítku firmy.** Uvnitř kontextu vysoká soudržnost, mezi kontexty nízká provázanost. |
 | [Value Object](../ValueObject/) | `CustomerId` je hodnota, kterou kontexty sdílejí — a i to je vědomé rozhodnutí. |
+| [Segregated Core](../SegregatedCore/) (DDD) | Jiná hranice: kontext odděluje **různé významy téhož pojmu**, oddělené jádro **důležité od podpůrného** uvnitř jednoho kontextu. |
 
 ---
 
