@@ -298,6 +298,7 @@ Konkrétní vodítko, když si nejsi jistý:
 | [Identity Map](../../PoEAA/IdentityMap/) (PoEAA) | Agregát určuje, co se načítá jako celek — a tím i co v mapě obvykle je. |
 | [Active Record](../../PoEAA/ActiveRecord/) (PoEAA) | Nejostřejší hranice toho vzoru: agregát je celek uložený přes víc tabulek, a to Active Record neumí. |
 | [Segregated Core](../SegregatedCore/) (DDD) | Agregát je hranice konzistence uvnitř jádra; oddělené jádro hranice kolem jádra jako celku. |
+| [Factory](../Factory/) (DDD) | **Jak agregát vzniká** — celý najednou a s vynucenými invarianty, ne skládáním zvenčí. |
 
 ---
 

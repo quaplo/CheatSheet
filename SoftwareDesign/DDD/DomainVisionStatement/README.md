@@ -156,6 +156,7 @@ Tři praktické věci, které rozhodují víc než obsah:
 | [Bounded Context](../BoundedContext/) | Vize může jádro popsat i tam, kde se táhne přes víc kontextů a struktura to neukáže. |
 | [Context Map](../ContextMap/) | Mapa ukazuje vztahy mezi kontexty, vize říká, který z nich nese hodnotu. |
 | [Ubiquitous Language](../) | Vize je první text, ve kterém se jednotný jazyk projeví — nebo se ukáže, že ho tým nemá. |
+| [Ubiquitous Language](../UbiquitousLanguage/) (DDD) | Vize je první text, na kterém se pozná, jestli tým jednotný jazyk má. |
 
 ---
 

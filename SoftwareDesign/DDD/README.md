@@ -25,7 +25,7 @@ U strategických vzorů se ukázalo, že demo smysl má — jen jiné: [Bounded 
 | [**Aggregate**](Aggregate/) | Skupina objektů se společným kořenem a hranicí konzistence | ●●●●○ | ✅ |
 | [Repository](../PoEAA/Repository/) | Kolekce agregátů, za kterou se schová persistence. Evans ho popsal rok po Fowlerovi, proto ho vedeme v [PoEAA](../PoEAA/) — rozdíl obou pojetí je rozebraný tam. | ●●●○○ | ✅ |
 | [**Domain Event**](DomainEvent/) | Fakt, který se v doméně stal a jiné části na něj reagují | ●●●●○ | ✅ |
-| Factory | Vytvoření složitého agregátu v platném stavu | | ⬜ |
+| [**Factory**](Factory/) | Vytvoření celého agregátu najednou, s vynucenými invarianty | ●●○○○ | ✅ |
 | [Application Service](../PoEAA/ServiceLayer/) | Orchestrace jedné operace aplikace. Evans ji popsal rok po Fowlerově *Service Layer*, proto ji vedeme v [PoEAA](../PoEAA/) — rozdíl proti **domain service** je rozebraný tam. | ●●○○○ | ✅ |
 | [**Domain Service**](DomainService/) | Doménová operace, která nepatří žádné entitě | ●●○○○ | ✅ |
 | [**Specification**](Specification/) | Doménové pravidlo vytažené do samostatného objektu | ●●●○○ | ✅ |
@@ -37,7 +37,7 @@ U strategických vzorů se ukázalo, že demo smysl má — jen jiné: [Bounded 
 | [**Bounded Context**](BoundedContext/) | Hranice, uvnitř které mají pojmy jediný význam | ●●●●○ | ✅ |
 | [**Context Map**](ContextMap/) | Vztahy mezi kontexty — kdo se komu přizpůsobuje | ●●●○○ | ✅ |
 | [**Anticorruption Layer**](AnticorruptionLayer/) | Překladová vrstva chránící model před cizím | ●●●○○ | ✅ |
-| Ubiquitous Language | Jeden slovník pro doménové experty i kód | | ⬜ |
+| [**Ubiquitous Language**](UbiquitousLanguage/) | Jeden jazyk pro doménu i kód — základ, na kterém stojí zbytek DDD | ●●●○○ | ✅ |
 
 ### Destilace
 

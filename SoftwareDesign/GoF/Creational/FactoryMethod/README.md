@@ -287,6 +287,7 @@ Pravidlo: **statická továrna smí použít jen to, co dostane v parametrech.**
 | [Strategy](../../Behavioral/Strategy/) | Když jde o výběr implementace podle vstupu, ne o způsob vytvoření. |
 | [Repository](../../../PoEAA/Repository/) | `nextIdentity()` je továrna na identitu — a proto může agregát vzniknout platný ještě před uložením. |
 | **Template Method** (GoF) | GoF Factory Method je jeho speciální případ: kostra v předkovi, jeden krok v potomkovi. |
+| [Factory](../../../DDD/Factory/) (DDD) | **Podobné jméno, jiný problém.** Ten řeší platný stav agregátu, tenhle to, která třída se má vytvořit. |
 
 ---
 

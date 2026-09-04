@@ -120,7 +120,9 @@ Aggregate, Entity, Value Object, Domain Event, Bounded Context. Ne úplně „de
 | [Aggregate](DDD/Aggregate/) | Taktický | Hranice konzistence — jediný vstup a pravidla platná pro celek | ●●●●○ |
 | [Domain Event](DDD/DomainEvent/) | Taktický | Fakt, který se stal — reakce se přihlašují samy, use-case o nich neví | ●●●●○ |
 | [Domain Service](DDD/DomainService/) | Taktický | Doménová operace, která nepatří žádné entitě — bez transakcí a databáze | ●●○○○ |
+| [Factory](DDD/Factory/) | Agregát vzniká celý a platný; `new` se schová za pojmenovanou metodu | ●●○○○ |
 | [Specification](DDD/Specification/) | Taktický | Doménové pravidlo jako objekt — pojmenovatelné, testovatelné, skládatelné | ●●●○○ |
+| [Ubiquitous Language](DDD/UbiquitousLanguage/) | Jeden jazyk pro doménu i kód — základ, bez kterého zbude jen sada vzorů | ●●●○○ |
 | [Bounded Context](DDD/BoundedContext/) | Strategický | Model platí jen uvnitř hranice; totéž slovo smí za ní znamenat jinou věc | ●●●●○ |
 | [Context Map](DDD/ContextMap/) | Strategický | Vztahy mezi kontexty — kdo se komu musí přizpůsobit | ●●●○○ |
 | [Anticorruption Layer](DDD/AnticorruptionLayer/) | Strategický | Překladová vrstva, která nepustí cizí model do tvojí domény | ●●●○○ |
@@ -276,6 +278,12 @@ Obrácený rejstřík: začni u toho, co tě pálí.
 | Nevím, jestli tu část stavět sami, nebo koupit | [Generic Subdomains](DDD/GenericSubdomains/#čtyři-způsoby-jak-obecnou-podoblast-pořídit) |
 | Píšeme si vlastní fakturaci, protože „to potřebujeme trochu jinak“ | [Generic Subdomains](DDD/GenericSubdomains/) |
 | Modul na fakturaci je plný naší terminologie a nejde vyměnit | [Generic Subdomains](DDD/GenericSubdomains/#leave-no-trace-of-your-specialties) |
+| Doménový expert řekne pojem a já si ho v hlavě překládám | [Ubiquitous Language](DDD/UbiquitousLanguage/) |
+| Pro jednu věc má kód tři různá jména a nevím, jestli jsou to tři věci | [Ubiquitous Language](DDD/UbiquitousLanguage/) |
+| V kódu jsou pojmy jako `process`, `handle`, `manage` | [Ubiquitous Language](DDD/UbiquitousLanguage/#pojmy-které-vznikly-u-klávesnice) |
+| Volající počítá součet položek a předává ho do konstruktoru | [Factory](DDD/Factory/) |
+| Jde vytvořit objekt, který je zjevně neplatný, a nic to nezachytí | [Factory](DDD/Factory/) |
+| Nevím, jestli `new Order(...)` znamená vznik, nebo načtení z databáze | [Factory](DDD/Factory/#vytvoření-není-rekonstrukce) |
 | Vysvětlit, o co v projektu jde, mi trvá pokaždé půl hodiny | [Domain Vision Statement](DDD/DomainVisionStatement/) |
 | Pět lidí označí za jádro pět různých sad tříd | [Highlighted Core](DDD/HighlightedCore/) |
 | Při review nevím, jestli je tahle změna velká věc, nebo detail | [Highlighted Core](DDD/HighlightedCore/#nejpraktičtější-důsledek-co-s-tím-při-změně) |

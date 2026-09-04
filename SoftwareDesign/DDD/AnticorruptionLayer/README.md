@@ -364,6 +364,7 @@ Antikorupční vrstva je jediné místo, které cizí systém opravdu zná — t
 | [Data Mapper](../../PoEAA/DataMapper/) | Táž myšlenka o patro níž: tam se překládá cizí **schéma**, tady cizí **model**. |
 | [Segregated Core](../SegregatedCore/) (DDD) | Chrání model před **vlastními** podpůrnými částmi; anticorruption layer před cizím modelem. |
 | [Generic Subdomains](../GenericSubdomains/) (DDD) | Nejčastější důvod, proč vrstvu stavíš — hotové řešení pro obecnou podoblast si nese vlastní model. |
+| [Ubiquitous Language](../UbiquitousLanguage/) (DDD) | Vrstva je místo, kde překlad mezi jazyky legitimně probíhá; uvnitř kontextu se překládat nesmí. |
 
 ---
 

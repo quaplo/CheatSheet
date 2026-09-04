@@ -272,6 +272,7 @@ Ve druhém případě každá metoda vrací **hotový a platný produkt**, ne ro
 | **Abstract Factory** (GoF) | Vyrábí rodiny objektů; builder jeden složitý. |
 | **Fluent Interface** (Fowler) | Zápis, který builder obvykle používá — ale sám o sobě to není tenhle vzor. |
 | [Specification](../../../DDD/Specification/) | Skládání pravidel přes `and()`/`or()` je fluent, ne builder: každý krok vrací hotovou specifikaci. |
+| [Factory](../../../DDD/Factory/) (DDD) | Builder sbírá vstupy, továrna z nich vyrobí agregát jedním krokem. Evans tu kombinaci zmiňuje přímo. |
 
 ---
 

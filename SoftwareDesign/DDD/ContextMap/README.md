@@ -240,6 +240,7 @@ Existuje na to i hotový nástroj — **[Context Mapper](https://contextmapper.o
 | [Domain Event](../DomainEvent/) | Integrační události **jsou** Published Language. Doménové události přes hranici nikdy neposílej. |
 | [Service Composition](../../Architecture/ServiceComposition/) | Vztah k víc kontextům naráz — do mapy patří stejně jako ostatní. |
 | [Core Domain](../CoreDomain/) (DDD) | Na mapě bývá jádro to, čemu se ostatní kontexty přizpůsobují. |
+| [Ubiquitous Language](../UbiquitousLanguage/) (DDD) | Mapa ukazuje, kde se jazyky potkávají — a tedy kde se musí překládat. |
 
 ---
 
