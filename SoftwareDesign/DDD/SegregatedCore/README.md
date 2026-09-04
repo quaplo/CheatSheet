@@ -286,6 +286,7 @@ Nejtěžší část a nejde ji odvodit z kódu. Pomůcka, která funguje: **zept
 | [Domain Service](../DomainService/) | Doménová logika, která nepatří entitě — ale pořád patří do jádra. |
 | [Anticorruption Layer](../AnticorruptionLayer/) | Chrání model před cizím modelem; oddělené jádro před vlastními podpůrnými částmi. |
 | [Active Record](../../PoEAA/ActiveRecord/) | Protipól: tam se doména záměrně tvaruje podle tabulky a žádné oddělené jádro nevzniká. |
+| [Core Domain](../CoreDomain/) · [Generic Subdomains](../GenericSubdomains/) (DDD) | První dva kroky destilace. Evans doporučuje sáhnout po strukturálním řezu **až po nich**. |
 
 ---
 

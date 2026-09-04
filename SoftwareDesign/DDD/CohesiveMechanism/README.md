@@ -257,6 +257,7 @@ Předposlední řádek je nejzákeřnější, protože vypadá nevinně. Ve chv�
 | [Rules Engine](../../Architecture/RulesEngine/) | Konkrétní mechanismus pro vyhodnocování pravidel; má vlastní dokument, protože si nese víc rozhodnutí. |
 | [Value Object](../ValueObject/) | Vstupy a výstupy mechanismu bývají hodnoty — neměnné, bez identity. |
 | [Specification](../Specification/) | Když je „mechanismus" jen podmínka ano/ne, je to specifikace a nepotřebuje rámec. |
+| [Core Domain](../CoreDomain/) (DDD) | Předpoklad celé destilace — bez pojmenovaného jádra není podle čeho poznat, co vytěsnit. |
 
 ---
 

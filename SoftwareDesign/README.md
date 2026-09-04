@@ -124,6 +124,8 @@ Aggregate, Entity, Value Object, Domain Event, Bounded Context. Ne úplně „de
 | [Bounded Context](DDD/BoundedContext/) | Strategický | Model platí jen uvnitř hranice; totéž slovo smí za ní znamenat jinou věc | ●●●●○ |
 | [Context Map](DDD/ContextMap/) | Strategický | Vztahy mezi kontexty — kdo se komu musí přizpůsobit | ●●●○○ |
 | [Anticorruption Layer](DDD/AnticorruptionLayer/) | Strategický | Překladová vrstva, která nepustí cizí model do tvojí domény | ●●●○○ |
+| [Core Domain](DDD/CoreDomain/) | Která část systému firmu živí — a proč na ní nemají dělat ti nejlepší jen náhodou | ●●○○○ |
+| [Generic Subdomains](DDD/GenericSubdomains/) | Co jádrem není: vytěsnit, nebo rovnou koupit | ●●○○○ |
 | [Cohesive Mechanism](DDD/CohesiveMechanism/) | Složitý výpočet do vlastního rámce — doména vyjadřuje „co“, mechanismus „jak“ | ●●●○○ |
 | [Segregated Core](DDD/SegregatedCore/) | Jádro do vlastního balíčku; závislosti míří jen dovnitř | ●●●●○ |
 
@@ -266,6 +268,11 @@ Obrácený rejstřík: začni u toho, co tě pálí.
 | Objekt jde vytvořit v neplatném stavu, protože validace je jinde než konstruktor | [Factory Method](GoF/Creational/FactoryMethod/) |
 | Objekt, který se mění, zná mailer, cache i statistiky | [Observer](GoF/Behavioral/Observer/) |
 | Nevím, jestli použít Observer, nebo doménovou událost | [Observer](GoF/Behavioral/Observer/#observer-nebo-doménová-událost) |
+| Na otázku „čím se lišíme od konkurence“ dostanu v týmu pět odpovědí | [Core Domain](DDD/CoreDomain/) |
+| Nejzkušenější člověk v týmu ladí cache vrstvu a nasazování | [Core Domain](DDD/CoreDomain/#problém) |
+| Nevím, jestli tu část stavět sami, nebo koupit | [Generic Subdomains](DDD/GenericSubdomains/#čtyři-způsoby-jak-obecnou-podoblast-pořídit) |
+| Píšeme si vlastní fakturaci, protože „to potřebujeme trochu jinak“ | [Generic Subdomains](DDD/GenericSubdomains/) |
+| Modul na fakturaci je plný naší terminologie a nejde vyměnit | [Generic Subdomains](DDD/GenericSubdomains/#leave-no-trace-of-your-specialties) |
 | Ve třídě je víc metod o algoritmu než o doméně | [Cohesive Mechanism](DDD/CohesiveMechanism/) |
 | Problém má jméno v matematice — bin packing, hledání cesty, rozvrh | [Cohesive Mechanism](DDD/CohesiveMechanism/#watch-for-formalisms) |
 | Konstruktor entity si žádá mailer, převodník měn a číselník | [Segregated Core](DDD/SegregatedCore/) |

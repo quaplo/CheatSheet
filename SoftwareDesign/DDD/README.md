@@ -45,8 +45,8 @@ Kapitola 15 knihy — jak z modelu vydestilovat to, co je na něm cenné, a zbav
 
 | Pattern | K čemu | Obtížnost | Stav |
 | ------- | ------ | --------- | ---- |
-| Core Domain | Pojmenování toho, čím se produkt liší od ostatních | | ⬜ |
-| Generic Subdomains | Vytěsnění obecných částí, které nejsou tvoje specialita | | ⬜ |
+| [**Core Domain**](CoreDomain/) | Pojmenování toho, čím se produkt liší — a kam tedy patří nejlepší lidé | ●●○○○ | ✅ |
+| [**Generic Subdomains**](GenericSubdomains/) | Vytěsnění obecných částí; nejdřív zvaž, jestli to nejde koupit | ●●○○○ | ✅ |
 | [**Cohesive Mechanism**](CohesiveMechanism/) | Složitý výpočet do vlastního rámce — doména říká „co“, mechanismus řeší „jak“ | ●●●○○ | ✅ |
 | [**Segregated Core**](SegregatedCore/) | Strukturální oddělení jádra od podpůrných částí | ●●●●○ | ✅ |
 | Abstract Core | Nejdůležitější pojmy jako abstrakce ve vlastním modulu | | ⬜ |
