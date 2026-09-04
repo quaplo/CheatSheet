@@ -201,6 +201,7 @@ Poslední řádek je důležitý: **generickou podoblast si pouštíš do systé
 | [Context Map](../ContextMap/) | Mapa vztahů mezi kontexty; jádro bývá to, čemu se ostatní přizpůsobují. |
 | [Anticorruption Layer](../AnticorruptionLayer/) | Čím se hotové generické řešení pouští do systému, aniž by prosáklo do modelu. |
 | [Active Record](../../PoEAA/ActiveRecord/) | Legitimní volba pro supporting podoblasti — tam, kde model je tabulka. |
+| [Domain Vision Statement](../DomainVisionStatement/) · [Highlighted Core](../HighlightedCore/) (DDD) | Dva nejlevnější způsoby, jak toto rozhodnutí zviditelnit — stránka textu a značky v kódu. |
 
 ---
 

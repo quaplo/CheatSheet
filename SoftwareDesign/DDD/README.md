@@ -41,15 +41,17 @@ U strategických vzorů se ukázalo, že demo smysl má — jen jiné: [Bounded 
 
 ### Destilace
 
-Kapitola 15 knihy — jak z modelu vydestilovat to, co je na něm cenné, a zbavit to všeho ostatního. **Pořadí je záměrné:** nejdřív vytěsni obecné části a výpočty, teprve pak sahej po strukturálním řezu.
+Kapitola 15 knihy — jak z modelu vydestilovat to, co je na něm cenné, a zbavit to všeho ostatního. **Pořadí v tabulce je Evansovo a je záměrné:** první vzory jsou levné (rozhodnutí, stránka textu, značky), poslední jsou zásahy do celého modelu. Sahej po nich v tomhle pořadí — a jen dokud to předchozí nestačí.
 
 | Pattern | K čemu | Obtížnost | Stav |
 | ------- | ------ | --------- | ---- |
 | [**Core Domain**](CoreDomain/) | Pojmenování toho, čím se produkt liší — a kam tedy patří nejlepší lidé | ●●○○○ | ✅ |
 | [**Generic Subdomains**](GenericSubdomains/) | Vytěsnění obecných částí; nejdřív zvaž, jestli to nejde koupit | ●●○○○ | ✅ |
+| [**Domain Vision Statement**](DomainVisionStatement/) | Jedna stránka o tom, co je jádro a jakou hodnotu přináší | ●○○○○ | ✅ |
+| [**Highlighted Core**](HighlightedCore/) | Označení prvků jádra přímo v modelu, ať je to poznat na první pohled | ●●○○○ | ✅ |
 | [**Cohesive Mechanism**](CohesiveMechanism/) | Složitý výpočet do vlastního rámce — doména říká „co“, mechanismus řeší „jak“ | ●●●○○ | ✅ |
 | [**Segregated Core**](SegregatedCore/) | Strukturální oddělení jádra od podpůrných částí | ●●●●○ | ✅ |
-| Abstract Core | Nejdůležitější pojmy jako abstrakce ve vlastním modulu | | ⬜ |
+| [**Abstract Core**](AbstractCore/) | Abstrakce vyjadřující interakci mezi moduly, ve vlastním modulu | ●●●●○ | ✅ |
 
 <sub>⬜ plánováno · 🚧 rozpracováno · ✅ hotovo</sub>
 

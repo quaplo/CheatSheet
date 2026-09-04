@@ -258,6 +258,7 @@ Předposlední řádek je nejzákeřnější, protože vypadá nevinně. Ve chv�
 | [Value Object](../ValueObject/) | Vstupy a výstupy mechanismu bývají hodnoty — neměnné, bez identity. |
 | [Specification](../Specification/) | Když je „mechanismus" jen podmínka ano/ne, je to specifikace a nepotřebuje rámec. |
 | [Core Domain](../CoreDomain/) (DDD) | Předpoklad celé destilace — bez pojmenovaného jádra není podle čeho poznat, co vytěsnit. |
+| [Abstract Core](../AbstractCore/) (DDD) | Také vytahuje do vlastního modulu — ale abstrakce modelu, ne výpočty. |
 
 ---
 

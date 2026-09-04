@@ -188,6 +188,7 @@ Předposlední řádek stojí za rozvedení. Zvyk, že junior je jen recenzovan�
 | [Scrum](../Scrum/) | Review bývá součástí **[Definice Hotovo](../Scrum/#inkrement-a-definice-hotovo)** — položka není hotová, dokud jí neprošla. |
 | [Extreme Programming](../ExtremeProgramming/) | Párové programování je táž myšlenka v jiné formě — kontrola průběžně místo na konci. |
 | [Kanban](../Kanban/) | Čekající review je nejčastější místo, kde se zadrhne tok. Sloupec „review“ s WIP limitem to zviditelní. |
+| [Highlighted Core](../../SoftwareDesign/DDD/HighlightedCore/) (DDD) | Značky jádra dávají odpověď na otázku, kterou review řeší pořád: **je tahle změna velká věc, nebo detail?** |
 
 ---
 

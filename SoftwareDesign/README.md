@@ -126,8 +126,11 @@ Aggregate, Entity, Value Object, Domain Event, Bounded Context. Ne úplně „de
 | [Anticorruption Layer](DDD/AnticorruptionLayer/) | Strategický | Překladová vrstva, která nepustí cizí model do tvojí domény | ●●●○○ |
 | [Core Domain](DDD/CoreDomain/) | Která část systému firmu živí — a proč na ní nemají dělat ti nejlepší jen náhodou | ●●○○○ |
 | [Generic Subdomains](DDD/GenericSubdomains/) | Co jádrem není: vytěsnit, nebo rovnou koupit | ●●○○○ |
+| [Domain Vision Statement](DDD/DomainVisionStatement/) | Jedna stránka o tom, čím se produkt liší — nejlevnější vzor v katalogu | ●○○○○ |
+| [Highlighted Core](DDD/HighlightedCore/) | Označení jádra v kódu; podle značek se pozná, kdy je změna velká věc | ●●○○○ |
 | [Cohesive Mechanism](DDD/CohesiveMechanism/) | Složitý výpočet do vlastního rámce — doména vyjadřuje „co“, mechanismus „jak“ | ●●●○○ |
 | [Segregated Core](DDD/SegregatedCore/) | Jádro do vlastního balíčku; závislosti míří jen dovnitř | ●●●●○ |
+| [Abstract Core](DDD/AbstractCore/) | Abstrakce mezi moduly ve vlastním modulu; vazby přestanou růst kvadraticky | ●●●●○ |
 
 <sub>Taktické i strategické stavební bloky: [DDD/README.md](DDD/)</sub>
 
@@ -273,6 +276,11 @@ Obrácený rejstřík: začni u toho, co tě pálí.
 | Nevím, jestli tu část stavět sami, nebo koupit | [Generic Subdomains](DDD/GenericSubdomains/#čtyři-způsoby-jak-obecnou-podoblast-pořídit) |
 | Píšeme si vlastní fakturaci, protože „to potřebujeme trochu jinak“ | [Generic Subdomains](DDD/GenericSubdomains/) |
 | Modul na fakturaci je plný naší terminologie a nejde vyměnit | [Generic Subdomains](DDD/GenericSubdomains/#leave-no-trace-of-your-specialties) |
+| Vysvětlit, o co v projektu jde, mi trvá pokaždé půl hodiny | [Domain Vision Statement](DDD/DomainVisionStatement/) |
+| Pět lidí označí za jádro pět různých sad tříd | [Highlighted Core](DDD/HighlightedCore/) |
+| Při review nevím, jestli je tahle změna velká věc, nebo detail | [Highlighted Core](DDD/HighlightedCore/#nejpraktičtější-důsledek-co-s-tím-při-změně) |
+| Přidání čtvrtého typu znamená sáhnout do tří existujících modulů | [Abstract Core](DDD/AbstractCore/) |
+| Model je rozdělený do modulů, ale každý zná všechny ostatní | [Abstract Core](DDD/AbstractCore/) |
 | Ve třídě je víc metod o algoritmu než o doméně | [Cohesive Mechanism](DDD/CohesiveMechanism/) |
 | Problém má jméno v matematice — bin packing, hledání cesty, rozvrh | [Cohesive Mechanism](DDD/CohesiveMechanism/#watch-for-formalisms) |
 | Konstruktor entity si žádá mailer, převodník měn a číselník | [Segregated Core](DDD/SegregatedCore/) |

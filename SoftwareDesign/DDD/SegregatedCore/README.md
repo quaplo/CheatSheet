@@ -287,6 +287,8 @@ Nejtěžší část a nejde ji odvodit z kódu. Pomůcka, která funguje: **zept
 | [Anticorruption Layer](../AnticorruptionLayer/) | Chrání model před cizím modelem; oddělené jádro před vlastními podpůrnými částmi. |
 | [Active Record](../../PoEAA/ActiveRecord/) | Protipól: tam se doména záměrně tvaruje podle tabulky a žádné oddělené jádro nevzniká. |
 | [Core Domain](../CoreDomain/) · [Generic Subdomains](../GenericSubdomains/) (DDD) | První dva kroky destilace. Evans doporučuje sáhnout po strukturálním řezu **až po nich**. |
+| [Highlighted Core](../HighlightedCore/) (DDD) | **Levnější krok před tímhle.** Evans: strukturální změna je ideál, ale těžko se dělá bez toho přehledu, který týmu chybí — a ten dá právě zvýraznění. |
+| [Abstract Core](../AbstractCore/) (DDD) | Následující krok: když je i oddělené jádro tak velké, že se v něm ztrácí obraz celku. |
 
 ---
 
