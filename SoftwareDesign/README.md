@@ -35,6 +35,7 @@ Patterny jsou konkrétní řešení; **principy jsou měřítko, podle kterého 
 | [**SOLID**](Principles/SOLID.md) | Jak rozdělit odpovědnosti — SRP, OCP, LSP, ISP, DIP | ✅ |
 | [**Jednoduchost**](Principles/Simplicity.md) | Kolik kódu psát a kdy — KISS, YAGNI, DRY, pravidlo tří | ✅ |
 | [**Objektový návrh**](Principles/ObjectDesign.md) | Jak spolu objekty mluví — Tell Don't Ask, Demeter, kompozice před dědičností, CQS, Fail Fast | ✅ |
+| [**Conwayův zákon**](Principles/ConwaysLaw.md) | Architektura kopíruje komunikační strukturu organizace — pozorování, ne rada | ✅ |
 
 <sub>Rozcestník i s vysvětlením členění: [Principles/README.md](Principles/)</sub>
 

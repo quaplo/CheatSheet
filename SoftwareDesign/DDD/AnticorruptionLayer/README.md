@@ -365,6 +365,7 @@ Antikorupční vrstva je jediné místo, které cizí systém opravdu zná — t
 | [Segregated Core](../SegregatedCore/) (DDD) | Chrání model před **vlastními** podpůrnými částmi; anticorruption layer před cizím modelem. |
 | [Generic Subdomains](../GenericSubdomains/) (DDD) | Nejčastější důvod, proč vrstvu stavíš — hotové řešení pro obecnou podoblast si nese vlastní model. |
 | [Ubiquitous Language](../UbiquitousLanguage/) (DDD) | Vrstva je místo, kde překlad mezi jazyky legitimně probíhá; uvnitř kontextu se překládat nesmí. |
+| [Conwayův zákon](../../Principles/ConwaysLaw.md) | Vrstva vzniká typicky tam, kde je organizační hranice — jiný tým, jiná firma, jiný dodavatel. |
 
 ---
 

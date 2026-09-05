@@ -189,6 +189,7 @@ Předposlední řádek stojí za rozvedení. Zvyk, že junior je jen recenzovan�
 | [Extreme Programming](../ExtremeProgramming/) | Párové programování je táž myšlenka v jiné formě — kontrola průběžně místo na konci. |
 | [Kanban](../Kanban/) | Čekající review je nejčastější místo, kde se zadrhne tok. Sloupec „review“ s WIP limitem to zviditelní. |
 | [Highlighted Core](../../SoftwareDesign/DDD/HighlightedCore/) (DDD) | Značky jádra dávají odpověď na otázku, kterou review řeší pořád: **je tahle změna velká věc, nebo detail?** |
+| [Conwayův zákon](../../SoftwareDesign/Principles/ConwaysLaw.md) | Kdo koho recenzuje, **je** komunikační struktura — a ta podle zákona formuje výslednou architekturu. |
 
 ---
 

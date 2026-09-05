@@ -319,6 +319,7 @@ Nedá se udělat přepnutím — chybějící předpoklady je potřeba doplnit *
 | [Extreme Programming](../../Processes/ExtremeProgramming/) (proces) | **Přímý předchůdce.** Continuous Integration, Single Code Base a Daily Deployment popsal Kent Beck už v roce 1999. |
 | [GitLab Flow](../GitLabFlow/) | **Sdílí pravidlo upstream first** — oprava jde nejdřív do hlavní větve, teprve pak do vydání. Na rozdíl od tohohle modelu ale připouští výjimku u spěchajícího hotfixu. |
 | [OneFlow](../OneFlow/) | Míří opačným směrem — k plánovaným vydáním. Sdílí ale důraz na krátké větve a čitelnou historii. |
+| [Conwayův zákon](../../SoftwareDesign/Principles/ConwaysLaw.md) (princip) | Model větvení je taky komunikační struktura. Tenhle předpokládá tým, který se domluví během hodin. |
 
 ---
 

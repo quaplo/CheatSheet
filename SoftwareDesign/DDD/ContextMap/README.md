@@ -241,6 +241,7 @@ Existuje na to i hotový nástroj — **[Context Mapper](https://contextmapper.o
 | [Service Composition](../../Architecture/ServiceComposition/) | Vztah k víc kontextům naráz — do mapy patří stejně jako ostatní. |
 | [Core Domain](../CoreDomain/) (DDD) | Na mapě bývá jádro to, čemu se ostatní kontexty přizpůsobují. |
 | [Ubiquitous Language](../UbiquitousLanguage/) (DDD) | Mapa ukazuje, kde se jazyky potkávají — a tedy kde se musí překládat. |
+| [Conwayův zákon](../../Principles/ConwaysLaw.md) | Mapa kontextů je z velké části mapou vztahů mezi týmy; vzory jako *Customer/Supplier* popisují lidi, ne kód. |
 
 ---
 

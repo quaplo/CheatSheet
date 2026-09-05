@@ -202,6 +202,7 @@ Poslední řádek je důležitý: **generickou podoblast si pouštíš do systé
 | [Anticorruption Layer](../AnticorruptionLayer/) | Čím se hotové generické řešení pouští do systému, aniž by prosáklo do modelu. |
 | [Active Record](../../PoEAA/ActiveRecord/) | Legitimní volba pro supporting podoblasti — tam, kde model je tabulka. |
 | [Domain Vision Statement](../DomainVisionStatement/) · [Highlighted Core](../HighlightedCore/) (DDD) | Dva nejlevnější způsoby, jak toto rozhodnutí zviditelnit — stránka textu a značky v kódu. |
+| [Conwayův zákon](../../Principles/ConwaysLaw.md) | Evansovo „apply top talent to the core“ je organizační rozhodnutí s architektonickým důsledkem. |
 
 ---
 

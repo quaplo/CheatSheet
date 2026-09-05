@@ -228,6 +228,16 @@ Skoro všude — a to je pointa. Tenhle princip je **cíl**, patterny jsou cesty
 
 ---
 
+## Provázanost mezi týmy
+
+Stupnice výš platí na funkce, třídy i moduly — a **stejně tak na týmy**. To není analogie: provázanost mezi lidmi se do kódu propíše, protože kód píšou oni.
+
+Popisuje to [Conwayův zákon](ConwaysLaw.md): *organizace jsou nuceny produkovat návrhy, které kopírují jejich komunikační strukturu*. Prakticky to znamená, že **hranice, kterou v kódu nakreslíš proti organizaci, se dřív nebo později rozpustí** — a naopak že organizační šev se v kódu objeví, i když jsi ho tam nechtěl.
+
+Když ti tedy nízká provázanost mezi moduly nevychází, stojí za to se podívat, jestli problém není o patro výš.
+
+---
+
 ## Kdy nízká provázanost není cíl
 
 Aby to nebylo dogma: **rozvazování něco stojí** a dá se ho udělat příliš.

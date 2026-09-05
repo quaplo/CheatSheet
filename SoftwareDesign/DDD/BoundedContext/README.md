@@ -106,7 +106,7 @@ Hranice se nevymýšlí u whiteboardu podle databázového schématu. Hledá se 
 | Signál | Co znamená |
 | ------ | ---------- |
 | **Totéž slovo, jiný význam** | Nejsilnější signál vůbec. Kde se význam láme, tam vede hranice. |
-| **Jiný tým** | Conwayův zákon platí. Hranice, která nekopíruje vlastnictví, se neudrží. |
+| **Jiný tým** | [Conwayův zákon](../../Principles/ConwaysLaw.md) platí. Hranice, která nekopíruje vlastnictví, se neudrží. |
 | **Jiný rytmus změn** | Katalog se mění denně, fakturace čtvrtletně. Držet je spolu znamená brzdit jedno druhým. |
 | **Jiný životní cyklus dat** | Příležitost žije týdny, faktura deset let ze zákona. |
 | **Jiná pravidla pro totéž** | „Aktivní zákazník“ znamená v obchodu a v podpoře jiný stav. |
@@ -294,6 +294,7 @@ Domluva nestačí; za půl roku tam bude první `use Sales\Customer` uprostřed 
 | [Segregated Core](../SegregatedCore/) (DDD) | Jiná hranice: kontext odděluje **různé významy téhož pojmu**, oddělené jádro **důležité od podpůrného** uvnitř jednoho kontextu. |
 | [Core Domain](../CoreDomain/) (DDD) | Jiné dělení: kontext podle **jazyka a významu**, jádro podle **hodnoty pro byznys**. Nemusí se krýt. |
 | [Ubiquitous Language](../UbiquitousLanguage/) (DDD) | **Kontext je hranicí platnosti jazyka.** Jeden jazyk uvnitř, překlad na hranici. |
+| [Conwayův zákon](../../Principles/ConwaysLaw.md) | **Hranice kontextu a hranice týmu mají splývat.** Když nesplývají, jedna z nich se rozpustí — a bývá to ta v kódu. |
 
 ---
 

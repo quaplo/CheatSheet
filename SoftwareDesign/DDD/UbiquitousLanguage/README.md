@@ -241,6 +241,7 @@ Jazyk platí **uvnitř jednoho [ohraničeného kontextu](../BoundedContext/)**, 
 | [Entity](../Entity/) · [Value Object](../ValueObject/) · [Aggregate](../Aggregate/) | Stavební bloky, jejichž jména mají pocházet z jazyka, ne z technického žargonu. |
 | [Domain Event](../DomainEvent/) | Události nesou jazyk nejvíc ze všeho — jejich jména čte i byznys. |
 | [Tell, Don't Ask](../../Principles/ObjectDesign.md#tell-dont-ask) | Doménové sloveso místo setteru je totéž pravidlo z druhé strany. |
+| [Conwayův zákon](../../Principles/ConwaysLaw.md) | Jazyk se láme přesně na organizačních hranicích — proto platí uvnitř kontextu, ne napříč firmou. |
 
 ---
 
