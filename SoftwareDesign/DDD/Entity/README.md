@@ -276,6 +276,7 @@ Dvě továrny vedle sebe — `register()` a `reconstitute()` — jsou schválně
 | [Identity Map](../../PoEAA/IdentityMap/) (PoEAA) | Rejstřík, díky kterému je tatáž entita v jedné operaci **jedna instance**. Bez něj `===` nefunguje a změny se tiše přepisují. |
 | [Active Record](../../PoEAA/ActiveRecord/) (PoEAA) | Obojí má identitu, ale entita ji odvozuje od domény, Active Record od primárního klíče. |
 | [Factory](../Factory/) (DDD) | Odkud pochází dvojice „vytvoření vs. rekonstrukce“ a proč má každá vlastní pojmenovanou metodu. |
+| [Replace Primitive with Object](../../../Refactoring/Code/ReplacePrimitiveWithObject/) (refaktoring) | Typ pro identifikátor (`OrderId` místo `string`) je tentýž refaktoring aplikovaný na klíč. |
 
 ---
 

@@ -356,6 +356,7 @@ $order->cancel();
 | [Observer](../Observer/) (GoF) | Oznámení o změně stavu je nejčastější důvod, proč subjekt Observer vůbec dostane. |
 | [Singleton](../../Creational/Singleton/) (GoF) | Bezstavové stavy se dají sdílet jako jediné instance. V PHP to díky enumům řeší jazyk sám — a je to [jediná podoba singletonu, která se doporučuje](../../Creational/Singleton/#enum-jako-jedináček-který-nevadí). |
 | [Replace Conditional with Polymorphism](../../../../Refactoring/Code/ReplaceConditionalWithPolymorphism/) (refaktoring) | **Jak se sem dostat z existujícího kódu.** Když se větví podle stavu objektu, vede tenhle refaktoring sem místo ke Strategy. |
+| [Replace Primitive with Object](../../../../Refactoring/Code/ReplacePrimitiveWithObject/) (refaktoring) | Pod starším názvem *Replace Type Code with Class* vede sem, když má hodnota omezenou sadu variant. |
 
 ---
 

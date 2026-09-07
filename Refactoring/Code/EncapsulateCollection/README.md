@@ -250,6 +250,7 @@ Objednávka a její položky. Demo nejdřív ukáže, že **v PHP vrácené pole
 | [Aggregate](../../../SoftwareDesign/DDD/Aggregate/) (DDD) | Pravidla skupiny bývají invarianty agregátu; kolekce je místo, kde se hlídají. |
 | [Specification](../../../SoftwareDesign/DDD/Specification/) (DDD) | Když filtrů přibývá, předává se kolekci podmínka místo psaní další metody. |
 | [Tell, Don't Ask](../../../SoftwareDesign/Principles/ObjectDesign.md#tell-dont-ask) | Princip, který se tím naplní: neptej se na pole, řekni kolekci, co chceš. |
+| [Replace Primitive with Object](../ReplacePrimitiveWithObject/) | Druhá půlka téhož problému: tam se zapouzdřuje jednotlivá hodnota, tady skupina. |
 
 ---
 
