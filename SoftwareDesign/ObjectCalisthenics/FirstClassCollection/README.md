@@ -322,6 +322,7 @@ foreach ($order->items as $item) {
 | [Composite](../../GoF/Structural/Composite/) (GoF) | Také zachází se skupinou jako s jedním prvkem, ale kvůli **rekurzivní** struktuře; kolekce je plochá — a to je přesně to rozlišení. |
 | [Repository](../../PoEAA/Repository/) (PoEAA) | Přirozený návratový typ repository — místo `array` vrací rovnou doménovou kolekci. |
 | [Specification](../../DDD/Specification/) (DDD) | Filtrovací pravidlo vytažené do samostatného objektu: `$items->satisfying($spec)` místo `array_filter` venku. |
+| [Encapsulate Collection](../../../Refactoring/Code/EncapsulateCollection/) (refaktoring) | **Jak se sem dostat z existujícího kódu** — krok za krokem, včetně toho, proč je důvod v PHP jiný než u Fowlera. |
 
 ---
 

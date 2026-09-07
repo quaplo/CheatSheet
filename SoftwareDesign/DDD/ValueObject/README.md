@@ -494,6 +494,7 @@ echo $address->format();                     // Sokolovská 100 / 186 00 Praha /
 | [Identity Map](../../PoEAA/IdentityMap/) (PoEAA) | Protipól: mapuje objekty **podle identity**, kterou value object nemá. Užitečný test — když nevíš, co je identita objektu, není to entita. |
 | [Active Record](../../PoEAA/ActiveRecord/) (PoEAA) | Špatně se snáší: hodnota bez identity nemá vlastní řádek. Odtud „doména se tvaruje podle tabulky“. |
 | [Cohesive Mechanism](../CohesiveMechanism/) (DDD) | Vstupy a výstupy mechanismu bývají hodnoty — na hranici se předávají objemy a kapacity, ne entity. |
+| [Encapsulate Collection](../../../Refactoring/Code/EncapsulateCollection/) (refaktoring) | Zapouzdřená kolekce **měnitelných** objektů chrání jen zčásti — druhá půlka problému je tenhle vzor. |
 
 ---
 

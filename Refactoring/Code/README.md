@@ -19,7 +19,7 @@ Každý dokument proto končí větou „a teď si přečti \<vzor\>". **Refakto
 | Refaktoring | Poznáš podle | Kam vede | Stav |
 | ----------- | ------------ | -------- | ---- |
 | [**Replace Conditional with Polymorphism**](ReplaceConditionalWithPolymorphism/) | tentýž `switch` na typ na víc místech | [Strategy](../../SoftwareDesign/GoF/Behavioral/Strategy/), [State](../../SoftwareDesign/GoF/Behavioral/State/) | ✅ |
-| Encapsulate Collection | veřejné pole a `array_map` nad ním na pěti místech | [First Class Collection](../../SoftwareDesign/ObjectCalisthenics/FirstClassCollection/) | ⬜ |
+| [**Encapsulate Collection**](EncapsulateCollection/) | `array_map` nad týmž polem na pěti místech; pravidla skupiny nemají kde být | [First Class Collection](../../SoftwareDesign/ObjectCalisthenics/FirstClassCollection/) | ✅ |
 | Replace Primitive with Object | `string $email`, validace na třech místech | [Value Object](../../SoftwareDesign/DDD/ValueObject/) | ⬜ |
 | Extract Class | třída, kterou nejde popsat jednou větou | [SRP](../../SoftwareDesign/Principles/SOLID.md#single-responsibility-principle-srp) | ⬜ |
 | Replace Constructor with Factory Method | `new` s osmi parametry a validací kolem | [Factory](../../SoftwareDesign/DDD/Factory/) | ⬜ |

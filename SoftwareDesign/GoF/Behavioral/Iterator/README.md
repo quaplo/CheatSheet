@@ -277,6 +277,7 @@ public function process(array $items): void
 | [CQRS](../../../Architecture/CQRS/) | Čtecí strana u velkých exportů stojí na líném průchodu. |
 | [Specification](../../../DDD/Specification/) | Filtr, který se předá průchodu — dokud je dat málo. |
 | [Decorator](../../Structural/Decorator/) | SPL iterátory (`LimitIterator`, `CallbackFilterIterator`) jsou dekorátory nad iterátorem. |
+| [Encapsulate Collection](../../../../Refactoring/Code/EncapsulateCollection/) (refaktoring) | Cesta od vydaného pole ke kolekci; `IteratorAggregate` je v něm hned první krok. |
 
 ---
 
