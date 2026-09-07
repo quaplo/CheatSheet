@@ -177,6 +177,7 @@ Dočasné repozitáře po sobě uklidí.
 | [TDD refaktoring](../TddRefactoring/) | Kde se klobouky střídají nejrychleji — a odkud Fowler metaforu uvádí. |
 | [Přípravný refaktoring](../PreparatoryRefactoring/) | Nejzřetelnější použití: připrav místo, pak přidej funkci. |
 | [Litter-pickup](../LitterPickupRefactoring/) | Odkud pochází krok „Get to Green" a proč se uklízí až v zelené. |
+| [Boy scout rule](../BoyScoutRule/) | Druhá norma, kterou smíchaný commit porušuje. |
 | [Comprehension refactoring](../ComprehensionRefactoring/) | Kde se pravidlo poruší nejnenápadněji — nálezem chyby při čtení. |
 | [Plánovaný refaktoring](../PlannedRefactoring/) | Totéž ve velkém: story, která mění chování, není vratná. |
 | [Charakterizační testy](../CharacterizationTests/) | Zelená sada je podmínka celého pravidla. Tohle je způsob, jak ji získat. |

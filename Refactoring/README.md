@@ -29,11 +29,10 @@ Slovo „refaktoring" pokrývá dvě věci, které mají společný cíl a skoro
 
 Pravidlo, které platí ve všech technikách níž, a dokumenty o tom, **kdy** se refaktoring do práce dostává — dohromady pokrývají [sedm workflow](TddRefactoring/#sedm-workflow-a-kde-je-najdeš), která popsal Fowler.
 
-<sub>Hledáš **boy scout rule** nebo **camp site rule**? To je [litter-pickup](LitterPickupRefactoring/) — Fowler i Robert C. Martin popisují touž věc.</sub>
-
 | Technika | K čemu | Náročnost | Stav |
 | -------- | ------ | --------- | ---- |
 | [**Dva klobouky**](TwoHats/) | Pravidlo nad všemi ostatními: buď funkce, nebo refaktoring | ●●○○○ | ✅ |
+| [**Boy scout rule**](BoyScoutRule/) | Norma týmu: odejdi ze souboru čistší, než jsi přišel | ●○○○○ | ✅ |
 | [**TDD refaktoring**](TddRefactoring/) | Třetí krok cyklu červená–zelená–refaktor, kde se dělá návrh | ●●○○○ | ✅ |
 | [**Přípravný refaktoring**](PreparatoryRefactoring/) | Kdy a proč refaktorovat — a proč ve dvou commitech | ●●○○○ | ✅ |
 | [**Charakterizační testy**](CharacterizationTests/) | Síť, která zapíše, co kód **dělá** — ne co má dělat | ●●○○○ | ✅ |

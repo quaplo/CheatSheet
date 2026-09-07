@@ -10,13 +10,7 @@ Fowler tomu říká **camp site rule**:
 >
 > — Martin Fowler, *Workflows of Refactoring*, 2014
 
-Pravidlo pochází ze skautingu a do programování ho přenesl Robert C. Martin v eseji *The Boy Scout Rule*. Jeho verze je konkrétnější, protože mluví o commitu:
-
-> „Always check a module in **cleaner** than when you checked it out."
->
-> — Robert C. Martin, *97 Things Every Programmer Should Know*, 2010
-
-Skautské pravidlo zní „always leave the campground cleaner than you found it" a je samo o sobě parafrází věty Roberta Baden-Powella: *„Try and leave this world a little better than you found it."*
+Totéž pravidlo znáš nejspíš pod jménem **[boy scout rule](../BoyScoutRule/)** — tam je i jeho původ a to, kolik úklidu podle Roberta C. Martina stačí. Tenhle dokument je o mechanice: **co je odpadek a kde je hranice.**
 
 ---
 
@@ -215,6 +209,7 @@ Nakonec ověří na 30 vstupech, že **úklid nezměnil ani jeden případ**, a 
 
 | Dokument | Vztah |
 | -------- | ----- |
+| [Boy scout rule](../BoyScoutRule/) | Táž věc jako norma týmu — a kolik úklidu stačí. |
 | [Dva klobouky](../TwoHats/) | Pravidlo, kvůli kterému je úklid vlastní commit. |
 | [Comprehension refactoring](../ComprehensionRefactoring/) | Druhý oportunistický refaktoring — stejný postup, jiný spouštěč. |
 | [TDD refaktoring](../TddRefactoring/) | Úklid toho, čeho ses právě dotkl; tenhle dokument řeší zbytek souboru. |
@@ -234,12 +229,12 @@ Nakonec ověří na 30 vstupech, že **úklid nezměnil ani jeden případ**, a 
 
 |             |                    |
 | ----------- | ------------------ |
-| **Autor**   | Robert C. Martin (pravidlo), Martin Fowler (pojmenování workflow) |
-| **Rok**     | 2010 / 2014        |
-| **Zdroj**   | Martin: *The Boy Scout Rule*; Fowler: *Workflows of Refactoring* |
+| **Autor**   | Martin Fowler (pojmenování workflow) |
+| **Rok**     | 2014               |
+| **Zdroj**   | Fowler: *Workflows of Refactoring* |
 | **Náročnost** | ●○○○○            |
 
-Skautské pravidlo do programování přenesl **Robert C. Martin** v eseji *The Boy Scout Rule*, která vyšla v roce 2010 ve sbírce *97 Things Every Programmer Should Know* (editor Kevlin Henney). Jeho formulace mluví o commitu, ne o kódu obecně — *„always check a module in cleaner than when you checked it out"* — a to je na ní to podstatné.
+Samotné pravidlo je starší a jeho původ je u [boy scout rule](../BoyScoutRule/).
 
 **Martin Fowler** ho v roce 2014 zařadil mezi sedm workflow refaktoringu jako *Litter-Pickup Refactoring*, dal mu místo v postupu s rozhodovacím bodem „opravit hned?" a spojil ho s [comprehension refactoringem](../ComprehensionRefactoring/) pod hlavičku **oportunistických refaktoringů**.
 
@@ -252,7 +247,7 @@ Náročnost je jednička a je to jediná technika v téhle sekci, která ji má.
 ## Zdroje
 
 - Martin Fowler: [*Workflows of Refactoring*](https://martinfowler.com/articles/workflowsOfRefactoring/), 8. ledna 2014
-- Robert C. Martin: [*The Boy Scout Rule*](https://github.com/97-things/97-things-every-programmer-should-know/blob/master/en/thing_08/README.md), in: *97 Things Every Programmer Should Know*, O'Reilly, 2010
+- Robert C. Martin: [*The Boy Scout Rule*](https://github.com/97-things/97-things-every-programmer-should-know/blob/master/en/thing_08/README.md), 2010 — rozebraná v [samostatném dokumentu](../BoyScoutRule/)
 - Martin Fowler: [*Opportunistic Refactoring*](https://martinfowler.com/bliki/OpportunisticRefactoring.html)
 
 ---
@@ -263,15 +258,15 @@ Náročnost je jednička a je to jediná technika v téhle sekci, která ji má.
 ```yaml
 name: Litter-pickup refactoring
 level: příprava
-author: Robert C. Martin (pravidlo), Martin Fowler (pojmenování workflow)
-year: 2010
+author: Martin Fowler (pojmenování workflow)
+year: 2014
 duration: minuty
 reversible: ano — refaktoring nic nemění
 requires_tests: ano
 difficulty: 1
 tags: [workflow, camp site rule, boy scout rule, dva klobouky, kdy refaktorovat]
 leads_to: []
-related: [ComprehensionRefactoring, PreparatoryRefactoring, CharacterizationTests, CodeReview]
+related: [BoyScoutRule, ComprehensionRefactoring, PreparatoryRefactoring, CharacterizationTests, CodeReview]
 status: done
 ```
 
