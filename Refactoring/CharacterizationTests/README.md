@@ -220,6 +220,7 @@ Závěr je nejdůležitější: pustí **rozbitý přepis** proti dvěma sadám 
 | [Dva klobouky](../TwoHats/) | Zelená sada je podmínka celého pravidla — tohle je způsob, jak ji získat. |
 | [Dlouhodobý refaktoring](../LongTermRefactoring/) | Kde se síť musí udržet po celé měsíce přestavby. |
 | [Mikado metoda](../MikadoMethod/) | Stojí na tom, že se dá spolehlivě zjistit, co je rozbité. |
+| [Decompose Conditional](../Code/DecomposeConditional/) | Sada musí projít všemi větvemi, jinak se rozklad neověří. |
 
 ---
 

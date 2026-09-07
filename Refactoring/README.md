@@ -50,6 +50,7 @@ Změny v jednom procesu, které nemění chování. Vybíráme ty, které **vedo
 
 | Refaktoring | Kam vede | Stav |
 | ----------- | -------- | ---- |
+| [**Decompose Conditional**](Code/DecomposeConditional/) | [Specification](../SoftwareDesign/DDD/Specification/), [Replace Conditional with Polymorphism](Code/ReplaceConditionalWithPolymorphism/) | ✅ |
 | [**Replace Conditional with Polymorphism**](Code/ReplaceConditionalWithPolymorphism/) | [Strategy](../SoftwareDesign/GoF/Behavioral/Strategy/), [State](../SoftwareDesign/GoF/Behavioral/State/) | ✅ |
 | [**Encapsulate Collection**](Code/EncapsulateCollection/) | [First Class Collection](../SoftwareDesign/ObjectCalisthenics/FirstClassCollection/) | ✅ |
 | [**Replace Primitive with Object**](Code/ReplacePrimitiveWithObject/) | [Value Object](../SoftwareDesign/DDD/ValueObject/) | ✅ |

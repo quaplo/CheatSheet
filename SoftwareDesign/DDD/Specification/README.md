@@ -380,6 +380,7 @@ $matching = array_filter(
 | [First Class Collection](../../ObjectCalisthenics/FirstClassCollection/) | Přirozený příjemce specifikace: `$items->satisfying($spec)` místo `array_filter` venku. |
 | [Active Record](../../PoEAA/ActiveRecord/) (PoEAA) | Query scope je jeho zjednodušená obdoba: pojmenovaná podmínka, ale vyhodnocená rovnou v SQL. |
 | [Cohesive Mechanism](../CohesiveMechanism/) (DDD) | Když je „mechanismus“ jen podmínka ano/ne, je to specifikace a nepotřebuje vlastní rámec. |
+| [Decompose Conditional](../../../Refactoring/Code/DecomposeConditional/) (refaktoring) | **Jak se sem dostat z existujícího kódu** — podmínka nejdřív dostane jméno, teprve pak vlastní objekt. |
 
 ---
 
