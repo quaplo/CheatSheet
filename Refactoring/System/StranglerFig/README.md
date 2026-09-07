@@ -224,6 +224,7 @@ E-shop s pěti schopnostmi a fasádou před nimi. Demo ukáže, že **fasáda na
 | [Conwayův zákon](../../../SoftwareDesign/Principles/ConwaysLaw.md) | Migrace, která nekopíruje vlastnictví týmů, se protáhne — každý přesun potřebuje někoho, kdo za něj odpovídá. |
 | [Feature flag](../../../GitWorkflows/Glossary.md#feature-flag) | Čím se přesměrování ve fasádě přepíná. |
 | [Expand–Contract](../ExpandContract/) | Při přesouvání schopnosti se obvykle mění i schéma — a tehdy se použije tahle technika uvnitř. |
+| [Charakterizační testy](../../CharacterizationTests/) | **Krok nula.** Co dělat, když testy neexistují a zadání, podle kterého by se napsaly, taky ne. |
 
 ---
 

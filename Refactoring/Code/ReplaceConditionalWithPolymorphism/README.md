@@ -237,6 +237,7 @@ Nejzajímavější je čtvrtá část: pustí v samostatném procesu třídu, kt
 | [Factory](../../../SoftwareDesign/DDD/Factory/) (DDD) | Co vznikne v kroku 4 — jediné místo, kde zůstane rozhodování podle řetězce. |
 | [Parallel Run](../../System/ParallelRun/) | Když je změna velká a chceš ověřit shodu na skutečném provozu. |
 | [Code review](../../../Processes/CodeReview/) | Refaktoring a změna chování patří do **oddělených** pull requestů — jinak se v šumu ztratí to podstatné. |
+| [Charakterizační testy](../../CharacterizationTests/) | **Krok nula.** Co dělat, když testy neexistují a zadání, podle kterého by se napsaly, taky ne. |
 
 ---
 

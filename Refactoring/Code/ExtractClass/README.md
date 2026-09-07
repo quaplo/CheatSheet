@@ -237,6 +237,7 @@ Nejzajímavější je, že jich najde **tři, ale vytáhnout se má jedna**. Pol
 | [Replace Primitive with Object](../ReplacePrimitiveWithObject/) | Často navazuje: vytažená adresa dostane `PostalCode` místo `string`. |
 | [Encapsulate Collection](../EncapsulateCollection/) | Když je vytažená část skupina, ne hodnota. |
 | [Expand–Contract](../../System/ExpandContract/) | Jak krok 5 udělat u rozhraní, které používá někdo mimo tvůj kód. |
+| [Charakterizační testy](../../CharacterizationTests/) | **Krok nula.** Co dělat, když testy neexistují a zadání, podle kterého by se napsaly, taky ne. |
 
 ---
 

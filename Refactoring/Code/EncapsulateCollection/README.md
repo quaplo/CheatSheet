@@ -251,6 +251,7 @@ Objednávka a její položky. Demo nejdřív ukáže, že **v PHP vrácené pole
 | [Specification](../../../SoftwareDesign/DDD/Specification/) (DDD) | Když filtrů přibývá, předává se kolekci podmínka místo psaní další metody. |
 | [Tell, Don't Ask](../../../SoftwareDesign/Principles/ObjectDesign.md#tell-dont-ask) | Princip, který se tím naplní: neptej se na pole, řekni kolekci, co chceš. |
 | [Replace Primitive with Object](../ReplacePrimitiveWithObject/) | Druhá půlka téhož problému: tam se zapouzdřuje jednotlivá hodnota, tady skupina. |
+| [Charakterizační testy](../../CharacterizationTests/) | **Krok nula.** Co dělat, když testy neexistují a zadání, podle kterého by se napsaly, taky ne. |
 
 ---
 

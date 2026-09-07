@@ -230,6 +230,7 @@ SKU jako řetězec proti SKU jako typu. Demo pustí sedm vstupů přes tři růz
 | [State](../../../SoftwareDesign/GoF/Behavioral/State/) (GoF) | Kam vede varianta *Replace Type Code with Class*, když má hodnota omezenou sadu variant. |
 | [Entity](../../../SoftwareDesign/DDD/Entity/) (DDD) | Typ pro identifikátor (`OrderId`) je tentýž refaktoring aplikovaný na klíč. |
 | [Replace Constructor with Factory Method](../ReplaceConstructorWithFactoryMethod/) | Tentýž vzor u objektu místo u hodnoty — `fromString()` je pojmenovaná továrna. |
+| [Charakterizační testy](../../CharacterizationTests/) | **Krok nula.** Co dělat, když testy neexistují a zadání, podle kterého by se napsaly, taky ne. |
 
 ---
 

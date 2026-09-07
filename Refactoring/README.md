@@ -25,6 +25,16 @@ Slovo „refaktoring" pokrývá dvě věci, které mají společný cíl a skoro
 
 ---
 
+## Krok nula: charakterizační testy
+
+Všechny techniky níž předpokládají testy. **[Charakterizační testy](CharacterizationTests/)** odpovídají na otázku, co dělat, když neexistují a napsat je podle zadání nejde — protože zadání není.
+
+| Technika | K čemu | Náročnost | Stav |
+| -------- | ------ | --------- | ---- |
+| [**Charakterizační testy**](CharacterizationTests/) | Síť, která zapíše, co kód **dělá** — ne co má dělat | ●●○○○ | ✅ |
+
+---
+
 ## Refaktoring kódu
 
 Změny v jednom procesu, které nemění chování. Vybíráme ty, které **vedou k některému ze vzorů**, co už v katalogu jsou — dokument tedy končí odkazem „a teď si přečti Strategy".

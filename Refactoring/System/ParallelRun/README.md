@@ -246,6 +246,7 @@ Výpočet slevy — stará implementace proti nové, na pěti stech objednávká
 | [Cohesive Mechanism](../../../SoftwareDesign/DDD/CohesiveMechanism/) (DDD) | Ideální kandidát na ověření: výpočet bez vedlejších efektů, se stejným vstupem i výstupem. |
 | [Code review](../../../Processes/CodeReview/) | Rozbor neshod je práce, kterou má někdo vlastnit — jinak experiment běží a nic nepřináší. |
 | [Expand–Contract](../ExpandContract/) | Než se přepne čtení na novou reprezentaci, ověří se tímhle, že dává tytéž výsledky. |
+| [Charakterizační testy](../../CharacterizationTests/) | **Krok nula.** Co dělat, když testy neexistují a zadání, podle kterého by se napsaly, taky ne. |
 
 ---
 

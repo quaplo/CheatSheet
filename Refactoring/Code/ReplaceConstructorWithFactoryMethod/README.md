@@ -253,6 +253,7 @@ Objednávka, která vzniká třemi způsoby přes jeden konstruktor o šesti par
 | [Replace Primitive with Object](../ReplacePrimitiveWithObject/) | Často navazuje: `fromString()` je tentýž vzor u hodnoty. |
 | [Fail Fast](../../../SoftwareDesign/Principles/ObjectDesign.md#fail-fast) | Čeho se dosáhne — neplatný objekt nevznikne. |
 | [Aggregate](../../../SoftwareDesign/DDD/Aggregate/) (DDD) | Nejčastější typ, u kterého se to dělá; invarianty musí platit od první chvíle. |
+| [Charakterizační testy](../../CharacterizationTests/) | **Krok nula.** Co dělat, když testy neexistují a zadání, podle kterého by se napsaly, taky ne. |
 
 ---
 
