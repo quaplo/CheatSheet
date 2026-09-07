@@ -52,6 +52,7 @@ Změny v jednom procesu, které nemění chování. Vybíráme ty, které **vedo
 | ----------- | -------- | ---- |
 | [**Decompose Conditional**](Code/DecomposeConditional/) | [Specification](../SoftwareDesign/DDD/Specification/), [Replace Conditional with Polymorphism](Code/ReplaceConditionalWithPolymorphism/) | ✅ |
 | [**Replace Conditional with Polymorphism**](Code/ReplaceConditionalWithPolymorphism/) | [Strategy](../SoftwareDesign/GoF/Behavioral/Strategy/), [State](../SoftwareDesign/GoF/Behavioral/State/) | ✅ |
+| [**Replace Type Code with Subclasses**](Code/ReplaceTypeCodeWithSubclasses/) | [Strategy](../SoftwareDesign/GoF/Behavioral/Strategy/), [State](../SoftwareDesign/GoF/Behavioral/State/) | ✅ |
 | [**Encapsulate Collection**](Code/EncapsulateCollection/) | [First Class Collection](../SoftwareDesign/ObjectCalisthenics/FirstClassCollection/) | ✅ |
 | [**Replace Superclass with Delegate**](Code/ReplaceSuperclassWithDelegate/) | [Kompozice před dědičností](../SoftwareDesign/Principles/ObjectDesign.md#kompozice-před-dědičností), [Decorator](../SoftwareDesign/GoF/Structural/Decorator/) | ✅ |
 | [**Replace Primitive with Object**](Code/ReplacePrimitiveWithObject/) | [Value Object](../SoftwareDesign/DDD/ValueObject/) | ✅ |

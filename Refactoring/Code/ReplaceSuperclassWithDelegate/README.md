@@ -229,6 +229,7 @@ Pak předvede, jak se pravidlo obejde jedním zavoláním `append()` — a že p
 | [Expand–Contract](../../System/ExpandContract/) | Když zděděné metody volá i kód mimo repozitář. |
 | [Dva klobouky](../../TwoHats/) | Krok 3 mění rozhraní — patří do vlastního commitu. |
 | [Extract Class](../ExtractClass/) | Když se při tom ukáže, že ta třída dělá dvě věci. |
+| [Replace Type Code with Subclasses](../ReplaceTypeCodeWithSubclasses/) | Tentýž pohyb od dědičnosti k delegaci, jen u druhu věci. |
 
 ---
 

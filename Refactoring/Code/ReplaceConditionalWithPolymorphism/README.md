@@ -238,6 +238,7 @@ Nejzajímavější je čtvrtá část: pustí v samostatném procesu třídu, kt
 | [Parallel Run](../../System/ParallelRun/) | Když je změna velká a chceš ověřit shodu na skutečném provozu. |
 | [Code review](../../../Processes/CodeReview/) | Refaktoring a změna chování patří do **oddělených** pull requestů — jinak se v šumu ztratí to podstatné. |
 | [Decompose Conditional](../DecomposeConditional/) | Levnější krok, který často stačí — a pokud ne, připraví půdu pro tenhle. |
+| [Replace Type Code with Subclasses](../ReplaceTypeCodeWithSubclasses/) | Týž cíl, jiný spouštěč — a rozhodnutí, jestli podtřídy vůbec jdou použít. |
 | [Charakterizační testy](../../CharacterizationTests/) | **Krok nula.** Co dělat, když testy neexistují a zadání, podle kterého by se napsaly, taky ne. |
 
 ---
