@@ -273,6 +273,7 @@ Ve druhém případě každá metoda vrací **hotový a platný produkt**, ne ro
 | **Fluent Interface** (Fowler) | Zápis, který builder obvykle používá — ale sám o sobě to není tenhle vzor. |
 | [Specification](../../../DDD/Specification/) | Skládání pravidel přes `and()`/`or()` je fluent, ne builder: každý krok vrací hotovou specifikaci. |
 | [Factory](../../../DDD/Factory/) (DDD) | Builder sbírá vstupy, továrna z nich vyrobí agregát jedním krokem. Evans tu kombinaci zmiňuje přímo. |
+| [Replace Constructor with Factory Method](../../../../Refactoring/Code/ReplaceConstructorWithFactoryMethod/) (refaktoring) | První krok, když má konstruktor moc parametrů. Builder přijde, až když je jich tolik, že se musí sbírat postupně. |
 
 ---
 

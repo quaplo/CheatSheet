@@ -229,6 +229,7 @@ SKU jako řetězec proti SKU jako typu. Demo pustí sedm vstupů přes tři růz
 | [Fail Fast](../../../SoftwareDesign/Principles/ObjectDesign.md#fail-fast) | Neplatná hodnota nevznikne — chyba se ohlásí při vzniku, ne při použití. |
 | [State](../../../SoftwareDesign/GoF/Behavioral/State/) (GoF) | Kam vede varianta *Replace Type Code with Class*, když má hodnota omezenou sadu variant. |
 | [Entity](../../../SoftwareDesign/DDD/Entity/) (DDD) | Typ pro identifikátor (`OrderId`) je tentýž refaktoring aplikovaný na klíč. |
+| [Replace Constructor with Factory Method](../ReplaceConstructorWithFactoryMethod/) | Tentýž vzor u objektu místo u hodnoty — `fromString()` je pojmenovaná továrna. |
 
 ---
 

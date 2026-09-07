@@ -22,7 +22,7 @@ Každý dokument proto končí větou „a teď si přečti \<vzor\>". **Refakto
 | [**Encapsulate Collection**](EncapsulateCollection/) | `array_map` nad týmž polem na pěti místech; pravidla skupiny nemají kde být | [First Class Collection](../../SoftwareDesign/ObjectCalisthenics/FirstClassCollection/) | ✅ |
 | [**Replace Primitive with Object**](ReplacePrimitiveWithObject/) | tatáž hodnota se validuje na třech místech, pokaždé jinak | [Value Object](../../SoftwareDesign/DDD/ValueObject/) | ✅ |
 | [**Extract Class**](ExtractClass/) | třída, kterou nejde popsat jednou větou bez „a taky“ | [SRP](../../SoftwareDesign/Principles/SOLID.md#single-responsibility-principle-srp) | ✅ |
-| Replace Constructor with Factory Method | `new` s osmi parametry a validací kolem | [Factory](../../SoftwareDesign/DDD/Factory/) | ⬜ |
+| [**Replace Constructor with Factory Method**](ReplaceConstructorWithFactoryMethod/) | `new` s bool parametry a nully; z volání nepoznáš, co se děje | [Factory](../../SoftwareDesign/DDD/Factory/) | ✅ |
 
 <sub>⬜ plánováno · 🚧 rozpracováno · ✅ hotovo</sub>
 

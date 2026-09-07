@@ -277,6 +277,7 @@ Nejčastější zdroj zmatku, protože jména jsou skoro stejná.
 | [Data Mapper](../../PoEAA/DataMapper/) (PoEAA) | Druhá cesta k témuž — mapper obnovuje stav bez kontrol. |
 | [Specification](../Specification/) | Když je pravidlo složité nebo znovupoužitelné, továrna se na něj zeptá místo vlastní podmínky. |
 | [Replace Conditional with Polymorphism](../../../Refactoring/Code/ReplaceConditionalWithPolymorphism/) (refaktoring) | Továrna je to, co v něm vznikne v posledním kroku — jediné místo, kde zůstane rozhodování podle řetězce. |
+| [Replace Constructor with Factory Method](../../../Refactoring/Code/ReplaceConstructorWithFactoryMethod/) (refaktoring) | **Jak se sem dostat z existujícího kódu** — továrna vedle konstruktoru, volající po jednom, soukromý konstruktor až nakonec. |
 
 ---
 
