@@ -120,6 +120,8 @@ $shipping = new DiscountedShipping(new ExpressShipping(), $discount);
 
 **Souvisí s patterny:** [Strategy](../GoF/Behavioral/Strategy/) · [Decorator](../GoF/Structural/Decorator/) — **učebnicová ukázka**: 3 vlastnosti znamenají 8 podtříd, ale jen 3 dekorátory · **Bridge**
 
+**Jak se sem dostat z existujícího kódu:** [Replace Superclass with Delegate](../../Refactoring/Code/ReplaceSuperclassWithDelegate/) (refaktoring) — krok za krokem, včetně toho, co `extends` bere navíc.
+
 ---
 
 ## CQS — Command-Query Separation

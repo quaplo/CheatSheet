@@ -244,6 +244,7 @@ Objednávka a její položky. Demo nejdřív ukáže, že **v PHP vrácené pole
 
 | Dokument | Vztah |
 | -------- | ----- |
+| [Replace Superclass with Delegate](../ReplaceSuperclassWithDelegate/) | Sourozenec: totéž, když kolekce místo pole uvnitř **dědí** z ArrayObject. |
 | [First Class Collection](../../../SoftwareDesign/ObjectCalisthenics/FirstClassCollection/) | **Cíl refaktoringu.** Navazuje neměnnou variantou a vztahem k `IteratorAggregate`. |
 | [Value Object](../../../SoftwareDesign/DDD/ValueObject/) (DDD) | Druhá půlka problému: zapouzdřená kolekce měnitelných objektů chrání jen zčásti. |
 | [Iterator](../../../SoftwareDesign/GoF/Behavioral/Iterator/) (GoF) | Proč `IteratorAggregate` a co umožní — průchod bez vydání vnitřku. |
