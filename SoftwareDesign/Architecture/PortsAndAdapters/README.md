@@ -375,6 +375,7 @@ Core\Port\Driven\OrderRepository: '@Adapter\Driven\Persistence\DoctrineOrderRepo
 | [Anticorruption Layer](../../DDD/AnticorruptionLayer/) (DDD) | Řízený adaptér s ambicí navíc: nejen překládá protokol, ale brání cizímu **modelu** prosáknout do domény. Kdy se vyplatí, řeší [Context Map](../../DDD/ContextMap/). |
 | [Bounded Context](../../DDD/BoundedContext/) (DDD) | Hranice kontextu je hranice aplikace, kolem které hexagon staví porty. Bounded Context říká **kudy** ta hranice vede, hexagon **jak** ji držet. |
 | [Segregated Core](../../DDD/SegregatedCore/) (DDD) | Táž myšlenka o patro níž — závislosti míří dovnitř, jen uvnitř modelu místo vůči okolnímu světu. |
+| [Branch by Abstraction](../../../Refactoring/System/BranchByAbstraction/) (refaktoring) | Kde port už existuje, je první krok techniky hotový — výměna adaptéru začíná rovnou třetím. |
 
 ---
 

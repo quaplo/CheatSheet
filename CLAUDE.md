@@ -31,6 +31,7 @@ Existující sekce:
 | [`SoftwareDesign/`](SoftwareDesign/) | [`SoftwareDesign/CLAUDE.md`](SoftwareDesign/CLAUDE.md) |
 | [`GitWorkflows/`](GitWorkflows/) | [`GitWorkflows/CLAUDE.md`](GitWorkflows/CLAUDE.md) |
 | [`Processes/`](Processes/) | [`Processes/CLAUDE.md`](Processes/CLAUDE.md) |
+| [`Refactoring/`](Refactoring/) | [`Refactoring/CLAUDE.md`](Refactoring/CLAUDE.md) |
 | [`Tooling/`](Tooling/) | [`Tooling/CLAUDE.md`](Tooling/CLAUDE.md) |
 
 ## Jazyková konvence — dodržuj bez výjimky

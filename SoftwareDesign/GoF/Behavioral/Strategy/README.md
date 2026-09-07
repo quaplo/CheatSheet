@@ -246,6 +246,7 @@ Nový dopravce = nová třída a jeden řádek v registraci. `ShippingCalculator
 | [Specification](../../../DDD/Specification/) (DDD) | Také zabaluje chování do objektu, ale odpovídá **ano/ne** místo toho, aby něco počítala. Často spolupracují: specifikace rozhodne, která strategie se použije. |
 | [Cohesive Mechanism](../../../DDD/CohesiveMechanism/) (DDD) | Říká **proč a co** vytáhnout z domény; Strategy **jak** to technicky udělat. Rozhraní mechanismu bývá Strategy. |
 | [Abstract Core](../../../DDD/AbstractCore/) (DDD) | Technicky totéž — rozhraní a zaměnitelné implementace. Abstract Core říká, **co** abstrahovat a proč do vlastního modulu. |
+| [Branch by Abstraction](../../../../Refactoring/System/BranchByAbstraction/) (refaktoring) | Výsledná struktura je táž. Rozdíl je v záměru: tady je cílem, tam **dočasným stavem** při výměně implementace. |
 
 ---
 

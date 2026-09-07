@@ -152,7 +152,7 @@ if ($features->enabled('nova-fakturace')) {
 return $this->staraFakturace->render();
 ```
 
-**Branch by abstraction** — přestavba za rozhraním. Místo třítýdenní větve postupně:
+**[Branch by abstraction](../../Refactoring/System/BranchByAbstraction/)** — přestavba za rozhraním. Místo třítýdenní větve postupně:
 
 1. Vlož mezi volající kód a starou implementaci **rozhraní** (`FakturaGenerator`). Sluč — nic se nezměnilo.
 2. Přidej vedle staré **novou implementaci**, zatím nepoužitou. Sluč — pořád se nic nezměnilo.
@@ -212,7 +212,7 @@ Nejnáročnější model ze všech na předpoklady — a přitom má jednu věte
 | **Automatické testy, kterým tým věří** | Jsou jediné, co drží `main` použitelný | Nikdo se neodváží slučovat denně a model se rozpadne sám |
 | **Rychlé review — hodiny** | Větev musí zmizet tentýž den | Větve čekají, stárnou a jsi zpátky u [GitHub Flow](../GitHubFlow/) v horší podobě |
 | **Umět dělit práci na malé kroky** | Největší a nejtěžší dovednost celého modelu | Tým bude tvrdit, že „naše změny jsou moc velké“, a vrátí se k dlouhým větvím |
-| **Branch by abstraction** | Velká přestavba jinak nemá jak projít po částech | Vznikne „refaktoringová větev“, která žije tři měsíce |
+| **[Branch by abstraction](../../Refactoring/System/BranchByAbstraction/)** | Velká přestavba jinak nemá jak projít po částech | Vznikne „refaktoringová větev“, která žije tři měsíce |
 | **Úklid přepínačů** | Flag je větvení navíc, které se testuje v obou stavech | Za rok padesát flagů a nikdo neví, které platí |
 
 První tři jsou nepodkročitelné. **Tým bez zelené CI a bez feature flagů si tenhle model vybrat nemůže** — ne proto, že by to bylo nesprávné, ale protože to technicky nefunguje.
@@ -279,7 +279,7 @@ Užitečnější než závěr „TBD je nejlepší“ je ta střední věta: **d
 | Flagy se po vydání nemažou | Za rok padesát přepínačů, exponenciálně kombinací a nikdo neví, co platí | Smazání flagu je součást úkolu, ne úklid „až bude čas“ |
 | Pomalá CI | Lidé ji začnou obcházet nebo slučovat bez čekání | Rychlost CI je předpoklad, ne komfort |
 | Review čeká do zítřka | Porušuje jediné pravidlo modelu | Review má přednost před rozpracovanou prací |
-| Velká přestavba ve vlastní větvi | Přesně to, čemu se model vyhýbá | Branch by abstraction |
+| Velká přestavba ve vlastní větvi | Přesně to, čemu se model vyhýbá | [Branch by abstraction](../../Refactoring/System/BranchByAbstraction/) |
 
 ---
 
@@ -320,6 +320,7 @@ Nedá se udělat přepnutím — chybějící předpoklady je potřeba doplnit *
 | [GitLab Flow](../GitLabFlow/) | **Sdílí pravidlo upstream first** — oprava jde nejdřív do hlavní větve, teprve pak do vydání. Na rozdíl od tohohle modelu ale připouští výjimku u spěchajícího hotfixu. |
 | [OneFlow](../OneFlow/) | Míří opačným směrem — k plánovaným vydáním. Sdílí ale důraz na krátké větve a čitelnou historii. |
 | [Conwayův zákon](../../SoftwareDesign/Principles/ConwaysLaw.md) (princip) | Model větvení je taky komunikační struktura. Tenhle předpokládá tým, který se domluví během hodin. |
+| [Branch by Abstraction](../../Refactoring/System/BranchByAbstraction/) (refaktoring) | **Odpověď na námitku „velké změny se bez dlouhé větve dělat nedají".** Hammant ji popsal právě v tomhle kontextu. |
 
 ---
 

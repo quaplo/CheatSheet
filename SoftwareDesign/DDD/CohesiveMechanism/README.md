@@ -259,6 +259,7 @@ Předposlední řádek je nejzákeřnější, protože vypadá nevinně. Ve chv�
 | [Specification](../Specification/) | Když je „mechanismus" jen podmínka ano/ne, je to specifikace a nepotřebuje rámec. |
 | [Core Domain](../CoreDomain/) (DDD) | Předpoklad celé destilace — bez pojmenovaného jádra není podle čeho poznat, co vytěsnit. |
 | [Abstract Core](../AbstractCore/) (DDD) | Také vytahuje do vlastního modulu — ale abstrakce modelu, ne výpočty. |
+| [Branch by Abstraction](../../../Refactoring/System/BranchByAbstraction/) (refaktoring) | Typický kandidát na výměnu: výpočet za rozhraním jde nahradit lepším, aniž by o tom doména věděla. |
 
 ---
 
