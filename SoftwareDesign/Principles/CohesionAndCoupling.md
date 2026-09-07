@@ -228,6 +228,14 @@ Skoro všude — a to je pointa. Tenhle princip je **cíl**, patterny jsou cesty
 
 ---
 
+## Dá se soudržnost změřit?
+
+Částečně. Metrika **LCOM4** staví graf, kde uzly jsou metody třídy a hrana vede mezi dvěma, které sahají na totéž pole — a spočítá nezávislé komponenty. Jedna komponenta znamená soudržnou třídu, víc komponent znamená, že v ní žijí oddělené skupiny.
+
+Užitečné to je, ale jen jako **ukazatel, kam se podívat**. Metrika měří provázanost přes data, ne přes pojem: dvě skupiny metod, které spolu technicky nesouvisejí, můžou k témuž pojmu patřit. Spočítanou soudržnost proto nikdy neber jako verdikt — [Extract Class](../../Refactoring/Code/ExtractClass/#metrika-dává-otázku-ne-odpověď) ukazuje na konkrétním příkladu, kde metrika najde tři skupiny a rozdělit se má jedna.
+
+---
+
 ## Provázanost mezi týmy
 
 Stupnice výš platí na funkce, třídy i moduly — a **stejně tak na týmy**. To není analogie: provázanost mezi lidmi se do kódu propíše, protože kód píšou oni.

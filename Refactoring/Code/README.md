@@ -21,7 +21,7 @@ Každý dokument proto končí větou „a teď si přečti \<vzor\>". **Refakto
 | [**Replace Conditional with Polymorphism**](ReplaceConditionalWithPolymorphism/) | tentýž `switch` na typ na víc místech | [Strategy](../../SoftwareDesign/GoF/Behavioral/Strategy/), [State](../../SoftwareDesign/GoF/Behavioral/State/) | ✅ |
 | [**Encapsulate Collection**](EncapsulateCollection/) | `array_map` nad týmž polem na pěti místech; pravidla skupiny nemají kde být | [First Class Collection](../../SoftwareDesign/ObjectCalisthenics/FirstClassCollection/) | ✅ |
 | [**Replace Primitive with Object**](ReplacePrimitiveWithObject/) | tatáž hodnota se validuje na třech místech, pokaždé jinak | [Value Object](../../SoftwareDesign/DDD/ValueObject/) | ✅ |
-| Extract Class | třída, kterou nejde popsat jednou větou | [SRP](../../SoftwareDesign/Principles/SOLID.md#single-responsibility-principle-srp) | ⬜ |
+| [**Extract Class**](ExtractClass/) | třída, kterou nejde popsat jednou větou bez „a taky“ | [SRP](../../SoftwareDesign/Principles/SOLID.md#single-responsibility-principle-srp) | ✅ |
 | Replace Constructor with Factory Method | `new` s osmi parametry a validací kolem | [Factory](../../SoftwareDesign/DDD/Factory/) | ⬜ |
 
 <sub>⬜ plánováno · 🚧 rozpracováno · ✅ hotovo</sub>

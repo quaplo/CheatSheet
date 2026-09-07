@@ -290,6 +290,7 @@ Nejtěžší část a nejde ji odvodit z kódu. Pomůcka, která funguje: **zept
 | [Highlighted Core](../HighlightedCore/) (DDD) | **Levnější krok před tímhle.** Evans: strukturální změna je ideál, ale těžko se dělá bez toho přehledu, který týmu chybí — a ten dá právě zvýraznění. |
 | [Abstract Core](../AbstractCore/) (DDD) | Následující krok: když je i oddělené jádro tak velké, že se v něm ztrácí obraz celku. |
 | [Conwayův zákon](../../Principles/ConwaysLaw.md) | Oddělit jádro se daří tehdy, když ho někdo vlastní. Bez vlastníka se hranice rozpustí. |
+| [Extract Class](../../../Refactoring/Code/ExtractClass/) (refaktoring) | **Totéž o úroveň níž** — dělení jedné třídy podle soudržnosti místo balíčků podle důležitosti. |
 
 ---
 

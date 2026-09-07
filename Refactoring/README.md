@@ -34,7 +34,7 @@ Změny v jednom procesu, které nemění chování. Vybíráme ty, které **vedo
 | [**Replace Conditional with Polymorphism**](Code/ReplaceConditionalWithPolymorphism/) | [Strategy](../SoftwareDesign/GoF/Behavioral/Strategy/), [State](../SoftwareDesign/GoF/Behavioral/State/) | ✅ |
 | [**Encapsulate Collection**](Code/EncapsulateCollection/) | [First Class Collection](../SoftwareDesign/ObjectCalisthenics/FirstClassCollection/) | ✅ |
 | [**Replace Primitive with Object**](Code/ReplacePrimitiveWithObject/) | [Value Object](../SoftwareDesign/DDD/ValueObject/) | ✅ |
-| Extract Class | [SRP](../SoftwareDesign/Principles/SOLID.md#single-responsibility-principle-srp), [Segregated Core](../SoftwareDesign/DDD/SegregatedCore/) | ⬜ |
+| [**Extract Class**](Code/ExtractClass/) | [SRP](../SoftwareDesign/Principles/SOLID.md#single-responsibility-principle-srp), [Segregated Core](../SoftwareDesign/DDD/SegregatedCore/) | ✅ |
 | Replace Constructor with Factory Method | [Factory](../SoftwareDesign/DDD/Factory/), [Factory Method](../SoftwareDesign/GoF/Creational/FactoryMethod/) | ⬜ |
 
 <sub>Kompletní katalog refaktoringů kódu vede [Martin Fowler](https://refactoring.com/catalog/) a je online zadarmo. Tady je nepřepisujeme — přidáváme k nim to, co v něm není: cestu k vzoru a k našemu kontextu.</sub>
