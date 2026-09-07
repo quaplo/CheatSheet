@@ -366,6 +366,7 @@ Antikorupční vrstva je jediné místo, které cizí systém opravdu zná — t
 | [Generic Subdomains](../GenericSubdomains/) (DDD) | Nejčastější důvod, proč vrstvu stavíš — hotové řešení pro obecnou podoblast si nese vlastní model. |
 | [Ubiquitous Language](../UbiquitousLanguage/) (DDD) | Vrstva je místo, kde překlad mezi jazyky legitimně probíhá; uvnitř kontextu se překládat nesmí. |
 | [Conwayův zákon](../../Principles/ConwaysLaw.md) | Vrstva vzniká typicky tam, kde je organizační hranice — jiný tým, jiná firma, jiný dodavatel. |
+| [Strangler Fig](../../../Refactoring/System/StranglerFig/) (refaktoring) | Během migrace je to vrstva mezi novým systémem a starým modelem, aby jeho pojmy neprosákly do nového. |
 
 ---
 

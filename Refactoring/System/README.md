@@ -21,7 +21,7 @@ Proto má každý dokument v téhle úrovni povinnou sekci *Průběh a návratov
 | Technika | K čemu | Návratová cesta | Náročnost | Stav |
 | -------- | ------ | --------------- | --------- | ---- |
 | [**Branch by Abstraction**](BranchByAbstraction/) | Výměna implementace za běhu; obě verze existují vedle sebe za společným rozhraním | přepnutí zpět, okamžité | ●●●○○ | ✅ |
-| Strangler Fig | Postupné obalení starého systému novým, dokud starý nezmizí | část po části | | ⬜ |
+| [**Strangler Fig**](StranglerFig/) | Postupné obalení starého systému novým, dokud starý nezmizí | část po části | ●●●●○ | ✅ |
 | Parallel Run | Obě verze běží současně, výsledky se porovnávají; nová zatím nerozhoduje | vypnutí nové větve | | ⬜ |
 | Expand–Contract | Změna rozhraní nebo schématu ve třech krocích bez výpadku | zastavení mezi kroky | | ⬜ |
 

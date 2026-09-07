@@ -202,7 +202,7 @@ Poslední řádek předposlední tabulky stojí za zdůraznění: **mezi krokem 
 - ❌ **Výměna se dá udělat jedním commitem.** Abstrakce, přepínač a dvojí implementace kvůli změně na hodinu jsou režie bez užitku.
 - ❌ **Tu část volá jediné místo.** Pak stačí vyměnit ji přímo.
 - ❌ **Nemáš testy a nechceš je psát.** Bez nich technika nedává jistotu, jen zdání.
-- ❌ **Nová verze má úplně jiné rozhraní.** Když se nedá najít společné rozhraní, které dává smysl oběma, technika nesedí — spíš potřebuješ **Strangler Fig**.
+- ❌ **Nová verze má úplně jiné rozhraní.** Když se nedá najít společné rozhraní, které dává smysl oběma, technika nesedí — spíš potřebuješ [Strangler Fig](../StranglerFig/).
 - ❌ **Stará implementace se má zachovat natrvalo.** Pak to není migrace, ale [Strategy](../../../SoftwareDesign/GoF/Behavioral/Strategy/) — a abstrakce zůstává napořád.
 
 ---
@@ -242,7 +242,7 @@ Výměna výpočtu dopravy — ze staré tabulky sazeb na sazbu podle hmotnosti.
 | [Strategy](../../../SoftwareDesign/GoF/Behavioral/Strategy/) (GoF) | Výsledná struktura je táž — rozhraní a zaměnitelné implementace. Rozdíl je v záměru: Strategy je cíl, tady je to **dočasný stav**. |
 | [Ports & Adapters](../../../SoftwareDesign/Architecture/PortsAndAdapters/) | Kde už abstrakce existuje, je krok 1 hotový — a technika začíná rovnou krokem 3. |
 | [Cohesive Mechanism](../../../SoftwareDesign/DDD/CohesiveMechanism/) (DDD) | Typický kandidát na výměnu: výpočet za rozhraním, který jde nahradit lepším. |
-| **Strangler Fig** | Pro případy, kdy se společné rozhraní najít nedá a nahrazuje se celý systém zvenčí. *(zatím nezpracováno)* |
+| [Strangler Fig](../StranglerFig/) | **Nejbližší příbuzný.** Pro případy, kdy se společné rozhraní najít nedá a nahrazuje se celý systém zvenčí — šev je na hranici, ne uvnitř kódu. |
 | **Parallel Run** | Porovnávací režim dotažený do samostatné techniky. *(zatím nezpracováno)* |
 
 ---

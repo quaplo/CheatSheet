@@ -376,6 +376,7 @@ Core\Port\Driven\OrderRepository: '@Adapter\Driven\Persistence\DoctrineOrderRepo
 | [Bounded Context](../../DDD/BoundedContext/) (DDD) | Hranice kontextu je hranice aplikace, kolem které hexagon staví porty. Bounded Context říká **kudy** ta hranice vede, hexagon **jak** ji držet. |
 | [Segregated Core](../../DDD/SegregatedCore/) (DDD) | Táž myšlenka o patro níž — závislosti míří dovnitř, jen uvnitř modelu místo vůči okolnímu světu. |
 | [Branch by Abstraction](../../../Refactoring/System/BranchByAbstraction/) (refaktoring) | Kde port už existuje, je první krok techniky hotový — výměna adaptéru začíná rovnou třetím. |
+| [Strangler Fig](../../../Refactoring/System/StranglerFig/) (refaktoring) | Nový systém se během migrace staví takhle; starý zůstává za adaptérem, dokud se nevypne. |
 
 ---
 

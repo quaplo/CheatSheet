@@ -295,6 +295,7 @@ Domluva nestačí; za půl roku tam bude první `use Sales\Customer` uprostřed 
 | [Core Domain](../CoreDomain/) (DDD) | Jiné dělení: kontext podle **jazyka a významu**, jádro podle **hodnoty pro byznys**. Nemusí se krýt. |
 | [Ubiquitous Language](../UbiquitousLanguage/) (DDD) | **Kontext je hranicí platnosti jazyka.** Jeden jazyk uvnitř, překlad na hranici. |
 | [Conwayův zákon](../../Principles/ConwaysLaw.md) | **Hranice kontextu a hranice týmu mají splývat.** Když nesplývají, jedna z nich se rozpustí — a bývá to ta v kódu. |
+| [Strangler Fig](../../../Refactoring/System/StranglerFig/) (refaktoring) | Švy, podle kterých se starý systém rozděluje při migraci, obvykle vedou tam, kde vedou hranice kontextů. |
 
 ---
 
