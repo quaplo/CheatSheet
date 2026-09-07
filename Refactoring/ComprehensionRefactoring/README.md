@@ -226,6 +226,7 @@ Zbytek dema ověří na 32 vstupech, že **všechny čtyři verze vracejí toté
 | Dokument | Vztah |
 | -------- | ----- |
 | [Charakterizační testy](../CharacterizationTests/) | Síť, bez které se do cizího kódu sahat nedá. Zapíší chování, tohle zapíše význam. |
+| [Litter-pickup refactoring](../LitterPickupRefactoring/) | Druhý oportunistický refaktoring — stejný postup, jiný spouštěč: „je to ošklivé" místo „nerozumím tomu". |
 | [Přípravný refaktoring](../PreparatoryRefactoring/) | Druhý z Fowlerových sedmi workflow — a zdroj pravidla o dvou kloboucích. |
 | [Refaktoring kódu](../Code/) | Konkrétní techniky, kterými se pojmenovává. |
 | [Replace Primitive with Object](../Code/ReplacePrimitiveWithObject/) | Pokračování kroku 2: pojem, který dostal jméno, může dostat i typ. |

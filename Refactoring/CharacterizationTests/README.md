@@ -214,6 +214,7 @@ Závěr je nejdůležitější: pustí **rozbitý přepis** proti dvěma sadám 
 | [Trunk-Based Development](../../GitWorkflows/TrunkBasedDevelopment/) | Bez sítě se denní integrace do hlavní větve dělat nedá. |
 | [Přípravný refaktoring](../PreparatoryRefactoring/) | **Kdy** se do toho pouštět. Charakterizační testy jsou to, s čím — obojí předchází všem technikám. |
 | [Comprehension refactoring](../ComprehensionRefactoring/) | Druhá polovina téhož: testy zapíší **chování**, comprehension refactoring **význam**. |
+| [Litter-pickup refactoring](../LitterPickupRefactoring/) | Zelené testy jsou podmínka i pro ten nejmenší úklid. |
 
 ---
 
