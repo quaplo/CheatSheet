@@ -184,7 +184,7 @@ Tímhle dokumentem je pokryto všech sedm způsobů, kterými se podle Fowlera r
 
 | Workflow | Kdo rozhoduje | Kde je to popsané |
 | -------- | ------------- | ----------------- |
-| **Two Hats** | vývojář, průběžně | [pravidlo o dvou commitech](../PreparatoryRefactoring/#proč-to-dělat-ve-dvou-krocích) |
+| **Two Hats** | vývojář, průběžně | [Dva klobouky](../TwoHats/) |
 | **TDD Refactoring** | vývojář, minuty | tenhle dokument |
 | **Litter-Pickup** | vývojář, minuty | [Litter-pickup](../LitterPickupRefactoring/) |
 | **Comprehension** | vývojář, hodiny | [Comprehension](../ComprehensionRefactoring/) |
@@ -240,7 +240,8 @@ Poslední část je ta zajímavá: demo udělá **třetí krok špatně** — `a
 
 | Dokument | Vztah |
 | -------- | ----- |
-| [Přípravný refaktoring](../PreparatoryRefactoring/) | Odkud pochází pravidlo dvou klobouků, na kterém stojí i tenhle cyklus. |
+| [Dva klobouky](../TwoHats/) | Pravidlo, kvůli kterému má cyklus tři kroky, a ne dva. |
+| [Přípravný refaktoring](../PreparatoryRefactoring/) | Druhé místo, kde se ty dva commity oddělují. |
 | [Litter-pickup](../LitterPickupRefactoring/) | Co s nepořádkem, kterého ses v cyklu nedotkl. |
 | [Comprehension refactoring](../ComprehensionRefactoring/) | Když nerozumíš kódu, který v cyklu voláš. |
 | [Plánovaný refaktoring](../PlannedRefactoring/) | Co zbude, když se třetí krok soustavně vynechává. |

@@ -75,7 +75,7 @@ změn v existujících           0
 
 ## Proč to dělat ve dvou krocích
 
-Nejde jen o pořadí — jde o **dva oddělené commity**. Fowler tomu říká **dva klobouky**: buď přidáváš funkci, nebo refaktoruješ, **nikdy obojí zároveň**. Přepínat mezi nimi můžeš klidně každých pár minut, ale vždycky máš na hlavě jen jeden.
+Nejde jen o pořadí — jde o **dva oddělené commity**. Platí tu [pravidlo dvou klobouků](../TwoHats/): buď přidáváš funkci, nebo refaktoruješ, nikdy obojí zároveň.
 
 ```
 commit                        mění chování?     co v něm recenzent hledá
@@ -122,7 +122,7 @@ Fowler v článku *Workflows of Refactoring* (2014) popisuje **sedm** způsobů,
 
 | Workflow | Kdy | Kdo o tom rozhoduje |
 | -------- | --- | ------------------- |
-| **Two Hats** | Základní pravidlo pro všechny ostatní: buď funkce, nebo refaktoring | vývojář, průběžně |
+| [**Two Hats**](../TwoHats/) | Základní pravidlo pro všechny ostatní: buď funkce, nebo refaktoring | vývojář, průběžně |
 | [**TDD Refactoring**](../TddRefactoring/) | Třetí krok cyklu red–green–refactor | vývojář, minuty |
 | [**Litter-Pickup**](../LitterPickupRefactoring/) | „Jsem tu stejně, tak to cestou uklidím" | vývojář, minuty |
 | [**Comprehension**](../ComprehensionRefactoring/) | Refaktoruješ, abys kódu porozuměl — a znalost zůstane v kódu | vývojář, hodiny |
@@ -137,7 +137,7 @@ Fowler v článku *Workflows of Refactoring* (2014) popisuje **sedm** způsobů,
 - [**Litter-pickup refactoring**](../LitterPickupRefactoring/) je s comprehension dvojice, které Fowler říká **oportunistické refaktoringy** — u obou narazíš na problém, když děláš něco jiného.
 - [**Planned Refactoring**](../PlannedRefactoring/) je první z nich, o kterém se rozhoduje tým — a podle Fowlera zároveň signál, že ta čtyři předchozí vázla.
 - **Long Term Refactoring** je to, čemu se v [`System/`](../System/) věnují všechny čtyři techniky.
-- **Two Hats** je pravidlo, které stojí za oddělenými commity ve všech [kódových refaktoringech](../Code/).
+- [**Two Hats**](../TwoHats/) je pravidlo, které stojí za oddělenými commity ve všech [kódových refaktoringech](../Code/).
 
 Fowler u toho zdůrazňuje jednu věc, která zní politicky, ale je praktická: **na první čtyři se nikoho neptáš.** Jsou to součást práce, ne samostatná položka v plánu. Teprve *Planned* a *Long Term* jsou rozhodnutí, o kterém tým ví.
 
@@ -174,6 +174,7 @@ Závěr obě cesty spočítá vedle sebe — a přiznává, že **kdyby žádný
 
 | Dokument | Vztah |
 | -------- | ----- |
+| [Dva klobouky](../TwoHats/) | Pravidlo, na kterém tenhle postup stojí — a proč jsou to dva commity. |
 | [TDD refaktoring](../TddRefactoring/) | Třetí krok cyklu — a druhé místo, kde platí dva klobouky. |
 | [Charakterizační testy](../CharacterizationTests/) | Bez sítě se příprava dělat nedá. |
 | [Comprehension refactoring](../ComprehensionRefactoring/) | Druhé z Fowlerových workflow, o kterých se nikoho neptáš — a často to, co přípravě předchází. |

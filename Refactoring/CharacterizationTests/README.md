@@ -217,6 +217,7 @@ Závěr je nejdůležitější: pustí **rozbitý přepis** proti dvěma sadám 
 | [Litter-pickup refactoring](../LitterPickupRefactoring/) | Zelené testy jsou podmínka i pro ten nejmenší úklid. |
 | [Plánovaný refaktoring](../PlannedRefactoring/) | U cizího modulu, na který je story, obvykle testy chybí — začíná se tady. |
 | [TDD refaktoring](../TddRefactoring/) | Opačný případ: tam testy vznikly první a refaktoring je má zadarmo. |
+| [Dva klobouky](../TwoHats/) | Zelená sada je podmínka celého pravidla — tohle je způsob, jak ji získat. |
 
 ---
 

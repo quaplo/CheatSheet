@@ -120,7 +120,7 @@ Stejný cílový stav jako cesta A. Rozdíl je jen v tom, že **v druhém commit
 
 Demo navíc ověří, co je u refaktoringu to podstatné: úklidový commit **nezměnil ani jeden z 30 testovaných případů**. Změnu chování přinesla jen ta jedna řádka — v šesti případech, a všechny jsou to objednávky přesně za 1 000 Kč.
 
-To je zase pravidlo [dvou klobouků](../PreparatoryRefactoring/#proč-to-dělat-ve-dvou-krocích): buď měníš chování, nebo strukturu, nikdy obojí v jednom commitu.
+To je zase pravidlo [dvou klobouků](../TwoHats/): buď měníš chování, nebo strukturu, nikdy obojí v jednom commitu.
 
 ---
 
@@ -215,6 +215,7 @@ Nakonec ověří na 30 vstupech, že **úklid nezměnil ani jeden případ**, a 
 
 | Dokument | Vztah |
 | -------- | ----- |
+| [Dva klobouky](../TwoHats/) | Pravidlo, kvůli kterému je úklid vlastní commit. |
 | [Comprehension refactoring](../ComprehensionRefactoring/) | Druhý oportunistický refaktoring — stejný postup, jiný spouštěč. |
 | [TDD refaktoring](../TddRefactoring/) | Úklid toho, čeho ses právě dotkl; tenhle dokument řeší zbytek souboru. |
 | [Přípravný refaktoring](../PreparatoryRefactoring/) | Co se z litter-pickupu stane ve chvíli, kdy úklid usnadní tvou vlastní změnu. |

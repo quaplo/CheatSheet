@@ -41,7 +41,7 @@ Story, která se dá dodělat, musí mít tři věci. Všechny tři vycházejí 
 **3. Odpověď na otázku „co když to nedoděláme".** Tahle otázka zní pesimisticky a přesně proto se neptá. Přitom je to ta jediná, která rozhoduje o tom, jak se story rozdělí.
 
 > [!IMPORTANT]
-> Refaktoringová story **nemění chování**. Když je v ní schovaná i oprava chyby nebo nová funkce, přestává být vratná a recenzent v ní nemá co hledat. Platí [dva klobouky](../PreparatoryRefactoring/#proč-to-dělat-ve-dvou-krocích), jen ve větším měřítku.
+> Refaktoringová story **nemění chování**. Když je v ní schovaná i oprava chyby nebo nová funkce, přestává být vratná a recenzent v ní nemá co hledat. Platí [dva klobouky](../TwoHats/), jen ve větším měřítku.
 
 ---
 
@@ -176,6 +176,7 @@ Nakonec ověří, kolik má každý postup bezpečných zastávek: po krocích t
 | -------- | ----- |
 | [Refaktoring systému](../System/) | Fowlerův *Long Term Refactoring* — totéž na měsíce a bez vyhrazeného času. |
 | [Branch by Abstraction](../System/BranchByAbstraction/) | Nástroj, který Fowler u dlouhodobého refaktoringu jmenuje. |
+| [Dva klobouky](../TwoHats/) | Proč story nesmí měnit chování — jinak ji nejde vrátit. |
 | [TDD refaktoring](../TddRefactoring/) | První z průběžných workflow; jeho soustavné vynechávání je vidět právě tady. |
 | [Litter-pickup](../LitterPickupRefactoring/) | Průběžný úklid, jehož absence dělá z plánovaného refaktoringu nutnost. |
 | [Comprehension refactoring](../ComprehensionRefactoring/) | Druhý z průběžných způsobů, které mají story předcházet. |

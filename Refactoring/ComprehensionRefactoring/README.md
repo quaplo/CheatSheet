@@ -182,7 +182,7 @@ Ty dvě techniky jsou vlastně dvě poloviny téhož: **charakterizační testy 
 | Cizí modul, do kterého nezasahuješ | Rozbiješ diffy a code ownership někomu jinému | Napsat si to k sobě, domluvit se |
 | Chování se ti nezdá správné | To už není comprehension refactoring | Nahlásit chybu, opravit zvlášť |
 
-Poslední řádek stojí za zdůraznění. **Když při pojmenovávání zjistíš, že kód dělá něco špatně, nejsi u toho, abys to opravil.** Objev si poznamenej a oprav ho jako samostatnou změnu — [dva klobouky](../PreparatoryRefactoring/#proč-to-dělat-ve-dvou-krocích) platí i tady.
+Poslední řádek stojí za zdůraznění. **Když při pojmenovávání zjistíš, že kód dělá něco špatně, nejsi u toho, abys to opravil.** Objev si poznamenej a oprav ho jako samostatnou změnu — [dva klobouky](../TwoHats/) platí i tady.
 
 ---
 
@@ -227,6 +227,7 @@ Zbytek dema ověří na 32 vstupech, že **všechny čtyři verze vracejí toté
 | -------- | ----- |
 | [Charakterizační testy](../CharacterizationTests/) | Síť, bez které se do cizího kódu sahat nedá. Zapíší chování, tohle zapíše význam. |
 | [TDD refaktoring](../TddRefactoring/) | Kde síť vzniká sama — a proto se tam pojmenovává nejlevněji. |
+| [Dva klobouky](../TwoHats/) | Proč se nalezená chyba neopravuje tady, ale ve vlastním commitu. |
 | [Litter-pickup refactoring](../LitterPickupRefactoring/) | Druhý oportunistický refaktoring — stejný postup, jiný spouštěč: „je to ošklivé" místo „nerozumím tomu". |
 | [Přípravný refaktoring](../PreparatoryRefactoring/) | Druhý z Fowlerových sedmi workflow — a zdroj pravidla o dvou kloboucích. |
 | [Plánovaný refaktoring](../PlannedRefactoring/) | Když je nesrozumitelný celý modul, na průběžné pojmenovávání to nestačí. |

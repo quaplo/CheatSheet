@@ -168,7 +168,7 @@ php Refactoring/<Úroveň>/<Název>/demo/run.php
 
 ```yaml
 name: <Název>
-level: <code | system>
+level: <code | system | příprava | pravidlo>
 author: <…>
 year: <…>
 duration: <hodiny | dny | týdny | měsíce>
