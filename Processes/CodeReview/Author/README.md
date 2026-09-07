@@ -152,6 +152,7 @@ Poslední řádek je drobnost s velkým dopadem. **Když během review přepíš
 | [Komentáře](../Comments/) | Jak poznat závazné od nezávazného |
 | [Trunk-Based Development](../../../GitWorkflows/TrunkBasedDevelopment/) | Model, který na malých změnách přímo stojí; má i techniky, jak velkou práci rozdělit |
 | [First Class Collection](../../../SoftwareDesign/ObjectCalisthenics/FirstClassCollection/) | Příklad změny, která se dá udělat samostatně a nezávisle |
+| [Přípravný refaktoring](../../../Refactoring/PreparatoryRefactoring/) | Proč refaktoring a změna chování patří do oddělených pull requestů — recenzent v každém hledá něco jiného. |
 
 ---
 

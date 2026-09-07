@@ -25,12 +25,13 @@ Slovo „refaktoring" pokrývá dvě věci, které mají společný cíl a skoro
 
 ---
 
-## Krok nula: charakterizační testy
+## Než začneš
 
-Všechny techniky níž předpokládají testy. **[Charakterizační testy](CharacterizationTests/)** odpovídají na otázku, co dělat, když neexistují a napsat je podle zadání nejde — protože zadání není.
+Dvě věci, které předcházejí všem technikám níž: **kdy** se do refaktoringu pouštět a **s čím** v ruce.
 
 | Technika | K čemu | Náročnost | Stav |
 | -------- | ------ | --------- | ---- |
+| [**Přípravný refaktoring**](PreparatoryRefactoring/) | Kdy a proč refaktorovat — a proč ve dvou commitech | ●●○○○ | ✅ |
 | [**Charakterizační testy**](CharacterizationTests/) | Síť, která zapíše, co kód **dělá** — ne co má dělat | ●●○○○ | ✅ |
 
 ---
@@ -68,7 +69,7 @@ Změny, které běží za provozu a musí jít vrátit.
 
 Refaktoring není hodnota sám o sobě — je to investice, která se musí vrátit. Čtyři situace, kdy se vyplatí, a jedna, kdy ne:
 
-- ✅ **Chystáš se v tom místě něco měnit.** Nejlevnější okamžik: uklidíš to, čemu stejně musíš rozumět. Kent Beck to shrnul jako *„make the change easy, then make the easy change"*.
+- ✅ **Chystáš se v tom místě něco měnit.** Nejlevnější okamžik: uklidíš to, čemu stejně musíš rozumět. To je [přípravný refaktoring](PreparatoryRefactoring/) a Kent Beck to shrnul jako *„make the change easy, then make the easy change"*.
 - ✅ **Totéž místo tě zdrželo potřetí.** [Pravidlo tří](../SoftwareDesign/Principles/Simplicity.md#pravidlo-tří) platí i tady.
 - ✅ **Nový člověk tomu nerozumí.** Kód, který nejde vysvětlit, se bude měnit špatně.
 - ✅ **Chyba se vrátila podruhé na tomtéž místě.** Obvykle to není chyba, ale návrh.

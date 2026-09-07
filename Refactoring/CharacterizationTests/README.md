@@ -212,6 +212,7 @@ Závěr je nejdůležitější: pustí **rozbitý přepis** proti dvěma sadám 
 | [Code review](../../Processes/CodeReview/) | Charakterizační testy a oprava chyby patří do **oddělených** pull requestů. |
 | [Extreme Programming](../../Processes/ExtremeProgramming/) | Odkud pochází důraz na testy jako podmínku průběžné změny. |
 | [Trunk-Based Development](../../GitWorkflows/TrunkBasedDevelopment/) | Bez sítě se denní integrace do hlavní větve dělat nedá. |
+| [Přípravný refaktoring](../PreparatoryRefactoring/) | **Kdy** se do toho pouštět. Charakterizační testy jsou to, s čím — obojí předchází všem technikám. |
 
 ---
 

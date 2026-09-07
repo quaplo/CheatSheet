@@ -8,7 +8,7 @@ Jak měnit kód, který už běží. Dvě úrovně s vlastními složkami:
 
 - **[`Code/`](Code/)** — změny v jednom procesu, které nemění chování. Vybíráme **jen ty, které vedou k některému ze vzorů v [`SoftwareDesign/`](../SoftwareDesign/)**; kompletní katalog vede Fowler a nepřepisujeme ho.
 - **[`System/`](System/)** — změny za provozu, které trvají týdny a musí jít vrátit.
-- **[`CharacterizationTests/`](CharacterizationTests/)** — krok nula pro obojí; leží na úrovni sekce, protože se netýká jedné úrovně, ale všech technik.
+- **[`PreparatoryRefactoring/`](PreparatoryRefactoring/)** a **[`CharacterizationTests/`](CharacterizationTests/)** — *kdy* refaktorovat a *s čím*; leží na úrovni sekce, protože se netýkají jedné úrovně, ale všech technik.
 
 ## Struktura
 
@@ -20,7 +20,10 @@ CLAUDE.md                      # tenhle soubor
 _template/
     README.md                  # postup přidání + checklist
     REFACTORING.md             # šablona
-CharacterizationTests/            # krok nula, mimo obě úrovně
+PreparatoryRefactoring/           # kdy refaktorovat — mimo obě úrovně
+    README.md
+    demo/
+CharacterizationTests/            # s čím — mimo obě úrovně
     README.md
     demo/
 Code/

@@ -184,6 +184,7 @@ Právě proto se z XP v praxi nejčastěji **bere po částech** — a jak je vi
 | [Simplicity — YAGNI](../../SoftwareDesign/Principles/Simplicity.md#yagni--you-arent-gonna-need-it) | Princip, který vzešel z XP komunity. |
 | [Software Design](../../SoftwareDesign/) | „Incremental Design" a průběžný refaktoring předpokládají, že víš, k čemu návrh vést. |
 | [Waterfall](../Waterfall/) | Protiklad — návrh dopředu a celý, místo průběžně a po částech. |
+| [Přípravný refaktoring](../../Refactoring/PreparatoryRefactoring/) | Kam vede XP důraz na průběžný refaktoring: neděje se ve fázi, ale před každou změnou. |
 
 ---
 
