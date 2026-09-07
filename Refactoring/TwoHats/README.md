@@ -181,6 +181,7 @@ Dočasné repozitáře po sobě uklidí.
 | [Plánovaný refaktoring](../PlannedRefactoring/) | Totéž ve velkém: story, která mění chování, není vratná. |
 | [Charakterizační testy](../CharacterizationTests/) | Zelená sada je podmínka celého pravidla. Tohle je způsob, jak ji získat. |
 | [Code review: autor](../../Processes/CodeReview/Author/) | Proč se oddělené commity vyplatí i tomu, kdo je jenom čte. |
+| [Dlouhodobý refaktoring](../LongTermRefactoring/) | Kde na tom pravidle stojí záruka, že hlavní větev pořád funguje. |
 | [Refaktoring systému](../System/) | Kde už oddělení nestačí a je potřeba návratová cesta. |
 
 ---

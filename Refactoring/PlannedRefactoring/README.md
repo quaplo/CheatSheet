@@ -174,7 +174,8 @@ Nakonec ověří, kolik má každý postup bezpečných zastávek: po krocích t
 
 | Dokument | Vztah |
 | -------- | ----- |
-| [Refaktoring systému](../System/) | Fowlerův *Long Term Refactoring* — totéž na měsíce a bez vyhrazeného času. |
+| [Dlouhodobý refaktoring](../LongTermRefactoring/) | Fowlerův *Long Term Refactoring* — totéž na měsíce a bez vyhrazeného času. |
+| [Refaktoring systému](../System/) | Techniky, ze kterých se obojí skládá. |
 | [Branch by Abstraction](../System/BranchByAbstraction/) | Nástroj, který Fowler u dlouhodobého refaktoringu jmenuje. |
 | [Dva klobouky](../TwoHats/) | Proč story nesmí měnit chování — jinak ji nejde vrátit. |
 | [TDD refaktoring](../TddRefactoring/) | První z průběžných workflow; jeho soustavné vynechávání je vidět právě tady. |

@@ -38,6 +38,7 @@ Pravidlo, které platí ve všech technikách níž, a dokumenty o tom, **kdy** 
 | [**Comprehension refactoring**](ComprehensionRefactoring/) | Jak porozumět cizímu kódu — a nechat to pochopení v něm | ●●○○○ | ✅ |
 | [**Litter-pickup refactoring**](LitterPickupRefactoring/) | Co s nepořádkem, na který narazíš cestou za něčím jiným | ●○○○○ | ✅ |
 | [**Plánovaný refaktoring**](PlannedRefactoring/) | Úklid, na který je vyhrazený čas — a proč je to zároveň špatná zpráva | ●●●○○ | ✅ |
+| [**Dlouhodobý refaktoring**](LongTermRefactoring/) | Přestavba na měsíce, dělaná v hlavní větvi mezi běžnou prací | ●●●●○ | ✅ |
 
 ---
 

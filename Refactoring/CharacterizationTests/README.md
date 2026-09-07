@@ -218,6 +218,7 @@ Závěr je nejdůležitější: pustí **rozbitý přepis** proti dvěma sadám 
 | [Plánovaný refaktoring](../PlannedRefactoring/) | U cizího modulu, na který je story, obvykle testy chybí — začíná se tady. |
 | [TDD refaktoring](../TddRefactoring/) | Opačný případ: tam testy vznikly první a refaktoring je má zadarmo. |
 | [Dva klobouky](../TwoHats/) | Zelená sada je podmínka celého pravidla — tohle je způsob, jak ji získat. |
+| [Dlouhodobý refaktoring](../LongTermRefactoring/) | Kde se síť musí udržet po celé měsíce přestavby. |
 
 ---
 

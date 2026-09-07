@@ -190,7 +190,7 @@ Tímhle dokumentem je pokryto všech sedm způsobů, kterými se podle Fowlera r
 | **Comprehension** | vývojář, hodiny | [Comprehension](../ComprehensionRefactoring/) |
 | **Preparatory** | vývojář, hodiny až den | [Přípravný](../PreparatoryRefactoring/) |
 | **Planned** | tým | [Plánovaný](../PlannedRefactoring/) |
-| **Long Term** | tým, někdy byznys | [Refaktoring systému](../System/) |
+| **Long Term** | tým, někdy byznys | [Dlouhodobý refaktoring](../LongTermRefactoring/) |
 
 Fowler k tomu dodává, co z toho plyne pro tým, který má pocit, že refaktoruje málo:
 
