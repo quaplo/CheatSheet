@@ -232,6 +232,7 @@ SKU jako řetězec proti SKU jako typu. Demo pustí sedm vstupů přes tři růz
 | [Replace Constructor with Factory Method](../ReplaceConstructorWithFactoryMethod/) | Tentýž vzor u objektu místo u hodnoty — `fromString()` je pojmenovaná továrna. |
 | [Charakterizační testy](../../CharacterizationTests/) | **Krok nula.** Co dělat, když testy neexistují a zadání, podle kterého by se napsaly, taky ne. |
 
+| [Comprehension refactoring](../../ComprehensionRefactoring/) | Často to, co tomuhle refaktoringu předchází — pojem nejdřív dostane jméno, pak teprve typ. |
 ---
 
 ## Původ

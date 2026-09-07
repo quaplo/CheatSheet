@@ -239,6 +239,7 @@ Nejzajímavější je, že jich najde **tři, ale vytáhnout se má jedna**. Pol
 | [Expand–Contract](../../System/ExpandContract/) | Jak krok 5 udělat u rozhraní, které používá někdo mimo tvůj kód. |
 | [Charakterizační testy](../../CharacterizationTests/) | **Krok nula.** Co dělat, když testy neexistují a zadání, podle kterého by se napsaly, taky ne. |
 
+| [Comprehension refactoring](../../ComprehensionRefactoring/) | Rozdělení na pojmenované metody bývá první krok; teprve pak je vidět, že v třídě bydlí dvě věci. |
 ---
 
 ## Původ

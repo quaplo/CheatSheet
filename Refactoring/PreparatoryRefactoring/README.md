@@ -125,14 +125,14 @@ Fowler v článku *Workflows of Refactoring* (2014) popisuje **sedm** způsobů,
 | **Two Hats** | Základní pravidlo pro všechny ostatní: buď funkce, nebo refaktoring | vývojář, průběžně |
 | **TDD Refactoring** | Třetí krok cyklu red–green–refactor | vývojář, minuty |
 | **Litter-Pickup** | „Jsem tu stejně, tak to cestou uklidím" | vývojář, minuty |
-| **Comprehension** | Refaktoruješ, abys kódu porozuměl — a znalost zůstane v kódu | vývojář, hodiny |
+| [**Comprehension**](../ComprehensionRefactoring/) | Refaktoruješ, abys kódu porozuměl — a znalost zůstane v kódu | vývojář, hodiny |
 | **Preparatory** | Chystáš změnu a připravuješ na ni místo | vývojář, hodiny až den |
 | **Planned** | Vyhrazený čas na úklid, který se nestihl průběžně | tým |
 | **Long Term** | Velká změna po částech, měsíce | tým, někdy i byznys |
 
 Tři z nich mají v tomhle katalogu vlastní pokračování:
 
-- **Comprehension refactoring** je myšlenkově blízké [charakterizačním testům](../CharacterizationTests/) — obojí je způsob, jak zjistit, co kód dělá, a zapsat to.
+- [**Comprehension refactoring**](../ComprehensionRefactoring/) je myšlenkově blízké [charakterizačním testům](../CharacterizationTests/) — obojí je způsob, jak zjistit, co kód dělá, a zapsat to.
 - **Long Term Refactoring** je to, čemu se v [`System/`](../System/) věnují všechny čtyři techniky.
 - **Two Hats** je pravidlo, které stojí za oddělenými commity ve všech [kódových refaktoringech](../Code/).
 
@@ -171,7 +171,8 @@ Závěr obě cesty spočítá vedle sebe — a přiznává, že **kdyby žádný
 
 | Dokument | Vztah |
 | -------- | ----- |
-| [Charakterizační testy](../CharacterizationTests/) | Bez sítě se příprava dělat nedá; a *comprehension refactoring* je jejich blízký příbuzný. |
+| [Charakterizační testy](../CharacterizationTests/) | Bez sítě se příprava dělat nedá. |
+| [Comprehension refactoring](../ComprehensionRefactoring/) | Druhé z Fowlerových workflow, o kterých se nikoho neptáš — a často to, co přípravě předchází. |
 | [Refaktoring kódu](../Code/) | Konkrétní techniky, kterými se to místo připravuje. |
 | [Refaktoring systému](../System/) | Fowlerův *Long Term Refactoring* — totéž na měsíce místo hodin. |
 | [Code review](../../Processes/CodeReview/Author/) | Odkud pochází pravidlo o oddělených pull requestech. |
