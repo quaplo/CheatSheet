@@ -376,6 +376,7 @@ Skoro nikdy — a je dobré to říct rovnou, aby z toho nevznikl zbytečný pro
 | [Entity](../../DDD/Entity/) | Objekt, který mapper překládá; odtud i dvojice `place()` / `reconstitute()`. |
 | [Anticorruption Layer](../../DDD/AnticorruptionLayer/) | Táž myšlenka o patro výš: tam se překládá cizí **model**, tady cizí **schéma**. |
 | [CQRS](../../Architecture/CQRS/) | Čtecí strana mapper obchází — z SQL rovnou do DTO, bez doménového objektu. |
+| [Expand–Contract](../../../Refactoring/System/ExpandContract/) (refaktoring) | Kde se v aplikaci implementuje dvojí zápis při migraci schématu — mapper píše do staré i nové podoby. |
 
 ---
 

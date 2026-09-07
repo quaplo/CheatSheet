@@ -244,6 +244,7 @@ Výměna výpočtu dopravy — ze staré tabulky sazeb na sazbu podle hmotnosti.
 | [Cohesive Mechanism](../../../SoftwareDesign/DDD/CohesiveMechanism/) (DDD) | Typický kandidát na výměnu: výpočet za rozhraním, který jde nahradit lepším. |
 | [Strangler Fig](../StranglerFig/) | **Nejbližší příbuzný.** Pro případy, kdy se společné rozhraní najít nedá a nahrazuje se celý systém zvenčí — šev je na hranici, ne uvnitř kódu. |
 | [Parallel Run](../ParallelRun/) | **Porovnávací režim dotažený do samostatné techniky** — s vzorkováním, zachytáváním výjimek a měřením výkonu. |
+| [Expand–Contract](../ExpandContract/) | Sourozenec o úroveň jinde: tenhle mění implementaci za rozhraním, ten **samo rozhraní** nebo schéma. |
 
 ---
 

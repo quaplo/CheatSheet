@@ -321,6 +321,7 @@ Nedá se udělat přepnutím — chybějící předpoklady je potřeba doplnit *
 | [OneFlow](../OneFlow/) | Míří opačným směrem — k plánovaným vydáním. Sdílí ale důraz na krátké větve a čitelnou historii. |
 | [Conwayův zákon](../../SoftwareDesign/Principles/ConwaysLaw.md) (princip) | Model větvení je taky komunikační struktura. Tenhle předpokládá tým, který se domluví během hodin. |
 | [Branch by Abstraction](../../Refactoring/System/BranchByAbstraction/) (refaktoring) | **Odpověď na námitku „velké změny se bez dlouhé větve dělat nedají".** Hammant ji popsal právě v tomhle kontextu. |
+| [Expand–Contract](../../Refactoring/System/ExpandContract/) (refaktoring) | Sato ji doporučuje právě pro continuous delivery: každá fáze je samostatně vydatelná. |
 
 ---
 

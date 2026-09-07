@@ -48,7 +48,7 @@ Změny, které běží za provozu a musí jít vrátit.
 | [**Branch by Abstraction**](System/BranchByAbstraction/) | Výměna implementace za běhu, přes abstrakci; obě verze existují vedle sebe | ●●●○○ | ✅ |
 | [**Strangler Fig**](System/StranglerFig/) | Postupné obalení starého systému novým, dokud starý nezmizí | ●●●●○ | ✅ |
 | [**Parallel Run**](System/ParallelRun/) | Obě verze běží současně a porovnávají se; nová nikdy neodpovídá | ●●○○○ | ✅ |
-| Expand–Contract | Změna rozhraní nebo schématu ve třech krocích bez výpadku | | ⬜ |
+| [**Expand–Contract**](System/ExpandContract/) | Změna rozhraní nebo schématu bez výpadku, ve fázích | ●●●○○ | ✅ |
 
 <sub>⬜ plánováno · 🚧 rozpracováno · ✅ hotovo</sub>
 
