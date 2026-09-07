@@ -27,7 +27,7 @@ Slovo „refaktoring" pokrývá dvě věci, které mají společný cíl a skoro
 
 ## Než začneš
 
-Čtyři věci, které předcházejí všem technikám níž: **kdy** se do refaktoringu pouštět, **s čím** v ruce, **jak** pochopit kód, který měníš, a **kde přestat** u toho, co uklízíš mimochodem.
+Pět věcí, které předcházejí všem technikám níž: **kdy** se do refaktoringu pouštět, **s čím** v ruce, **jak** pochopit kód, který měníš, **kde přestat** u toho, co uklízíš mimochodem, a **co dělat s tím**, na co průběžný úklid nestačí.
 
 | Technika | K čemu | Náročnost | Stav |
 | -------- | ------ | --------- | ---- |
@@ -35,6 +35,7 @@ Slovo „refaktoring" pokrývá dvě věci, které mají společný cíl a skoro
 | [**Charakterizační testy**](CharacterizationTests/) | Síť, která zapíše, co kód **dělá** — ne co má dělat | ●●○○○ | ✅ |
 | [**Comprehension refactoring**](ComprehensionRefactoring/) | Jak porozumět cizímu kódu — a nechat to pochopení v něm | ●●○○○ | ✅ |
 | [**Litter-pickup refactoring**](LitterPickupRefactoring/) | Co s nepořádkem, na který narazíš cestou za něčím jiným | ●○○○○ | ✅ |
+| [**Plánovaný refaktoring**](PlannedRefactoring/) | Úklid, na který je vyhrazený čas — a proč je to zároveň špatná zpráva | ●●●○○ | ✅ |
 
 ---
 

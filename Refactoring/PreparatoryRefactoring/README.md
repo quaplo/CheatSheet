@@ -127,13 +127,14 @@ Fowler v článku *Workflows of Refactoring* (2014) popisuje **sedm** způsobů,
 | [**Litter-Pickup**](../LitterPickupRefactoring/) | „Jsem tu stejně, tak to cestou uklidím" | vývojář, minuty |
 | [**Comprehension**](../ComprehensionRefactoring/) | Refaktoruješ, abys kódu porozuměl — a znalost zůstane v kódu | vývojář, hodiny |
 | **Preparatory** | Chystáš změnu a připravuješ na ni místo | vývojář, hodiny až den |
-| **Planned** | Vyhrazený čas na úklid, který se nestihl průběžně | tým |
+| [**Planned**](../PlannedRefactoring/) | Vyhrazený čas na úklid, který se nestihl průběžně | tým |
 | **Long Term** | Velká změna po částech, měsíce | tým, někdy i byznys |
 
-Čtyři z nich mají v tomhle katalogu vlastní pokračování:
+Pět z nich má v tomhle katalogu vlastní pokračování:
 
 - [**Comprehension refactoring**](../ComprehensionRefactoring/) je myšlenkově blízké [charakterizačním testům](../CharacterizationTests/) — obojí je způsob, jak zjistit, co kód dělá, a zapsat to.
 - [**Litter-pickup refactoring**](../LitterPickupRefactoring/) je s comprehension dvojice, které Fowler říká **oportunistické refaktoringy** — u obou narazíš na problém, když děláš něco jiného.
+- [**Planned Refactoring**](../PlannedRefactoring/) je první z nich, o kterém se rozhoduje tým — a podle Fowlera zároveň signál, že ta čtyři předchozí vázla.
 - **Long Term Refactoring** je to, čemu se v [`System/`](../System/) věnují všechny čtyři techniky.
 - **Two Hats** je pravidlo, které stojí za oddělenými commity ve všech [kódových refaktoringech](../Code/).
 
@@ -175,6 +176,7 @@ Závěr obě cesty spočítá vedle sebe — a přiznává, že **kdyby žádný
 | [Charakterizační testy](../CharacterizationTests/) | Bez sítě se příprava dělat nedá. |
 | [Comprehension refactoring](../ComprehensionRefactoring/) | Druhé z Fowlerových workflow, o kterých se nikoho neptáš — a často to, co přípravě předchází. |
 | [Litter-pickup refactoring](../LitterPickupRefactoring/) | Nejlevnější z nich; přejde v přípravný ve chvíli, kdy úklid usnadní tvou vlastní změnu. |
+| [Plánovaný refaktoring](../PlannedRefactoring/) | Co přijde, když se příprava ani úklid dělat nestihly. |
 | [Refaktoring kódu](../Code/) | Konkrétní techniky, kterými se to místo připravuje. |
 | [Refaktoring systému](../System/) | Fowlerův *Long Term Refactoring* — totéž na měsíce místo hodin. |
 | [Code review](../../Processes/CodeReview/Author/) | Odkud pochází pravidlo o oddělených pull requestech. |

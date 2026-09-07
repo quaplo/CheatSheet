@@ -218,6 +218,7 @@ Nakonec ověří na 30 vstupech, že **úklid nezměnil ani jeden případ**, a 
 | [Comprehension refactoring](../ComprehensionRefactoring/) | Druhý oportunistický refaktoring — stejný postup, jiný spouštěč. |
 | [Přípravný refaktoring](../PreparatoryRefactoring/) | Co se z litter-pickupu stane ve chvíli, kdy úklid usnadní tvou vlastní změnu. |
 | [Charakterizační testy](../CharacterizationTests/) | Bez zelených testů se uklízet nedá; tohle je způsob, jak je získat. |
+| [Plánovaný refaktoring](../PlannedRefactoring/) | Kam odložit úklid, který se do „pár řádků" nevejde — a proč je jeho převaha špatná zpráva. |
 | [Refaktoring kódu](../Code/) | Konkrétní techniky pro úklid, který se do „pár řádků" nevejde. |
 | [Extract Class](../Code/ExtractClass/) | Přesně ten případ z části „kde je hranice" — správná změna, špatná chvíle. |
 | [Code review: autor](../../Processes/CodeReview/Author/) | Odkud pochází pravidlo o oddělených pull requestech a proč recenzentovi pomáhá. |
