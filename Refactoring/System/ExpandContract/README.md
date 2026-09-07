@@ -1,5 +1,6 @@
 # Expand–Contract
 
+
 > [← zpět na Refaktoring systému](../)
 
 > **V jedné větě:** Nejdřív přidej nové vedle starého, pak převeď všechny na nové — a teprve nakonec staré odstraň.
@@ -271,6 +272,7 @@ Výměna sloupce `shipped` (ano/ne) za `status` (nová/expedovaná/zrušená) na
 | [Feature flag](../../../GitWorkflows/Glossary.md#feature-flag) | Čím se přepíná čtení mezi starou a novou reprezentací. |
 | [Idempotence](../../../SoftwareDesign/Glossary.md#idempotence) | Backfill musí jít pustit znovu — po přerušení se pokračuje, ne začíná od začátku. |
 | [Data Mapper](../../../SoftwareDesign/PoEAA/DataMapper/) (PoEAA) | Kde se dvojí zápis v aplikaci nejčastěji implementuje. |
+| [Introduce Parameter Object](../../Code/IntroduceParameterObject/) | Totéž v malém: když se mění podpis metody, kterou volá i kód mimo repozitář. |
 | [Charakterizační testy](../../CharacterizationTests/) | **Krok nula.** Co dělat, když testy neexistují a zadání, podle kterého by se napsaly, taky ne. |
 
 ---

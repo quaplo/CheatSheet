@@ -233,6 +233,7 @@ SKU jako řetězec proti SKU jako typu. Demo pustí sedm vstupů přes tři růz
 | [Charakterizační testy](../../CharacterizationTests/) | **Krok nula.** Co dělat, když testy neexistují a zadání, podle kterého by se napsaly, taky ne. |
 
 | [Comprehension refactoring](../../ComprehensionRefactoring/) | Často to, co tomuhle refaktoringu předchází — pojem nejdřív dostane jméno, pak teprve typ. |
+| [Introduce Parameter Object](../IntroduceParameterObject/) | Sousední případ: skupina hodnot, které chodí spolu, místo jedné. |
 ---
 
 ## Původ

@@ -54,6 +54,7 @@ Změny v jednom procesu, které nemění chování. Vybíráme ty, které **vedo
 | [**Replace Conditional with Polymorphism**](Code/ReplaceConditionalWithPolymorphism/) | [Strategy](../SoftwareDesign/GoF/Behavioral/Strategy/), [State](../SoftwareDesign/GoF/Behavioral/State/) | ✅ |
 | [**Encapsulate Collection**](Code/EncapsulateCollection/) | [First Class Collection](../SoftwareDesign/ObjectCalisthenics/FirstClassCollection/) | ✅ |
 | [**Replace Primitive with Object**](Code/ReplacePrimitiveWithObject/) | [Value Object](../SoftwareDesign/DDD/ValueObject/) | ✅ |
+| [**Introduce Parameter Object**](Code/IntroduceParameterObject/) | [Value Object](../SoftwareDesign/DDD/ValueObject/) | ✅ |
 | [**Extract Class**](Code/ExtractClass/) | [SRP](../SoftwareDesign/Principles/SOLID.md#single-responsibility-principle-srp), [Segregated Core](../SoftwareDesign/DDD/SegregatedCore/) | ✅ |
 | [**Replace Constructor with Factory Method**](Code/ReplaceConstructorWithFactoryMethod/) | [Factory](../SoftwareDesign/DDD/Factory/), [Factory Method](../SoftwareDesign/GoF/Creational/FactoryMethod/) | ✅ |
 
