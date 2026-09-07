@@ -175,6 +175,7 @@ Dočasné repozitáře demo po sobě uklidí a dva běhy dávají totožný výs
 
 | Dokument | Vztah |
 | -------- | ----- |
+| [Mikado metoda](../MikadoMethod/) | Jak najít cestu k dohodnutému cíli, když se neví kudy. |
 | [Refaktoring systému](../System/) | Techniky, ze kterých se dlouhodobá přestavba skládá. |
 | [Branch by Abstraction](../System/BranchByAbstraction/) | Ta, kterou Fowler jmenuje přímo. |
 | [Plánovaný refaktoring](../PlannedRefactoring/) | Menší sourozenec: vyhrazený čas místo běžné práce. |

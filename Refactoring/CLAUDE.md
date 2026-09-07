@@ -9,7 +9,7 @@ Jak měnit kód, který už běží. Dvě úrovně s vlastními složkami:
 - **[`Code/`](Code/)** — změny v jednom procesu, které nemění chování. Vybíráme **jen ty, které vedou k některému ze vzorů v [`SoftwareDesign/`](../SoftwareDesign/)**; kompletní katalog vede Fowler a nepřepisujeme ho.
 - **[`System/`](System/)** — změny za provozu, které trvají týdny a musí jít vrátit.
 - **[`TwoHats/`](TwoHats/)** — pravidlo, na kterém stojí všechny ostatní.
-- **[`TddRefactoring/`](TddRefactoring/)**, **[`PreparatoryRefactoring/`](PreparatoryRefactoring/)**, **[`CharacterizationTests/`](CharacterizationTests/)**, **[`ComprehensionRefactoring/`](ComprehensionRefactoring/)**, **[`LitterPickupRefactoring/`](LitterPickupRefactoring/)** **[`PlannedRefactoring/`](PlannedRefactoring/)** a **[`LongTermRefactoring/`](LongTermRefactoring/)** — *kdy* se refaktoring do práce dostává a *s čím*; leží na úrovni sekce, protože se netýkají jedné úrovně, ale všech technik. Dohromady pokrývají sedm workflow, která popsal Fowler.
+- **[`TddRefactoring/`](TddRefactoring/)**, **[`PreparatoryRefactoring/`](PreparatoryRefactoring/)**, **[`CharacterizationTests/`](CharacterizationTests/)**, **[`ComprehensionRefactoring/`](ComprehensionRefactoring/)**, **[`LitterPickupRefactoring/`](LitterPickupRefactoring/)** **[`PlannedRefactoring/`](PlannedRefactoring/)** **[`LongTermRefactoring/`](LongTermRefactoring/)** a **[`MikadoMethod/`](MikadoMethod/)** — *kdy* se refaktoring do práce dostává, *s čím* a *kudy*; leží na úrovni sekce, protože se netýkají jedné úrovně, ale všech technik. Dohromady pokrývají sedm workflow, která popsal Fowler.
 
 ## Struktura
 
@@ -43,6 +43,9 @@ PlannedRefactoring/               # vyhrazený čas — mimo obě úrovně
     README.md
     demo/
 LongTermRefactoring/              # měsíce v hlavní větvi — mimo obě úrovně
+    README.md
+    demo/
+MikadoMethod/                     # kudy — mimo obě úrovně
     README.md
     demo/
 Code/

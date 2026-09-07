@@ -183,6 +183,7 @@ Nakonec ověří, kolik má každý postup bezpečných zastávek: po krocích t
 | [Comprehension refactoring](../ComprehensionRefactoring/) | Druhý z průběžných způsobů, které mají story předcházet. |
 | [Přípravný refaktoring](../PreparatoryRefactoring/) | Kde je hranice: příprava má spouštěč v úkolu, story ne. |
 | [Charakterizační testy](../CharacterizationTests/) | Bez sítě se story dělat nedá — a u cizího modulu obvykle chybí. |
+| [Mikado metoda](../MikadoMethod/) | Jak story rozdělit na kroky, po kterých se dá odejít. |
 | [Refaktoring kódu](../Code/) | Konkrétní techniky, ze kterých se story skládá. |
 | [DRY](../../SoftwareDesign/Principles/Simplicity.md#dry--dont-repeat-yourself) | Pravidlo na třech místech je učebnicové porušení — a demo ho měří. |
 | [Scrum](../../Processes/Scrum/) | Kde v procesu refaktoringová story bydlí a s čím soutěží. |

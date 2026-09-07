@@ -219,6 +219,7 @@ Závěr je nejdůležitější: pustí **rozbitý přepis** proti dvěma sadám 
 | [TDD refaktoring](../TddRefactoring/) | Opačný případ: tam testy vznikly první a refaktoring je má zadarmo. |
 | [Dva klobouky](../TwoHats/) | Zelená sada je podmínka celého pravidla — tohle je způsob, jak ji získat. |
 | [Dlouhodobý refaktoring](../LongTermRefactoring/) | Kde se síť musí udržet po celé měsíce přestavby. |
+| [Mikado metoda](../MikadoMethod/) | Stojí na tom, že se dá spolehlivě zjistit, co je rozbité. |
 
 ---
 

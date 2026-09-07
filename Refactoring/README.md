@@ -29,6 +29,8 @@ Slovo „refaktoring" pokrývá dvě věci, které mají společný cíl a skoro
 
 Pravidlo, které platí ve všech technikách níž, a dokumenty o tom, **kdy** se refaktoring do práce dostává — dohromady pokrývají [sedm workflow](TddRefactoring/#sedm-workflow-a-kde-je-najdeš), která popsal Fowler.
 
+<sub>Hledáš **boy scout rule** nebo **camp site rule**? To je [litter-pickup](LitterPickupRefactoring/) — Fowler i Robert C. Martin popisují touž věc.</sub>
+
 | Technika | K čemu | Náročnost | Stav |
 | -------- | ------ | --------- | ---- |
 | [**Dva klobouky**](TwoHats/) | Pravidlo nad všemi ostatními: buď funkce, nebo refaktoring | ●●○○○ | ✅ |
@@ -39,6 +41,7 @@ Pravidlo, které platí ve všech technikách níž, a dokumenty o tom, **kdy** 
 | [**Litter-pickup refactoring**](LitterPickupRefactoring/) | Co s nepořádkem, na který narazíš cestou za něčím jiným | ●○○○○ | ✅ |
 | [**Plánovaný refaktoring**](PlannedRefactoring/) | Úklid, na který je vyhrazený čas — a proč je to zároveň špatná zpráva | ●●●○○ | ✅ |
 | [**Dlouhodobý refaktoring**](LongTermRefactoring/) | Přestavba na měsíce, dělaná v hlavní větvi mezi běžnou prací | ●●●●○ | ✅ |
+| [**Mikado metoda**](MikadoMethod/) | Jak najít cestu velkou přestavbou — pokus, chyba, revert, graf | ●●●○○ | ✅ |
 
 ---
 
