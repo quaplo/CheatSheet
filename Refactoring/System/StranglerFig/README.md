@@ -144,7 +144,7 @@ Háček je v datech. Když nová schopnost začne zapisovat, návrat zpět už n
 **Nová schopnost se musí chovat jako stará** — a stará je jediná specifikace, kterou máš. Postup:
 
 1. **Zaznamenej skutečný provoz** starého systému — vstupy i výstupy.
-2. **Pusť tytéž vstupy na novou schopnost** a porovnej. Když se to nechá běžet naostro, je to **Parallel Run**.
+2. **Pusť tytéž vstupy na novou schopnost** a porovnej. Když se to nechá běžet naostro, je to [Parallel Run](../ParallelRun/).
 3. **Přesměruj část provozu** a sleduj chyby, latenci a výsledky.
 4. **Teprve pak přesuň zbytek.**
 
@@ -217,7 +217,7 @@ E-shop s pěti schopnostmi a fasádou před nimi. Demo ukáže, že **fasáda na
 | Dokument | Vztah |
 | -------- | ----- |
 | [Branch by Abstraction](../BranchByAbstraction/) | **Nejbližší příbuzný a nejčastější záměna.** Ten vyměňuje implementaci za společným rozhraním uvnitř kódu; tenhle přesouvá celé schopnosti na hranici systému. [Srovnání](#demo) je v demu. |
-| **Parallel Run** | Jak ověřit, že se nová schopnost chová jako stará, dřív než jí svěříš provoz. *(zatím nezpracováno)* |
+| [Parallel Run](../ParallelRun/) | **Jak ověřit, že se nová schopnost chová jako stará**, dřív než jí svěříš provoz. Nová přitom nikdy neodpovídá. |
 | [Bounded Context](../../../SoftwareDesign/DDD/BoundedContext/) (DDD) | Švy, podle kterých se systém dělí, obvykle vedou tam, kde vedou hranice kontextů. |
 | [Anticorruption Layer](../../../SoftwareDesign/DDD/AnticorruptionLayer/) (DDD) | Co postavit mezi nový systém a starý model, aby jeho pojmy neprosákly do nového. |
 | [Ports & Adapters](../../../SoftwareDesign/Architecture/PortsAndAdapters/) | Nový systém se staví takhle; starý zůstává za adaptérem. |

@@ -260,6 +260,7 @@ Předposlední řádek je nejzákeřnější, protože vypadá nevinně. Ve chv�
 | [Core Domain](../CoreDomain/) (DDD) | Předpoklad celé destilace — bez pojmenovaného jádra není podle čeho poznat, co vytěsnit. |
 | [Abstract Core](../AbstractCore/) (DDD) | Také vytahuje do vlastního modulu — ale abstrakce modelu, ne výpočty. |
 | [Branch by Abstraction](../../../Refactoring/System/BranchByAbstraction/) (refaktoring) | Typický kandidát na výměnu: výpočet za rozhraním jde nahradit lepším, aniž by o tom doména věděla. |
+| [Parallel Run](../../../Refactoring/System/ParallelRun/) (refaktoring) | Ideální kandidát na ověření výměny: výpočet bez vedlejších efektů, se stejným vstupem i výstupem. |
 
 ---
 

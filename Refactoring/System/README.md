@@ -22,7 +22,7 @@ Proto má každý dokument v téhle úrovni povinnou sekci *Průběh a návratov
 | -------- | ------ | --------------- | --------- | ---- |
 | [**Branch by Abstraction**](BranchByAbstraction/) | Výměna implementace za běhu; obě verze existují vedle sebe za společným rozhraním | přepnutí zpět, okamžité | ●●●○○ | ✅ |
 | [**Strangler Fig**](StranglerFig/) | Postupné obalení starého systému novým, dokud starý nezmizí | část po části | ●●●●○ | ✅ |
-| Parallel Run | Obě verze běží současně, výsledky se porovnávají; nová zatím nerozhoduje | vypnutí nové větve | | ⬜ |
+| [**Parallel Run**](ParallelRun/) | Obě verze běží současně, výsledky se porovnávají; nová **nikdy neodpovídá** | vypnutí experimentu | ●●○○○ | ✅ |
 | Expand–Contract | Změna rozhraní nebo schématu ve třech krocích bez výpadku | zastavení mezi kroky | | ⬜ |
 
 <sub>⬜ plánováno · 🚧 rozpracováno · ✅ hotovo</sub>

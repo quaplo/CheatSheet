@@ -174,7 +174,7 @@ rozdílů:               4
 
 Z výpisu je vidět něco, co se z testů nedozvíš: **nová verze mění ceny.** Někde nahoru, někde dolů. To není chyba implementace — je to rozhodnutí, které má udělat byznys, a technika ho vytáhla na světlo **dřív, než to zjistil zákazník**.
 
-Když se porovnávací režim nechá běžet na skutečném provozu, dělá se z toho samostatná technika: **Parallel Run**.
+Když se porovnávací režim nechá běžet na skutečném provozu, dělá se z toho samostatná technika: [Parallel Run](../ParallelRun/).
 
 Dál platí obvyklé:
 
@@ -243,7 +243,7 @@ Výměna výpočtu dopravy — ze staré tabulky sazeb na sazbu podle hmotnosti.
 | [Ports & Adapters](../../../SoftwareDesign/Architecture/PortsAndAdapters/) | Kde už abstrakce existuje, je krok 1 hotový — a technika začíná rovnou krokem 3. |
 | [Cohesive Mechanism](../../../SoftwareDesign/DDD/CohesiveMechanism/) (DDD) | Typický kandidát na výměnu: výpočet za rozhraním, který jde nahradit lepším. |
 | [Strangler Fig](../StranglerFig/) | **Nejbližší příbuzný.** Pro případy, kdy se společné rozhraní najít nedá a nahrazuje se celý systém zvenčí — šev je na hranici, ne uvnitř kódu. |
-| **Parallel Run** | Porovnávací režim dotažený do samostatné techniky. *(zatím nezpracováno)* |
+| [Parallel Run](../ParallelRun/) | **Porovnávací režim dotažený do samostatné techniky** — s vzorkováním, zachytáváním výjimek a měřením výkonu. |
 
 ---
 
