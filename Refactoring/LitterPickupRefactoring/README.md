@@ -216,6 +216,7 @@ Nakonec ověří na 30 vstupech, že **úklid nezměnil ani jeden případ**, a 
 | Dokument | Vztah |
 | -------- | ----- |
 | [Comprehension refactoring](../ComprehensionRefactoring/) | Druhý oportunistický refaktoring — stejný postup, jiný spouštěč. |
+| [TDD refaktoring](../TddRefactoring/) | Úklid toho, čeho ses právě dotkl; tenhle dokument řeší zbytek souboru. |
 | [Přípravný refaktoring](../PreparatoryRefactoring/) | Co se z litter-pickupu stane ve chvíli, kdy úklid usnadní tvou vlastní změnu. |
 | [Charakterizační testy](../CharacterizationTests/) | Bez zelených testů se uklízet nedá; tohle je způsob, jak je získat. |
 | [Plánovaný refaktoring](../PlannedRefactoring/) | Kam odložit úklid, který se do „pár řádků" nevejde — a proč je jeho převaha špatná zpráva. |

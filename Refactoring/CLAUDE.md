@@ -8,7 +8,7 @@ Jak měnit kód, který už běží. Dvě úrovně s vlastními složkami:
 
 - **[`Code/`](Code/)** — změny v jednom procesu, které nemění chování. Vybíráme **jen ty, které vedou k některému ze vzorů v [`SoftwareDesign/`](../SoftwareDesign/)**; kompletní katalog vede Fowler a nepřepisujeme ho.
 - **[`System/`](System/)** — změny za provozu, které trvají týdny a musí jít vrátit.
-- **[`PreparatoryRefactoring/`](PreparatoryRefactoring/)**, **[`CharacterizationTests/`](CharacterizationTests/)**, **[`ComprehensionRefactoring/`](ComprehensionRefactoring/)**, **[`LitterPickupRefactoring/`](LitterPickupRefactoring/)** a **[`PlannedRefactoring/`](PlannedRefactoring/)** — *kdy* refaktorovat, *s čím*, *jak* pochopit kód, který měníš, *kde přestat* a *co s tím*, na co průběžný úklid nestačí; leží na úrovni sekce, protože se netýkají jedné úrovně, ale všech technik.
+- **[`TddRefactoring/`](TddRefactoring/)**, **[`PreparatoryRefactoring/`](PreparatoryRefactoring/)**, **[`CharacterizationTests/`](CharacterizationTests/)**, **[`ComprehensionRefactoring/`](ComprehensionRefactoring/)**, **[`LitterPickupRefactoring/`](LitterPickupRefactoring/)** a **[`PlannedRefactoring/`](PlannedRefactoring/)** — *kdy* se refaktoring do práce dostává a *s čím*; leží na úrovni sekce, protože se netýkají jedné úrovně, ale všech technik. Dohromady pokrývají sedm workflow, která popsal Fowler.
 
 ## Struktura
 
@@ -20,6 +20,9 @@ CLAUDE.md                      # tenhle soubor
 _template/
     README.md                  # postup přidání + checklist
     REFACTORING.md             # šablona
+TddRefactoring/                   # třetí krok cyklu — mimo obě úrovně
+    README.md
+    demo/
 PreparatoryRefactoring/           # kdy refaktorovat — mimo obě úrovně
     README.md
     demo/

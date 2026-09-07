@@ -27,10 +27,11 @@ Slovo „refaktoring" pokrývá dvě věci, které mají společný cíl a skoro
 
 ## Než začneš
 
-Pět věcí, které předcházejí všem technikám níž: **kdy** se do refaktoringu pouštět, **s čím** v ruce, **jak** pochopit kód, který měníš, **kde přestat** u toho, co uklízíš mimochodem, a **co dělat s tím**, na co průběžný úklid nestačí.
+Šest dokumentů o tom, **kdy** se refaktoring do práce dostává — a všechny dohromady pokrývají [sedm workflow](TddRefactoring/#sedm-workflow-a-kde-je-najdeš), která popsal Fowler.
 
 | Technika | K čemu | Náročnost | Stav |
 | -------- | ------ | --------- | ---- |
+| [**TDD refaktoring**](TddRefactoring/) | Třetí krok cyklu červená–zelená–refaktor, kde se dělá návrh | ●●○○○ | ✅ |
 | [**Přípravný refaktoring**](PreparatoryRefactoring/) | Kdy a proč refaktorovat — a proč ve dvou commitech | ●●○○○ | ✅ |
 | [**Charakterizační testy**](CharacterizationTests/) | Síť, která zapíše, co kód **dělá** — ne co má dělat | ●●○○○ | ✅ |
 | [**Comprehension refactoring**](ComprehensionRefactoring/) | Jak porozumět cizímu kódu — a nechat to pochopení v něm | ●●○○○ | ✅ |

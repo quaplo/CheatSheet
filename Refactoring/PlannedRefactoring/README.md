@@ -176,6 +176,7 @@ Nakonec ověří, kolik má každý postup bezpečných zastávek: po krocích t
 | -------- | ----- |
 | [Refaktoring systému](../System/) | Fowlerův *Long Term Refactoring* — totéž na měsíce a bez vyhrazeného času. |
 | [Branch by Abstraction](../System/BranchByAbstraction/) | Nástroj, který Fowler u dlouhodobého refaktoringu jmenuje. |
+| [TDD refaktoring](../TddRefactoring/) | První z průběžných workflow; jeho soustavné vynechávání je vidět právě tady. |
 | [Litter-pickup](../LitterPickupRefactoring/) | Průběžný úklid, jehož absence dělá z plánovaného refaktoringu nutnost. |
 | [Comprehension refactoring](../ComprehensionRefactoring/) | Druhý z průběžných způsobů, které mají story předcházet. |
 | [Přípravný refaktoring](../PreparatoryRefactoring/) | Kde je hranice: příprava má spouštěč v úkolu, story ne. |

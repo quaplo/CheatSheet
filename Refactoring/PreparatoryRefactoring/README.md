@@ -123,15 +123,16 @@ Fowler v článku *Workflows of Refactoring* (2014) popisuje **sedm** způsobů,
 | Workflow | Kdy | Kdo o tom rozhoduje |
 | -------- | --- | ------------------- |
 | **Two Hats** | Základní pravidlo pro všechny ostatní: buď funkce, nebo refaktoring | vývojář, průběžně |
-| **TDD Refactoring** | Třetí krok cyklu red–green–refactor | vývojář, minuty |
+| [**TDD Refactoring**](../TddRefactoring/) | Třetí krok cyklu red–green–refactor | vývojář, minuty |
 | [**Litter-Pickup**](../LitterPickupRefactoring/) | „Jsem tu stejně, tak to cestou uklidím" | vývojář, minuty |
 | [**Comprehension**](../ComprehensionRefactoring/) | Refaktoruješ, abys kódu porozuměl — a znalost zůstane v kódu | vývojář, hodiny |
 | **Preparatory** | Chystáš změnu a připravuješ na ni místo | vývojář, hodiny až den |
 | [**Planned**](../PlannedRefactoring/) | Vyhrazený čas na úklid, který se nestihl průběžně | tým |
 | **Long Term** | Velká změna po částech, měsíce | tým, někdy i byznys |
 
-Pět z nich má v tomhle katalogu vlastní pokračování:
+Šest z nich má v tomhle katalogu vlastní pokračování:
 
+- [**TDD refaktoring**](../TddRefactoring/) je ten nejlevnější — síť už máš z prvního kroku cyklu.
 - [**Comprehension refactoring**](../ComprehensionRefactoring/) je myšlenkově blízké [charakterizačním testům](../CharacterizationTests/) — obojí je způsob, jak zjistit, co kód dělá, a zapsat to.
 - [**Litter-pickup refactoring**](../LitterPickupRefactoring/) je s comprehension dvojice, které Fowler říká **oportunistické refaktoringy** — u obou narazíš na problém, když děláš něco jiného.
 - [**Planned Refactoring**](../PlannedRefactoring/) je první z nich, o kterém se rozhoduje tým — a podle Fowlera zároveň signál, že ta čtyři předchozí vázla.
@@ -173,6 +174,7 @@ Závěr obě cesty spočítá vedle sebe — a přiznává, že **kdyby žádný
 
 | Dokument | Vztah |
 | -------- | ----- |
+| [TDD refaktoring](../TddRefactoring/) | Třetí krok cyklu — a druhé místo, kde platí dva klobouky. |
 | [Charakterizační testy](../CharacterizationTests/) | Bez sítě se příprava dělat nedá. |
 | [Comprehension refactoring](../ComprehensionRefactoring/) | Druhé z Fowlerových workflow, o kterých se nikoho neptáš — a často to, co přípravě předchází. |
 | [Litter-pickup refactoring](../LitterPickupRefactoring/) | Nejlevnější z nich; přejde v přípravný ve chvíli, kdy úklid usnadní tvou vlastní změnu. |
