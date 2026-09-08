@@ -271,6 +271,7 @@ public function process(array $items): void
 
 | Pattern | Vztah |
 | ------- | ----- |
+| [Memento](../Memento/) (GoF) | Historie snímků je kolekce — průchod bez vydání vnitřku platí i tam. |
 | [First Class Collection](../../../ObjectCalisthenics/FirstClassCollection/) | Implementuje `IteratorAggregate` — to je způsob, jak zůstat kolekcí, aniž by vydala vnitřek. |
 | [Composite](../../Structural/Composite/) | Přirozený doplněk: Composite dá stromu tvar, Iterator ho umí projít, aniž by ho volající znal. |
 | [Repository](../../../PoEAA/Repository/) | Nad velkými výsledky vrací iterátor, ne pole. Ale agregace patří do databáze. |

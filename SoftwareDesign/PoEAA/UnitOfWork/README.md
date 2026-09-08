@@ -246,6 +246,7 @@ Ten poslední řádek je praktický: **události se publikují až po `commit()`
 
 | Pattern | Vztah |
 | ------- | ----- |
+| [Memento](../../GoF/Behavioral/Memento/) (GoF) | Snímek původních dat, ze kterého Doctrine počítá, co se změnilo. |
 | [Data Mapper](../DataMapper/) | Unit of Work rozhoduje **co** zapsat, Data Mapper **jak**. V Doctrine to je tentýž `EntityManager`. |
 | [Identity Map](../IdentityMap/) (PoEAA) | Samostatný pattern, ale v praxi součást Unit of Work — je to jeho paměť. Bez jistoty, že jde o jeden objekt, nelze porovnávat se snímky. |
 | [Repository](../Repository/) | Repository objekty načítá a registruje; Unit of Work je zapisuje. `save()` v repository často jen registruje. |

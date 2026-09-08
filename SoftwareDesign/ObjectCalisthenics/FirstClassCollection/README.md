@@ -324,6 +324,7 @@ foreach ($order->items as $item) {
 | [Specification](../../DDD/Specification/) (DDD) | Filtrovací pravidlo vytažené do samostatného objektu: `$items->satisfying($spec)` místo `array_filter` venku. |
 | [Encapsulate Collection](../../../Refactoring/Code/EncapsulateCollection/) (refaktoring) | **Jak se sem dostat z existujícího kódu** — krok za krokem, včetně toho, proč je důvod v PHP jiný než u Fowlera. |
 | [Replace Superclass with Delegate](../../../Refactoring/Code/ReplaceSuperclassWithDelegate/) (refaktoring) | Druhá cesta sem: když kolekce místo pole uvnitř **dědí** z `ArrayObject`. |
+| [Memento](../../GoF/Behavioral/Memento/) (GoF) | Historie snímků s pravidly (limit kroků, mazání) je právě tenhle případ. |
 
 ---
 

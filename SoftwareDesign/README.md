@@ -75,6 +75,7 @@ Patterny jsou uspořádané podle **původu** — podle knihy nebo autora, kde b
 | [Command](GoF/Behavioral/Command/) | Behavioral | Operace jako objekt — undo, fronta, makro; a proč to není totéž co command v CQRS | ●●○○○ |
 | [Singleton](GoF/Creational/Singleton/) | Creational | Jediná instance dostupná odkudkoli — **a proč ho skoro nikdy nechceš** | ●○○○○ |
 | [Builder](GoF/Creational/Builder/) | Creational | Objekt se sestaví po částech a vznikne až na konci | ●○○○○ |
+| [Memento](GoF/Behavioral/Memento/) | Behavioral | Snímek stavu pro krok zpět — a pečovatel, který se do něj nemůže podívat | ●●○○○ |
 
 <sub>Kompletní katalog všech 23 patternů včetně nezpracovaných: [GoF/README.md](GoF/)</sub>
 
@@ -273,6 +274,9 @@ Obrácený rejstřík: začni u toho, co tě pálí.
 | Konstruktor má šest nepovinných parametrů a půlku z nich předávám `null` | [Factory Method](GoF/Creational/FactoryMethod/) |
 | Objekt jde vytvořit v neplatném stavu, protože validace je jinde než konstruktor | [Factory Method](GoF/Creational/FactoryMethod/) |
 | Objekt, který se mění, zná mailer, cache i statistiky | [Observer](GoF/Behavioral/Observer/) |
+| Chci tlačítko „zpět", ale kvůli záloze musím entitě otevřít všechna pole | [Memento](GoF/Behavioral/Memento/) |
+| Undo mi nic nevrací, i když snímek podle všeho existuje | [Memento](GoF/Behavioral/Memento/#časté-chyby) |
+| Rozdělaný formulář nebo konfigurátor je potřeba odložit a později obnovit | [Memento](GoF/Behavioral/Memento/) |
 | Nevím, jestli použít Observer, nebo doménovou událost | [Observer](GoF/Behavioral/Observer/#observer-nebo-doménová-událost) |
 | Na otázku „čím se lišíme od konkurence“ dostanu v týmu pět odpovědí | [Core Domain](DDD/CoreDomain/) |
 | Nejzkušenější člověk v týmu ladí cache vrstvu a nasazování | [Core Domain](DDD/CoreDomain/#problém) |

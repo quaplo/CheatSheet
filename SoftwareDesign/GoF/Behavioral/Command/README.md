@@ -140,7 +140,7 @@ public function execute(): void
 }
 ```
 
-**Výchozí volba je snímek**, protože je bezpečný. K odečtení sáhni, až když je operace prokazatelně reverzibilní a stav je velký. Vzoru s uloženým snímkem se říká **Memento** — je to samostatný vzor z GoF a s Command se potkává skoro vždycky.
+**Výchozí volba je snímek**, protože je bezpečný. K odečtení sáhni, až když je operace prokazatelně reverzibilní a stav je velký. Vzoru s uloženým snímkem se říká [Memento](../Memento/) — je to samostatný vzor z GoF a s Command se potkává skoro vždycky.
 
 ### Makro: skupina příkazů jako jeden příkaz
 
@@ -346,7 +346,7 @@ Třetí možnost je nejelegantnější: když si ID vyrobíš dopředu, `execute
 | [CQRS](../../../Architecture/CQRS/) | **Nejčastější zdroj nedorozumění.** Tamní command je data bez chování, práci dělá handler. Viz [srovnání](#command-v-gof-a-command-v-cqrs). |
 | [Service Layer](../../../PoEAA/ServiceLayer/) | Use-case s příkazem na vstupu je verze bez chování; místo, kde se v aplikaci s příkazy nejčastěji potkáš. |
 | [Composite](../../Structural/Composite/) | `MacroCommand` **je** Composite — skupina příkazů se chová jako jeden. |
-| **Memento** (GoF) | Uložený snímek stavu pro undo. Command říká *co se má vrátit*, Memento *na co*. |
+| [Memento](../Memento/) (GoF) | Uložený snímek stavu pro undo. Command říká *co se má vrátit*, Memento *na co*. |
 | [Strategy](../Strategy/) | Struktura stejná, záměr jiný: Strategy vybírá **jak** něco spočítat, Command eviduje **co se má stát**. |
 | [Chain of Responsibility](../ChainOfResponsibility/) | Command bus bývá řetěz middleware — validace, transakce, logování kolem provedení. |
 | [Domain Event](../../../DDD/DomainEvent/) | Zrcadlový pár: příkaz je **rozkaz do budoucna** a smí být odmítnut, událost je **fakt z minulosti** a odmítnout nejde. |

@@ -15,7 +15,7 @@ Společný jmenovatel většiny z nich: místo aby jedna třída věděla všech
 | Interpreter | Vyhodnocení vět jednoduchého jazyka | | ⬜ |
 | [**Iterator**](Iterator/) | Průchod kolekcí bez znalosti její vnitřní struktury; v PHP hlavně generátory a práce s daty, která se nevejdou do paměti | ●○○○○ | ✅ |
 | Mediator | Prostředník, přes kterého objekty komunikují místo napřímo | | ⬜ |
-| Memento | Uložení a obnovení stavu objektu bez porušení zapouzdření | | ⬜ |
+| [**Memento**](Memento/) | Snímek stavu pro krok zpět; pečovatel ho drží, ale nemůže se do něj podívat | ●●○○○ | ✅ |
 | [**Observer**](Observer/) | Objekt informuje odběratele o své změně; předchůdce doménových událostí | ●●○○○ | ✅ |
 | [**State**](State/) | Objekt mění chování podle vnitřního stavu; v PHP 8.1+ často stačí enum | ●●●○○ | ✅ |
 | [**Strategy**](Strategy/) | Zaměnitelné algoritmy za jedním rozhraním | ●●○○○ | ✅ |

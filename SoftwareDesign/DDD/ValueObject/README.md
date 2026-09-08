@@ -497,6 +497,7 @@ echo $address->format();                     // Sokolovská 100 / 186 00 Praha /
 | [Encapsulate Collection](../../../Refactoring/Code/EncapsulateCollection/) (refaktoring) | Zapouzdřená kolekce **měnitelných** objektů chrání jen zčásti — druhá půlka problému je tenhle vzor. |
 | [Replace Primitive with Object](../../../Refactoring/Code/ReplacePrimitiveWithObject/) (refaktoring) | **Jak se sem dostat z existujícího kódu** — od hranic dovnitř, podpis po podpisu. |
 | [Introduce Parameter Object](../../../Refactoring/Code/IntroduceParameterObject/) (refaktoring) | Druhá cesta sem: skupina parametrů, které chodí spolu, místo jedné hodnoty. |
+| [Memento](../../GoF/Behavioral/Memento/) (GoF) | Snímek složený z neměnných hodnot nepotřebuje hlubokou kopii — je bezpečný sám o sobě. |
 | [Extract Class](../../../Refactoring/Code/ExtractClass/) (refaktoring) | Nejčastější cesta sem: vytažená skupina polí je hodnota bez identity. |
 
 ---

@@ -346,6 +346,7 @@ $order->cancel();
 
 | Pattern | Vztah |
 | ------- | ----- |
+| [Memento](../Memento/) (GoF) | Snímkovat lze i stavový objekt — Memento pak nese, ve kterém stavu se bylo. |
 | [Strategy](../Strategy/) | **Nejčastěji zaměňovaná dvojice a strukturou jsou totožné.** Rozdíl je v tom, kdo rozhoduje a co ví: strategii vybírá **klient zvenčí** a ta se během operace nemění; stav si objekt přepíná **sám** a jednotlivé stavy **znají své následníky**. Strategy odpovídá na „jak to udělat“, State na „co teď smím“. |
 | [Chain of Responsibility](../ChainOfResponsibility/) | Také deleguje dál, ale hledá zpracovatele. State nehledá — ví přesně, kdo je na řadě. |
 | [Specification](../../../DDD/Specification/) | Přirozený obsah guardu: podmínka, za které je přechod dovolený. |

@@ -52,7 +52,7 @@ Autoři vzory rozdělili podle toho, čeho se týkají:
 | Interpreter | Vyhodnocení vět jednoduchého jazyka | ⬜ |
 | [**Iterator**](Behavioral/Iterator/) | Průchod kolekcí bez znalosti její vnitřní struktury | ✅ |
 | Mediator | Prostředník, přes kterého objekty komunikují místo napřímo | ⬜ |
-| Memento | Uložení a obnovení stavu objektu bez porušení zapouzdření | ⬜ |
+| [**Memento**](Behavioral/Memento/) | Uložení a obnovení stavu objektu bez porušení zapouzdření | ✅ |
 | [**Observer**](Behavioral/Observer/) | Objekt informuje odběratele o své změně | ✅ |
 | [**State**](Behavioral/State/) | Objekt mění chování podle vnitřního stavu | ✅ |
 | [**Strategy**](Behavioral/Strategy/) | Zaměnitelné algoritmy za jedním rozhraním | ✅ |
