@@ -222,6 +222,7 @@ Obrácený rejstřík: začni u toho, co tě pálí.
 | „Přepíšeme to jednodušeji" — a nový systém vyšel stejně velký | [Esenciální a akcidentální složitost](Principles/Simplicity.md#esenciální-a-akcidentální-složitost) |
 | Nevím, jestli je ta složitost z domény, nebo z toho, jak jsme to napsali | [Esenciální a akcidentální složitost](Principles/Simplicity.md#jak-to-poznat-na-kusu-kódu) |
 | Zavedli jsme vzor a práce neubylo | [Vzor složitost nepřesouvá zadarmo](Principles/Simplicity.md#proč-to-patří-sem) |
+| Nevím, kdy je refaktoring hotový — pořád se dá něco vylepšit | [Dokončeno není, když není co přidat](Principles/Simplicity.md#dokončeno-není-když-není-co-přidat) |
 | Chyba se objeví jen někdy a restart ji spraví | [Out of the Tar Pit](Principles/OutOfTheTarPit.md#1-stav--ten-hlavní) |
 | Testy procházejí a v produkci to počítá jinak | [Out of the Tar Pit](Principles/OutOfTheTarPit.md#demo) |
 | Každá metoda je správně, ale dohromady vyjde nesmysl | [Out of the Tar Pit](Principles/OutOfTheTarPit.md#2-řízení--pořadí-které-nás-nemá-zajímat) |

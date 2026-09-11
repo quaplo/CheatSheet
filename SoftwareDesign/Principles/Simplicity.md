@@ -97,6 +97,23 @@ Ten první řádek je drahý a Brooks kvůli němu tu esej vůbec napsal. Jeho z
 
 Původ je mimo softwarové inženýrství: **Kelly Johnson**, konstruktér letadel v Lockheed Skunk Works, kolem roku **1960**. Jeho zadání znělo, že letoun musí být opravitelný průměrným mechanikem s běžným nářadím v polních podmínkách. To je přesně to správné čtení: jednoduché = **opravitelné pod tlakem někým jiným než tebou**.
 
+### Dokončeno není, když není co přidat
+
+O dvacet let dřív a taky od letadel:
+
+> „Il semble que la perfection soit atteinte non quand il n'y a plus rien à ajouter, **mais quand il n'y a plus rien à retrancher**."
+>
+> *Zdá se, že dokonalosti není dosaženo tehdy, když už není co přidat, ale když už není co ubrat.*
+>
+> — Antoine de Saint-Exupéry, *Terre des hommes*, 1939
+
+Ta věta se cituje jako estetická poučka, ale **v knize je o inženýrství**. Stojí v kapitole *L'Avion* a Saint-Exupéry v ní popisuje, jak se strojařina po generacích zkoušení propracovává k tvaru, na kterém už nic nepřebývá. Psal to pilot o letadlech, ne designér o nábytku.
+
+Pro programátora z toho plyne použitelná definice hotového: **hotovo není, když to funguje. Hotovo je, když z toho nejde nic odebrat, aniž by to přestalo fungovat.** To je zároveň jediná otázka, kterou se dá KISS ověřit — a na rozdíl od „je to jednoduché?" se na ni dá odpovědět.
+
+> [!NOTE]
+> **Citát se běžně připisuje někomu jinému** — nejčastěji průmyslovým designérům. Nejspíš proto, že v téže hlavě bydlí i **„Weniger, aber besser"** od **Dietera Ramse**, německého designéra Braunu, jehož desáté pravidlo dobrého designu zní *„Good design is as little design as possible"*. Je to týž nápad z jiného oboru a o třicet let později, ale ta věta o ubírání je Saint-Exupéryho.
+
 **Poznáš porušení podle:**
 
 - chytrého jednořádkového výrazu, který si musíš po týdnu rozebrat, abys ho pochopil
@@ -264,6 +281,7 @@ Když si dva principy odporují, vyhrává skoro vždycky ten, který ti říká
 | Princip | Autor | Rok |
 | ------- | ----- | --- |
 | **KISS** | Kelly Johnson (Lockheed Skunk Works) | cca 1960 |
+| *„není co ubrat"* | Antoine de Saint-Exupéry — *Terre des hommes* | 1939 |
 | **YAGNI** | Ron Jeffries, Kent Beck (extrémní programování) | cca 1998 |
 | **DRY** | Andy Hunt, Dave Thomas — *The Pragmatic Programmer* | 1999 |
 | **Pravidlo tří** | Don Roberts; rozšířil Martin Fowler — *Refactoring* | 1999 |
@@ -281,5 +299,7 @@ Brooksovo rozdělení je o patnáct let starší a je jiného druhu: není to ra
 - Martin Fowler: *Yagni*, 2015 — [martinfowler.com/bliki/Yagni.html](https://martinfowler.com/bliki/Yagni.html)
 - Martin Fowler: *Refactoring*, Addison-Wesley, 1999 — pravidlo tří
 - Sandi Metz: *The Wrong Abstraction*, 2016 — [sandimetz.com/blog/2016/1/20/the-wrong-abstraction](https://sandimetz.com/blog/2016/1/20/the-wrong-abstraction)
+- Antoine de Saint-Exupéry: *Terre des hommes*, Gallimard, 1939 — kapitola *L'Avion*, odkud je citát o ubírání
+- Dieter Rams: [*Ten principles for good design*](https://www.vitsoe.com/us/about/good-design) — „Weniger, aber besser"
 - Fred Brooks: [*No Silver Bullet — Essence and Accident in Software Engineering*](https://worrydream.com/refs/Brooks_1986_-_No_Silver_Bullet.pdf), 1986 — esenciální a akcidentální složitost
 - Ben Moseley, Peter Marks: [*Out of the Tar Pit*](https://curtclifton.net/papers/MoseleyMarks06a.pdf), 2006 — kritika Brooksova závěru; rozbor je [tady](OutOfTheTarPit.md)
