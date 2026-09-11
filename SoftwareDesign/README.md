@@ -33,7 +33,7 @@ Patterny jsou konkrétní řešení; **principy jsou měřítko, podle kterého 
 | ------ | ----------- | ---- |
 | [**Soudržnost a provázanost**](Principles/CohesionAndCoupling.md) | Měřítko pod vším ostatním — co spolu souvisí ať je pohromadě, co ne ať na sobě nezávisí | ✅ |
 | [**SOLID**](Principles/SOLID.md) | Jak rozdělit odpovědnosti — SRP, OCP, LSP, ISP, DIP | ✅ |
-| [**Jednoduchost**](Principles/Simplicity.md) | Kolik kódu psát a kdy — KISS, YAGNI, DRY, pravidlo tří | ✅ |
+| [**Jednoduchost**](Principles/Simplicity.md) | Co vůbec jde zjednodušit (esenciální vs akcidentální složitost) a kolik kódu psát — KISS, YAGNI, DRY, pravidlo tří | ✅ |
 | [**Objektový návrh**](Principles/ObjectDesign.md) | Jak spolu objekty mluví — Tell Don't Ask, Demeter, kompozice před dědičností, CQS, Fail Fast | ✅ |
 | [**Conwayův zákon**](Principles/ConwaysLaw.md) | Architektura kopíruje komunikační strukturu organizace — pozorování, ne rada | ✅ |
 
@@ -217,6 +217,9 @@ Obrácený rejstřík: začni u toho, co tě pálí.
 | Entity mají jen gettery a settery, všechna pravidla jsou ve službách | [Co DDD je](DDD/#nejčastější-omyl) |
 | „Děláme DDD" znamená u nás složky Entity/, Repository/, Service/ | [Co DDD je](DDD/#nejčastější-omyl) |
 | Nevím, jestli má DDD na tomhle projektu vůbec smysl | [Kdy DDD nedělat](DDD/#kdy-ddd-nedělat) |
+| „Přepíšeme to jednodušeji" — a nový systém vyšel stejně velký | [Esenciální a akcidentální složitost](Principles/Simplicity.md#esenciální-a-akcidentální-složitost) |
+| Nevím, jestli je ta složitost z domény, nebo z toho, jak jsme to napsali | [Esenciální a akcidentální složitost](Principles/Simplicity.md#jak-to-poznat-na-kusu-kódu) |
+| Zavedli jsme vzor a práce neubylo | [Vzor složitost nepřesouvá zadarmo](Principles/Simplicity.md#proč-to-patří-sem) |
 | Doména zná Doctrine a `$request` a nejde otestovat bez databáze | [DDD + hexagonální architektura](DDD/#hexagonální-architektura-co-doménu-drží-čistou) |
 | Pravidlo o slevě mám v šabloně, v kontroleru i v SQL — pokaždé jinak | [Layered Architecture](Architecture/LayeredArchitecture/) |
 | Vrstvy máme, ale doména se pořád nedá otestovat bez databáze | [Layered Architecture](Architecture/LayeredArchitecture/#čím-to-samo-o-sobě-nestačí) |

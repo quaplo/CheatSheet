@@ -2,16 +2,92 @@
 
 > [← zpět na Principy](README.md)
 
-> **V jedné větě:** Tři principy o tom, **kolik kódu psát a kdy** — a jedno pravidlo, které rozhoduje, když si odporují.
+> **V jedné větě:** Tři principy o tom, **kolik kódu psát a kdy** — jedno pravidlo, které rozhoduje, když si odporují, a jedno rozlišení, které určuje, co z toho vůbec jde zjednodušit.
 
 Tyhle tři se citují nejčastěji ze všech a taky se nejčastěji používají jako záminka. DRY tlačí ke sjednocování, YAGNI k odkládání, KISS k ubírání — a když je někdo použije bez pochopení, dokáže jimi obhájit skoro cokoli. Proto je tady dohromady: dávají smysl jen ve vzájemném napětí.
 
 | Zkratka | Princip | V jedné větě |
 | ------- | ------- | ------------ |
+| — | [Esenciální a akcidentální složitost](#esenciální-a-akcidentální-složitost) | Odstranit jde jen ta druhá. O první rozhoduje byznys. |
 | **KISS** | [Keep It Simple](#kiss--keep-it-simple) | Nejjednodušší řešení, které opravdu funguje. |
 | **YAGNI** | [You Aren't Gonna Need It](#yagni--you-arent-gonna-need-it) | Nedělej to, co zatím nikdo nechce. |
 | **DRY** | [Don't Repeat Yourself](#dry--dont-repeat-yourself) | Každá **znalost** má v systému jediné vyjádření. |
 | — | [Pravidlo tří](#pravidlo-tří) | Rozhodčí mezi předchozími dvěma. |
+
+---
+
+## Esenciální a akcidentální složitost
+
+Než se začne zjednodušovat, je potřeba vědět, **co se zjednodušit dá**. Rozdělení pochází od **Freda Brookse** z eseje *No Silver Bullet* (1986) a on sám ho přiznaně půjčil od Aristotela:
+
+> „Following Aristotle, I divide them into **essence** — the difficulties inherent in the nature of the software — and **accidents** — those difficulties that today attend its production but that are not inherent."
+>
+> — Fred Brooks, *No Silver Bullet*, 1986
+
+Přeloženo do praxe: ve tvém kódu jsou vedle sebe dva druhy složitosti a **odstranit jde jen jeden z nich**.
+
+| | Esenciální | Akcidentální |
+| --- | --- | --- |
+| Odkud je | z **domény** — pravidla, která platí, ať je píšeš v čemkoli | ze **způsobu**, jakým to zrovna řešíme |
+| Příklad | objednávku nelze stornovat po odeslání, jen vrátit | položky jsou JSON ve sloupci, takže se musí dekódovat a kontrolovat |
+| Zmizí, když | zmizí ten požadavek | zvolíš jiný nástroj, typ, rozvržení |
+| Kdo o tom rozhoduje | **byznys** | **tým** |
+| Refaktoring ji | přesune, nikdy neodstraní | odstraní |
+
+Poslední dva řádky jsou to, co se v praxi vyplatí umět rozlišit. **Akcidentální složitost je ta, o které může tým rozhodnout sám. Esenciální se dá odstranit jen tím, že někdo zruší požadavek** — a to není refaktoring, to je rozhovor s byznysem.
+
+### Jak to poznat na kusu kódu
+
+```php
+public function cancel(array $order): array
+{
+    $items = json_decode($order['items_json'], true);   // ← akcidentální
+
+    if (!is_array($items)) {                            // ← akcidentální
+        $items = [];
+    }
+
+    if ($order['status'] === 'shipped') {               // ← ESENCIÁLNÍ
+        throw new DomainException('Odeslanou objednávku nelze stornovat, jen vrátit.');
+    }
+
+    if ($order['status'] === 'cancelled') {             // ← ESENCIÁLNÍ
+        return $order;
+    }
+
+    $order['status'] = 'cancelled';
+
+    return $order;
+}
+```
+
+Dekódování JSON a obranná kontrola zmizí, když se položky uloží do vlastní tabulky a vrátí se jako typy. **Ty dvě podmínky o stavu nezmizí nikdy** — leda by obchod přestal rozlišovat storno a vratku.
+
+Praktická zkouška, která funguje překvapivě dobře: **„zůstalo by tohle, kdyby ten systém psal někdo dokonalý v dokonalém jazyce?"** Když ano, je to esenciální.
+
+### Proč to patří sem
+
+Protože to určuje **strop** pro všechny tři principy níž:
+
+- [KISS](#kiss--keep-it-simple) může ubrat jen akcidentální složitost. Když se někdo pokouší „zjednodušit" pravidla domény, ve skutečnosti maže požadavky.
+- [YAGNI](#yagni--you-arent-gonna-need-it) je obrana proti akcidentální složitosti, kterou si teprve chystáš.
+- [DRY](#dry--dont-repeat-yourself) sjednocuje **znalost** — tedy esenciální složitost. Sjednocovat kód, který vypadá stejně náhodou, je přidávání akcidentální složitosti.
+
+A pak jedna věta, která platí pro celý tenhle katalog a je poctivé ji říct nahlas: **většina návrhových vzorů složitost neodstraní. Přesune ji tam, kde je levnější.** [Strategy](../GoF/Behavioral/Strategy/) nesníží počet variant — jen je přestane mít v jednom `switch`i. Kdo od vzoru čeká, že ubere práci, bude zklamaný; vzor mění, **kde** ta práce je.
+
+### Kde se to plete
+
+| Chyba | Co se stane |
+| ----- | ----------- |
+| Esenciální složitost se považuje za akcidentální | „Přepíšeme to jednodušeji" skončí u stejně velkého systému, jen nového a bez otestovaných hran |
+| Akcidentální se považuje za esenciální | „To takhle musí být" u věci, kterou drží jen dvacet let starý formát sloupce |
+| Složitost se přesune a vydává se za odstraněnou | Z jednoho velkého souboru je osm malých a nikdo pořád neví, kde se co děje |
+| Nástroj se vymění kvůli esenciální složitosti | Nový framework, tytéž problémy — Brooksovo *„there is inherently no silver bullet"* |
+
+Ten první řádek je drahý a Brooks kvůli němu tu esej vůbec napsal. Jeho závěr zněl, že **žádná jednotlivá věc nepřinese řádové zlepšení**, protože to podstatné na psaní softwaru je *„the specification, design, and testing of this conceptual construct"* — a to zůstane těžké v jakémkoli jazyce.
+
+> [!NOTE]
+> **Brooksův závěr se dá zpochybnit a zpochybněný byl.** Ben Moseley a Peter Marks v článku [*Out of the Tar Pit*](https://curtclifton.net/papers/MoseleyMarks06a.pdf) (2006) jeho rozdělení přebírají, ale **nesouhlasí s tím, že většina zbývající složitosti je esenciální**. Podle nich je největším zdrojem té akcidentální **měnitelný stav** — a toho se ubrat dá. Pro dnešního čtenáře je to užitečnější čtení než Brooks sám, protože z toho plyne konkrétní rada: [neměnné hodnoty](../DDD/ValueObject/) a stav na jednom místě.
 
 ---
 
@@ -191,8 +267,11 @@ Když si dva principy odporují, vyhrává skoro vždycky ten, který ti říká
 | **YAGNI** | Ron Jeffries, Kent Beck (extrémní programování) | cca 1998 |
 | **DRY** | Andy Hunt, Dave Thomas — *The Pragmatic Programmer* | 1999 |
 | **Pravidlo tří** | Don Roberts; rozšířil Martin Fowler — *Refactoring* | 1999 |
+| **Esenciální / akcidentální** | Fred Brooks — *No Silver Bullet* (od Aristotela) | 1986 |
 
-Stojí za povšimnutí, že tři ze čtyř vznikly na přelomu tisíciletí, v době, kdy se objektové programování dostávalo do praxe a ukázalo se, že hlavní riziko není nedostatek abstrakce, ale její přebytek. Všechny čtyři jsou reakcí na totéž — na kód, který někdo napsal pro budoucnost, která nikdy nepřišla.
+Stojí za povšimnutí, že tři ze čtyř principů vznikly na přelomu tisíciletí, v době, kdy se objektové programování dostávalo do praxe a ukázalo se, že hlavní riziko není nedostatek abstrakce, ale její přebytek. Všechny čtyři jsou reakcí na totéž — na kód, který někdo napsal pro budoucnost, která nikdy nepřišla.
+
+Brooksovo rozdělení je o patnáct let starší a je jiného druhu: není to rada, co dělat, ale **hranice toho, co od těch rad jde čekat**.
 
 ---
 
@@ -202,3 +281,5 @@ Stojí za povšimnutí, že tři ze čtyř vznikly na přelomu tisíciletí, v d
 - Martin Fowler: *Yagni*, 2015 — [martinfowler.com/bliki/Yagni.html](https://martinfowler.com/bliki/Yagni.html)
 - Martin Fowler: *Refactoring*, Addison-Wesley, 1999 — pravidlo tří
 - Sandi Metz: *The Wrong Abstraction*, 2016 — [sandimetz.com/blog/2016/1/20/the-wrong-abstraction](https://sandimetz.com/blog/2016/1/20/the-wrong-abstraction)
+- Fred Brooks: [*No Silver Bullet — Essence and Accident in Software Engineering*](https://worrydream.com/refs/Brooks_1986_-_No_Silver_Bullet.pdf), 1986 — esenciální a akcidentální složitost
+- Ben Moseley, Peter Marks: [*Out of the Tar Pit*](https://curtclifton.net/papers/MoseleyMarks06a.pdf), 2006 — kritika Brooksova závěru, se stavem jako hlavním podezřelým
