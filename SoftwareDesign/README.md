@@ -215,6 +215,10 @@ Obrácený rejstřík: začni u toho, co tě pálí.
 | Entity mají jen gettery a settery, všechna pravidla jsou ve službách | [Co DDD je](DDD/#nejčastější-omyl) |
 | „Děláme DDD" znamená u nás složky Entity/, Repository/, Service/ | [Co DDD je](DDD/#nejčastější-omyl) |
 | Nevím, jestli má DDD na tomhle projektu vůbec smysl | [Kdy DDD nedělat](DDD/#kdy-ddd-nedělat) |
+| Doména zná Doctrine a `$request` a nejde otestovat bez databáze | [DDD + hexagonální architektura](DDD/#hexagonální-architektura-co-doménu-drží-čistou) |
+| `Domain/` má osmdesát souborů a nevím, co ta aplikace vlastně dělá | [Horizontálně, nebo vertikálně](DDD/#horizontálně-nebo-vertikálně) |
+| Chci hranice mezi moduly, ale nechci zatím microservices | [Modulární monolit](DDD/#modulární-monolit) |
+| „Moduly" máme, ale jeden joinuje do tabulek druhého | [Kde to v praxi padá](DDD/#kde-to-v-praxi-padá) |
 | Doménové třídy mají pole pojmenovaná podle sloupců cizího systému | [Anticorruption Layer](DDD/AnticorruptionLayer/) |
 | Mám v kódu `if ($status === '03')` s komentářem, co to znamená u nich | [Anticorruption Layer](DDD/AnticorruptionLayer/) |
 | Cizí systém nejde vyměnit, protože je propletený úplně vším | [Anticorruption Layer](DDD/AnticorruptionLayer/) |

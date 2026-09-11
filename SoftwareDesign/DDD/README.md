@@ -123,6 +123,135 @@ To pořadí je dobrá rada i pro čtení tohohle katalogu.
 
 ---
 
+---
+
+## Kam doménu v projektu posadit
+
+Předchozí sekce říkají, **co** modelovat. Tahle říká, **kam to dát**, aby to vydrželo — a jsou to dvě nezávislá rozhodnutí, která se pletou dohromady.
+
+### Hexagonální architektura: co doménu drží čistou
+
+DDD říká „soustřeď se na jádro domény". To je ale jen přání, dokud něco nebrání tomu, aby doména začala znát Doctrine, Symfony a formát HTTP požadavku. A ona začne — protože je to pokaždé o dva řádky pohodlnější.
+
+[Ports & Adapters](../Architecture/PortsAndAdapters/) (hexagonální architektura) z toho přání dělá **pravidlo, které jde ohlídat strojem**: doména je uprostřed, infrastruktura na okrajích a **všechny závislosti míří dovnitř**. Doména definuje rozhraní (`OrderRepository`), implementaci dodá adaptér (`DoctrineOrderRepository`), a doména o něm neví.
+
+Proč se ty dvě věci potkávají tak často:
+
+| DDD potřebuje | Hexagonální architektura to dodává |
+| ------------- | ---------------------------------- |
+| Jádro, na které se dá soustředit | Fyzickou hranici, za kterou se framework nedostane |
+| Model, který se dá měnit podle nového pochopení | Změnu modelu bez zásahu do persistence a HTTP |
+| Rychlou zpětnou vazbu při zkoumání modelu | Testy domény **bez databáze a bez sítě** |
+| Jazyk, který odpovídá doméně | Kód, ve kterém není `$request` ani `$entityManager` |
+
+Třetí řádek je ten, který rozhoduje v praxi. **Model se prohlubuje refaktoringem** — a refaktoring, po kterém se čeká dvě minuty na testy s databází, se dělat nebude. Když jde doménu otestovat bez infrastruktury, jde těch iterací udělat za odpoledne dvacet.
+
+> [!IMPORTANT]
+> To pravidlo se **nedá udržet dobrou vůlí**. Jediné, co funguje, je kontrola v CI: `Domain/` nesmí obsahovat jediný `use` mířící do `Infrastructure\` ani do `Doctrine\`. Nástroje na to jsou — [deptrac](https://github.com/qossmic/deptrac), pravidla pro PHPStan. Konkrétní rozvržení složek a to hlídání je popsané [u Ports & Adapters](../Architecture/PortsAndAdapters/#kam-to-dát-ve-složkách).
+
+### Horizontálně, nebo vertikálně
+
+Druhé rozhodnutí, nezávislé na prvním: podle čeho dělit **nejvyšší úroveň** složek.
+
+**Horizontálně — podle vrstvy:**
+
+```
+src/
+    Domain/           Order.php, Customer.php, Invoice.php, Shipment.php…
+    Application/      PlaceOrderHandler.php, CancelOrderHandler.php…
+    Infrastructure/   DoctrineOrderRepository.php, StripeGateway.php…
+```
+
+**Vertikálně — podle modulu:**
+
+```
+src/
+    Ordering/
+        Domain/           Order.php
+        Application/      PlaceOrderHandler.php
+        Infrastructure/   DoctrineOrderRepository.php
+    Catalog/
+        Domain/           Product.php
+        Application/      …
+        Infrastructure/   …
+    Shipping/
+        …
+```
+
+Vrstvy jsou v obou případech stejné. Liší se jen to, **co je nahoře**.
+
+| | Horizontálně (vrstvy nahoře) | Vertikálně (moduly nahoře) |
+| --- | --- | --- |
+| Co vidíš na první pohled | z jakých vrstev se aplikace skládá | **co ta aplikace dělá** |
+| Kde končí jedna funkce | roztažená přes tři složky | v jedné složce |
+| Hranice kontextu | v kódu ji nic nedrží | **je to složka** |
+| Kdy začne vadit | když `Domain/` má 80 souborů | skoro nikdy; spíš je to předčasné |
+| Změna jedné funkce | sáhne do tří míst | sáhne do jednoho |
+| Vhodné pro | jeden model, jeden tým | víc kontextů, víc týmů |
+
+Fowler k tomu má jasné doporučení a je staré:
+
+> „Although presentation-domain-data separation is a common approach, it should only be applied at a **relatively small granularity**. […] Once any of these layers gets too big you should **split your top level into domain oriented modules** which are internally layered."
+>
+> — Martin Fowler, *PresentationDomainDataLayering*
+
+**Pro DDD je to ale víc než otázka přehlednosti.** Vertikální dělení je jediné místo, kde se [bounded context](BoundedContext/) projeví v souborech. Dokud jsou nahoře vrstvy, existují kontexty jen v hlavách lidí a na diagramu — a nic nebrání tomu, aby `Catalog` sáhl přímo do objednávky.
+
+### Modulární monolit
+
+Ano, ten pojem je správný a má autora. **Simon Brown** ho popsal jako aplikaci, kde *„all of the code resides in a single source code tree"*, ale vnitřně je to **sada komponent, ne vrstvy tříd** — přístupu ke skládání složek říká *package by component*.
+
+Je to tedy vertikální dělení dotažené do konce: **jedno nasazení, jedna databáze, jeden repozitář — ale uvnitř hranice, které platí.**
+
+Brownova věta, která z toho dělá víc než rozvržení složek:
+
+> „The design thinking required to create a good microservices architecture is the same as that needed to create a well structured monolith. And this begs the question that **if you can't build a well-structured monolith, what makes you think microservices is the answer?**"
+>
+> — Simon Brown
+
+#### Co z toho dělá modul, a co ne
+
+Složka modulem nedělá. Modul je modul, až když platí tohle:
+
+1. **Má veřejné rozhraní** — pár tříd, které smí volat okolí. Zbytek je jeho věc.
+2. **Nikdo nesahá dovnitř.** Cizí modul nesmí použít jeho entitu, jeho repository ani jeho tabulku.
+3. **Komunikuje přes vlastní jazyk.** Co si vymění s jiným modulem, je jednoduchý tvar (ID, [DTO](../Glossary.md#dto--data-transfer-object), [doménová událost](DomainEvent/)) — ne jeho vnitřní model.
+4. **Má vlastní data.** Ideálně vlastní tabulky, do kterých ostatní nejoinují.
+
+> [!IMPORTANT]
+> **V PHP ti bod 2 nikdo nevynutí.** Jazyk nemá package-private ani `internal` — `use App\Ordering\Domain\Order` uvnitř `App\Catalog` projde a nic se nestane. Java a C# na to modifikátory mají, PHP ne. Zbývá [deptrac](https://github.com/qossmic/deptrac) v CI a dohoda; **bez toho prvního to nevydrží.**
+
+#### Kde to v praxi padá
+
+Podle toho, co se dá pozorovat, ne podle pořadí důležitosti:
+
+| Co se stane | Proč je to konec modularity |
+| ----------- | --------------------------- |
+| `JOIN` přes tabulky dvou modulů | Databáze je společná, takže hranice existuje jen v PHP — a schéma se odteď nedá změnit samostatně |
+| Sdílená entita „protože je to pořád tentýž zákazník" | Právě tohle řeší [Bounded Context](BoundedContext/): v katalogu je zákazník něco jiného než v účetnictví |
+| Modul `Shared/`, kam se dává, co se nikam nehodí | Za půl roku je to největší modul a závisí na něm všechno |
+| Osm modulů hned na začátku | Hranice se kreslily dřív, než se vědělo, kudy vedou; přerozdělovat je pak dráž než je zavést |
+| Modul, který nikdo nesmí volat, ale všichni ho volají | Pravidlo bez kontroly v CI je jen komentář |
+
+První řádek je ten, který se podceňuje nejčastěji. **Modularita obvykle neumře v kódu, ale v databázi** — a pozná se to až ve chvíli, kdy chceš modul odstřihnout a zjistíš, že na jeho tabulky sahá půlka reportů.
+
+#### Kdy z modulu udělat službu
+
+Skoro nikdy hned. Brown modulární monolit popisuje jako *„stepping stone to a microservices architecture"* — tedy stav, ze kterého se dá vyjít, **ne stav, kterým se má rychle projít**.
+
+Rozumné spouštěče jsou provozní, ne estetické: modul potřebuje jiné škálování, jiné nasazovací tempo nebo ho převezme jiný tým ([Conwayův zákon](../Principles/ConwaysLaw.md) tady rozhoduje víc než architektura). A když ten den přijde, je odstřižení modulu, jehož hranice roky držela, otázka [Strangler Fig](../../Refactoring/System/StranglerFig/) — ne přepisu.
+
+### Doporučení
+
+**Začni horizontálně a vertikálně přejdi, až tě to začne pálit.** Osm modulů první den je odhad hranic, které ještě neznáš — a přerozdělit modul stojí víc než rozdělit velkou složku.
+
+| Situace | Rozvržení |
+| ------- | --------- |
+| Jeden model, jeden tým, do ~50 tříd v doméně | Horizontálně, s [hexagonální architekturou](../Architecture/PortsAndAdapters/) |
+| `Domain/` přestává být přehledná, rýsují se dvě témata | Vertikálně, dva moduly |
+| Dva a víc [kontextů](BoundedContext/), víc týmů | Vertikálně, modulární monolit, hranice hlídané v CI |
+| Modul má jiné provozní nároky než zbytek | Teprve teď zvaž samostatnou službu |
+
 ## Kudy tím katalogem projít
 
 Ne abecedně a ne od `Value Object`. Takhle:
@@ -226,3 +355,6 @@ Druhý řádek je nejužitečnější dluh: *Side-Effect-Free Functions* je [CQS
 - Eric Evans: [*Domain-Driven Design Reference*](https://www.domainlanguage.com/wp-content/uploads/2016/05/DDD_Reference_2015-03.pdf), 2015 — definice a shrnutí vzorů, volně ke stažení (CC BY 4.0)
 - Vaughn Vernon: *Implementing Domain-Driven Design*, Addison-Wesley, 2013
 - Martin Fowler: [*Anemic Domain Model*](https://martinfowler.com/bliki/AnemicDomainModel.html) — nejčastější podoba „děláme DDD"
+- Martin Fowler: [*Presentation Domain Data Layering*](https://martinfowler.com/bliki/PresentationDomainDataLayering.html) — kdy přejít z vrstev na moduly
+- Simon Brown: [*Modular monolith and „package by component"*](https://simonbrown.je/modular-monolith/) — odkud pojem pochází
+- Alistair Cockburn: [*Hexagonal Architecture*](https://alistair.cockburn.us/hexagonal-architecture/), 2005 — rozebraná u [Ports & Adapters](../Architecture/PortsAndAdapters/)
