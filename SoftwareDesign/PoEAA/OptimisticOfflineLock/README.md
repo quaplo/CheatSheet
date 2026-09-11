@@ -281,6 +281,7 @@ U API totéž přes `ETag` a `If-Match` — a je to jeho standardní použití, 
 
 | Pattern | Vztah |
 | ------- | ----- |
+| [Event Sourcing](../../Architecture/EventSourcing/) | Tam je verzování proudu nutnost, ne volba — dva zápisy do jednoho proudu se jinak neuhlídají. |
 | [Aggregate](../../DDD/Aggregate/) | **Určuje, kam verze patří** — na kořen, ne na části. Agregát je jednotka souběžnosti. |
 | **Pessimistic Offline Lock** (PoEAA) | Protipól: konfliktu předchází místo toho, aby ho poznal. [Srovnání výše](#optimistické-nebo-pesimistické). |
 | **Coarse-Grained Lock** (PoEAA) | Fowlerovo jméno pro „jeden zámek na celý agregát“. |

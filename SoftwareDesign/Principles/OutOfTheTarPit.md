@@ -113,7 +113,7 @@ Co se ujalo, je rozebrané po kouskách:
 | Oddělit esenciální stav od odvozeného | [CQRS](../Architecture/CQRS/) — zápisový model zvlášť, čtecí odvozený |
 | Neměnná data místo přepisování | [Value Object](../DDD/ValueObject/), `readonly` v PHP 8.2+ |
 | Logika jako funkce bez vedlejších efektů | Evansovy *Side-Effect-Free Functions*, [CQS](ObjectDesign.md#cqs--command-query-separation) |
-| Stav jako posloupnost faktů, ne jako snímek | **Event Sourcing** |
+| Stav jako posloupnost faktů, ne jako snímek | [Event Sourcing](../Architecture/EventSourcing/) |
 
 ---
 

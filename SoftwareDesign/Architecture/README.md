@@ -20,7 +20,7 @@ Společné mají jedno pozorování: **byznys logika je to jediné, co v aplikac
 | [**Saga**](Saga/) | Garcia-Molina & Salem 1987; Richardson 2018 | **Zápis** přes víc kontextů s kompenzačními akcemi | ●●●●○ | ✅ |
 | Clean Architecture | Robert C. Martin, 2012 | Soustředné vrstvy s pravidlem závislosti | | ⬜ |
 | Onion Architecture | Jeffrey Palermo, 2008 | Blízký příbuzný obou výše | | ⬜ |
-| Event Sourcing | Martin Fowler, 2005 | Stav jako posloupnost událostí, ne jako snímek | | ⬜ |
+| [**Event Sourcing**](EventSourcing/) | Martin Fowler, 2005 | Stav jako posloupnost událostí, ne jako snímek | ●●●●● | ✅ |
 
 <sub>⬜ plánováno · 🚧 rozpracováno · ✅ hotovo</sub>
 

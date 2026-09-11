@@ -316,7 +316,7 @@ Rozhodnutí, které je potřeba udělat vědomě, protože výchozí chování b
 | [Entity](../Entity/) | Události zaznamenává kořen agregátu — tedy entita. |
 | [Value Object](../ValueObject/) | Událost sama je hodnotou: neměnná, bez identity v doménovém smyslu. |
 | [CQRS](../../Architecture/CQRS/) | Nejběžnější způsob, jak se plní čtecí modely. Od stupně 4 výš je to hlavní mechanismus. |
-| **Event Sourcing** | **Nezaměňovat.** Publikovat události ≠ ukládat je jako zdroj pravdy. Event Sourcing tenhle pattern předpokládá, opačně to neplatí. |
+| [Event Sourcing](../../Architecture/EventSourcing/) | **Nezaměňovat.** Publikovat události ≠ ukládat je jako zdroj pravdy. Event Sourcing tenhle pattern předpokládá, opačně to neplatí. |
 | [Context Map](../ContextMap/) | Integrační události jsou Published Language — jeden ze sedmi vztahů. |
 | [Anticorruption Layer](../AnticorruptionLayer/) | Překlad doménové události na integrační je tatáž práce, jen opačným směrem. |
 | [Service Layer](../../PoEAA/ServiceLayer/) | Místo, kde se události publikují — a kde se hlídá, že až **po commitu**. |

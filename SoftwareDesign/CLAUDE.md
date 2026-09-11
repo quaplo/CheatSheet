@@ -32,8 +32,11 @@ Principles/
     README.md                  # rozcestník principů
     CohesionAndCoupling.md     # soudržnost a provázanost — cíl, ke kterému ostatní vedou
     SOLID.md                   # SRP, OCP, LSP, ISP, DIP
-    Simplicity.md              # KISS, YAGNI, DRY, pravidlo tří
+    Simplicity.md              # esenciální/akcidentální složitost, KISS, YAGNI, DRY, pravidlo tří
     ObjectDesign.md            # Tell Don't Ask, Demeter, kompozice, CQS, Fail Fast
+    ConwaysLaw.md              # proč architektura kopíruje organizaci
+    OutOfTheTarPit.md          # složitost, stav a řízení — rozbor článku z roku 2006
+    demo/<Téma>/               # jen tam, kde se princip dá ukázat na běhu
 <Zdroj>/
     README.md                  # původ sbírky (kdo, kdy, proč) + katalog patternů
     <Kategorie>/               # jen u sbírek, které kategorie mají (GoF)
@@ -45,7 +48,7 @@ Principles/
 
 Členění kopíruje **původ** patternu, ne abecedu. GoF má kategorie (`Creational` / `Structural` / `Behavioral`), novější sbírky často ne — pak je struktura `<Zdroj>/<PatternName>/`.
 
-Plánované sbírky: GoF (1994) · PoEAA (Fowler, 2002) · DDD (Evans, 2003) · EIP (Hohpe & Woolf, 2003) · Architecture (Hexagonal, Clean, CQRS, Event Sourcing).
+Plánované sbírky: GoF (1994) · PoEAA (Fowler, 2002) · DDD (Evans, 2003) · EIP (Hohpe & Woolf, 2003) · Architecture (Hexagonal, Clean, CQRS, Event Sourcing — poslední tři už hotové).
 
 ## Struktura popisu patternu
 
@@ -74,7 +77,7 @@ Referenční hotový pattern: **`GoF/Behavioral/Strategy/README.md`**. Když si 
 
 ## Principy vs. patterny
 
-Ve složce `Principles/` žijí **principy návrhu** (zatím SOLID). Platí striktní dělba:
+Ve složce `Principles/` žijí **principy návrhu**. Platí striktní dělba:
 
 - **Princip se vysvětluje na jediném místě — v `Principles/`.** Nikdy ho nevysvětluj znovu v README patternu.
 - Pattern na princip **odkazuje**: v sekci *Vztah k principům* tabulkou `Princip | Jak souvisí`, kde je **jedna věta o vztahu**, ne definice principu.
@@ -82,16 +85,17 @@ Ve složce `Principles/` žijí **principy návrhu** (zatím SOLID). Platí stri
   `[OCP](../../../Principles/SOLID.md#openclosed-principle-ocp)`
   Počet `../` odpovídá zanoření: z `<Zdroj>/<Kategorie>/<Pattern>/` tři (GoF),
   z `<Zdroj>/<Pattern>/` dva (sbírky bez kategorií). **Po napsání odkaz ověř**, ne odhadni.
-- Principy jsou ve **čtyřech souborech podle tématu**, každý princip má vlastní kotvu:
+- Principy jsou v **souborech podle tématu**, každý princip má vlastní kotvu:
   - `CohesionAndCoupling.md` — `#stupnice-provázanosti` · `#stupnice-soudržnosti`
   - `SOLID.md` — `#single-responsibility-principle-srp` · `#openclosed-principle-ocp` ·
     `#liskov-substitution-principle-lsp` · `#interface-segregation-principle-isp` ·
     `#dependency-inversion-principle-dip`
-  - `Simplicity.md` — `#kiss--keep-it-simple` · `#yagni--you-arent-gonna-need-it` ·
-    `#dry--dont-repeat-yourself` · `#pravidlo-tří`
+  - `Simplicity.md` — `#esenciální-a-akcidentální-složitost` · `#kiss--keep-it-simple` ·
+    `#yagni--you-arent-gonna-need-it` · `#dry--dont-repeat-yourself` · `#pravidlo-tří`
   - `ObjectDesign.md` — `#tell-dont-ask` · `#zákon-demeter-law-of-demeter` ·
     `#kompozice-před-dědičností` · `#cqs--command-query-separation` · `#fail-fast` ·
     `#zviditelni-implicitní`
+  - `ConwaysLaw.md` a `OutOfTheTarPit.md` — celotematické dokumenty, odkazuj na ně celé
 - Když „špatný“ kód v sekci *Problém* porušuje nějaký princip, **pojmenuj ho a odlinkuj rovnou tam**, u konkrétního symptomu. Junior tak vidí souvislost v momentě, kdy problém poznává.
 - Zkratky principů patří i do metadat (`principles: [OCP, DIP]`).
 - **Nový princip nezakládej jen kvůli jednomu patternu.** Chybí-li princip, na který chceš odkázat, buď ho doplň do **existujícího tematického souboru** (nezakládej nový soubor na jeden princip), nebo o něm napiš prostým textem bez odkazu — a pak si to poznamenej jako dluh.

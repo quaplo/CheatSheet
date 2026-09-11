@@ -157,13 +157,14 @@ Vzory bez jedné mateřské knihy, které se netýkají jedné třídy, ale **tv
 | Pattern | Autor, rok | K čemu to je | Obtížnost |
 | ------- | ---------- | ------------ | --------- |
 | [Layered Architecture](Architecture/LayeredArchitecture/) | — | Čtyři vrstvy, z nichž každá sahá jen pod sebe — a proč to k izolaci domény nestačí | ●●○○○ |
+| [Event Sourcing](Architecture/EventSourcing/) | — | Pravdou je proud událostí, ne stav — a co za to zaplatíš | ●●●●● |
 | [Ports & Adapters](Architecture/PortsAndAdapters/) | Cockburn, 2005 | Jádro nezávislé na okolí; závislosti míří dovnitř | ●●●●○ |
 | [Rules Engine](Architecture/RulesEngine/) | Forgy 1979, Fowler 2009 | Byznysová pravidla jako seznam objektů se strategií a auditní stopou | ●●●●○ |
 | [CQRS](Architecture/CQRS/) | Meyer 1988, Young 2010 | Oddělený model pro zápis a pro čtení — každý optimalizovaný na své | ●●●●○ |
 | [Service Composition](Architecture/ServiceComposition/) | Peltz 2003, Erl 2009 | Poskládá **čtení** z víc kontextů do jednoho celku | ●●●○○ |
 | [Saga](Architecture/Saga/) | Garcia-Molina & Salem 1987 | **Zápis** přes víc kontextů — kroky s kompenzacemi místo transakce | ●●●●○ |
 
-<sub>Plánované (Clean Architecture, Onion, Event Sourcing): [Architecture/README.md](Architecture/)</sub>
+<sub>Plánované (Clean Architecture, Onion): [Architecture/README.md](Architecture/)</sub>
 
 <sub>⬜ plánováno · 🚧 rozpracováno · ✅ hotovo</sub>
 
@@ -297,6 +298,9 @@ Obrácený rejstřík: začni u toho, co tě pálí.
 | Konstruktor má šest nepovinných parametrů a půlku z nich předávám `null` | [Factory Method](GoF/Creational/FactoryMethod/) |
 | Objekt jde vytvořit v neplatném stavu, protože validace je jinde než konstruktor | [Factory Method](GoF/Creational/FactoryMethod/) |
 | Objekt, který se mění, zná mailer, cache i statistiky | [Observer](GoF/Behavioral/Observer/) |
+| Nevím, na jakou adresu se objednávka odeslala — dnes je tam jiná | [Event Sourcing](Architecture/EventSourcing/) |
+| Vedle hlavní tabulky máme „historii", kterou plní aplikace ručně | [Event Sourcing](Architecture/EventSourcing/#problém) |
+| Chceme audit — stačí na to event sourcing? | [Kdy nepoužít](Architecture/EventSourcing/#kdy-nepoužít) |
 | Chci tlačítko „zpět", ale kvůli záloze musím entitě otevřít všechna pole | [Memento](GoF/Behavioral/Memento/) |
 | Undo mi nic nevrací, i když snímek podle všeho existuje | [Memento](GoF/Behavioral/Memento/#časté-chyby) |
 | Rozdělaný formulář nebo konfigurátor je potřeba odložit a později obnovit | [Memento](GoF/Behavioral/Memento/) |

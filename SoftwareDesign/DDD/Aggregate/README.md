@@ -281,6 +281,7 @@ Konkrétní vodítko, když si nejsi jistý:
 
 | Pattern | Vztah |
 | ------- | ----- |
+| [Event Sourcing](../../Architecture/EventSourcing/) | Hranice agregátu je zároveň hranicí proudu událostí. |
 | [Entity](../Entity/) | Stavební kámen. Agregát je skupina entit a hodnot, kde se jedna entita stane kořenem a začne hlídat pravidla celku. |
 | [Value Object](../ValueObject/) | Tvoří vnitřek agregátu. Nemají vlastní životní cyklus — žijí a umírají s ním. |
 | [Repository](../../PoEAA/Repository/) | **Jedno repository na agregát**, a jen pro kořen. Agregát určuje, pro co repository vůbec smí vzniknout. |

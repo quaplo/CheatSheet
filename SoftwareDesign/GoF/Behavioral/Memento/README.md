@@ -220,7 +220,7 @@ $order = $before;                    // a to je undo
 
 - ❌ **Objekt může být neměnný** — pak je snímek jen proměnná a Memento je tři třídy navíc.
 - ❌ **Vrací se jedna hodnota, ne stav** — na to stačí lokální proměnná.
-- ❌ **Stav je velký a snímků má být hodně** — paměť roste lineárně s historií; zvaž ukládání *rozdílů* nebo **Event Sourcing**.
+- ❌ **Stav je velký a snímků má být hodně** — paměť roste lineárně s historií; zvaž ukládání *rozdílů* nebo [Event Sourcing](../../../Architecture/EventSourcing/).
 - ❌ **Operace už opustila proces** — odeslaný e-mail ani stržená platba se obnovením objektu nevrátí. Memento vrací **stav v paměti**, ne následky.
 
 > [!IMPORTANT]
@@ -272,7 +272,7 @@ po undo                           9 kusů  ← undo nic nevrátilo
 | [Iterator](../Iterator/) (GoF) | Historie snímků je kolekce — průchod bez vydání vnitřku platí i tady. |
 | [Unit of Work](../../../PoEAA/UnitOfWork/) (PoEAA) | Sleduje změny od načtení; Doctrine k tomu používá právě snímek původních dat. |
 | [First Class Collection](../../../ObjectCalisthenics/FirstClassCollection/) | Kam patří historie snímků, když k ní přibudou pravidla (limit kroků, mazání). |
-| **Event Sourcing** | Opačný přístup: neukládá se stav, ale posloupnost změn. Historii dává zadarmo, ale je to jiná architektura, ne jiná třída. |
+| [Event Sourcing](../../../Architecture/EventSourcing/) | Opačný přístup: neukládá se stav, ale posloupnost změn. Historii dává zadarmo, ale je to jiná architektura, ne jiná třída. |
 
 ---
 
