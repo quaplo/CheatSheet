@@ -57,6 +57,15 @@ Komunikace s uživatelem: **slovensky**.
 - **Prolinkovávej.** Pojem se vysvětluje na jednom místě; odjinud se na něj odkazuje. **Po napsání odkaz ověř**, ne odhadni.
 - **Na nehotové dokumenty odkazuj tučným textem, ne odkazem.** Odkaz na neexistující složku je rozbitý odkaz.
 
+## Myšlenky, ke kterým se vracím
+
+V kořenovém [`README.md`](README.md) je osobní výběr myšlenek, které stojí za přečtení samy o sobě. Platí pro něj dvě pravidla:
+
+- **Je to rozcestník, ne výklad.** Každá položka má háček a odkaz — samotné vysvětlení žije na jednom místě v příslušné sekci a odsud se na něj jen odkazuje.
+- **Přidává se tam, co je jinde hotové.** Není to seznam přání.
+
+---
+
 ## Přidání nové sekce
 
 1. Založ složku a v ní `README.md` — co sekce obsahuje, pro koho je, rozcestník na dokumenty.

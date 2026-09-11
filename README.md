@@ -10,13 +10,43 @@ Není to knihovna ani balíček — je to **dokumentace se spustitelnými přík
 
 | Sekce | Co obsahuje | Stav |
 | ----- | ----------- | ---- |
-| [**Software Design**](SoftwareDesign/) | Návrhové vzory a architektura — GoF, PoEAA, DDD, principy návrhu. Spustitelné PHP ukázky u každého vzoru. | ✅ 43 vzorů · 5 souborů principů |
+| [**Software Design**](SoftwareDesign/) | Návrhové vzory a architektura — GoF, PoEAA, DDD, principy návrhu. Spustitelné PHP ukázky u každého vzoru. | ✅ 47 vzorů · 6 souborů principů |
 | [**Git Workflows**](GitWorkflows/) | Modely větvení — jak tým pracuje s větvemi, kdy co slučuje a odkud nasazuje. | ✅ 5 workflow |
 | [**Procesy**](Processes/) | Jak u nás probíhá práce — code review, a dál podle toho, co je potřeba vysvětlovat. | 🚧 7 dokumentů |
 | [**Refaktoring**](Refactoring/) | Jak měnit kód, který už běží — od jedné metody po výměnu části systému za provozu. | ✅ 23 technik |
 | [**Nástroje**](Tooling/) | Nástroje a konvence kolem vývoje — Makefile, Docker, statická analýza. | 🚧 1 nástroj |
 
-<sub>Další sekce přibudou. Návod, jak založit novou, je [níž](#přidání-nové-sekce).</sub>
+<sub>Další sekce přibudou. Návod, jak založit novou, je [níž](#přidání-nové-sekce). Hledáš-li spíš inspiraci než odpověď, začni u [Myšlenek, ke kterým se vracím](#myšlenky-ke-kterým-se-vracím).</sub>
+
+---
+
+## Myšlenky, ke kterým se vracím
+
+Osobní výběr — věci, které mě zrovna nejvíc baví a které stojí za přečtení, i když zrovna neřešíš problém, na který odpovídají. **Seznam poroste.** Každá z nich je pořádně rozebraná jinde v repozitáři, tady je jen důvod, proč tam jít.
+
+### Luneta na potápěčských hodinkách
+
+Dá se otáčet **jen jedním směrem** a předepisuje to norma. Když o ni potápěč zavadí, může ukázat jedině **víc** uplynulého času — takže vyplave dřív, než by musel. Opačný směr by znamenal zůstat pod hladinou déle, než stačí vzduch, a to se vrátit nedá.
+
+Je v tom celý princip, který se v kódu skoro nikdy nenavrhuje vědomě: **chybu v jednom směru znemožnit a v druhém ji naklonit tak, aby nebolela.** Nespoléhá se na to, že si někdo dá pozor — pozornost selže vždycky, stačí dost pokusů.
+
+→ [Poka-yoke](SoftwareDesign/Principles/ObjectDesign.md#poka-yoke--znemožni-chybu-nebo-ji-nakloň)
+
+### Jen jednu ze dvou složitostí jde odstranit
+
+Ve tvém kódu jsou vedle sebe dva druhy složitosti. **Akcidentální** je z toho, jak jsme to zrovna napsali — zmizí s jiným nástrojem, typem, rozvržením. **Esenciální** je z domény a nezmizí nikdy, leda by někdo zrušil požadavek.
+
+Rozdíl není akademický, protože určuje, **kdo o tom rozhoduje**: o té první tým, o té druhé byznys. A vysvětluje, proč „přepíšeme to jednodušeji" tak často skončí u stejně velkého systému. Zkouška, která na to funguje: *zůstalo by tohle, kdyby ten systém psal někdo dokonalý v dokonalém jazyce?*
+
+→ [Esenciální a akcidentální složitost](SoftwareDesign/Principles/Simplicity.md#esenciální-a-akcidentální-složitost)
+
+### Vysoká soudržnost, nízká provázanost
+
+Co spolu souvisí, ať je pohromadě; co spolu nesouvisí, ať na sobě nezávisí. Zní to jako fráze, dokud si člověk nevšimne data: **1974**, Constantine a Yourdon — dvacet let před GoF a třicet před SOLID.
+
+A tohle je na tom to zajímavé: **není to jedno z pravidel, je to cíl.** SOLID i většina vzorů v tomhle repozitáři jsou způsoby, jak toho dosáhnout. Když si u nějakého vzoru nejsi jistý, proč vlastně existuje, odpověď bude skoro vždycky tady.
+
+→ [Soudržnost a provázanost](SoftwareDesign/Principles/CohesionAndCoupling.md)
 
 ---
 
