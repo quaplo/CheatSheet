@@ -236,6 +236,7 @@ Zbytek dema ověří na 32 vstupech, že **všechny čtyři verze vracejí toté
 | [Decompose Conditional](../Code/DecomposeConditional/) | Týž pohyb jako katalogový refaktoring — s mechanikou krok za krokem. |
 | [Extract Class](../Code/ExtractClass/) | Pokračování kroku 3, když se ukáže, že v té třídě bydlí dvě věci. |
 | [Ubiquitous Language](../../SoftwareDesign/DDD/UbiquitousLanguage/) | Jména, která se hledají, mají existovat i mimo kód — a být stejná. |
+| [Domain-Driven Design](../../SoftwareDesign/DDD/#model-se-prohlubuje-refaktoringem) | Evansův čtvrtý důvod k refaktoringu: pochopil jsem doménu líp. |
 | [Zviditelni implicitní](../../SoftwareDesign/Principles/ObjectDesign.md#zviditelni-implicitní) | Přesně to, co se v kroku 2 stane s pravidly, o kterých nikde nic nebylo. |
 | [Code review](../../Processes/CodeReview/Reviewer/) | Druhé místo, kde se cizí kód čte — a kde se nesrozumitelnost pozná dřív. |
 

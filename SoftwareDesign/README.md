@@ -115,6 +115,8 @@ Vzory pro aplikace nad databází a s doménovou logikou — Repository, Unit of
 
 Aggregate, Entity, Value Object, Domain Event, Bounded Context. Ne úplně „design patterny“ v gangofourském smyslu, ale stejný typ znalosti — pojmenované řešení opakujícího se problému.
 
+**Než začneš u tabulky:** [co DDD vlastně je](DDD/#co-ddd-je) a [kudy tím katalogem projít](DDD/#kudy-tím-katalogem-projít). Kdo začne u `Value Objectu`, skončí u složek `Entity/`, `Repository/`, `Service/` — a to je [ten nejčastější omyl](DDD/#nejčastější-omyl).
+
 | Pattern | Kategorie | K čemu to je | Obtížnost |
 | ------- | --------- | ------------ | --------- |
 | [Entity](DDD/Entity/) | Taktický | Objekt s identitou, která přežije změnu všech atributů | ●●○○○ |
@@ -210,6 +212,9 @@ Obrácený rejstřík: začni u toho, co tě pálí.
 | Na otázku „když tohle změním, koho rozbiju?“ neumí odpovědět nikdo | [Context Map](DDD/ContextMap/) |
 | Existuje sdílená knihovna, na které závisí všichni a nikdo ji nevlastní | [Context Map](DDD/ContextMap/) |
 | Cizí datový model prosákl do naší domény a nikdo neví kdy | [Context Map](DDD/ContextMap/) |
+| Entity mají jen gettery a settery, všechna pravidla jsou ve službách | [Co DDD je](DDD/#nejčastější-omyl) |
+| „Děláme DDD" znamená u nás složky Entity/, Repository/, Service/ | [Co DDD je](DDD/#nejčastější-omyl) |
+| Nevím, jestli má DDD na tomhle projektu vůbec smysl | [Kdy DDD nedělat](DDD/#kdy-ddd-nedělat) |
 | Doménové třídy mají pole pojmenovaná podle sloupců cizího systému | [Anticorruption Layer](DDD/AnticorruptionLayer/) |
 | Mám v kódu `if ($status === '03')` s komentářem, co to znamená u nich | [Anticorruption Layer](DDD/AnticorruptionLayer/) |
 | Cizí systém nejde vyměnit, protože je propletený úplně vším | [Anticorruption Layer](DDD/AnticorruptionLayer/) |
