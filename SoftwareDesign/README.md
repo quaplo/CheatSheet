@@ -223,6 +223,9 @@ Obrácený rejstřík: začni u toho, co tě pálí.
 | Nevím, jestli je ta složitost z domény, nebo z toho, jak jsme to napsali | [Esenciální a akcidentální složitost](Principles/Simplicity.md#jak-to-poznat-na-kusu-kódu) |
 | Zavedli jsme vzor a práce neubylo | [Vzor složitost nepřesouvá zadarmo](Principles/Simplicity.md#proč-to-patří-sem) |
 | Nevím, kdy je refaktoring hotový — pořád se dá něco vylepšit | [Dokončeno není, když není co přidat](Principles/Simplicity.md#dokončeno-není-když-není-co-přidat) |
+| Pořád dokola se někdo splete ve stejné věci, i když ví, jak to má být | [Poka-yoke](Principles/ObjectDesign.md#poka-yoke--znemožni-chybu-nebo-ji-nakloň) |
+| Metoda bere tři `int`y za sebou a plete se pořadí | [Poka-yoke, stupeň 1](Principles/ObjectDesign.md#tři-stupně-obrany-od-nejsilnějšího) |
+| Když něco selže, systém pokračuje tou riskantnější cestou | [Třetí stupeň se nenavrhuje](Principles/ObjectDesign.md#třetí-stupeň-se-nenavrhuje-a-měl-by) |
 | Chyba se objeví jen někdy a restart ji spraví | [Out of the Tar Pit](Principles/OutOfTheTarPit.md#1-stav--ten-hlavní) |
 | Testy procházejí a v produkci to počítá jinak | [Out of the Tar Pit](Principles/OutOfTheTarPit.md#demo) |
 | Každá metoda je správně, ale dohromady vyjde nesmysl | [Out of the Tar Pit](Principles/OutOfTheTarPit.md#2-řízení--pořadí-které-nás-nemá-zajímat) |

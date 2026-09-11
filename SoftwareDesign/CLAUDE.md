@@ -33,7 +33,7 @@ Principles/
     CohesionAndCoupling.md     # soudržnost a provázanost — cíl, ke kterému ostatní vedou
     SOLID.md                   # SRP, OCP, LSP, ISP, DIP
     Simplicity.md              # esenciální/akcidentální složitost, KISS, YAGNI, DRY, pravidlo tří
-    ObjectDesign.md            # Tell Don't Ask, Demeter, kompozice, CQS, Fail Fast
+    ObjectDesign.md            # Tell Don't Ask, Demeter, kompozice, CQS, Fail Fast, poka-yoke
     ConwaysLaw.md              # proč architektura kopíruje organizaci
     OutOfTheTarPit.md          # složitost, stav a řízení — rozbor článku z roku 2006
     demo/<Téma>/               # jen tam, kde se princip dá ukázat na běhu
@@ -94,7 +94,7 @@ Ve složce `Principles/` žijí **principy návrhu**. Platí striktní dělba:
     `#yagni--you-arent-gonna-need-it` · `#dry--dont-repeat-yourself` · `#pravidlo-tří`
   - `ObjectDesign.md` — `#tell-dont-ask` · `#zákon-demeter-law-of-demeter` ·
     `#kompozice-před-dědičností` · `#cqs--command-query-separation` · `#fail-fast` ·
-    `#zviditelni-implicitní`
+    `#poka-yoke--znemožni-chybu-nebo-ji-nakloň` · `#zviditelni-implicitní`
   - `ConwaysLaw.md` a `OutOfTheTarPit.md` — celotematické dokumenty, odkazuj na ně celé
 - Když „špatný“ kód v sekci *Problém* porušuje nějaký princip, **pojmenuj ho a odlinkuj rovnou tam**, u konkrétního symptomu. Junior tak vidí souvislost v momentě, kdy problém poznává.
 - Zkratky principů patří i do metadat (`principles: [OCP, DIP]`).

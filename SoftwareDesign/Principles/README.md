@@ -9,7 +9,7 @@ Principy nejsou patterny. **Pattern je konkrétní řešení konkrétního probl
 | [**Jednoduchost**](Simplicity.md) | Co jde zjednodušit — [esenciální a akcidentální složitost](Simplicity.md#esenciální-a-akcidentální-složitost) — a kolik kódu psát: [KISS](Simplicity.md#kiss--keep-it-simple), [YAGNI](Simplicity.md#yagni--you-arent-gonna-need-it), [DRY](Simplicity.md#dry--dont-repeat-yourself), [pravidlo tří](Simplicity.md#pravidlo-tří) | ✅ |
 | [**Conwayův zákon**](ConwaysLaw.md) | Proč architektura kopíruje organizaci — a co s tím jde a nejde dělat | ✅ |
 | [**Out of the Tar Pit**](OutOfTheTarPit.md) | Složitost jako jediná příčina a **stav** jako její hlavní zdroj — rozbor článku z roku 2006 | ✅ |
-| [**Objektový návrh**](ObjectDesign.md) | Jak spolu objekty mluví — [Tell Don't Ask](ObjectDesign.md#tell-dont-ask), [Demeter](ObjectDesign.md#zákon-demeter-law-of-demeter), [kompozice před dědičností](ObjectDesign.md#kompozice-před-dědičností), [CQS](ObjectDesign.md#cqs--command-query-separation), [Fail Fast](ObjectDesign.md#fail-fast), [zviditelni implicitní](ObjectDesign.md#zviditelni-implicitní) | ✅ |
+| [**Objektový návrh**](ObjectDesign.md) | Jak spolu objekty mluví — [Tell Don't Ask](ObjectDesign.md#tell-dont-ask), [Demeter](ObjectDesign.md#zákon-demeter-law-of-demeter), [kompozice před dědičností](ObjectDesign.md#kompozice-před-dědičností), [CQS](ObjectDesign.md#cqs--command-query-separation), [Fail Fast](ObjectDesign.md#fail-fast), [poka-yoke](ObjectDesign.md#poka-yoke--znemožni-chybu-nebo-ji-nakloň), [zviditelni implicitní](ObjectDesign.md#zviditelni-implicitní) | ✅ |
 
 <sub>⬜ plánováno · 🚧 rozpracováno · ✅ hotovo</sub>
 

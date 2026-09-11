@@ -13,6 +13,7 @@ Zatímco [SOLID](SOLID.md) řeší, jak rozdělit odpovědnosti, [KISS/YAGNI/DRY
 | [Kompozice před dědičností](#kompozice-před-dědičností) | Skládej objekty, neděď je — dokud dědičnost není opravdu na místě. |
 | [CQS](#cqs--command-query-separation) | Metoda buď mění stav, nebo vrací hodnotu. Nikdy obojí. |
 | [Fail Fast](#fail-fast) | Spadni hned a hlasitě, ne o tři vrstvy dál a potichu. |
+| [Poka-yoke](#poka-yoke--znemožni-chybu-nebo-ji-nakloň) | Ještě líp: zařiď, aby ta chyba nešla udělat. |
 | [Zviditelni implicitní](#zviditelni-implicitní) | Co je v kódu skryté v podmínkách a pořadí, má dostat jméno. |
 
 ---
@@ -187,6 +188,62 @@ public function vatRateFor(string $country): float
 
 ---
 
+## Poka-yoke — znemožni chybu, nebo ji nakloň
+
+> Nespoléhej na to, že si někdo dá pozor. **Uprav to tak, aby ta chyba nešla udělat** — a kde to nejde, zařiď, aby následek padl na bezpečnou stranu.
+
+Nejlepší vysvětlení tohohle principu nejsou hodinky náhodou. **Luneta na potápěčských hodinkách se dá otáčet jen jedním směrem** — proti směru hodinových ručiček — a předepisuje to norma [ISO 6425](https://divewatch.com/reference/iso-6425/).
+
+Funguje to takhle: před ponorem potápěč otočí nulu na lunetě k minutové ručičce a od té chvíle čte uplynulý čas z lunety. Kdyby šla otáčet oběma směry a někde o ni zavadil, mohla by ukázat, že uplynulo **méně** času, než ve skutečnosti — a potápěč by zůstal pod hladinou déle, než mu stačí vzduch.
+
+**Jednosměrnost tu dělá dvě věci naráz:**
+
+1. **Chybu v jednom směru znemožní.** Luneta se doprava neotočí, ať děláš, co děláš.
+2. **Chybu v druhém směru nakloní na bezpečnou stranu.** Když se posune, ukáže *víc* uplynulého času. Potápěč vyplave dřív, než by musel — což je nepříjemné, ne smrtelné.
+
+Přesně tohle je **poka-yoke**, princip z Toyoty. Zavedl ho **Shigeo Shingo** v roce **1961** a původně se jmenoval *baka-yoke*, tedy „blbuvzdorné"; přejmenoval se poté, co dělnice odmítla u takhle pojmenovaného zařízení pracovat. Podstata je v tom, že **se nespoléhá na pozornost člověka** — ta selže vždycky, stačí dost pokusů.
+
+### Tři stupně obrany, od nejsilnějšího
+
+| Stupeň | Co znamená | V PHP |
+| ------ | ---------- | ----- |
+| **1. Nejde to udělat** | Chybný stav se nedá ani zapsat | Typ místo `string`, `enum` místo konstant, `readonly` místo setteru, validace v konstruktoru |
+| **2. Pozná se to hned** | Chyba jde udělat, ale okamžitě křičí | [Fail Fast](#fail-fast) — výjimka místo `?? 0` |
+| **3. Padne to na bezpečnou stranu** | Ani to nejde, tak ať následek nebolí | Výchozí hodnota, která nic nepovolí a nic neutratí |
+
+**Sahej po nich v tomhle pořadí.** První stupeň je jediný, který funguje i po noční směni.
+
+```php
+// Stupeň 0: spoléhá se na pozornost
+public function charge(int $amount, string $currency): void
+
+// Stupeň 1: takhle to nejde zavolat špatně
+public function charge(Money $amount): void
+```
+
+`charge(1000, 'CZK')` a `charge(1000, 'EUR')` vypadají stejně a spletou se; `Money::fromCents(1000, Currency::CZK)` ne. Je to táž myšlenka jako [Introduce Parameter Object](../../Refactoring/Code/IntroduceParameterObject/) — a jediné místo, kam se ta kontrola vejde, je konstruktor.
+
+### Třetí stupeň se nenavrhuje, a měl by
+
+První dva stupně dělá kdekdo. Ten třetí — **naklonit zbytkovou chybu** — se skoro vždycky nechá náhodě, přestože je to přesně to, co dělá ta luneta.
+
+| Situace | Nakloněné špatně | Nakloněné dobře |
+| ------- | ---------------- | --------------- |
+| Kontrola oprávnění selže | pustí dál | **nepustí** |
+| Nový feature flag bez hodnoty | zapnuto | **vypnuto** |
+| Platební brána neodpoví do timeoutu | bereme jako zaplaceno | **bereme jako nezaplaceno** a ověříme |
+| Neznámý stav objednávky z cizího systému | spadne do `default` a jede dál | **výjimka**, protože nevíš, co to je |
+| Chybí konfigurace limitu | nekonečno | **nula nebo výjimka** |
+
+Poznávací znamení je jednoduché: **zeptej se, co se stane při nejhorší možné shodě okolností** — a jestli je to vratné. Potápěč, který vyplave o pět minut dřív, má nepříjemný den. Ten druhý směr se nedá vzít zpět, a proto ho luneta neumí.
+
+> [!NOTE]
+> ISO 6425 kromě jednosměrnosti požaduje i to, aby byla luneta **odolná proti nechtěnému otočení**. To je stupeň 1 a stupeň 3 v jednom výrobku — a je to dobrá připomínka, že se ty stupně nevylučují.
+
+**Souvisí s patterny:** [Value Object](../DDD/ValueObject/) (neplatná instance nevznikne) · [Factory](../DDD/Factory/) (jediná cesta k sestavenému agregátu) · [State](../GoF/Behavioral/State/) (zakázaný přechod nejde provést) · [Specification](../DDD/Specification/) (pravidlo se dá zeptat předem, ne až po) · [Anticorruption Layer](../DDD/AnticorruptionLayer/) (neznámý cizí kód neprojde do domény)
+
+---
+
 ## Zviditelni implicitní
 
 > Co je v kódu skryté v pořadí podmínek, v konvenci nebo v hlavě autora, má dostat **jméno a vlastní místo**.
@@ -222,6 +279,7 @@ if ((new EligibleForFreeShipping())->isSatisfiedBy($order)) { }
 | **Tell, Don't Ask** | Alec Sharp — *Smalltalk by Example* | 1997 |
 | **Zviditelni implicitní** | Eric Evans — *Domain-Driven Design* | 2003 |
 | **Fail Fast** | Jim Shore, Martin Fowler — IEEE Software | 2004 |
+| **Poka-yoke** | Shigeo Shingo — Toyota Production System | 1961 |
 
 ---
 
@@ -232,3 +290,5 @@ if ((new EligibleForFreeShipping())->isSatisfiedBy($order)) { }
 - Eric Evans: *Domain-Driven Design*, Addison-Wesley, 2003 — kapitola 9
 - Jim Shore: *Fail Fast*, IEEE Software, 2004
 - Martin Fowler: *TellDontAsk*, 2013 — [martinfowler.com/bliki/TellDontAsk.html](https://martinfowler.com/bliki/TellDontAsk.html)
+- Shigeo Shingo: *Zero Quality Control: Source Inspection and the Poka-yoke System*, Productivity Press, 1986
+- [ISO 6425](https://divewatch.com/reference/iso-6425/) — norma pro potápěčské hodinky, odkud je příklad s lunetou
