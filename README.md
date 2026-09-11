@@ -24,6 +24,18 @@ Není to knihovna ani balíček — je to **dokumentace se spustitelnými přík
 
 Osobní výběr — věci, které mě zrovna nejvíc baví a které stojí za přečtení, i když zrovna neřešíš problém, na který odpovídají. **Seznam poroste.** Každá z nich je pořádně rozebraná jinde v repozitáři, tady je jen důvod, proč tam jít.
 
+### Udělej změnu jednoduchou, a pak udělej tu jednoduchou změnu
+
+> „for each desired change, **make the change easy (warning: this may be hard), then make the easy change**"
+>
+> — Kent Beck, 25. září 2012
+
+Vejde se to do jednoho tweetu a je to nejcitovanější pravidlo o refaktoringu vůbec. Nejdůležitější je na tom **ta závorka**: připravit v kódu místo bývá těžší než ta změna, kvůli které jsi přišel — a přesně proto se to přeskakuje.
+
+Druhá polovina věty je stejně podstatná a čte se přes ni. Když je příprava hotová, **ta změna má být triviální**. Když není, nebyla to ta správná příprava.
+
+→ [Přípravný refaktoring](Refactoring/PreparatoryRefactoring/)
+
 ### Luneta na potápěčských hodinkách
 
 Dá se otáčet **jen jedním směrem** a předepisuje to norma. Když o ni potápěč zavadí, může ukázat jedině **víc** uplynulého času — takže vyplave dřív, než by musel. Opačný směr by znamenal zůstat pod hladinou déle, než stačí vzduch, a to se vrátit nedá.
