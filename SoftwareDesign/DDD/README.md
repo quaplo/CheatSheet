@@ -312,6 +312,7 @@ U strategických vzorů se ukázalo, že demo smysl má — jen jiné: [Bounded 
 | [**Domain Service**](DomainService/) | Doménová operace, která nepatří žádné entitě | ●●○○○ | ✅ |
 | [**Specification**](Specification/) | Doménové pravidlo vytažené do samostatného objektu | ●●●○○ | ✅ |
 | [**Modules**](Modules/) | Celky, jejichž jména patří do jazyka domény — jediný blok bez jediné třídy | ●●○○○ | ✅ |
+| [Layered Architecture](../Architecture/LayeredArchitecture/) | Evansův stavební blok, ale vzor je starší — popsali ho v [POSA](../Architecture/) v roce 1996, proto ho vedeme v [Architecture](../Architecture/). | ●●○○○ | ✅ |
 
 ### Strategický návrh
 

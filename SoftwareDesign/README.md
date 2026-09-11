@@ -155,6 +155,7 @@ Vzory bez jedné mateřské knihy, které se netýkají jedné třídy, ale **tv
 
 | Pattern | Autor, rok | K čemu to je | Obtížnost |
 | ------- | ---------- | ------------ | --------- |
+| [Layered Architecture](Architecture/LayeredArchitecture/) | — | Čtyři vrstvy, z nichž každá sahá jen pod sebe — a proč to k izolaci domény nestačí | ●●○○○ |
 | [Ports & Adapters](Architecture/PortsAndAdapters/) | Cockburn, 2005 | Jádro nezávislé na okolí; závislosti míří dovnitř | ●●●●○ |
 | [Rules Engine](Architecture/RulesEngine/) | Forgy 1979, Fowler 2009 | Byznysová pravidla jako seznam objektů se strategií a auditní stopou | ●●●●○ |
 | [CQRS](Architecture/CQRS/) | Meyer 1988, Young 2010 | Oddělený model pro zápis a pro čtení — každý optimalizovaný na své | ●●●●○ |
@@ -217,6 +218,8 @@ Obrácený rejstřík: začni u toho, co tě pálí.
 | „Děláme DDD" znamená u nás složky Entity/, Repository/, Service/ | [Co DDD je](DDD/#nejčastější-omyl) |
 | Nevím, jestli má DDD na tomhle projektu vůbec smysl | [Kdy DDD nedělat](DDD/#kdy-ddd-nedělat) |
 | Doména zná Doctrine a `$request` a nejde otestovat bez databáze | [DDD + hexagonální architektura](DDD/#hexagonální-architektura-co-doménu-drží-čistou) |
+| Pravidlo o slevě mám v šabloně, v kontroleru i v SQL — pokaždé jinak | [Layered Architecture](Architecture/LayeredArchitecture/) |
+| Vrstvy máme, ale doména se pořád nedá otestovat bez databáze | [Layered Architecture](Architecture/LayeredArchitecture/#čím-to-samo-o-sobě-nestačí) |
 | `Domain/` má osmdesát souborů a nevím, co ta aplikace vlastně dělá | [Horizontálně, nebo vertikálně](DDD/#horizontálně-nebo-vertikálně) |
 | Ze složek v projektu nepoznám, co ten systém dělá — jen z čeho je postavený | [Modules](DDD/Modules/) |
 | Struktura složek je od prvního měsíce stejná, ale doména se posunula | [Modules](DDD/Modules/#problém) |

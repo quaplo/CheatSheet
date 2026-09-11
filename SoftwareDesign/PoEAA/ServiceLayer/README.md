@@ -415,6 +415,7 @@ Složka `Application/` je pak **čitelný seznam toho, co aplikace umí**. To je
 
 | Pattern | Vztah |
 | ------- | ----- |
+| [Layered Architecture](../../Architecture/LayeredArchitecture/) | Kde v ní Application vrstva bydlí a proč se plete s doménovou službou. |
 | [Ports & Adapters](../../Architecture/PortsAndAdapters/) | Use-case je to, co sedí uvnitř hexagonu za **[řídicím portem](../../Architecture/PortsAndAdapters/#dvě-strany-na-jednu-se-zapomíná)**. Pattern říká *kde* vrstva je, tenhle *co* v ní je. |
 | [CQRS](../../Architecture/CQRS/) | Pokračování dotazovací strany: vlastní čtecí modely, vlastní úložiště, projekce. Tenhle pattern se zastavuje u otázky, jestli má dotaz dostat handler. |
 | [Aggregate](../../DDD/Aggregate/) | To, co use-case obsluhuje. Pravidlo „jedna transakce = jeden agregát“ platí právě tady. |

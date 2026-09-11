@@ -235,6 +235,7 @@ Poslední řádek je Evansova vlastní odpověď a je to na celém vzoru to nejc
 
 | Pattern | Vztah |
 | ------- | ----- |
+| [Layered Architecture](../../Architecture/LayeredArchitecture/) | Dělení kolmé na tohle: moduly nahoru, vrstvy dovnitř. |
 | [Bounded Context](../BoundedContext/) | **Nejčastější záměna.** Modul je uvnitř modelu, kontext je hranice modelu. Rozdíl je [výš](#modul-nebo-bounded-context). |
 | [Ubiquitous Language](../UbiquitousLanguage/) | Jména modulů do něj patří — to je na tomhle vzoru to hlavní. |
 | [Core Domain](../CoreDomain/) | Destilace obvykle vede k přerozdělení modulů: jádro zvlášť, obecné části zvlášť. |

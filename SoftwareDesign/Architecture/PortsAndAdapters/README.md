@@ -365,6 +365,7 @@ Core\Port\Driven\OrderRepository: '@Adapter\Driven\Persistence\DoctrineOrderRepo
 
 | Pattern | Vztah |
 | ------- | ----- |
+| [Layered Architecture](../LayeredArchitecture/) | **Předchůdce.** Vrstvy oddělí doménu od UI, ale ne od infrastruktury — a Evans sám u nich odkazuje sem. |
 | [Modules](../../DDD/Modules/) (DDD) | Modul říká „co", hexagon „kudy dovnitř" — vrstvy z tohohle vzoru žijí uvnitř modulu. |
 | [Domain-Driven Design](../../DDD/#kam-doménu-v-projektu-posadit) | **Nejčastější dvojice.** Hexagonální architektura dělá z „soustřeď se na jádro domény" pravidlo, které jde ohlídat v CI. |
 | [Adapter](../../GoF/Structural/Adapter/) (GoF) | Sdílejí jméno, ne měřítko. GoF Adapter je jeden objekt překládající jedno rozhraní na druhé; adaptér tady je **architektonická role** — celý kus kódu na hranici aplikace. GoF Adapter se často použije uvnitř. |

@@ -12,6 +12,7 @@ Společné mají jedno pozorování: **byznys logika je to jediné, co v aplikac
 
 | Pattern | Autor, rok | K čemu | Obtížnost | Stav |
 | ------- | ---------- | ------ | --------- | ---- |
+| [**Layered Architecture**](LayeredArchitecture/) | Buschmann a kol., 1996 | Vrstvy, z nichž každá sahá jen pod sebe; předchůdce hexagonu | ●●○○○ | ✅ |
 | [**Ports & Adapters**](PortsAndAdapters/) | Alistair Cockburn, 2005 | Jádro nezávislé na okolí; závislosti míří dovnitř | ●●●●○ | ✅ |
 | [**Rules Engine**](RulesEngine/) | Forgy 1979, Fowler 2009 | Byznysová pravidla jako seznam objektů, ne jako hromada `if`ů | ●●●●○ | ✅ |
 | [**CQRS**](CQRS/) | Meyer 1988, Greg Young 2010 | Oddělený model pro zápis a pro čtení | ●●●●○ | ✅ |
