@@ -48,6 +48,22 @@ A tohle je na tom to zajímavé: **není to jedno z pravidel, je to cíl.** SOLI
 
 → [Soudržnost a provázanost](SoftwareDesign/Principles/CohesionAndCoupling.md)
 
+### Většina nepříjemného kódu vzniká jedním pohybem
+
+Zeptáš se objektu na jeho stav a rozhodneš za něj:
+
+```php
+if ($order->getStatus() === 'paid' && $order->getTotalInCents() >= 150000) {
+    $shipping = 0;
+}
+```
+
+Je to správně, projde to testy — a přesto tím logika objednávky skončila mimo objednávku. Příští člověk ji tam napíše znovu, jen o kus jinak a s jinou hranicí. **Tell, Don't Ask** je odpověď na jednu větu: *řekni jí, co potřebuješ vědět, a rozhodnutí nech na ní.*
+
+Sedm pravidel v tom souboru se čte jako sada nezávislých rad, ale drží je pohromadě jedna otázka: **kdo se koho na co smí ptát a kdo o kom smí vědět.** Baví mě na nich, že odpovídají na „proč je tenhle kód nepříjemný, když je vlastně správně" — a že jedno z nich je ta luneta nahoře.
+
+→ [Objektový návrh](SoftwareDesign/Principles/ObjectDesign.md)
+
 ---
 
 ## Proč to takhle
