@@ -200,6 +200,7 @@ Poslední tři řádky se podceňují nejčastěji. Poslední se řeší snímky
 
 | Pattern | Vztah |
 | ------- | ----- |
+| [Batching](../Batching/) | Projekce se staví po dávkách, ne po jedné události. |
 | [CQRS](../CQRS/) | **Nutná dvojice v tomhle směru.** ES bez CQRS skoro nedává smysl; CQRS bez ES ano a je to obvyklejší. |
 | [Domain Event](../../DDD/DomainEvent/) (DDD) | **Nezaměňovat.** ES používá události jako úložiště, Domain Event jako oznámení. |
 | [Memento](../../GoF/Behavioral/Memento/) (GoF) | Opačný přístup ke stejnému problému: snímek stavu proti posloupnosti změn. |

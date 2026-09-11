@@ -158,6 +158,7 @@ Vzory bez jedné mateřské knihy, které se netýkají jedné třídy, ale **tv
 | ------- | ---------- | ------------ | --------- |
 | [Layered Architecture](Architecture/LayeredArchitecture/) | — | Čtyři vrstvy, z nichž každá sahá jen pod sebe — a proč to k izolaci domény nestačí | ●●○○○ |
 | [Event Sourcing](Architecture/EventSourcing/) | — | Pravdou je proud událostí, ne stav — a co za to zaplatíš | ●●●●● |
+| [Batching](Architecture/Batching/) | — | Dávkování zpráv kvůli zátěži — počet, nebo čas, co nastane dřív | ●●●○○ |
 | [Ports & Adapters](Architecture/PortsAndAdapters/) | Cockburn, 2005 | Jádro nezávislé na okolí; závislosti míří dovnitř | ●●●●○ |
 | [Rules Engine](Architecture/RulesEngine/) | Forgy 1979, Fowler 2009 | Byznysová pravidla jako seznam objektů se strategií a auditní stopou | ●●●●○ |
 | [CQRS](Architecture/CQRS/) | Meyer 1988, Young 2010 | Oddělený model pro zápis a pro čtení — každý optimalizovaný na své | ●●●●○ |
@@ -302,6 +303,9 @@ Obrácený rejstřík: začni u toho, co tě pálí.
 | Konstruktor má šest nepovinných parametrů a půlku z nich předávám `null` | [Factory Method](GoF/Creational/FactoryMethod/) |
 | Objekt jde vytvořit v neplatném stavu, protože validace je jinde než konstruktor | [Factory Method](GoF/Creational/FactoryMethod/) |
 | Objekt, který se mění, zná mailer, cache i statistiky | [Observer](GoF/Behavioral/Observer/) |
+| Import běží v malém vteřinu a v produkci hodinu | [Batching](Architecture/Batching/) |
+| Každá entita vydá událost a při importu to položí cílový systém | [Batching](Architecture/Batching/) |
+| Dávkujeme, ale po restartu občas chybí data | [Past, která se pozná až při pádu](Architecture/Batching/#past-která-se-pozná-až-při-pádu) |
 | Nevím, na jakou adresu se objednávka odeslala — dnes je tam jiná | [Event Sourcing](Architecture/EventSourcing/) |
 | Vedle hlavní tabulky máme „historii", kterou plní aplikace ručně | [Event Sourcing](Architecture/EventSourcing/#problém) |
 | Chceme audit — stačí na to event sourcing? | [Kdy nepoužít](Architecture/EventSourcing/#kdy-nepoužít) |

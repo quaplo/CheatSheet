@@ -312,6 +312,7 @@ Rozhodnutí, které je potřeba udělat vědomě, protože výchozí chování b
 
 | Pattern | Vztah |
 | ------- | ----- |
+| [Batching](../../Architecture/Batching/) | Co s událostmi, když jich při importu vznikne deset tisíc a cíl to neunese. |
 | [Aggregate](../Aggregate/) | **Přímé pokračování.** Agregát zavedl pravidlo „jedna transakce = jeden agregát“; události jsou to, čím se konzistence mezi nimi dohání. |
 | [Entity](../Entity/) | Události zaznamenává kořen agregátu — tedy entita. |
 | [Value Object](../ValueObject/) | Událost sama je hodnotou: neměnná, bez identity v doménovém smyslu. |
