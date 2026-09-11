@@ -36,6 +36,7 @@ Patterny jsou konkrétní řešení; **principy jsou měřítko, podle kterého 
 | [**Jednoduchost**](Principles/Simplicity.md) | Co vůbec jde zjednodušit (esenciální vs akcidentální složitost) a kolik kódu psát — KISS, YAGNI, DRY, pravidlo tří | ✅ |
 | [**Objektový návrh**](Principles/ObjectDesign.md) | Jak spolu objekty mluví — Tell Don't Ask, Demeter, kompozice před dědičností, CQS, Fail Fast | ✅ |
 | [**Conwayův zákon**](Principles/ConwaysLaw.md) | Architektura kopíruje komunikační strukturu organizace — pozorování, ne rada | ✅ |
+| [**Out of the Tar Pit**](Principles/OutOfTheTarPit.md) | Proč je složitost jediná skutečná příčina a proč za ni může stav | ✅ |
 
 <sub>Rozcestník i s vysvětlením členění: [Principles/README.md](Principles/)</sub>
 
@@ -220,6 +221,9 @@ Obrácený rejstřík: začni u toho, co tě pálí.
 | „Přepíšeme to jednodušeji" — a nový systém vyšel stejně velký | [Esenciální a akcidentální složitost](Principles/Simplicity.md#esenciální-a-akcidentální-složitost) |
 | Nevím, jestli je ta složitost z domény, nebo z toho, jak jsme to napsali | [Esenciální a akcidentální složitost](Principles/Simplicity.md#jak-to-poznat-na-kusu-kódu) |
 | Zavedli jsme vzor a práce neubylo | [Vzor složitost nepřesouvá zadarmo](Principles/Simplicity.md#proč-to-patří-sem) |
+| Chyba se objeví jen někdy a restart ji spraví | [Out of the Tar Pit](Principles/OutOfTheTarPit.md#1-stav--ten-hlavní) |
+| Testy procházejí a v produkci to počítá jinak | [Out of the Tar Pit](Principles/OutOfTheTarPit.md#demo) |
+| Každá metoda je správně, ale dohromady vyjde nesmysl | [Out of the Tar Pit](Principles/OutOfTheTarPit.md#2-řízení--pořadí-které-nás-nemá-zajímat) |
 | Doména zná Doctrine a `$request` a nejde otestovat bez databáze | [DDD + hexagonální architektura](DDD/#hexagonální-architektura-co-doménu-drží-čistou) |
 | Pravidlo o slevě mám v šabloně, v kontroleru i v SQL — pokaždé jinak | [Layered Architecture](Architecture/LayeredArchitecture/) |
 | Vrstvy máme, ale doména se pořád nedá otestovat bez databáze | [Layered Architecture](Architecture/LayeredArchitecture/#čím-to-samo-o-sobě-nestačí) |

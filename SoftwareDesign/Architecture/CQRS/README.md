@@ -334,6 +334,7 @@ $repository->save($order->cancel());
 
 | Pattern | Vztah |
 | ------- | ----- |
+| [Out of the Tar Pit](../../Principles/OutOfTheTarPit.md) | Oddělení esenciálního stavu od odvozeného — tenhle vzor je jeho praktická podoba. |
 | [Service Layer](../../PoEAA/ServiceLayer/) | Vrstva, kterou CQRS rozděluje na příkazovou a dotazovací stranu. Dotazy obvykle žádnou orchestraci nepotřebují. |
 | [Repository](../../PoEAA/Repository/) | Přímý předchůdce téhle úvahy. Repository říká „na výpisy si udělej samostatný dotaz“; CQRS z toho dělá záměrné rozdělení celé cesty k datům. |
 | [Ports & Adapters](../PortsAndAdapters/) | Vrstva, do které se CQRS vkládá: zápis přes port, čtení může mít vlastní. Obojí se hlídá stejným nástrojem v CI. |

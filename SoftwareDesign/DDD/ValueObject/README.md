@@ -478,6 +478,7 @@ echo $address->format();                     // Sokolovská 100 / 186 00 Praha /
 
 | Pattern | Vztah |
 | ------- | ----- |
+| [Out of the Tar Pit](../../Principles/OutOfTheTarPit.md) | Proč je omezení stavu to hlavní, co se dá se složitostí udělat. |
 | [Entity](../Entity/) (DDD) | **Protipól a nejdůležitější rozhodnutí při návrhu modelu.** Entita má identitu, která přežije změnu všech atributů; value object je definován jen svým obsahem. Kontrolní otázka: zajímá mě, *který* to je, nebo *jaký* je? |
 | [First Class Collection](../../ObjectCalisthenics/FirstClassCollection/) | Sourozenec: tenhle pattern obaluje primitiv, ten druhý pole. Neměnná kolekce je vlastně value object nad seznamem. |
 | **Money** (PoEAA) | Fowlerův konkrétní value object; `allocate()` pochází odtud. |

@@ -87,7 +87,7 @@ A pak jedna věta, která platí pro celý tenhle katalog a je poctivé ji říc
 Ten první řádek je drahý a Brooks kvůli němu tu esej vůbec napsal. Jeho závěr zněl, že **žádná jednotlivá věc nepřinese řádové zlepšení**, protože to podstatné na psaní softwaru je *„the specification, design, and testing of this conceptual construct"* — a to zůstane těžké v jakémkoli jazyce.
 
 > [!NOTE]
-> **Brooksův závěr se dá zpochybnit a zpochybněný byl.** Ben Moseley a Peter Marks v článku [*Out of the Tar Pit*](https://curtclifton.net/papers/MoseleyMarks06a.pdf) (2006) jeho rozdělení přebírají, ale **nesouhlasí s tím, že většina zbývající složitosti je esenciální**. Podle nich je největším zdrojem té akcidentální **měnitelný stav** — a toho se ubrat dá. Pro dnešního čtenáře je to užitečnější čtení než Brooks sám, protože z toho plyne konkrétní rada: [neměnné hodnoty](../DDD/ValueObject/) a stav na jednom místě.
+> **Brooksův závěr se dá zpochybnit a zpochybněný byl.** Ben Moseley a Peter Marks v článku [*Out of the Tar Pit*](https://curtclifton.net/papers/MoseleyMarks06a.pdf) (2006) jeho rozdělení přebírají, ale **nesouhlasí s tím, že většina zbývající složitosti je esenciální**. Podle nich je největším zdrojem té akcidentální **měnitelný stav** — a toho se ubrat dá. Rozbor toho článku je [ve vlastním dokumentu](OutOfTheTarPit.md).
 
 ---
 
@@ -282,4 +282,4 @@ Brooksovo rozdělení je o patnáct let starší a je jiného druhu: není to ra
 - Martin Fowler: *Refactoring*, Addison-Wesley, 1999 — pravidlo tří
 - Sandi Metz: *The Wrong Abstraction*, 2016 — [sandimetz.com/blog/2016/1/20/the-wrong-abstraction](https://sandimetz.com/blog/2016/1/20/the-wrong-abstraction)
 - Fred Brooks: [*No Silver Bullet — Essence and Accident in Software Engineering*](https://worrydream.com/refs/Brooks_1986_-_No_Silver_Bullet.pdf), 1986 — esenciální a akcidentální složitost
-- Ben Moseley, Peter Marks: [*Out of the Tar Pit*](https://curtclifton.net/papers/MoseleyMarks06a.pdf), 2006 — kritika Brooksova závěru, se stavem jako hlavním podezřelým
+- Ben Moseley, Peter Marks: [*Out of the Tar Pit*](https://curtclifton.net/papers/MoseleyMarks06a.pdf), 2006 — kritika Brooksova závěru; rozbor je [tady](OutOfTheTarPit.md)
