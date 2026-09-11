@@ -234,6 +234,7 @@ Jazyk platí **uvnitř jednoho [ohraničeného kontextu](../BoundedContext/)**, 
 
 | Pattern | Vztah |
 | ------- | ----- |
+| [Modules](../Modules/) (DDD) | Jména modulů do jazyka patří — Evans to říká přímo v definici vzoru. |
 | [Bounded Context](../BoundedContext/) | **Určuje hranice platnosti jazyka.** Jeden jazyk uvnitř jednoho kontextu — ne napříč firmou. |
 | [Context Map](../ContextMap/) | Ukazuje, kde se jazyky potkávají a kde se tedy musí překládat. |
 | [Anticorruption Layer](../AnticorruptionLayer/) | Místo, kde překlad mezi jazyky legitimně probíhá. |

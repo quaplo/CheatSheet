@@ -130,6 +130,7 @@ Aggregate, Entity, Value Object, Domain Event, Bounded Context. Ne úplně „de
 | [Bounded Context](DDD/BoundedContext/) | Strategický | Model platí jen uvnitř hranice; totéž slovo smí za ní znamenat jinou věc | ●●●●○ |
 | [Context Map](DDD/ContextMap/) | Strategický | Vztahy mezi kontexty — kdo se komu musí přizpůsobit | ●●●○○ |
 | [Anticorruption Layer](DDD/AnticorruptionLayer/) | Strategický | Překladová vrstva, která nepustí cizí model do tvojí domény | ●●●○○ |
+| [Modules](DDD/Modules/) | Taktický | Složky, jejichž jména jsou součástí jazyka domény — a hranice, které drží | ●●○○○ |
 | [Core Domain](DDD/CoreDomain/) | Která část systému firmu živí — a proč na ní nemají dělat ti nejlepší jen náhodou | ●●○○○ |
 | [Generic Subdomains](DDD/GenericSubdomains/) | Co jádrem není: vytěsnit, nebo rovnou koupit | ●●○○○ |
 | [Domain Vision Statement](DDD/DomainVisionStatement/) | Jedna stránka o tom, čím se produkt liší — nejlevnější vzor v katalogu | ●○○○○ |
@@ -217,6 +218,9 @@ Obrácený rejstřík: začni u toho, co tě pálí.
 | Nevím, jestli má DDD na tomhle projektu vůbec smysl | [Kdy DDD nedělat](DDD/#kdy-ddd-nedělat) |
 | Doména zná Doctrine a `$request` a nejde otestovat bez databáze | [DDD + hexagonální architektura](DDD/#hexagonální-architektura-co-doménu-drží-čistou) |
 | `Domain/` má osmdesát souborů a nevím, co ta aplikace vlastně dělá | [Horizontálně, nebo vertikálně](DDD/#horizontálně-nebo-vertikálně) |
+| Ze složek v projektu nepoznám, co ten systém dělá — jen z čeho je postavený | [Modules](DDD/Modules/) |
+| Struktura složek je od prvního měsíce stejná, ale doména se posunula | [Modules](DDD/Modules/#problém) |
+| Moduly máme, ale jeden si bere entitu druhého a nikdo to nehlídá | [Modules](DDD/Modules/#hranici-ti-php-neuhlídá) |
 | Chci hranice mezi moduly, ale nechci zatím microservices | [Modulární monolit](DDD/#modulární-monolit) |
 | „Moduly" máme, ale jeden joinuje do tabulek druhého | [Kde to v praxi padá](DDD/#kde-to-v-praxi-padá) |
 | Doménové třídy mají pole pojmenovaná podle sloupců cizího systému | [Anticorruption Layer](DDD/AnticorruptionLayer/) |

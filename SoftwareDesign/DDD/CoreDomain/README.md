@@ -194,6 +194,7 @@ Poslední řádek je důležitý: **generickou podoblast si pouštíš do systé
 
 | Pattern | Vztah |
 | ------- | ----- |
+| [Modules](../Modules/) (DDD) | Destilace obvykle vede k přerozdělení modulů — jádro zvlášť, obecné části zvlášť. |
 | [Generic Subdomains](../GenericSubdomains/) | **Druhá strana téže mince** — co jádrem není a jak s tím naložit. |
 | [Cohesive Mechanism](../CohesiveMechanism/) | Druhý destilační krok: vytáhnout z jádra složité výpočty. |
 | [Segregated Core](../SegregatedCore/) | Poslední krok: strukturálně oddělit jádro, když předchozí nestačily. |

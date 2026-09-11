@@ -365,6 +365,7 @@ Core\Port\Driven\OrderRepository: '@Adapter\Driven\Persistence\DoctrineOrderRepo
 
 | Pattern | Vztah |
 | ------- | ----- |
+| [Modules](../../DDD/Modules/) (DDD) | Modul říká „co", hexagon „kudy dovnitř" — vrstvy z tohohle vzoru žijí uvnitř modulu. |
 | [Domain-Driven Design](../../DDD/#kam-doménu-v-projektu-posadit) | **Nejčastější dvojice.** Hexagonální architektura dělá z „soustřeď se na jádro domény" pravidlo, které jde ohlídat v CI. |
 | [Adapter](../../GoF/Structural/Adapter/) (GoF) | Sdílejí jméno, ne měřítko. GoF Adapter je jeden objekt překládající jedno rozhraní na druhé; adaptér tady je **architektonická role** — celý kus kódu na hranici aplikace. GoF Adapter se často použije uvnitř. |
 | **Clean / Onion Architecture** | Totéž jinými slovy a s jiným obrázkem. Clean Architecture přidává pojmenované vrstvy a explicitní pravidlo závislosti, Onion soustředné kruhy. Rozdíly jsou hlavně v terminologii. |

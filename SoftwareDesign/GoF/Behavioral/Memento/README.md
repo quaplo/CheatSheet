@@ -264,6 +264,7 @@ po undo                           9 kusů  ← undo nic nevrátilo
 
 | Pattern | Vztah |
 | ------- | ----- |
+| [Modules](../../../DDD/Modules/) (DDD) | Táž mez PHP o patro výš: chybí package-private, takže hranici drží konvence a CI. |
 | [Command](../Command/) (GoF) | **Nejčastější dvojice.** Command říká, *co se má vrátit*, Memento *na co*. Undo se dělá buď odečtením operace, nebo obnovením snímku. |
 | [Value Object](../../../DDD/ValueObject/) (DDD) | Když je stav složený z neměnných hodnot, hluboká kopie odpadá — snímek je bezpečný sám o sobě. |
 | **Prototype** (GoF) | Sourozenec přes kopírování: Prototype kopíruje, **aby vznikl nový objekt**, Memento, **aby se dal vrátit ten původní**. |

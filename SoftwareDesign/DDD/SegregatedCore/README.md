@@ -278,6 +278,7 @@ Nejtěžší část a nejde ji odvodit z kódu. Pomůcka, která funguje: **zept
 
 | Pattern | Vztah |
 | ------- | ----- |
+| [Modules](../Modules/) (DDD) | Obecnější případ: tohle je jeho dotažení na jádro. |
 | [Cohesive Mechanism](../CohesiveMechanism/) | **Sourozenec z téže kapitoly.** Ten vytahuje výpočty, tenhle podpůrné role. Evans je uvádí jeden po druhém a doporučuje v tomhle pořadí. |
 | [Bounded Context](../BoundedContext/) | Jiná hranice a nezaměňovat: kontext odděluje **různé významy téhož pojmu**, oddělené jádro **důležité od podpůrného** uvnitř jednoho kontextu. |
 | [Ports & Adapters](../../Architecture/PortsAndAdapters/) | Táž myšlenka na úrovni architektury — závislosti míří dovnitř. Segregated Core to dělá uvnitř modelu, hexagon vůči okolnímu světu. |

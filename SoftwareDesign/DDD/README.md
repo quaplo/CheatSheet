@@ -195,7 +195,7 @@ Fowler k tomu má jasné doporučení a je staré:
 >
 > — Martin Fowler, *PresentationDomainDataLayering*
 
-**Pro DDD je to ale víc než otázka přehlednosti.** Vertikální dělení je jediné místo, kde se [bounded context](BoundedContext/) projeví v souborech. Dokud jsou nahoře vrstvy, existují kontexty jen v hlavách lidí a na diagramu — a nic nebrání tomu, aby `Catalog` sáhl přímo do objednávky.
+**Pro DDD je to ale víc než otázka přehlednosti.** Evans na to má vlastní stavební blok — [Modules](Modules/) — a vertikální dělení je jediné místo, kde se [bounded context](BoundedContext/) projeví v souborech. Dokud jsou nahoře vrstvy, existují kontexty jen v hlavách lidí a na diagramu — a nic nebrání tomu, aby `Catalog` sáhl přímo do objednávky.
 
 ### Modulární monolit
 
@@ -311,6 +311,7 @@ U strategických vzorů se ukázalo, že demo smysl má — jen jiné: [Bounded 
 | [Application Service](../PoEAA/ServiceLayer/) | Orchestrace jedné operace aplikace. Evans ji popsal rok po Fowlerově *Service Layer*, proto ji vedeme v [PoEAA](../PoEAA/) — rozdíl proti **domain service** je rozebraný tam. | ●●○○○ | ✅ |
 | [**Domain Service**](DomainService/) | Doménová operace, která nepatří žádné entitě | ●●○○○ | ✅ |
 | [**Specification**](Specification/) | Doménové pravidlo vytažené do samostatného objektu | ●●●○○ | ✅ |
+| [**Modules**](Modules/) | Celky, jejichž jména patří do jazyka domény — jediný blok bez jediné třídy | ●●○○○ | ✅ |
 
 ### Strategický návrh
 

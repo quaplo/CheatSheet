@@ -281,6 +281,7 @@ Domluva nestačí; za půl roku tam bude první `use Sales\Customer` uprostřed 
 
 | Pattern | Vztah |
 | ------- | ----- |
+| [Modules](../Modules/) (DDD) | **Nejčastější záměna.** Modul je celek uvnitř jednoho modelu, kontext je hranice modelu — přes modul se předává, přes kontext překládá. |
 | [Modulární monolit](../#modulární-monolit) | Kde se hranice kontextu projeví v souborech — dokud jsou nahoře vrstvy, existuje kontext jen na diagramu. |
 | [Context Map](../ContextMap/) | **Přímé pokračování.** Bounded Context řekne, kde jsou hranice; Context Map, jaké vztahy mezi nimi panují a kdo se komu přizpůsobuje. Jeden bez druhého nedává smysl. |
 | [Ports & Adapters](../../Architecture/PortsAndAdapters/) | Hranice kontextu je hranice aplikace; překladač na hranici je řízený adaptér. Vynucuje se stejným nástrojem. |
