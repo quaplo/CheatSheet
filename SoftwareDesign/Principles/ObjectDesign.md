@@ -251,10 +251,32 @@ public function refund(string $paymentId, int $amountInCents): void
 }
 ```
 
-**Proč je to `1b` a ne `4`:** není to slabší varianta. Pro tuhle třídu chyb je to nejlepší dostupný tah, protože stupeň 1 tu neexistuje. Luneta se dá udělat jednosměrná; opakované doručení zprávy zakázat nejde.
+**Proč je to `1b` a ne `4`:** není to slabší varianta. Pro tuhle třídu chyb je to nejlepší dostupný tah, protože stupeň 1 tu neexistuje. Opakované doručení zprávy zakázat nejde — a nemá se zakazovat, jinak se po výpadku sítě nedoručí nic.
+
+#### Tohle dělá i ta luneta — ale jinak
+
+Stojí za to je postavit vedle sebe, protože **oba ty postupy nechají chybu nastat a postarají se, aby nebolela.** Luneta nezakazuje, že o ni potápěč zavadí; jen zařídí, aby to nevadilo.
+
+Rozdíl je v tom, **kolik z toho následku zůstane**:
+
+| | Idempotence | Luneta |
+| --- | --- | --- |
+| Chyba nastane | ano | ano |
+| Co zůstane po ní | **nic** — stav je stejný jako bez ní | údaj je špatně, jen v neškodném směru |
+| Co to stojí | nic | **minuty ponoru** |
+| Kdo rozhoduje o ceně | nikdo, není co platit | **návrhář** — musí vybrat, co obětuje |
+
+Jedna chybu **smaže**, druhá ji **zlevní**. A poslední řádek je ten, který se v kódu přehlíží: u lunety někdo musel rozhodnout, že **dýchatelný vzduch je důležitější než odkroucený ponor**, a tomu podřídit směr otáčení. To rozhodnutí je součást návrhu, ne jeho vedlejší efekt.
+
+Praktický závěr z toho vychází jednoduchý:
+
+- **Když jde následek smazat, smaž ho.** To je idempotence a nic tě nestojí.
+- **Když nejde, zeptej se, kterou vlastnost jsi ochoten obětovat** — a obětuj ji vědomě, ne náhodou.
+
+Druhý bod je celý rozdíl mezi naklonit a nechat padnout. Systém, který při pochybnostech o platbě raději **nepošle zboží**, obětoval rychlost dodání. Ten, který ho pošle, obětoval peníze. Obojí je rozhodnutí — jen v jednom případě ho někdo udělal.
 
 > [!NOTE]
-> Idempotence má stejnou vlastnost jako ta luneta: **po nasazení na ni nikdo nemusí myslet.** Nevyžaduje kázeň, dokumentaci ani kontrolu v code review — funguje i pro toho, kdo o ní neví.
+> Obě metody mají ještě jednu společnou vlastnost, a je to ta, která z nich dělá poka-yoke: **po nasazení na ně nikdo nemusí myslet.** Nevyžadují kázeň, dokumentaci ani kontrolu v code review — fungují i pro toho, kdo o nich neví.
 
 ### Třetí stupeň se nenavrhuje, a měl by
 

@@ -227,6 +227,7 @@ Obrácený rejstřík: začni u toho, co tě pálí.
 | Pořád dokola se někdo splete ve stejné věci, i když ví, jak to má být | [Poka-yoke](Principles/ObjectDesign.md#poka-yoke--znemožni-chybu-nebo-ji-nakloň) |
 | Metoda bere tři `int`y za sebou a plete se pořadí | [Poka-yoke, stupeň 1](Principles/ObjectDesign.md#stupně-obrany-od-nejsilnějšího) |
 | Chybě se nedá zabránit — fronta doručuje aspoň jednou | [Stupeň 1b: idempotence](Principles/ObjectDesign.md#stupeň-1b-když-se-chybě-nedá-zabránit) |
+| Chybu smazat nejde — čím za ni tedy zaplatit? | [Tohle dělá i ta luneta](Principles/ObjectDesign.md#tohle-dělá-i-ta-luneta--ale-jinak) |
 | Máme metriky a alerty — stačí to? | [Kam patří metriky a upozornění](Principles/ObjectDesign.md#kam-patří-metriky-a-upozornění) |
 | Když něco selže, systém pokračuje tou riskantnější cestou | [Třetí stupeň se nenavrhuje](Principles/ObjectDesign.md#třetí-stupeň-se-nenavrhuje-a-měl-by) |
 | Chyba se objeví jen někdy a restart ji spraví | [Out of the Tar Pit](Principles/OutOfTheTarPit.md#1-stav--ten-hlavní) |
