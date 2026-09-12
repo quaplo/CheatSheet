@@ -203,11 +203,12 @@ Funguje to takhle: před ponorem potápěč otočí nulu na lunetě k minutové 
 
 Přesně tohle je **poka-yoke**, princip z Toyoty. Zavedl ho **Shigeo Shingo** v roce **1961** a původně se jmenoval *baka-yoke*, tedy „blbuvzdorné"; přejmenoval se poté, co dělnice odmítla u takhle pojmenovaného zařízení pracovat. Podstata je v tom, že **se nespoléhá na pozornost člověka** — ta selže vždycky, stačí dost pokusů.
 
-### Tři stupně obrany, od nejsilnějšího
+### Stupně obrany, od nejsilnějšího
 
 | Stupeň | Co znamená | V PHP |
 | ------ | ---------- | ----- |
 | **1. Nejde to udělat** | Chybný stav se nedá ani zapsat | Typ místo `string`, `enum` místo konstant, `readonly` místo setteru, validace v konstruktoru |
+| **1b. Nezáleží na tom** | Chybu nejde zakázat, tak ať nemá následek | [Idempotence](../Glossary.md#idempotence) — druhé spuštění nic nepřidá |
 | **2. Pozná se to hned** | Chyba jde udělat, ale okamžitě křičí | [Fail Fast](#fail-fast) — výjimka místo `?? 0` |
 | **3. Padne to na bezpečnou stranu** | Ani to nejde, tak ať následek nebolí | Výchozí hodnota, která nic nepovolí a nic neutratí |
 
@@ -222,6 +223,38 @@ public function charge(Money $amount): void
 ```
 
 `charge(1000, 'CZK')` a `charge(1000, 'EUR')` vypadají stejně a spletou se; `Money::fromCents(1000, Currency::CZK)` ne. Je to táž myšlenka jako [Introduce Parameter Object](../../Refactoring/Code/IntroduceParameterObject/) — a jediné místo, kam se ta kontrola vejde, je konstruktor.
+
+### Stupeň 1b: když se chybě nedá zabránit
+
+Někdy první stupeň k dispozici není, protože **tu chybu nedělá člověk ani tvůj kód** — dělá ji prostředí. Fronta doručuje *aspoň jednou*. Uživatel klikne dvakrát, protože se stránka nehnula. Platební brána neodpoví do timeoutu, tak se volání zopakuje.
+
+Zakázat se to nedá. Zopakované doručení **musí** být povolené, jinak se po výpadku sítě nedoručí nic.
+
+Zbývá tedy jediný pohyb, a je to ten nejsilnější, který v takové situaci existuje: **nechat tu chybu nastat a odebrat jí následek.** Operace, která je [idempotentní](../Glossary.md#idempotence), se dá spustit pětkrát a dopadne to jako po prvním spuštění.
+
+```php
+// Kolize je fatální — dva dobropisy
+public function refund(string $paymentId, int $amountInCents): void
+{
+    $this->gateway->refund($paymentId, $amountInCents);
+}
+
+// Kolize je nezajímavá — druhé volání nic neudělá
+public function refund(string $paymentId, int $amountInCents): void
+{
+    if ($this->refunds->exists($paymentId)) {
+        return;
+    }
+
+    $this->gateway->refund($paymentId, $amountInCents);
+    $this->refunds->record($paymentId);
+}
+```
+
+**Proč je to `1b` a ne `4`:** není to slabší varianta. Pro tuhle třídu chyb je to nejlepší dostupný tah, protože stupeň 1 tu neexistuje. Luneta se dá udělat jednosměrná; opakované doručení zprávy zakázat nejde.
+
+> [!NOTE]
+> Idempotence má stejnou vlastnost jako ta luneta: **po nasazení na ni nikdo nemusí myslet.** Nevyžaduje kázeň, dokumentaci ani kontrolu v code review — funguje i pro toho, kdo o ní neví.
 
 ### Třetí stupeň se nenavrhuje, a měl by
 
@@ -240,7 +273,23 @@ Poznávací znamení je jednoduché: **zeptej se, co se stane při nejhorší mo
 > [!NOTE]
 > ISO 6425 kromě jednosměrnosti požaduje i to, aby byla luneta **odolná proti nechtěnému otočení**. To je stupeň 1 a stupeň 3 v jednom výrobku — a je to dobrá připomínka, že se ty stupně nevylučují.
 
-**Souvisí s patterny:** [Value Object](../DDD/ValueObject/) (neplatná instance nevznikne) · [Factory](../DDD/Factory/) (jediná cesta k sestavenému agregátu) · [State](../GoF/Behavioral/State/) (zakázaný přechod nejde provést) · [Specification](../DDD/Specification/) (pravidlo se dá zeptat předem, ne až po) · [Anticorruption Layer](../DDD/AnticorruptionLayer/) (neznámý cizí kód neprojde do domény)
+### Kam patří metriky a upozornění
+
+Tohle se s poka-yoke plete často, a rozdíl stojí za vyslovení: **metrika chybě nezabrání, nenakloní ji ani jí neodebere následek. Řekne ti, že už se stala.**
+
+Není to tedy čtvrtý stupeň, je to **[Fail Fast](#fail-fast) roztažený v čase** — mechanismus, kterým „spadni hlasitě" funguje i pro věci, které nevyhodí výjimku: fronta, která roste, konverze, která klesla, podíl duplicit, který se ztrojnásobil. Tyhle chyby nemají moment, ve kterém by šlo vyhodit výjimku, a bez měření by nebyly vidět vůbec.
+
+| | Poka-yoke | Metrika a upozornění |
+| --- | --- | --- |
+| Kdy zafunguje | **před** chybou, nebo při ní | **po** chybě |
+| Co potřebuje | nic — je to v kódu | někoho, kdo se dívá a umí zasáhnout |
+| Když si nikdo nevšimne | nevadí, stejně to drží | **nestalo se nic** |
+
+Prostřední řádek je ten podstatný. **Upozornění je návrh, který spoléhá na pozornost člověka** — tedy přesně to, čemu se poka-yoke vyhýbá. To z něj nedělá špatný nástroj; dělá to z něj **poslední** nástroj, ne první.
+
+Poka-yoke z toho ale udělat jde, a to jedním krokem: **když upozornění spouští automatickou akci místo člověka.** Automatické vypnutí feature flagu při skoku chybovosti, jistič, který po sérii selhání přestane volat cizí službu, zastavený import při podezřelém počtu duplicit — to všechno je stupeň 3, protože se systém sám přepne do bezpečnějšího režimu, i když se nikdo nedívá.
+
+**Souvisí s patterny:** [Value Object](../DDD/ValueObject/) (neplatná instance nevznikne) · [Factory](../DDD/Factory/) (jediná cesta k sestavenému agregátu) · [State](../GoF/Behavioral/State/) (zakázaný přechod nejde provést) · [Specification](../DDD/Specification/) (pravidlo se dá zeptat předem, ne až po) · [Anticorruption Layer](../DDD/AnticorruptionLayer/) (neznámý cizí kód neprojde do domény) · [Saga](../Architecture/Saga/) a [Batching](../Architecture/Batching/) (obojí stojí a padá s idempotencí)
 
 ---
 
