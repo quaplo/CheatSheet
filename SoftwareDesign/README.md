@@ -161,6 +161,7 @@ Vzory bez jedné mateřské knihy, které se netýkají jedné třídy, ale **tv
 | [Batching](Architecture/Batching/) | — | Dávkování zpráv kvůli zátěži — počet, nebo čas, co nastane dřív | ●●●○○ |
 | [Circuit Breaker](Architecture/CircuitBreaker/) | — | Cizí služba mlčí — přestaň ji volat, než položí i tebe | ●●●○○ |
 | [Retry](Architecture/Retry/) | — | Opakování, které nepoloží to, co se právě zvedá | ●●○○○ |
+| [Clean Architecture](Architecture/CleanArchitecture/) | — | Kruhy, pravidlo závislosti — a co z toho je oproti hexagonu nové | ●●●●○ |
 | [Ports & Adapters](Architecture/PortsAndAdapters/) | Cockburn, 2005 | Jádro nezávislé na okolí; závislosti míří dovnitř | ●●●●○ |
 | [Rules Engine](Architecture/RulesEngine/) | Forgy 1979, Fowler 2009 | Byznysová pravidla jako seznam objektů se strategií a auditní stopou | ●●●●○ |
 | [CQRS](Architecture/CQRS/) | Meyer 1988, Young 2010 | Oddělený model pro zápis a pro čtení — každý optimalizovaný na své | ●●●●○ |
@@ -237,6 +238,10 @@ Obrácený rejstřík: začni u toho, co tě pálí.
 | Každá metoda je správně, ale dohromady vyjde nesmysl | [Out of the Tar Pit](Principles/OutOfTheTarPit.md#2-řízení--pořadí-které-nás-nemá-zajímat) |
 | Doména zná Doctrine a `$request` a nejde otestovat bez databáze | [DDD + hexagonální architektura](DDD/#hexagonální-architektura-co-doménu-drží-čistou) |
 | Pravidlo o slevě mám v šabloně, v kontroleru i v SQL — pokaždé jinak | [Layered Architecture](Architecture/LayeredArchitecture/) |
+| Přidání API vedle webu znamená napsat tutéž logiku podruhé | [Clean Architecture](Architecture/CleanArchitecture/) |
+| Přejmenování pole v entitě změnilo odpověď našeho API | [Co přes hranici smí](Architecture/CleanArchitecture/#2-vstupní-a-výstupní-port--a-co-přes-ně-smí) |
+| Nevím, jestli pravidlo patří do entity, nebo do use case | [Kam které pravidlo patří](Architecture/CleanArchitecture/#1-rozdělení-entities-a-use-cases) |
+| Vrstvy, hexagon, kruhy — čím se to vlastně liší? | [Porovnání](Architecture/CleanArchitecture/#vrstvy-hexagon-nebo-kruhy) |
 | Vrstvy máme, ale doména se pořád nedá otestovat bez databáze | [Layered Architecture](Architecture/LayeredArchitecture/#čím-to-samo-o-sobě-nestačí) |
 | `Domain/` má osmdesát souborů a nevím, co ta aplikace vlastně dělá | [Horizontálně, nebo vertikálně](DDD/#horizontálně-nebo-vertikálně) |
 | Ze složek v projektu nepoznám, co ten systém dělá — jen z čeho je postavený | [Modules](DDD/Modules/) |

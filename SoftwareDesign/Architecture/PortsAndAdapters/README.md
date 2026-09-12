@@ -365,6 +365,7 @@ Core\Port\Driven\OrderRepository: '@Adapter\Driven\Persistence\DoctrineOrderRepo
 
 | Pattern | Vztah |
 | ------- | ----- |
+| [Clean Architecture](../CleanArchitecture/) | Mladší příbuzný: totéž pravidlo, navíc rozdělení entit od use cases a zákaz posílat entity přes hranici. |
 | [Circuit Breaker](../CircuitBreaker/) | Bydlí v adaptéru, ne v doméně — ta nemá vědět, že se něco volá přes síť. |
 | [Layered Architecture](../LayeredArchitecture/) | **Předchůdce.** Vrstvy oddělí doménu od UI, ale ne od infrastruktury — a Evans sám u nich odkazuje sem. |
 | [Modules](../../DDD/Modules/) (DDD) | Modul říká „co", hexagon „kudy dovnitř" — vrstvy z tohohle vzoru žijí uvnitř modulu. |
