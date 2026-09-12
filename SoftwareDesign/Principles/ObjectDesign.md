@@ -228,7 +228,7 @@ public function charge(Money $amount): void
 
 Někdy první stupeň k dispozici není, protože **tu chybu nedělá člověk ani tvůj kód** — dělá ji prostředí. Fronta doručuje *aspoň jednou*. Uživatel klikne dvakrát, protože se stránka nehnula. Platební brána neodpoví do timeoutu, tak se volání zopakuje.
 
-Zakázat se to nedá. Zopakované doručení **musí** být povolené, jinak se po výpadku sítě nedoručí nic.
+Zakázat se to nedá. Zopakované doručení **musí** být povolené, jinak se po výpadku sítě nedoručí nic — viz [Retry](../Architecture/Retry/).
 
 Zbývá tedy jediný pohyb, a je to ten nejsilnější, který v takové situaci existuje: **nechat tu chybu nastat a odebrat jí následek.** Operace, která je [idempotentní](../Glossary.md#idempotence), se dá spustit pětkrát a dopadne to jako po prvním spuštění.
 

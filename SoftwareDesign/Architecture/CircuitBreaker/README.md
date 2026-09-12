@@ -181,7 +181,7 @@ První řádek je ten, který v praxi působí nejvíc zmatku. **`404` není vý
 | [Ports & Adapters](../PortsAndAdapters/) | Jistič bydlí v **adaptéru**, ne v doméně — ta o něm nemá vědět. |
 | [Saga](../Saga/) | Kompenzace řeší, co s rozpracovaným procesem, když volání neprojde. |
 | [Batching](../Batching/) | Sousední odpověď na zátěž: ten chrání cíl před množstvím, tenhle před opakováním. |
-| [Retry](#kdy-nepoužít) | Nutná dvojice, ale v tomhle pořadí: **opakuj uvnitř jističe**, ne kolem něj — jinak si opakováním otevřený jistič obejdeš. |
+| [Retry](../Retry/) | Nutná dvojice, ale v tomhle pořadí: **opakuj uvnitř jističe**, ne kolem něj — jinak si opakováním otevřený jistič obejdeš. |
 
 ---
 

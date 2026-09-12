@@ -388,6 +388,7 @@ Co s tím jde dělat:
 
 | Pattern | Vztah |
 | ------- | ----- |
+| [Retry](../Retry/) | První obrana před kompenzací: co projde po zopakování, nemusí se vracet. |
 | [Service Composition](../ServiceComposition/) | **Předchůdce pro čtení.** Kompozice skládá pohled; jakmile měníš stav, potřebuješ kompenzace a jsi tady. |
 | [Domain Event](../../DDD/DomainEvent/) | Choreografovaná varianta stojí celá na událostech. I orchestrovaná jimi obvykle komunikuje. |
 | [Aggregate](../../DDD/Aggregate/) | Pravidlo „jedna transakce = jeden agregát“ je důvod, proč sága vůbec existuje. Stav ságy je sám agregátem. |

@@ -197,6 +197,7 @@ Předposlední řádek je nejčastější způsob, jak si dávkováním ublíži
 
 | Pattern | Vztah |
 | ------- | ----- |
+| [Retry](../Retry/) | Opakování dávky je ošemetné — jedna vadná zpráva nesmí nutit k opakování zbylých 499. |
 | [Circuit Breaker](../CircuitBreaker/) | Sousední odpověď na zátěž: tenhle chrání cíl před množstvím, ten druhý před opakováním. |
 | **Aggregator** (EIP) | Nejbližší pojmenovaný příbuzný. Slučuje **související** zprávy do jedné podle *completeness condition* — což je táž dvojice podmínek, ale s jiným záměrem. |
 | [Unit of Work](../../PoEAA/UnitOfWork/) (PoEAA) | Dávkování zápisů do databáze; `flush()` je ruční spuštění téhož. |

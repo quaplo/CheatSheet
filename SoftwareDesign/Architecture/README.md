@@ -20,6 +20,7 @@ Společné mají jedno pozorování: **byznys logika je to jediné, co v aplikac
 | [**Saga**](Saga/) | Garcia-Molina & Salem 1987; Richardson 2018 | **Zápis** přes víc kontextů s kompenzačními akcemi | ●●●●○ | ✅ |
 | [**Batching**](Batching/) | nemá jediný autor; RFC 896 (1984), EIP (2003) | Zprávy po dávkách — vyprázdni při počtu, nebo po čase | ●●●○○ | ✅ |
 | [**Circuit Breaker**](CircuitBreaker/) | Michael Nygard, 2007 | Po sérii selhání přestaň volat — a pak zkus jediný pokus | ●●●○○ | ✅ |
+| [**Retry**](Retry/) | praxe; backoff a jitter — Brooker, 2015 | Zopakuj, ale jen přechodnou chybu, na jedné vrstvě a s náhodou | ●●○○○ | ✅ |
 | Clean Architecture | Robert C. Martin, 2012 | Soustředné vrstvy s pravidlem závislosti | | ⬜ |
 | Onion Architecture | Jeffrey Palermo, 2008 | Blízký příbuzný obou výše | | ⬜ |
 | [**Event Sourcing**](EventSourcing/) | Martin Fowler, 2005 | Stav jako posloupnost událostí, ne jako snímek | ●●●●● | ✅ |
