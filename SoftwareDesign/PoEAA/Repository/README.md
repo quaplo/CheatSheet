@@ -318,6 +318,7 @@ markOverdue(new DoctrineOrderRepository($entityManager), $now);
 
 | Pattern | Vztah |
 | ------- | ----- |
+| [Onion Architecture](../../Architecture/OnionArchitecture/) | Rozhraní repository patří do prvního prstence kolem modelu, implementace na okraj — Palermo to uvádí jmenovitě. |
 | [Ports & Adapters](../../Architecture/PortsAndAdapters/) | Repository **je [řízený port](../../Architecture/PortsAndAdapters/#dvě-strany-na-jednu-se-zapomíná)** — ten nejběžnější. Hexagon říká *proč* rozhraní patří do domény, Repository *jak* má vypadat. |
 | [Specification](../../DDD/Specification/) | Odpověď na repository o čtyřiceti metodách: kritérium se předá jako objekt. Pozor na překlad do SQL. |
 | [Value Object](../../DDD/ValueObject/) | `OrderId` je value object. Repository jimi mluví místo `int` a `string`. |

@@ -365,6 +365,7 @@ Core\Port\Driven\OrderRepository: '@Adapter\Driven\Persistence\DoctrineOrderRepo
 
 | Pattern | Vztah |
 | ------- | ----- |
+| [Onion Architecture](../OnionArchitecture/) | Navazuje (2008) a doplňuje explicitní větu, že databáze patří na okraj. |
 | [Clean Architecture](../CleanArchitecture/) | Mladší příbuzný: totéž pravidlo, navíc rozdělení entit od use cases a zákaz posílat entity přes hranici. |
 | [Circuit Breaker](../CircuitBreaker/) | Bydlí v adaptéru, ne v doméně — ta nemá vědět, že se něco volá přes síť. |
 | [Layered Architecture](../LayeredArchitecture/) | **Předchůdce.** Vrstvy oddělí doménu od UI, ale ne od infrastruktury — a Evans sám u nich odkazuje sem. |

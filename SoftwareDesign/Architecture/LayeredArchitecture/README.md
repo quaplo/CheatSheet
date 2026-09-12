@@ -183,6 +183,7 @@ Předposlední řádek je ten, který v praxi rozhoduje o tom, jestli má rozdě
 
 | Pattern | Vztah |
 | ------- | ----- |
+| [Onion Architecture](../OnionArchitecture/) | Vznikla přímo proti tomu, co měří demo tady: databáze jako základ, na kterém všechno visí. |
 | [Clean Architecture](../CleanArchitecture/) | Třetí člen téže rodiny; porovnání všech tří je [tam](../CleanArchitecture/#vrstvy-hexagon-nebo-kruhy). |
 | [Ports & Adapters](../PortsAndAdapters/) | **Kam to vede.** Totéž dotažené: infrastruktura přestane být vrstvou dole a stane se adaptérem vedle. |
 | [Modules](../../DDD/Modules/) (DDD) | Druhé dělení, kolmé na tohle. U větší aplikace patří moduly nahoru a vrstvy dovnitř. |

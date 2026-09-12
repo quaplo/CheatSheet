@@ -162,13 +162,14 @@ Vzory bez jedné mateřské knihy, které se netýkají jedné třídy, ale **tv
 | [Circuit Breaker](Architecture/CircuitBreaker/) | — | Cizí služba mlčí — přestaň ji volat, než položí i tebe | ●●●○○ |
 | [Retry](Architecture/Retry/) | — | Opakování, které nepoloží to, co se právě zvedá | ●●○○○ |
 | [Clean Architecture](Architecture/CleanArchitecture/) | — | Kruhy, pravidlo závislosti — a co z toho je oproti hexagonu nové | ●●●●○ |
+| [Onion Architecture](Architecture/OnionArchitecture/) | — | Historicky prostřední krok: databáze není základ, ale okraj | ●●●●○ |
 | [Ports & Adapters](Architecture/PortsAndAdapters/) | Cockburn, 2005 | Jádro nezávislé na okolí; závislosti míří dovnitř | ●●●●○ |
 | [Rules Engine](Architecture/RulesEngine/) | Forgy 1979, Fowler 2009 | Byznysová pravidla jako seznam objektů se strategií a auditní stopou | ●●●●○ |
 | [CQRS](Architecture/CQRS/) | Meyer 1988, Young 2010 | Oddělený model pro zápis a pro čtení — každý optimalizovaný na své | ●●●●○ |
 | [Service Composition](Architecture/ServiceComposition/) | Peltz 2003, Erl 2009 | Poskládá **čtení** z víc kontextů do jednoho celku | ●●●○○ |
 | [Saga](Architecture/Saga/) | Garcia-Molina & Salem 1987 | **Zápis** přes víc kontextů — kroky s kompenzacemi místo transakce | ●●●●○ |
 
-<sub>Plánované (Clean Architecture, Onion): [Architecture/README.md](Architecture/)</sub>
+<sub>Kompletní katalog sbírky: [Architecture/README.md](Architecture/)</sub>
 
 <sub>⬜ plánováno · 🚧 rozpracováno · ✅ hotovo</sub>
 
@@ -242,6 +243,8 @@ Obrácený rejstřík: začni u toho, co tě pálí.
 | Přejmenování pole v entitě změnilo odpověď našeho API | [Co přes hranici smí](Architecture/CleanArchitecture/#2-vstupní-a-výstupní-port--a-co-přes-ně-smí) |
 | Nevím, jestli pravidlo patří do entity, nebo do use case | [Kam které pravidlo patří](Architecture/CleanArchitecture/#1-rozdělení-entities-a-use-cases) |
 | Vrstvy, hexagon, kruhy — čím se to vlastně liší? | [Porovnání](Architecture/CleanArchitecture/#vrstvy-hexagon-nebo-kruhy) |
+| Výměna databáze by znamenala projít celou doménu | [Onion Architecture](Architecture/OnionArchitecture/) |
+| Entity mají anotace ORM — je to ještě čistá doména? | [Jak to poznat na svém projektu](Architecture/OnionArchitecture/#jak-to-poznat-na-svém-projektu) |
 | Vrstvy máme, ale doména se pořád nedá otestovat bez databáze | [Layered Architecture](Architecture/LayeredArchitecture/#čím-to-samo-o-sobě-nestačí) |
 | `Domain/` má osmdesát souborů a nevím, co ta aplikace vlastně dělá | [Horizontálně, nebo vertikálně](DDD/#horizontálně-nebo-vertikálně) |
 | Ze složek v projektu nepoznám, co ten systém dělá — jen z čeho je postavený | [Modules](DDD/Modules/) |

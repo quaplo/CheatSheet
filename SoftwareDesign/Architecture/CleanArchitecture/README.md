@@ -227,6 +227,7 @@ Všechny tři jsou táž myšlenka a Martin to sám píše: *„They all have th
 
 | Pattern | Vztah |
 | ------- | ----- |
+| [Onion Architecture](../OnionArchitecture/) | Starší sourozenec (2008) a historicky prostřední krok; přidal postoj k databázi, Clean k tomu pravidlo závislosti. |
 | [Ports & Adapters](../PortsAndAdapters/) | **Nejbližší příbuzný.** Táž myšlenka o sedm let dřív, bez rozdělení entit a use cases. |
 | [Layered Architecture](../LayeredArchitecture/) | Předchůdce obou; ukazuje, proč rozdělení na vrstvy samo o sobě nestačí. |
 | [Service Layer](../../PoEAA/ServiceLayer/) (PoEAA) | Use case je jeho zúžená podoba — jedna operace, vlastní vstup a výstup. |

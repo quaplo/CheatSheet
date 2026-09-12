@@ -22,7 +22,7 @@ Společné mají jedno pozorování: **byznys logika je to jediné, co v aplikac
 | [**Circuit Breaker**](CircuitBreaker/) | Michael Nygard, 2007 | Po sérii selhání přestaň volat — a pak zkus jediný pokus | ●●●○○ | ✅ |
 | [**Retry**](Retry/) | praxe; backoff a jitter — Brooker, 2015 | Zopakuj, ale jen přechodnou chybu, na jedné vrstvě a s náhodou | ●●○○○ | ✅ |
 | [**Clean Architecture**](CleanArchitecture/) | Robert C. Martin, 2012 | Soustředné kruhy s pravidlem závislosti; entity zvlášť od use cases | ●●●●○ | ✅ |
-| Onion Architecture | Jeffrey Palermo, 2008 | Blízký příbuzný obou výše | | ⬜ |
+| [**Onion Architecture**](OnionArchitecture/) | Jeffrey Palermo, 2008 | Vazba míří do středu — a databáze je okraj, ne základ | ●●●●○ | ✅ |
 | [**Event Sourcing**](EventSourcing/) | Martin Fowler, 2005 | Stav jako posloupnost událostí, ne jako snímek | ●●●●● | ✅ |
 
 <sub>⬜ plánováno · 🚧 rozpracováno · ✅ hotovo</sub>
