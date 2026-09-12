@@ -309,7 +309,7 @@ Není to tedy čtvrtý stupeň, je to **[Fail Fast](#fail-fast) roztažený v č
 
 Prostřední řádek je ten podstatný. **Upozornění je návrh, který spoléhá na pozornost člověka** — tedy přesně to, čemu se poka-yoke vyhýbá. To z něj nedělá špatný nástroj; dělá to z něj **poslední** nástroj, ne první.
 
-Poka-yoke z toho ale udělat jde, a to jedním krokem: **když upozornění spouští automatickou akci místo člověka.** Automatické vypnutí feature flagu při skoku chybovosti, jistič, který po sérii selhání přestane volat cizí službu, zastavený import při podezřelém počtu duplicit — to všechno je stupeň 3, protože se systém sám přepne do bezpečnějšího režimu, i když se nikdo nedívá.
+Poka-yoke z toho ale udělat jde, a to jedním krokem: **když upozornění spouští automatickou akci místo člověka.** Automatické vypnutí feature flagu při skoku chybovosti, [jistič](../Architecture/CircuitBreaker/), který po sérii selhání přestane volat cizí službu, zastavený import při podezřelém počtu duplicit — to všechno je stupeň 3, protože se systém sám přepne do bezpečnějšího režimu, i když se nikdo nedívá.
 
 **Souvisí s patterny:** [Value Object](../DDD/ValueObject/) (neplatná instance nevznikne) · [Factory](../DDD/Factory/) (jediná cesta k sestavenému agregátu) · [State](../GoF/Behavioral/State/) (zakázaný přechod nejde provést) · [Specification](../DDD/Specification/) (pravidlo se dá zeptat předem, ne až po) · [Anticorruption Layer](../DDD/AnticorruptionLayer/) (neznámý cizí kód neprojde do domény) · [Saga](../Architecture/Saga/) a [Batching](../Architecture/Batching/) (obojí stojí a padá s idempotencí)
 

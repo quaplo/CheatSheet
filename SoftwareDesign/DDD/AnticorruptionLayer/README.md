@@ -354,6 +354,7 @@ Antikorupční vrstva je jediné místo, které cizí systém opravdu zná — t
 
 | Pattern | Vztah |
 | ------- | ----- |
+| [Circuit Breaker](../../Architecture/CircuitBreaker/) | Přirozený spolubydlící: obojí stojí na hranici k cizímu systému, tenhle ho překládá, ten druhý přestane volat, když mlčí. |
 | [Context Map](../ContextMap/) | **Odsud pochází rozhodnutí, jestli tuhle vrstvu vůbec stavět.** Je to jeden ze sedmi vztahů; alternativou je Conformist. |
 | [Bounded Context](../BoundedContext/) | Vrstva stojí přesně na hranici kontextu a je to nejsilnější podoba překladu, o kterém tenhle pattern mluví. |
 | [Ports & Adapters](../../Architecture/PortsAndAdapters/) | Technická podoba: port v doméně, vrstva jako [řízený adaptér](../../Architecture/PortsAndAdapters/#dvě-strany-na-jednu-se-zapomíná). |

@@ -19,6 +19,7 @@ Společné mají jedno pozorování: **byznys logika je to jediné, co v aplikac
 | [**Service Composition**](ServiceComposition/) | Peltz 2003, Erl 2009 | Poskládá **čtení** z víc kontextů do jednoho celku | ●●●○○ | ✅ |
 | [**Saga**](Saga/) | Garcia-Molina & Salem 1987; Richardson 2018 | **Zápis** přes víc kontextů s kompenzačními akcemi | ●●●●○ | ✅ |
 | [**Batching**](Batching/) | nemá jediný autor; RFC 896 (1984), EIP (2003) | Zprávy po dávkách — vyprázdni při počtu, nebo po čase | ●●●○○ | ✅ |
+| [**Circuit Breaker**](CircuitBreaker/) | Michael Nygard, 2007 | Po sérii selhání přestaň volat — a pak zkus jediný pokus | ●●●○○ | ✅ |
 | Clean Architecture | Robert C. Martin, 2012 | Soustředné vrstvy s pravidlem závislosti | | ⬜ |
 | Onion Architecture | Jeffrey Palermo, 2008 | Blízký příbuzný obou výše | | ⬜ |
 | [**Event Sourcing**](EventSourcing/) | Martin Fowler, 2005 | Stav jako posloupnost událostí, ne jako snímek | ●●●●● | ✅ |
